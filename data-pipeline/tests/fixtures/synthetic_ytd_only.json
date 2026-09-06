@@ -1,0 +1,180 @@
+{
+ "cik": 9000001,
+ "entityName": "YTD Only Corp",
+ "_fixture": "Calendar FY. Revenue/OCF filed year-to-date only. R&D filed both discretely and cumulatively, so basis preference is exercised. Contains an 8-K fact that must be excluded by the form filter.",
+ "facts": {
+  "us-gaap": {
+   "Revenues": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": 100000000,
+       "accn": "q1",
+       "fy": 2024,
+       "fp": "Q1",
+       "form": "10-Q",
+       "filed": "2024-05-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-06-30",
+       "val": 250000000,
+       "accn": "q2",
+       "fy": 2024,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2024-08-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-09-30",
+       "val": 450000000,
+       "accn": "q3",
+       "fy": 2024,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2024-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-12-31",
+       "val": 700000000,
+       "accn": "0000000000-25-000001",
+       "fy": 2024,
+       "fp": "FY",
+       "form": "10-K",
+       "filed": "2025-02-01"
+      },
+      {
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 999000000,
+       "accn": "x1",
+       "fy": 2025,
+       "fp": "Q1",
+       "form": "8-K",
+       "filed": "2025-04-15"
+      }
+     ]
+    }
+   },
+   "ResearchAndDevelopmentExpense": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": 10000000,
+       "accn": "q1",
+       "fy": 2024,
+       "fp": "Q1",
+       "form": "10-Q",
+       "filed": "2024-05-01"
+      },
+      {
+       "start": "2024-04-01",
+       "end": "2024-06-30",
+       "val": 20000000,
+       "accn": "q2",
+       "fy": 2024,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2024-08-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-06-30",
+       "val": 30000000,
+       "accn": "q2",
+       "fy": 2024,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2024-08-01"
+      },
+      {
+       "start": "2024-07-01",
+       "end": "2024-09-30",
+       "val": 30000000,
+       "accn": "q3",
+       "fy": 2024,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2024-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-09-30",
+       "val": 60000000,
+       "accn": "q3",
+       "fy": 2024,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2024-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-12-31",
+       "val": 100000000,
+       "accn": "0000000000-25-000001",
+       "fy": 2024,
+       "fp": "FY",
+       "form": "10-K",
+       "filed": "2025-02-01"
+      }
+     ]
+    }
+   },
+   "NetCashProvidedByUsedInOperatingActivities": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": -40000000,
+       "accn": "q1",
+       "fy": 2024,
+       "fp": "Q1",
+       "form": "10-Q",
+       "filed": "2024-05-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-06-30",
+       "val": -90000000,
+       "accn": "q2",
+       "fy": 2024,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2024-08-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-09-30",
+       "val": -150000000,
+       "accn": "q3",
+       "fy": 2024,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2024-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-12-31",
+       "val": -220000000,
+       "accn": "0000000000-25-000001",
+       "fy": 2024,
+       "fp": "FY",
+       "form": "10-K",
+       "filed": "2025-02-01"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "cik": 9000003,
+ "entityName": "Chain Walker Inc.",
+ "_fixture": "Each fiscal year is covered by a different entry of the revenue chain: SalesRevenueNet in 2022, RevenueFromContractWithCustomer in 2023, Revenues in 2024. 2023 is covered by two tags at once, so chain order must decide it.",
+ "facts": {
+  "us-gaap": {
+   "SalesRevenueNet": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2022-01-01",
+       "end": "2022-03-31",
+       "val": 10000000,
+       "accn": "srn-0",
+       "form": "10-Q",
+       "filed": "2023-02-01"
+      },
+      {
+       "start": "2022-04-01",
+       "end": "2022-06-30",
+       "val": 11000000,
+       "accn": "srn-1",
+       "form": "10-Q",
+       "filed": "2023-02-01"
+      },
+      {
+       "start": "2022-07-01",
+       "end": "2022-09-30",
+       "val": 12000000,
+       "accn": "srn-2",
+       "form": "10-Q",
+       "filed": "2023-02-01"
+      },
+      {
+       "start": "2022-10-01",
+       "end": "2022-12-31",
+       "val": 13000000,
+       "accn": "srn-3",
+       "form": "10-Q",
+       "filed": "2023-02-01"
+      }
+     ]
+    }
+   },
+   "RevenueFromContractWithCustomerExcludingAssessedTax": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2023-01-01",
+       "end": "2023-03-31",
+       "val": 20000000,
+       "accn": "rfc-0",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-04-01",
+       "end": "2023-06-30",
+       "val": 21000000,
+       "accn": "rfc-1",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-07-01",
+       "end": "2023-09-30",
+       "val": 22000000,
+       "accn": "rfc-2",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-10-01",
+       "end": "2023-12-31",
+       "val": 23000000,
+       "accn": "rfc-3",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      }
+     ]
+    }
+   },
+   "Revenues": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2023-01-01",
+       "end": "2023-03-31",
+       "val": 70000000,
+       "accn": "rev-overlap-0",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-04-01",
+       "end": "2023-06-30",
+       "val": 71000000,
+       "accn": "rev-overlap-1",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-07-01",
+       "end": "2023-09-30",
+       "val": 72000000,
+       "accn": "rev-overlap-2",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2023-10-01",
+       "end": "2023-12-31",
+       "val": 73000000,
+       "accn": "rev-overlap-3",
+       "form": "10-Q",
+       "filed": "2024-02-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": 30000000,
+       "accn": "rev-0",
+       "form": "10-Q",
+       "filed": "2025-02-01"
+      },
+      {
+       "start": "2024-04-01",
+       "end": "2024-06-30",
+       "val": 31000000,
+       "accn": "rev-1",
+       "form": "10-Q",
+       "filed": "2025-02-01"
+      },
+      {
+       "start": "2024-07-01",
+       "end": "2024-09-30",
+       "val": 32000000,
+       "accn": "rev-2",
+       "form": "10-Q",
+       "filed": "2025-02-01"
+      },
+      {
+       "start": "2024-10-01",
+       "end": "2024-12-31",
+       "val": 33000000,
+       "accn": "rev-3",
+       "form": "10-Q",
+       "filed": "2025-02-01"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

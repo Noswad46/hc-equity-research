@@ -1,0 +1,145 @@
+# Coverage universe — hand-maintained. See SPEC.md §4.
+#
+# Anchor: vaccines and infectious disease, plus a large-cap pharma comparison set
+# so the metrics have context.
+#
+# CIKs were taken from https://www.sec.gov/files/company_tickers.json and are
+# zero-padded to 10 digits, as data.sec.gov requires.
+#
+# `ct_sponsor_names` and `fda_applicant_names` are NOT yet verified against live
+# ClinicalTrials.gov / openFDA responses — that happens in M4/M7. SPEC §4 is
+# explicit that these must be curated by hand and never fuzzy-matched, so treat
+# the values below as first drafts to be confirmed, not as working mappings.
+#
+# Deliberately excluded from v1: GSK, AstraZeneca, Sanofi and BioNTech. All four
+# are foreign private issuers that file 20-F under the `ifrs-full` taxonomy, so
+# the us-gaap tag chains in SPEC §5.1 return nothing for them. Adding them needs
+# an IFRS concept mapping, which is out of scope for M1.
+
+- ticker: MRNA
+  cik: "0001682852"
+  name: Moderna, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease, oncology]
+  ct_sponsor_names:
+    - "ModernaTX, Inc."
+  fda_applicant_names:
+    - "MODERNATX INC"
+  index_membership: [sp500]
+  notes: "Reports operating cash flow year-to-date only; every quarter after Q1 is derived."
+
+- ticker: NVAX
+  cik: "0001000694"
+  name: Novavax, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease]
+  ct_sponsor_names:
+    - "Novavax"
+  fda_applicant_names:
+    - "NOVAVAX INC"
+  index_membership: []
+  notes: ""
+
+- ticker: EBS
+  cik: "0001367644"
+  name: Emergent BioSolutions Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease, medical_countermeasures]
+  ct_sponsor_names:
+    - "Emergent BioSolutions"
+  fda_applicant_names:
+    - "EMERGENT BIOSOLUTIONS"
+  index_membership: []
+  notes: "Government-contract revenue is lumpy; quarterly figures are not a smooth series."
+
+- ticker: VIR
+  cik: "0001706431"
+  name: Vir Biotechnology, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [infectious_disease, hepatitis, oncology]
+  ct_sponsor_names:
+    - "Vir Biotechnology, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: "Collaboration revenue only; RevenueFromContractWithCustomer coverage is sparse."
+
+- ticker: PFE
+  cik: "0000078003"
+  name: Pfizer Inc.
+  subsector: large_cap_pharma
+  therapeutic_focus: [vaccines, oncology, immunology, infectious_disease]
+  ct_sponsor_names:
+    - "Pfizer"
+  fda_applicant_names:
+    - "PFIZER INC"
+  index_membership: [sp500]
+  notes: >-
+    52/53-week fiscal calendar, so quarter ends drift by a few days. Tags R&D as
+    ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost, which is not in
+    the SPEC §5.1 chain, so R&D resolves to nothing.
+
+- ticker: MRK
+  cik: "0000310158"
+  name: Merck & Co., Inc.
+  subsector: large_cap_pharma
+  therapeutic_focus: [vaccines, oncology, infectious_disease]
+  ct_sponsor_names:
+    - "Merck Sharp & Dohme LLC"
+  fda_applicant_names:
+    - "MERCK SHARP DOHME"
+  index_membership: [sp500]
+  notes: "FY2020 was restated for the Organon spin-off; the 2020 quarters were not, so they do not sum to the annual."
+
+- ticker: JNJ
+  cik: "0000200406"
+  name: Johnson & Johnson
+  subsector: large_cap_pharma
+  therapeutic_focus: [immunology, oncology, infectious_disease, medtech]
+  ct_sponsor_names:
+    - "Janssen Research & Development, LLC"
+  fda_applicant_names:
+    - "JANSSEN BIOTECH INC"
+  index_membership: [sp500]
+  notes: >-
+    Tags quarterly R&D as ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost.
+    ResearchAndDevelopmentExpense exists but carries annual figures only, so the
+    SPEC §5.1 chain yields no quarterly R&D.
+
+- ticker: GILD
+  cik: "0000882095"
+  name: Gilead Sciences, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [infectious_disease, hiv, hepatitis, oncology]
+  ct_sponsor_names:
+    - "Gilead Sciences"
+  fda_applicant_names:
+    - "GILEAD SCIENCES INC"
+  index_membership: [sp500]
+  notes: ""
+
+- ticker: VRTX
+  cik: "0000875320"
+  name: Vertex Pharmaceuticals Incorporated
+  subsector: commercial_biotech
+  therapeutic_focus: [cystic_fibrosis, pain, nephrology]
+  ct_sponsor_names:
+    - "Vertex Pharmaceuticals Incorporated"
+  fda_applicant_names:
+    - "VERTEX PHARMACEUTICALS INC"
+  index_membership: [sp500]
+  notes: "Non-vaccine comparator; included for R&D-intensity context within commercial biotech."
+
+- ticker: BDX
+  cik: "0000010795"
+  name: Becton, Dickinson and Company
+  subsector: medtech
+  therapeutic_focus: [infectious_disease_diagnostics, injection_devices, specimen_collection]
+  ct_sponsor_names:
+    - "Becton, Dickinson and Company"
+  fda_applicant_names:
+    - "BECTON DICKINSON"
+  index_membership: [sp500]
+  notes: >-
+    Fiscal year ends 30 September. No RevenueFromContractWithCustomer tag, so
+    revenue falls back through the chain. Operating cash flow is split across both
+    entries of the OCF chain.

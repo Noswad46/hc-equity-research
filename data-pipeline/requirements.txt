@@ -1,0 +1,4 @@
+# Data pipeline (SPEC §2). Python 3.11+.
+PyYAML>=6.0
+requests>=2.31
+pytest>=8.0

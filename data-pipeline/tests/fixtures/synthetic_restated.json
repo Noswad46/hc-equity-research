@@ -1,0 +1,96 @@
+{
+ "cik": 9000002,
+ "entityName": "Restated Corp",
+ "_fixture": "Every FY2024 period is filed twice, the second time restated downward. Mixing vintages across a subtraction gives a visibly wrong Q4, so this pins the most-recently-filed rule.",
+ "facts": {
+  "us-gaap": {
+   "Revenues": {
+    "label": null,
+    "units": {
+     "USD": [
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": 100000000,
+       "accn": "orig-q1",
+       "fy": 2024,
+       "fp": "Q1",
+       "form": "10-Q",
+       "filed": "2024-05-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-06-30",
+       "val": 250000000,
+       "accn": "orig-q2",
+       "fy": 2024,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2024-08-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-09-30",
+       "val": 450000000,
+       "accn": "orig-q3",
+       "fy": 2024,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2024-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-12-31",
+       "val": 700000000,
+       "accn": "orig-fy",
+       "fy": 2024,
+       "fp": "FY",
+       "form": "10-K",
+       "filed": "2025-02-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-03-31",
+       "val": 90000000,
+       "accn": "new-q1",
+       "fy": 2025,
+       "fp": "Q1",
+       "form": "10-Q",
+       "filed": "2025-05-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-06-30",
+       "val": 230000000,
+       "accn": "new-q2",
+       "fy": 2025,
+       "fp": "Q2",
+       "form": "10-Q",
+       "filed": "2025-08-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-09-30",
+       "val": 400000000,
+       "accn": "new-q3",
+       "fy": 2025,
+       "fp": "Q3",
+       "form": "10-Q",
+       "filed": "2025-11-01"
+      },
+      {
+       "start": "2024-01-01",
+       "end": "2024-12-31",
+       "val": 640000000,
+       "accn": "new-fy",
+       "fy": 2025,
+       "fp": "FY",
+       "form": "10-K",
+       "filed": "2026-02-01"
+      }
+     ]
+    }
+   }
+  }
+ }
+}
