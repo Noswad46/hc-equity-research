@@ -14,7 +14,7 @@ import json
 import pytest
 
 from run import (
-    UNCOMPUTED_METRICS,
+    DERIVED_METRICS,
     UNCOMPUTED_PIPELINE_METRICS,
     _SCREENER_KEYS,
     company_document,
@@ -92,11 +92,18 @@ def test_every_screener_key_is_present(pfe_doc):
         assert key in pfe_doc, key
 
 
-def test_uncomputed_metrics_are_null_not_absent(pfe_doc):
-    """SPEC §6 and §5.2 metrics are not built yet; the keys must still exist."""
-    for key in UNCOMPUTED_METRICS + UNCOMPUTED_PIPELINE_METRICS:
+def test_uncomputed_pipeline_metrics_are_null_not_absent(pfe_doc):
+    """SPEC §5.2 clinical metrics are M4; the keys must still exist."""
+    for key in UNCOMPUTED_PIPELINE_METRICS:
         assert key in pfe_doc
         assert pfe_doc[key] is None
+
+
+def test_derived_metrics_are_present_as_result_objects(pfe_doc):
+    """Each carries its value or the reason there isn't one, never a bare null."""
+    for key in DERIVED_METRICS:
+        assert key in pfe_doc
+        assert set(pfe_doc[key]) >= {"value", "suppressed_by", "flags"}
 
 
 def test_unbuilt_sections_are_null(pfe_doc):

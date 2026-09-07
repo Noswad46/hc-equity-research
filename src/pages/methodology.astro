@@ -1,0 +1,170 @@
+---
+/**
+ * SPEC §8: every derived metric, its formula, its source, its known limitations
+ * and the update cadence. Shipped with the milestone that introduces the
+ * metrics, not later.
+ */
+import Base from "../layouts/Base.astro";
+import meta from "../data/meta.json";
+
+const growthFloor = meta.thresholds.growth_floor_usd;
+---
+
+<Base title="Methodology">
+  <p class="muted"><a href="/screener/">Screener</a> · <a href="/companies/">Company pages</a></p>
+
+  <h1>Methodology</h1>
+  <p>
+    Every figure on this site comes from SEC EDGAR XBRL company facts. Nothing is estimated,
+    smoothed or adjusted. Where a figure cannot be established honestly it is reported as
+    <strong>null</strong>, which is not zero, or as <strong>n/m</strong>, which means the
+    arithmetic is valid but the result describes nothing useful.
+  </p>
+  <p class="muted">
+    Data as of {meta.generated_at} · pipeline version {meta.pipeline_version} · refreshed weekly.
+  </p>
+
+  <h2>Deriving quarters</h2>
+  <p>
+    Income-statement and cash-flow facts are frequently filed year to date rather than as discrete
+    quarters, and a fourth quarter is almost never filed on its own. Quarters are obtained by
+    differencing successive year-to-date figures within a single XBRL tag, and Q4 by subtracting
+    the nine-month figure from the annual. Three rules govern this:
+  </p>
+  <ul>
+    <li>
+      <strong>Tags are resolved per period, not per company.</strong> Filers migrate tags mid-life,
+      so a single choice for a whole company either loses recent data or loses history.
+    </li>
+    <li>
+      <strong>Arithmetic never crosses tags.</strong> A quarter is derived inside one tag's facts;
+      only finished quarters are compared. Subtracting a figure on one basis from a figure on
+      another produces a plausible, wrong number.
+    </li>
+    <li>
+      <strong>Restatements resolve to the most recently filed value</strong>, on both sides of every
+      subtraction, so a derived quarter never mixes vintages.
+    </li>
+  </ul>
+
+  <h2>Metrics</h2>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Formula</th><th>Limitations</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Revenue TTM</td>
+        <td>Sum of the four most recent discrete quarters</td>
+        <td>Null unless four quarters tile the window exactly.</td>
+      </tr>
+      <tr>
+        <td>Revenue growth YoY</td>
+        <td>(TTM − prior TTM) ÷ |prior TTM|</td>
+        <td>
+          <strong>n/m where the prior trailing year was below {growthFloor} USD.</strong> A
+          percentage off a near-zero base describes the base, not the business. n/m sorts to the
+          end of the column in both directions, so these names cannot top a growth screen.
+          Suppressed entirely where the window spans a restated fiscal year.
+        </td>
+      </tr>
+      <tr>
+        <td>Operating margin</td>
+        <td>Operating income TTM ÷ revenue TTM</td>
+        <td>
+          Both sides must cover the same twelve months. Several large-cap filers present no
+          operating income subtotal at all — see below.
+        </td>
+      </tr>
+      <tr>
+        <td>OCF margin</td>
+        <td>Operating cash flow TTM ÷ revenue TTM</td>
+        <td>Same window requirement.</td>
+      </tr>
+      <tr>
+        <td>R&D intensity</td>
+        <td>R&D TTM ÷ revenue TTM</td>
+        <td>
+          For pre-revenue companies the denominator is operating expenses instead, and the value is
+          flagged. The two denominators are not comparable with each other.
+        </td>
+      </tr>
+      <tr>
+        <td>Net cash</td>
+        <td>cash + short-term investments − total debt</td>
+        <td>
+          Negative for leveraged large caps, which is expected. Where a filer tags no borrowings,
+          debt is treated as zero and the value is flagged — a debt-free company and one that
+          failed to tag its debt are indistinguishable from the filings.
+        </td>
+      </tr>
+      <tr>
+        <td>Cash runway</td>
+        <td>(cash + short-term investments) ÷ mean(|quarterly OCF|) over the trailing four</td>
+        <td>
+          Null where trailing operating cash flow is positive — that is the absence of a runway,
+          not a short one. Suppressed where the cash figure includes restricted cash that the filer
+          does not tag separately.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Known limitations</h2>
+
+  <h3>Operating income is not universally reported</h3>
+  <p>
+    Large pharmaceutical companies often present no operating income subtotal, running from expense
+    lines straight to pre-tax earnings. Where the subtotal is absent it is reconstructed as pre-tax
+    income from continuing operations less the non-operating block, and every such figure is marked
+    as derived. Reconstructing it instead as revenue less cost of sales, R&D and SG&A would be
+    wrong for these companies: amortisation of acquired intangibles, restructuring, litigation
+    provisions and acquired in-process R&D are real operating costs outside those three lines.
+  </p>
+  <p>
+    Some filers tag neither the subtotal nor the non-operating line it would be reconstructed from.
+    For those, operating margin is null rather than estimated.
+  </p>
+
+  <h3>Cash sometimes includes restricted balances</h3>
+  <p>
+    The balance-sheet cash tag excludes restricted cash; the cash-flow statement's reconciling
+    figure includes it. Where a filer abandons the former, the latter is used and flagged. For a
+    cash position the overstatement is minor. For cash runway it is a conceptual error, because
+    restricted cash cannot fund operations, so the restricted portion is netted off where the filer
+    tags it separately and the metric is suppressed where it does not.
+  </p>
+
+  <h3>Two measurement bases for R&D</h3>
+  <p>
+    Some filers report R&D including acquired in-process R&D and some excluding it, and a few
+    switch partway through their history. Acquired IPR&D charges are lumpy and deal-driven, so the
+    two are not comparable. The basis is recorded on every value and the switchover point is
+    identified, but the figures are never normalised to a common basis.
+  </p>
+
+  <h3>IFRS filers are excluded</h3>
+  <p>
+    GSK, AstraZeneca, Sanofi and BioNTech report under IFRS. Under IAS 38 qualifying development
+    costs are capitalised and amortised, while US GAAP expenses essentially all R&D as incurred, so
+    R&D intensity and cash runway measure different things on the two bases. Several also file
+    annually on 20-F rather than quarterly, so the discrete quarterly series this site is built on
+    does not exist for them.
+  </p>
+
+  <h3>Restated years suppress comparisons</h3>
+  <p>
+    Where an annual figure was restated but its quarters were not — typically after a spin-off —
+    the quarters are still reported as filed, but any growth or comparison metric spanning that
+    year returns null. A comparison across such a year measures the restatement rather than the
+    business.
+  </p>
+
+  <h2>Not yet built</h2>
+  <p>
+    Clinical-pipeline and regulatory metrics — active trials, phase distribution, pipeline depth
+    and concentration, clinical momentum — come from ClinicalTrials.gov and openFDA and are not yet
+    implemented. Their columns exist and are empty so that the shape of the data does not change
+    when they arrive.
+  </p>
+</Base>

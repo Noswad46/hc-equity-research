@@ -107,10 +107,55 @@ export function describeFlag(record: QualityRecord): string {
       ).join(", ")}.`;
     case "mixed_tags":
       return `${concept} is drawn from more than one XBRL tag across this series.`;
+    case "cash_includes_restricted":
+      return `${concept} was read from the cash-flow statement's reconciling figure, which includes restricted cash — the filer stopped tagging the balance-sheet figure that excludes it. For a cash position this overstates slightly. Anything dividing by a burn rate nets the restricted portion off, or declines to answer where the filer does not tag it separately.`;
+    case "derived_subtotal":
+      return `${concept} is not presented by this filer, so it was reconstructed as pre-tax income from continuing operations less the non-operating block. It is the filer's own figures, but not a subtotal the filer published.`;
+    case "incomplete_sum":
+      return `${concept} was summed from fewer components than it is defined by — typically a filer with no current maturities of long-term debt. A company that genuinely has none and one that failed to tag them are indistinguishable here.`;
     default:
       return `${concept}: ${record.code}${
         Object.keys(d).length ? ` ${JSON.stringify(d)}` : ""
       }`;
+  }
+}
+
+/**
+ * Why a metric produced no value.
+ *
+ * These are suppression reasons rather than data-quality flags: the fact layer
+ * was fine, and the metric declined to answer. They need their own wording
+ * because "we have no figure" and "the figure exists but is unreliable" are
+ * different messages to a reader.
+ */
+export function describeReason(code: string, concept = "This metric"): string {
+  switch (code) {
+    case "not_meaningful_small_base":
+      return `${concept} growth is not meaningful: the prior trailing year was too small for a percentage to describe the business rather than the base.`;
+    case "restricted_cash_not_separable":
+      return `Runway is suppressed: the cash figure includes restricted cash, and this filer does not tag the restricted portion separately. Restricted cash cannot fund operations, so dividing by a burn rate would overstate the runway.`;
+    case "operating_cash_flow_positive":
+      return `No runway figure: trailing operating cash flow is positive, so there is no burn rate to divide into. This is not a short runway — it is the absence of one.`;
+    case "restated_fiscal_year":
+      return `Suppressed because the window spans a fiscal year whose annual figure was restated while its quarters were not. A comparison across it would measure the restatement rather than the business.`;
+    case "incomplete_window":
+      return `No value: the twelve-month window does not tile cleanly, or the two sides of the ratio do not cover the same period.`;
+    case "no_denominator":
+      return `No value: neither revenue nor operating expenses were available as a denominator.`;
+    case "no_cash_figure":
+      return `No value: no cash balance could be resolved for this filer.`;
+    case "no_inputs":
+      return `No value: the underlying series is empty.`;
+    case "not_a_flow_concept":
+      return `No value: this is a balance, and a balance has no growth rate over a trailing year.`;
+    case "debt_not_tagged":
+      return `Net cash treats debt as zero because this filer tags no borrowings. A debt-free company and one that failed to tag its debt look identical here.`;
+    case "rnd_intensity_over_opex":
+      return `R&D intensity is measured against operating expenses rather than revenue, because this company has no revenue. The two denominators are not comparable.`;
+    case "cash_includes_restricted":
+      return `The cash figure comes from the cash-flow statement and includes restricted cash.`;
+    default:
+      return code;
   }
 }
 

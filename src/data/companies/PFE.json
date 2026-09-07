@@ -11,14 +11,88 @@
  ],
  "fiscal_period_end": "2026-06-28",
  "revenue_ttm": 63696000000,
- "revenue_growth_yoy": -0.002146225306659565,
  "rnd_ttm": 11051000000,
  "ocf_ttm": 13401000000,
+ "operating_income_ttm": null,
  "cash": 976000000,
- "operating_margin": null,
- "net_cash": null,
- "cash_runway_quarters": null,
- "rnd_intensity": null,
+ "revenue_growth_yoy": {
+  "name": "revenue_growth_yoy",
+  "value": -0.002146225306659565,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2024-09-29",
+   "2024-12-31",
+   "2025-03-30",
+   "2025-06-29",
+   "2025-09-28",
+   "2025-12-31",
+   "2026-03-29",
+   "2026-06-28"
+  ]
+ },
+ "operating_margin": {
+  "name": "operating_margin",
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "incomplete_window"
+  ],
+  "flags": [],
+  "period_ends": [
+   "2026-06-28"
+  ]
+ },
+ "ocf_margin": {
+  "name": "ocf_margin",
+  "value": 0.21038997739261492,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-28",
+   "2026-06-28"
+  ]
+ },
+ "net_cash": {
+  "name": "net_cash",
+  "value": -54843000000.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-28",
+   "2026-06-28"
+  ]
+ },
+ "cash_runway_quarters": {
+  "name": "cash_runway_quarters",
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "operating_cash_flow_positive"
+  ],
+  "flags": [],
+  "period_ends": [
+   "2026-06-28",
+   "2025-09-28",
+   "2025-12-31",
+   "2026-03-29",
+   "2026-06-28"
+  ]
+ },
+ "rnd_intensity": {
+  "name": "rnd_intensity",
+  "value": 0.17349598090931925,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-28",
+   "2026-06-28"
+  ]
+ },
  "active_trials": null,
  "phase_3_trials": null,
  "pipeline_depth_score": null,
@@ -36,7 +110,12 @@
   "rnd:fy_reconciliation_failed",
   "rnd:overlapping_periods",
   "ocf:chain_tags_diverge",
-  "operating_income:no_tag_resolved"
+  "operating_income:no_tag_resolved",
+  "short_term_investments:fallback_tag",
+  "short_term_investments:mixed_tags",
+  "debt:fallback_tag",
+  "restricted_cash:no_tag_resolved",
+  "opex:no_tag_resolved"
  ],
  "entity_name": "PFIZER INC",
  "taxonomies": [
@@ -54,26 +133,42 @@
    "ocf": null,
    "cash": 1827000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -95,26 +190,42 @@
    "ocf": null,
    "cash": 3406000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -136,26 +247,42 @@
    "ocf": null,
    "cash": 820000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": null,
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": null,
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -177,26 +304,42 @@
    "ocf": 3952000000,
    "cash": 1265000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -218,26 +361,42 @@
    "ocf": 5973000000,
    "cash": 2122000000,
    "operating_income": null,
+   "short_term_investments": 21609000000,
+   "debt": 8900000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -259,26 +418,42 @@
    "ocf": 3147000000,
    "cash": 1247000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -305,28 +480,46 @@
    "ocf": 4514000000,
    "cash": 2244000000,
    "operating_income": null,
+   "short_term_investments": 47403000000,
+   "debt": 31864000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -351,28 +544,46 @@
    "ocf": 4101000000,
    "cash": 4234000000,
    "operating_income": null,
+   "short_term_investments": 48239000000,
+   "debt": 32402000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -397,26 +608,42 @@
    "ocf": 4825000000,
    "cash": 1978000000,
    "operating_income": null,
+   "short_term_investments": 23991000000,
+   "debt": 43220000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -443,26 +670,42 @@
    "ocf": null,
    "cash": 1978000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": null,
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -484,28 +727,45 @@
    "ocf": -6360000000,
    "cash": 1759000000,
    "operating_income": null,
+   "short_term_investments": 15503000000,
+   "debt": 38281000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -539,28 +799,45 @@
    "ocf": 4873000000,
    "cash": 1877000000,
    "operating_income": null,
+   "short_term_investments": 17391000000,
+   "debt": 37765000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -594,28 +871,45 @@
    "ocf": 6683000000,
    "cash": 2176000000,
    "operating_income": null,
+   "short_term_investments": 20288000000,
+   "debt": 39010000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -649,26 +943,42 @@
    "ocf": 6258000000,
    "cash": 1735000000,
    "operating_income": null,
+   "short_term_investments": 26277000000,
+   "debt": 41912000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "revenue:restated_fiscal_year",
@@ -704,28 +1014,46 @@
    "ocf": 4642000000,
    "cash": 730000000,
    "operating_income": null,
+   "short_term_investments": 23279000000,
+   "debt": 35308000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": null,
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": null,
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -745,28 +1073,46 @@
    "ocf": 5898000000,
    "cash": 3096000000,
    "operating_income": null,
+   "short_term_investments": 22388000000,
+   "debt": 35723000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -786,28 +1132,46 @@
    "ocf": 4439000000,
    "cash": 3706000000,
    "operating_income": null,
+   "short_term_investments": 25257000000,
+   "debt": 35399000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -827,26 +1191,42 @@
    "ocf": 5261000000,
    "cash": 3182000000,
    "operating_income": null,
+   "short_term_investments": 23270000000,
+   "debt": 34932000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -868,28 +1248,45 @@
    "ocf": 2774000000,
    "cash": 2934000000,
    "operating_income": null,
+   "short_term_investments": 21038000000,
+   "debt": 33543000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -919,28 +1316,45 @@
    "ocf": 4021000000,
    "cash": 3031000000,
    "operating_income": null,
+   "short_term_investments": 21275000000,
+   "debt": 30868000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -970,28 +1384,45 @@
    "ocf": 5003000000,
    "cash": 4506000000,
    "operating_income": null,
+   "short_term_investments": 18462000000,
+   "debt": 31083000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
+    "debt:incomplete_sum",
     "revenue:restated_fiscal_year",
     "rnd:restated_fiscal_year"
    ],
@@ -1021,26 +1452,42 @@
    "ocf": 4948000000,
    "cash": 10081000000,
    "operating_income": null,
+   "short_term_investments": 22318000000,
+   "debt": 33485000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "revenue:restated_fiscal_year",
@@ -1072,28 +1519,46 @@
    "ocf": 2303000000,
    "cash": 1892000000,
    "operating_income": null,
+   "short_term_investments": 33212000000,
+   "debt": 31481000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1124,28 +1589,46 @@
    "ocf": 3757000000,
    "cash": 2436000000,
    "operating_income": null,
+   "short_term_investments": 31275000000,
+   "debt": 31532000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1176,28 +1659,46 @@
    "ocf": 5900000000,
    "cash": 2052000000,
    "operating_income": null,
+   "short_term_investments": 31627000000,
+   "debt": 31812000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1228,26 +1729,42 @@
    "ocf": 5724000000,
    "cash": 2183000000,
    "operating_income": null,
+   "short_term_investments": 30225000000,
+   "debt": 32522000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1280,28 +1797,46 @@
    "ocf": 2935000000,
    "cash": 2862000000,
    "operating_income": null,
+   "short_term_investments": 31019000000,
+   "debt": 27649000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1332,28 +1867,46 @@
    "ocf": 4087000000,
    "cash": 3406000000,
    "operating_income": null,
+   "short_term_investments": 30648000000,
+   "debt": 32267000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1384,28 +1937,46 @@
    "ocf": 4463000000,
    "cash": 2437000000,
    "operating_income": null,
+   "short_term_investments": 31009000000,
+   "debt": 31666000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1425,26 +1996,42 @@
    "ocf": 5599000000,
    "cash": 3343000000,
    "operating_income": null,
+   "short_term_investments": 32779000000,
+   "debt": 34552000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1466,28 +2053,46 @@
    "ocf": 680000000,
    "cash": 3563000000,
    "operating_income": null,
+   "short_term_investments": 24145000000,
+   "debt": 29370000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1507,28 +2112,46 @@
    "ocf": 4090000000,
    "cash": 3670000000,
    "operating_income": null,
+   "short_term_investments": 26586000000,
+   "debt": 26729000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1548,28 +2171,46 @@
    "ocf": 5020000000,
    "cash": 3099000000,
    "operating_income": null,
+   "short_term_investments": 17559000000,
+   "debt": 29079000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1589,26 +2230,42 @@
    "ocf": 4898000000,
    "cash": 3641000000,
    "operating_income": null,
+   "short_term_investments": 19649000000,
+   "debt": 32459000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1630,28 +2287,46 @@
    "ocf": 1808000000,
    "cash": 2561000000,
    "operating_income": null,
+   "short_term_investments": 16882000000,
+   "debt": 27824000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1671,28 +2346,46 @@
    "ocf": 3606000000,
    "cash": 3411000000,
    "operating_income": null,
+   "short_term_investments": 17531000000,
+   "debt": 30457000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1712,28 +2405,46 @@
    "ocf": 4737000000,
    "cash": 2094000000,
    "operating_income": null,
+   "short_term_investments": 12277000000,
+   "debt": 30437000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
-   "flags": [],
+   "flags": [
+    "debt:incomplete_sum"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
@@ -1753,26 +2464,42 @@
    "ocf": 6041000000,
    "cash": 2595000000,
    "operating_income": null,
+   "short_term_investments": 15255000000,
+   "debt": 35623000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1794,26 +2521,42 @@
    "ocf": 1584000000,
    "cash": 4057000000,
    "operating_income": null,
+   "short_term_investments": 10503000000,
+   "debt": 39622000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1835,26 +2578,42 @@
    "ocf": 3240000000,
    "cash": 2585000000,
    "operating_income": null,
+   "short_term_investments": 11748000000,
+   "debt": 37263000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1876,26 +2635,42 @@
    "ocf": 4889000000,
    "cash": 2779000000,
    "operating_income": null,
+   "short_term_investments": 14146000000,
+   "debt": 37575000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1917,26 +2692,42 @@
    "ocf": 7089000000,
    "cash": 1342000000,
    "operating_income": null,
+   "short_term_investments": 18650000000,
+   "debt": 37084000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -1958,26 +2749,42 @@
    "ocf": 1983000000,
    "cash": 2302000000,
    "operating_income": null,
+   "short_term_investments": 9119000000,
+   "debt": 36594000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2004,26 +2811,42 @@
    "ocf": 3847000000,
    "cash": 2704000000,
    "operating_income": null,
+   "short_term_investments": 10727000000,
+   "debt": 33197000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2050,26 +2873,42 @@
    "ocf": 5259000000,
    "cash": 3559000000,
    "operating_income": null,
+   "short_term_investments": 13680000000,
+   "debt": 37907000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2096,26 +2935,42 @@
    "ocf": 4738000000,
    "cash": 1139000000,
    "operating_income": null,
+   "short_term_investments": 17694000000,
+   "debt": 37685000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2144,26 +2999,42 @@
    "ocf": 1698000000,
    "cash": 1937000000,
    "operating_income": null,
+   "short_term_investments": 9682000000,
+   "debt": 40204000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2192,26 +3063,42 @@
    "ocf": 2611000000,
    "cash": 1784000000,
    "operating_income": null,
+   "short_term_investments": 11128000000,
+   "debt": 38307000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2240,26 +3127,42 @@
    "ocf": 4510000000,
    "cash": 2785000000,
    "operating_income": null,
+   "short_term_investments": 6302000000,
+   "debt": 38475000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2288,26 +3191,42 @@
    "ocf": 3769000000,
    "cash": 1121000000,
    "operating_income": null,
+   "short_term_investments": 8525000000,
+   "debt": 37417000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2338,26 +3257,42 @@
    "ocf": 3133000000,
    "cash": 2151000000,
    "operating_income": null,
+   "short_term_investments": 8199000000,
+   "debt": 36618000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2386,26 +3321,42 @@
    "ocf": 3555000000,
    "cash": 1801000000,
    "operating_income": null,
+   "short_term_investments": 20993000000,
+   "debt": 52010000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2436,26 +3387,42 @@
    "ocf": 2090000000,
    "cash": 1587000000,
    "operating_income": null,
+   "short_term_investments": 20325000000,
+   "debt": 51934000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2486,26 +3453,42 @@
    "ocf": 5625000000,
    "cash": 1786000000,
    "operating_income": null,
+   "short_term_investments": 10437000000,
+   "debt": 39135000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2536,26 +3519,42 @@
    "ocf": 4538000000,
    "cash": 1768000000,
    "operating_income": null,
+   "short_term_investments": 11899000000,
+   "debt": 39023000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2584,26 +3583,42 @@
    "ocf": 11299000000,
    "cash": 2372000000,
    "operating_income": null,
+   "short_term_investments": 19328000000,
+   "debt": 39041000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2632,26 +3647,42 @@
    "ocf": 10829000000,
    "cash": 1966000000,
    "operating_income": null,
+   "short_term_investments": 27730000000,
+   "debt": 38913000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain"
@@ -2682,26 +3713,42 @@
    "ocf": 5914000000,
    "cash": 1944000000,
    "operating_income": null,
+   "short_term_investments": 22014000000,
+   "debt": 37831000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "ocf:tag_basis_uncertain",
@@ -2735,26 +3782,42 @@
    "ocf": 6541000000,
    "cash": 2470000000,
    "operating_income": null,
+   "short_term_investments": 17337000000,
+   "debt": 35916000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2783,26 +3846,42 @@
    "ocf": 8170000000,
    "cash": 1780000000,
    "operating_income": null,
+   "short_term_investments": 25621000000,
+   "debt": 35570000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2831,26 +3910,42 @@
    "ocf": 5974000000,
    "cash": 1298000000,
    "operating_income": null,
+   "short_term_investments": 20176000000,
+   "debt": 35195000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2879,26 +3974,42 @@
    "ocf": 8582000000,
    "cash": 416000000,
    "operating_income": null,
+   "short_term_investments": 18743000000,
+   "debt": 35444000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "revenue:tag_basis_uncertain"
@@ -2931,26 +4042,42 @@
    "ocf": 1212000000,
    "cash": 2166000000,
    "operating_income": null,
+   "short_term_investments": 16118000000,
+   "debt": 35271000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -2983,26 +4110,42 @@
    "ocf": -1208000000,
    "cash": 2632000000,
    "operating_income": null,
+   "short_term_investments": 24091000000,
+   "debt": 64921000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3035,26 +4178,42 @@
    "ocf": 3456000000,
    "cash": 3148000000,
    "operating_income": null,
+   "short_term_investments": 26247000000,
+   "debt": 63308000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3087,26 +4246,42 @@
    "ocf": 5240000000,
    "cash": 2853000000,
    "operating_income": null,
+   "short_term_investments": 4400000000,
+   "debt": 63792000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [
     "revenue:tag_basis_uncertain"
@@ -3139,26 +4314,42 @@
    "ocf": 1090000000,
    "cash": 719000000,
    "operating_income": null,
+   "short_term_investments": 8217000000,
+   "debt": 62308000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3189,26 +4380,42 @@
    "ocf": -1781000000,
    "cash": 1052000000,
    "operating_income": null,
+   "short_term_investments": 4401000000,
+   "debt": 61251000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3239,26 +4446,42 @@
    "ocf": 6714000000,
    "cash": 1092000000,
    "operating_income": null,
+   "short_term_investments": 6849000000,
+   "debt": 61748000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3289,26 +4512,42 @@
    "ocf": 6721000000,
    "cash": 1043000000,
    "operating_income": null,
+   "short_term_investments": 10881000000,
+   "debt": 61152000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3339,26 +4578,42 @@
    "ocf": 2335000000,
    "cash": 1430000000,
    "operating_income": null,
+   "short_term_investments": 13952000000,
+   "debt": 61388000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3389,26 +4644,42 @@
    "ocf": -582000000,
    "cash": 1638000000,
    "operating_income": null,
+   "short_term_investments": 9525000000,
+   "debt": 61748000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3439,26 +4710,42 @@
    "ocf": 4603000000,
    "cash": 1343000000,
    "operating_income": null,
+   "short_term_investments": 10123000000,
+   "debt": 61656000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3489,26 +4776,42 @@
    "ocf": 5348000000,
    "cash": 1142000000,
    "operating_income": null,
+   "short_term_investments": 9183000000,
+   "debt": 64638000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "derived",
     "rnd": "derived",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3537,26 +4840,42 @@
    "ocf": 2615000000,
    "cash": 1703000000,
    "operating_income": null,
+   "short_term_investments": 8189000000,
+   "debt": 64426000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3585,26 +4904,42 @@
    "ocf": 835000000,
    "cash": 976000000,
    "operating_income": null,
+   "short_term_investments": 7281000000,
+   "debt": 63100000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "derived",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3635,26 +4970,42 @@
    "ocf": 13353000000,
    "cash": 3406000000,
    "operating_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3676,26 +5027,42 @@
    "ocf": 18238000000,
    "cash": 2122000000,
    "operating_income": null,
+   "short_term_investments": 21609000000,
+   "debt": 8900000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3717,26 +5084,42 @@
    "ocf": 16587000000,
    "cash": 1978000000,
    "operating_income": null,
+   "short_term_investments": 23991000000,
+   "debt": 43220000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3763,26 +5146,42 @@
    "ocf": 11454000000,
    "cash": 1735000000,
    "operating_income": null,
+   "short_term_investments": 26277000000,
+   "debt": 41912000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3815,26 +5214,42 @@
    "ocf": 20240000000,
    "cash": 3182000000,
    "operating_income": null,
+   "short_term_investments": 23270000000,
+   "debt": 34932000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3856,26 +5271,42 @@
    "ocf": 16746000000,
    "cash": 10081000000,
    "operating_income": null,
+   "short_term_investments": 22318000000,
+   "debt": 33485000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3904,26 +5335,42 @@
    "ocf": 17684000000,
    "cash": 2183000000,
    "operating_income": null,
+   "short_term_investments": 30225000000,
+   "debt": 32522000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "SalesRevenueNet",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3956,26 +5403,42 @@
    "ocf": 17084000000,
    "cash": 3343000000,
    "operating_income": null,
+   "short_term_investments": 32779000000,
+   "debt": 34552000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -3997,26 +5460,42 @@
    "ocf": 14688000000,
    "cash": 3641000000,
    "operating_income": null,
+   "short_term_investments": 19649000000,
+   "debt": 32459000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": null,
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": null,
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": null,
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4038,26 +5517,42 @@
    "ocf": 16192000000,
    "cash": 2595000000,
    "operating_income": null,
+   "short_term_investments": 15255000000,
+   "debt": 35623000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4079,26 +5574,42 @@
    "ocf": 16802000000,
    "cash": 1342000000,
    "operating_income": null,
+   "short_term_investments": 18650000000,
+   "debt": 37084000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4120,26 +5631,42 @@
    "ocf": 15827000000,
    "cash": 1139000000,
    "operating_income": null,
+   "short_term_investments": 17694000000,
+   "debt": 37685000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4166,26 +5693,42 @@
    "ocf": 12588000000,
    "cash": 1121000000,
    "operating_income": null,
+   "short_term_investments": 8525000000,
+   "debt": 37417000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_contracts_with_customers",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4214,26 +5757,42 @@
    "ocf": 14403000000,
    "cash": 1786000000,
    "operating_income": null,
+   "short_term_investments": 10437000000,
+   "debt": 39135000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "ShortTermInvestments",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4262,26 +5821,42 @@
    "ocf": 32580000000,
    "cash": 1944000000,
    "operating_income": null,
+   "short_term_investments": 22014000000,
+   "debt": 37831000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4312,26 +5887,42 @@
    "ocf": 29267000000,
    "cash": 416000000,
    "operating_income": null,
+   "short_term_investments": 18743000000,
+   "debt": 35444000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4362,26 +5953,42 @@
    "ocf": 8700000000,
    "cash": 2853000000,
    "operating_income": null,
+   "short_term_investments": 4400000000,
+   "debt": 63792000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4412,26 +6019,42 @@
    "ocf": 12744000000,
    "cash": 1043000000,
    "operating_income": null,
+   "short_term_investments": 10881000000,
+   "debt": 61152000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4462,26 +6085,42 @@
    "ocf": 11704000000,
    "cash": 1142000000,
    "operating_income": null,
+   "short_term_investments": 9183000000,
+   "debt": 64638000000,
+   "restricted_cash": null,
+   "opex": null,
    "source_tags": {
     "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": null
    },
    "source_basis": {
     "revenue": "reported",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null
+    "operating_income": null,
+    "short_term_investments": "reported",
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": null
    },
    "measurement_basis": {
     "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
-    "cash": null,
-    "operating_income": null
+    "cash": "cash_excluding_restricted",
+    "operating_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
    },
    "flags": [],
    "revenue_growth_yoy": {
@@ -4690,19 +6329,30 @@
    "label": "Cash",
    "kind": "instant",
    "candidates": [
-    "CashAndCashEquivalentsAtCarryingValue"
+    "CashAndCashEquivalentsAtCarryingValue",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
    ],
    "selection": "chain_order",
    "tags_available": [
-    "CashAndCashEquivalentsAtCarryingValue"
+    "CashAndCashEquivalentsAtCarryingValue",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
    ],
    "tags_used": [
     "CashAndCashEquivalentsAtCarryingValue"
    ],
    "primary_tag": "CashAndCashEquivalentsAtCarryingValue",
    "uses_fallback": false,
-   "measurement_bases": [],
-   "basis_segments": [],
+   "measurement_bases": [
+    "cash_excluding_restricted"
+   ],
+   "basis_segments": [
+    {
+     "basis": "cash_excluding_restricted",
+     "first_period_end": "2006-12-31",
+     "last_period_end": "2026-06-28",
+     "periods": 76
+    }
+   ],
    "basis_cutovers": [],
    "latest_period_end": "2026-06-28",
    "reference_period_end": "2026-06-28",
@@ -4739,6 +6389,139 @@
    "is_stale": false,
    "growth_yoy": {
     "name": "operating_income_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_inputs"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "short_term_investments": {
+   "label": "Short-term investments",
+   "kind": "instant",
+   "candidates": [
+    "ShortTermInvestments",
+    "MarketableSecuritiesCurrent",
+    "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "ShortTermInvestments",
+    "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+   ],
+   "tags_used": [
+    "ShortTermInvestments",
+    "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+   ],
+   "primary_tag": "ShortTermInvestments",
+   "uses_fallback": true,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-28",
+   "reference_period_end": "2026-06-28",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "short_term_investments_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "debt": {
+   "label": "Total debt",
+   "kind": "sum",
+   "candidates": [
+    "LongTermDebtNoncurrent",
+    "LongTermDebtCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "LongTermDebtNoncurrent + LongTermDebtCurrent"
+   ],
+   "tags_used": [
+    "LongTermDebtNoncurrent + LongTermDebtCurrent"
+   ],
+   "primary_tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-28",
+   "reference_period_end": "2026-06-28",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "debt_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "restricted_cash": {
+   "label": "Restricted cash",
+   "kind": "instant",
+   "candidates": [
+    "RestrictedCashAndCashEquivalentsAtCarryingValue",
+    "RestrictedCashAndCashEquivalents",
+    "RestrictedCash",
+    "RestrictedCashCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [],
+   "tags_used": [],
+   "primary_tag": "RestrictedCashAndCashEquivalentsAtCarryingValue",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": null,
+   "reference_period_end": "2026-06-28",
+   "staleness_days": null,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "restricted_cash_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_inputs"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "opex": {
+   "label": "Operating expenses",
+   "kind": "duration",
+   "candidates": [
+    "OperatingExpenses",
+    "CostsAndExpenses"
+   ],
+   "selection": "chain_order",
+   "tags_available": [],
+   "tags_used": [],
+   "primary_tag": "OperatingExpenses",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": null,
+   "reference_period_end": "2026-06-28",
+   "staleness_days": null,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "opex_growth_yoy",
     "value": null,
     "suppressed": true,
     "suppressed_by": [
@@ -5407,6 +7190,305 @@
     "near_misses": [
      "OtherOperatingIncomeExpenseNet"
     ]
+   }
+  },
+  {
+   "code": "fallback_tag",
+   "concept": "short_term_investments",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "ShortTermInvestments",
+    "tags_used": [
+     "ShortTermInvestments",
+     "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+    ],
+    "tag_spans": {
+     "ShortTermInvestments": [
+      "2008-12-31",
+      "2021-10-03"
+     ],
+     "AvailableForSaleSecuritiesDebtSecuritiesCurrent": [
+      "2021-12-31",
+      "2026-06-28"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_tags",
+   "concept": "short_term_investments",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "tag_spans": {
+     "ShortTermInvestments": [
+      "2008-12-31",
+      "2021-10-03"
+     ],
+     "AvailableForSaleSecuritiesDebtSecuritiesCurrent": [
+      "2021-12-31",
+      "2026-06-28"
+     ]
+    }
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2009-06-28",
+   "period_end": "2009-06-28",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2009-09-27",
+   "period_end": "2009-09-27",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2010-04-04",
+   "period_end": "2010-04-04",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2010-07-04",
+   "period_end": "2010-07-04",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2010-10-03",
+   "period_end": "2010-10-03",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2011-04-03",
+   "period_end": "2011-04-03",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2011-07-03",
+   "period_end": "2011-07-03",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2011-10-02",
+   "period_end": "2011-10-02",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2012-04-01",
+   "period_end": "2012-04-01",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2012-07-01",
+   "period_end": "2012-07-01",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2012-09-30",
+   "period_end": "2012-09-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2013-03-31",
+   "period_end": "2013-03-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2013-06-30",
+   "period_end": "2013-06-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2013-09-29",
+   "period_end": "2013-09-29",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2014-03-30",
+   "period_end": "2014-03-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2014-06-29",
+   "period_end": "2014-06-29",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2014-09-28",
+   "period_end": "2014-09-28",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2015-03-29",
+   "period_end": "2015-03-29",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2015-06-28",
+   "period_end": "2015-06-28",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2015-09-27",
+   "period_end": "2015-09-27",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2016-04-03",
+   "period_end": "2016-04-03",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2016-07-03",
+   "period_end": "2016-07-03",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2016-10-02",
+   "period_end": "2016-10-02",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "no_tag_resolved",
+   "concept": "restricted_cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "chain": [
+     "RestrictedCashAndCashEquivalentsAtCarryingValue",
+     "RestrictedCashAndCashEquivalents",
+     "RestrictedCash",
+     "RestrictedCashCurrent"
+    ],
+    "near_misses": []
+   }
+  },
+  {
+   "code": "no_tag_resolved",
+   "concept": "opex",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "chain": [
+     "OperatingExpenses",
+     "CostsAndExpenses"
+    ],
+    "near_misses": []
    }
   }
  ],

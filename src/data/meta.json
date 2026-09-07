@@ -1,14 +1,17 @@
 {
- "generated_at": "2026-09-07T01:34:57Z",
+ "generated_at": "2026-09-07T03:30:45Z",
  "universe_size": 10,
  "sources": {
   "edgar": {
-   "fetched_at": "2026-09-07T01:34:57Z",
+   "fetched_at": "2026-09-07T03:30:45Z",
    "companies_ok": 10,
    "companies_failed": []
   },
   "clinicaltrials": null,
   "openfda": null
  },
- "pipeline_version": "1.0.0"
+ "pipeline_version": "1.0.0",
+ "thresholds": {
+  "growth_floor_usd": 50000000.0
+ }
 }

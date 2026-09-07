@@ -28,9 +28,11 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 from sources.edgar import Company, EdgarClient, load_universe
+from transform.derive import GROWTH_FLOOR, all_metrics
 from transform.fundamentals import (
     CONCEPT_CHAINS,
-    M2_CONCEPTS,
+
+    M3_CONCEPTS,
     PERIODIC_FORMS,
     QuarterlySeries,
     annual_series,
@@ -48,10 +50,10 @@ DEFAULT_UNIVERSE = HERE / "universe.yaml"
 DEFAULT_CACHE = HERE / "cache"
 DEFAULT_OUT = REPO_ROOT / "src" / "data"
 
-#: SPEC §6 metrics that need work not yet done. Named explicitly so the null is
-#: visibly deliberate rather than an oversight.
-UNCOMPUTED_METRICS = (
+#: SPEC §6 metrics computed from fundamentals alone, all live as of M3.
+DERIVED_METRICS = (
     "operating_margin",
+    "ocf_margin",
     "net_cash",
     "cash_runway_quarters",
     "rnd_intensity",
@@ -298,20 +300,22 @@ def period_rows(
 
 
 def screener_record(
-    company: Company, series_by_concept: Mapping[str, QuarterlySeries], flags: Sequence[str]
+    company: Company,
+    series_by_concept: Mapping[str, QuarterlySeries],
+    flags: Sequence[str],
+    metrics: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """The flat per-company record for SPEC §7's `screener.json`."""
     revenue = series_by_concept["revenue"]
-    rnd = series_by_concept["rnd"]
-    ocf = series_by_concept["ocf"]
-    cash = series_by_concept["cash"]
+    metrics = metrics or {}
 
-    def ttm(series: QuarterlySeries) -> int | float | None:
-        value = series.trailing_twelve_months()
+    def ttm(name: str) -> int | float | None:
+        series = series_by_concept.get(name)
+        value = series.trailing_twelve_months() if series else None
         return number(value.val) if value else None
 
-    growth = revenue.growth()
-    latest_cash = cash.values[-1] if cash.values else None
+    cash_series = series_by_concept.get("cash")
+    latest_cash = cash_series.values[-1] if cash_series and cash_series.values else None
 
     record: dict[str, Any] = {
         "ticker": company.ticker,
@@ -320,13 +324,20 @@ def screener_record(
         "subsector": company.subsector,
         "therapeutic_focus": list(company.therapeutic_focus),
         "fiscal_period_end": iso(revenue.latest_period_end),
-        "revenue_ttm": ttm(revenue),
-        "revenue_growth_yoy": growth.value,
-        "rnd_ttm": ttm(rnd),
-        "ocf_ttm": ttm(ocf),
+        "revenue_ttm": ttm("revenue"),
+        "rnd_ttm": ttm("rnd"),
+        "ocf_ttm": ttm("ocf"),
+        "operating_income_ttm": ttm("operating_income"),
         "cash": number(latest_cash.val) if latest_cash else None,
     }
-    for key in UNCOMPUTED_METRICS + UNCOMPUTED_PIPELINE_METRICS:
+
+    # Derived metrics travel with the reasons they are null, so the screener can
+    # show "n/m" or a suppression note rather than an unexplained blank.
+    record["revenue_growth_yoy"] = metrics.get("revenue_growth_yoy")
+    for key in DERIVED_METRICS:
+        record[key] = metrics.get(key)
+
+    for key in UNCOMPUTED_PIPELINE_METRICS:
         record[key] = None
     record["data_quality_flags"] = list(flags)
     return record
@@ -335,7 +346,7 @@ def screener_record(
 def company_document(
     company: Company,
     companyfacts: Mapping[str, Any],
-    concepts: Sequence[str] = M2_CONCEPTS,
+    concepts: Sequence[str] = M3_CONCEPTS,
 ) -> dict[str, Any]:
     """The full per-company record: SPEC §7's screener fields plus the detail."""
     table = build_quarterly_table(companyfacts, concepts)
@@ -351,7 +362,8 @@ def company_document(
         for value in annual[name].values
     }
 
-    document = screener_record(company, quarterly, table.flags)
+    metrics = {name: result.to_dict() for name, result in all_metrics(quarterly).items()}
+    document = screener_record(company, quarterly, table.flags, metrics)
 
     used_accns = {
         accn
@@ -458,6 +470,7 @@ def run(
                 "openfda": None,
             },
             "pipeline_version": PIPELINE_VERSION,
+            "thresholds": {"growth_floor_usd": GROWTH_FLOOR},
         },
     )
 
@@ -478,8 +491,9 @@ _SCREENER_KEYS = (
     "revenue_growth_yoy",
     "rnd_ttm",
     "ocf_ttm",
+    "operating_income_ttm",
     "cash",
-    *UNCOMPUTED_METRICS,
+    *DERIVED_METRICS,
     *UNCOMPUTED_PIPELINE_METRICS,
     "data_quality_flags",
 )

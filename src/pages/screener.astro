@@ -1,0 +1,245 @@
+---
+/**
+ * The screener (SPEC §8). One interactive island; everything else is static.
+ *
+ * The whole dataset ships with the page, so filtering and sorting never touch
+ * the network. `client:load` rather than `client:visible` because the table is
+ * the page — there is nothing to see before it hydrates.
+ */
+import Base from "../layouts/Base.astro";
+import Screener from "../components/Screener.tsx";
+import meta from "../data/meta.json";
+import screener from "../data/screener.json";
+---
+
+<Base title="Screener">
+  <p class="muted"><a href="/companies/">Company pages</a> · <a href="/methodology/">Methodology</a></p>
+
+  <h1>Screener</h1>
+  <p class="muted">
+    {screener.companies.length} US-listed healthcare companies. Data as of {meta.generated_at},
+    pipeline version {meta.pipeline_version}. All filtering and sorting happens in your browser.
+  </p>
+
+  <Screener
+    client:load
+    companies={screener.companies}
+    generatedAt={meta.generated_at}
+    growthFloor={meta.thresholds.growth_floor_usd}
+  />
+
+  <style is:global>
+    .screener .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+      gap: 0.75rem 1.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .screener fieldset {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 0;
+      padding: 0.5rem 0 0;
+      min-width: 0;
+    }
+
+    .screener legend {
+      padding: 0;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .screener .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      max-height: 11rem;
+      overflow-y: auto;
+      font-size: 13px;
+    }
+
+    .screener .options label {
+      display: flex;
+      gap: 0.4rem;
+      align-items: baseline;
+      cursor: pointer;
+    }
+
+    .screener .hint {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin: 0.4rem 0 0;
+      max-width: none;
+    }
+
+    .screener .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1.25rem;
+      padding: 0.6rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .screener .presets {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .screener button {
+      font: inherit;
+      font-size: 13px;
+      background: none;
+      border: 1px solid var(--rule);
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    .screener button:hover {
+      background: var(--field);
+    }
+
+    .screener .preset.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .screener .count {
+      margin: 0;
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    .screener .actions {
+      margin-left: auto;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .screener .notice,
+    .screener .empty {
+      background: var(--field);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      font-size: 13px;
+      max-width: none;
+    }
+
+    /* Sticky header and ticker column: the table has to survive 60 rows. */
+    .screener .table-scroll {
+      max-height: 70vh;
+      overflow: auto;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .screener table {
+      margin: 0;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .screener thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--paper);
+      border-bottom: 1px solid var(--ink);
+      padding: 0;
+    }
+
+    .screener .sticky-col {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: var(--paper);
+      border-right: 1px solid var(--rule);
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .screener thead .sticky-col {
+      z-index: 3;
+    }
+
+    .screener tbody tr:nth-child(even) th.sticky-col,
+    .screener tbody tr:nth-child(even) td {
+      background: var(--field);
+    }
+
+    .screener th.num button {
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    .screener .sort {
+      border: 0;
+      padding: 0.4rem 0.6rem;
+      display: flex;
+      gap: 0.3rem;
+      align-items: baseline;
+      white-space: nowrap;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .screener .sort.active {
+      text-decoration: underline;
+    }
+
+    .screener .unit {
+      font-weight: 400;
+      color: var(--ink-muted);
+      font-size: 11px;
+    }
+
+    .screener .arrow {
+      font-size: 10px;
+      width: 0.7em;
+    }
+
+    .screener td,
+    .screener tbody th {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0.6rem;
+      font-size: 13px;
+    }
+
+    .screener .flagged {
+      cursor: help;
+      border-bottom: 1px dotted var(--ink-muted);
+    }
+
+    .screener .marker {
+      color: #9b2c2c;
+      font-weight: 700;
+      padding-left: 0.15em;
+    }
+
+    .screener :focus-visible {
+      outline: 2px solid #0f7a6b;
+      outline-offset: 1px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</Base>

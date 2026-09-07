@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-07T01:34:57Z",
+ "generated_at": "2026-09-07T03:30:45Z",
  "companies": [
   {
    "ticker": "MRNA",
@@ -13,14 +13,87 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 2228000000,
-   "revenue_growth_yoy": -0.2761533463287849,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.2761533463287849,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 2876000000,
    "ocf_ttm": -1073000000,
+   "operating_income_ttm": -3320000000,
    "cash": 1723000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -1.4901256732495511,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.48159784560143626,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 4547000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 7.007159904534606,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 1.2908438061041292,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -30,7 +103,13 @@
     "revenue:fallback_tag",
     "revenue:mixed_tags",
     "revenue:mixed_measurement_basis",
-    "revenue:basis_cutover"
+    "revenue:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "opex:fallback_tag",
+    "opex:mixed_tags"
    ]
   },
   {
@@ -44,14 +123,87 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 413796000,
-   "revenue_growth_yoy": -0.6164002083955213,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.6164002083955213,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 340315000,
    "ocf_ttm": -36901000,
+   "operating_income_ttm": -234124000,
    "cash": 191458000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.565795706096724,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.08917679242911966,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 427850000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 11.395078987283622,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.8224221597115486,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -59,7 +211,10 @@
    "clinical_momentum": null,
    "data_quality_flags": [
     "ocf:chain_tags_diverge",
-    "ocf:basis_cutover"
+    "ocf:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "opex:fallback_tag"
    ]
   },
   {
@@ -74,14 +229,91 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 770200000,
-   "revenue_growth_yoy": null,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 45300000,
    "ocf_ttm": 97700000,
+   "operating_income_ttm": -66000000,
    "cash": 139700000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.08569202804466372,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.12685016878732797,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -442100000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.058815891976110105,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -97,7 +329,12 @@
     "rnd:fy_reconciliation_failed",
     "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
-    "operating_income:fy_reconciliation_failed"
+    "operating_income:fy_reconciliation_failed",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "opex:stale_series"
    ]
   },
   {
@@ -112,20 +349,101 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 303227000,
-   "revenue_growth_yoy": 14.959315789473685,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_meaningful_small_base"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 484017000,
    "ocf_ttm": -202506000,
+   "operating_income_ttm": -280187000,
    "cash": 278729000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.9240173203573561,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.6678363074528324,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 528593000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 4.707412536345784,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 1.5962199936021528,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
    "pipeline_concentration": null,
    "clinical_momentum": null,
-   "data_quality_flags": []
+   "data_quality_flags": [
+    "cash:basis_cutover",
+    "operating_income:chain_tags_diverge",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "opex:fallback_tag",
+    "opex:mixed_tags"
+   ]
   },
   {
    "ticker": "PFE",
@@ -140,14 +458,88 @@
    ],
    "fiscal_period_end": "2026-06-28",
    "revenue_ttm": 63696000000,
-   "revenue_growth_yoy": -0.002146225306659565,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.002146225306659565,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-29",
+     "2024-12-31",
+     "2025-03-30",
+     "2025-06-29",
+     "2025-09-28",
+     "2025-12-31",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
    "rnd_ttm": 11051000000,
    "ocf_ttm": 13401000000,
+   "operating_income_ttm": null,
    "cash": 976000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.21038997739261492,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -54843000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2025-09-28",
+     "2025-12-31",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.17349598090931925,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -165,7 +557,12 @@
     "rnd:fy_reconciliation_failed",
     "rnd:overlapping_periods",
     "ocf:chain_tags_diverge",
-    "operating_income:no_tag_resolved"
+    "operating_income:no_tag_resolved",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:no_tag_resolved"
    ]
   },
   {
@@ -180,14 +577,90 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 66569000000,
-   "revenue_growth_yoy": 0.04641913983903421,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.04641913983903421,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 30453000000,
    "ocf_ttm": 19967000000,
+   "operating_income_ttm": null,
    "cash": 6849000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.29994441857320975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -43940000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.4574651864982199,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -202,7 +675,12 @@
     "ocf:mixed_measurement_basis",
     "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
-    "operating_income:no_tag_resolved"
+    "operating_income:no_tag_resolved",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:no_tag_resolved"
    ]
   },
   {
@@ -218,14 +696,92 @@
    ],
    "fiscal_period_end": "2026-06-28",
    "revenue_ttm": 97929000000,
-   "revenue_growth_yoy": 0.08057201496242841,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.08057201496242841,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-29",
+     "2024-12-29",
+     "2025-03-30",
+     "2025-06-29",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
    "rnd_ttm": 15104000000,
    "ocf_ttm": 27608000000,
+   "operating_income_ttm": 21767000000,
    "cash": 20422000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2819185328145902,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -16586000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.15423419007648398,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -237,7 +793,13 @@
     "rnd:fallback_tag",
     "rnd:fy_reconciliation_failed",
     "rnd:chain_tags_diverge",
-    "operating_income:stale_series"
+    "operating_income:stale_series",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "restricted_cash:stale_series",
+    "opex:no_tag_resolved"
    ]
   },
   {
@@ -253,14 +815,91 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 30457000000,
-   "revenue_growth_yoy": 0.05522641444063334,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05522641444063334,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 6066000000,
    "ocf_ttm": 13552000000,
-   "cash": 5412000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_income_ttm": -2497000000,
+   "cash": 3179000000,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.08198443707522081,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.4449551827166169,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -23067000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.19916603736415275,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -277,7 +916,15 @@
     "rnd:fy_reconciliation_failed",
     "rnd:chain_tags_diverge",
     "rnd:basis_cutover",
-    "cash:stale_series"
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "operating_income:chain_tags_diverge",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
    ]
   },
   {
@@ -292,14 +939,88 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 12587200000,
-   "revenue_growth_yoy": 0.10232248572529513,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10232248572529513,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 3906800000,
    "ocf_ttm": 4292900000,
+   "operating_income_ttm": 4777100000,
    "cash": 6143500000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.379520465234524,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.3410528155586628,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 7852400000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.31037879750858016,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -315,7 +1036,13 @@
     "rnd:chain_tags_diverge",
     "rnd:basis_cutover",
     "ocf:basis_cutover",
-    "operating_income:fy_reconciliation_failed"
+    "operating_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "opex:fallback_tag",
+    "opex:fy_reconciliation_failed"
    ]
   },
   {
@@ -330,14 +1057,96 @@
    ],
    "fiscal_period_end": "2026-06-30",
    "revenue_ttm": 23250000000,
-   "revenue_growth_yoy": null,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
    "rnd_ttm": 1372000000,
    "ocf_ttm": null,
+   "operating_income_ttm": 2482000000,
    "cash": 708000000,
-   "operating_margin": null,
-   "net_cash": null,
-   "cash_runway_quarters": null,
-   "rnd_intensity": null,
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -12803000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
    "active_trials": null,
    "phase_3_trials": null,
    "pipeline_depth_score": null,
@@ -351,7 +1160,12 @@
     "ocf:mixed_measurement_basis",
     "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
-    "operating_income:fy_reconciliation_failed"
+    "operating_income:fy_reconciliation_failed",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag",
+    "opex:fy_reconciliation_failed"
    ]
   }
  ]

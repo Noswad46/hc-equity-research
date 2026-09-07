@@ -16,7 +16,7 @@ from transform.fundamentals import (
     ConceptKind,
     Basis,
     FundamentalsError,
-    UnsupportedConcept,
+
     build_quarterly_table,
     discrete_quarters,
     extract_facts,
@@ -443,10 +443,67 @@ def test_unknown_concept_is_rejected(ytd_only):
         quarterly_series(ytd_only, "ebitda")
 
 
-def test_summed_concepts_are_still_unimplemented(ytd_only):
+def test_summed_concepts_add_their_components():
     """Total debt is `LongTermDebtNoncurrent + LongTermDebtCurrent`, not a chain."""
-    with pytest.raises(UnsupportedConcept):
-        quarterly_series(ytd_only, "debt")
+    def instant(tag, val):
+        return {"units": {"USD": [
+            {"end": "2026-06-30", "val": val, "form": "10-Q", "accn": tag, "filed": "2026-08-01"}
+        ]}}
+
+    series = quarterly_series(
+        {"facts": {"us-gaap": {
+            "LongTermDebtNoncurrent": instant("a", 900 * M),
+            "LongTermDebtCurrent": instant("b", 100 * M),
+        }}},
+        "debt",
+    )
+
+    assert series.values[-1].val == 1_000 * M
+    assert series.values[-1].contributing_tags == ("LongTermDebtNoncurrent", "LongTermDebtCurrent")
+    assert "debt:incomplete_sum" not in series.flags
+
+
+def test_a_missing_debt_component_is_flagged():
+    """A filer with no current maturities and one that failed to tag them look alike."""
+    series = quarterly_series(
+        {"facts": {"us-gaap": {"LongTermDebtNoncurrent": {"units": {"USD": [
+            {"end": "2026-06-30", "val": 900 * M, "form": "10-Q", "accn": "a", "filed": "2026-08-01"}
+        ]}}}}},
+        "debt",
+    )
+
+    assert series.values[-1].val == 900 * M
+    assert "incomplete_sum" in series.values[-1].flags
+
+
+def test_debt_aggregate_stands_in_when_no_component_is_tagged():
+    """Novavax tags `LongTermDebt` and neither split; the aggregate must not double-count."""
+    series = quarterly_series(
+        {"facts": {"us-gaap": {"LongTermDebt": {"units": {"USD": [
+            {"end": "2026-06-30", "val": 291 * M, "form": "10-Q", "accn": "a", "filed": "2026-08-01"}
+        ]}}}}},
+        "debt",
+    )
+
+    assert series.values[-1].val == 291 * M
+
+
+def test_debt_aggregate_is_ignored_where_components_exist():
+    def instant(tag, val):
+        return {"units": {"USD": [
+            {"end": "2026-06-30", "val": val, "form": "10-Q", "accn": tag, "filed": "2026-08-01"}
+        ]}}
+
+    series = quarterly_series(
+        {"facts": {"us-gaap": {
+            "LongTermDebtNoncurrent": instant("a", 900 * M),
+            "LongTermDebtCurrent": instant("b", 100 * M),
+            "LongTermDebt": instant("c", 1000 * M),
+        }}},
+        "debt",
+    )
+
+    assert series.values[-1].val == 1_000 * M  # not 2,000M
 
 
 @pytest.mark.parametrize("concept", ["cash", "short_term_investments"])
