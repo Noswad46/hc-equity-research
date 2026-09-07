@@ -1,0 +1,5582 @@
+{
+ "ticker": "GILD",
+ "cik": "0000882095",
+ "name": "Gilead Sciences, Inc.",
+ "subsector": "commercial_biotech",
+ "therapeutic_focus": [
+  "infectious_disease",
+  "hiv",
+  "hepatitis",
+  "oncology"
+ ],
+ "fiscal_period_end": "2026-06-30",
+ "revenue_ttm": 30457000000,
+ "revenue_growth_yoy": 0.05522641444063334,
+ "rnd_ttm": 6066000000,
+ "ocf_ttm": 13552000000,
+ "cash": 5412000000,
+ "operating_margin": null,
+ "net_cash": null,
+ "cash_runway_quarters": null,
+ "rnd_intensity": null,
+ "active_trials": null,
+ "phase_3_trials": null,
+ "pipeline_depth_score": null,
+ "pipeline_concentration": null,
+ "clinical_momentum": null,
+ "data_quality_flags": [
+  "revenue:fallback_tag",
+  "revenue:mixed_tags",
+  "revenue:mixed_measurement_basis",
+  "revenue:basis_cutover",
+  "rnd:fallback_tag",
+  "rnd:mixed_tags",
+  "rnd:mixed_measurement_basis",
+  "rnd:fy_reconciliation_failed",
+  "rnd:chain_tags_diverge",
+  "rnd:basis_cutover",
+  "cash:stale_series"
+ ],
+ "entity_name": "GILEAD SCIENCES, INC.",
+ "taxonomies": [
+  "dei",
+  "ffd",
+  "invest",
+  "us-gaap"
+ ],
+ "quarterly": [
+  {
+   "period_start": "2006-12-31",
+   "period_end": "2006-12-31",
+   "revenue": null,
+   "rnd": null,
+   "ocf": null,
+   "cash": 816007000,
+   "operating_income": null,
+   "source_tags": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": null
+   },
+   "source_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "reported",
+    "operating_income": null
+   },
+   "measurement_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2007-12-31",
+   "period_end": "2007-12-31",
+   "revenue": null,
+   "rnd": null,
+   "ocf": null,
+   "cash": 968086000,
+   "operating_income": null,
+   "source_tags": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": null
+   },
+   "source_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "reported",
+    "operating_income": null
+   },
+   "measurement_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2008-04-01",
+   "period_end": "2008-06-30",
+   "revenue": 1278125000,
+   "rnd": 176542000,
+   "ocf": null,
+   "cash": 1119599000,
+   "operating_income": 605515000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": null,
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": null,
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2008-07-01",
+   "period_end": "2008-09-30",
+   "revenue": 1371268000,
+   "rnd": 188062000,
+   "ocf": 518516000,
+   "cash": 1209424000,
+   "operating_income": 693834000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2008-10-01",
+   "period_end": "2008-12-31",
+   "revenue": 1428205000,
+   "rnd": 201863000,
+   "ocf": 578287000,
+   "cash": 1459302000,
+   "operating_income": 711146000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2009-01-01",
+   "period_end": "2009-03-31",
+   "revenue": 1530460000,
+   "rnd": 188779000,
+   "ocf": 641330000,
+   "cash": 1663646000,
+   "operating_income": 808316000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2008-06-30",
+     "2008-09-30",
+     "2008-12-31",
+     "2009-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2009-04-01",
+   "period_end": "2009-06-30",
+   "revenue": 1647155000,
+   "rnd": 241638000,
+   "ocf": 622917000,
+   "cash": 1040874000,
+   "operating_income": 761061000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2008-09-30",
+     "2008-12-31",
+     "2009-03-31",
+     "2009-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2009-07-01",
+   "period_end": "2009-09-30",
+   "revenue": 1801389000,
+   "rnd": 269856000,
+   "ocf": 860531000,
+   "cash": 1024599000,
+   "operating_income": 894406000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2008-12-31",
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2009-10-01",
+   "period_end": "2009-12-31",
+   "revenue": 2032379000,
+   "rnd": 239645000,
+   "ocf": 955276000,
+   "cash": 1272958000,
+   "operating_income": 1065438000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2010-01-01",
+   "period_end": "2010-03-31",
+   "revenue": 2085853000,
+   "rnd": 218664000,
+   "ocf": 670569000,
+   "cash": 936880000,
+   "operating_income": 1161141000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.34926849900625134,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2008-06-30",
+     "2008-09-30",
+     "2008-12-31",
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2010-04-01",
+   "period_end": "2010-06-30",
+   "revenue": 1927224000,
+   "rnd": 231066000,
+   "ocf": 699079000,
+   "cash": 1482639000,
+   "operating_income": 992627000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.3128207247408772,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2008-09-30",
+     "2008-12-31",
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2010-07-01",
+   "period_end": "2010-09-30",
+   "revenue": 1937656000,
+   "rnd": 230440000,
+   "ocf": 739422000,
+   "cash": 1022993000,
+   "operating_income": 979073000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.2459577953520792,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2008-12-31",
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2010-10-01",
+   "period_end": "2010-12-31",
+   "revenue": 1998687000,
+   "rnd": 392760000,
+   "ocf": 724843000,
+   "cash": 907879000,
+   "operating_income": 829381000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.13378772775642123,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2011-01-01",
+   "period_end": "2011-03-31",
+   "revenue": 1926094000,
+   "rnd": 254446000,
+   "ocf": 820542000,
+   "cash": 1835978000,
+   "operating_income": 901969000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.02945574178487641,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2011-04-01",
+   "period_end": "2011-06-30",
+   "revenue": 2137253000,
+   "rnd": 282403000,
+   "ocf": 943255000,
+   "cash": 905779000,
+   "operating_income": 1016718000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.019478529268769806,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2011-07-01",
+   "period_end": "2011-09-30",
+   "revenue": 2121660000,
+   "rnd": 290066000,
+   "ocf": 897106000,
+   "cash": 909359000,
+   "operating_income": 1003678000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.025125790543838043,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2011-10-01",
+   "period_end": "2011-12-31",
+   "revenue": 2200378000,
+   "rnd": 402236000,
+   "ocf": 978107000,
+   "cash": 9884000000,
+   "operating_income": 867476000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05484236585813808,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2012-01-01",
+   "period_end": "2012-03-31",
+   "revenue": 2282449000,
+   "rnd": 458211000,
+   "ocf": 452969000,
+   "cash": 1451942000,
+   "operating_income": 800186000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.12222341896521556,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2012-04-01",
+   "period_end": "2012-06-30",
+   "revenue": 2405186000,
+   "rnd": 396244000,
+   "ocf": 1290651000,
+   "cash": 1625500000,
+   "operating_income": 1059092000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.12625276729473267,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2012-07-01",
+   "period_end": "2012-09-30",
+   "revenue": 2426597000,
+   "rnd": 465831000,
+   "ocf": 745368000,
+   "cash": 1550710000,
+   "operating_income": 1043914000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.1381913839886975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2012-10-01",
+   "period_end": "2012-12-31",
+   "revenue": 2588285000,
+   "rnd": 439714000,
+   "ocf": 706012000,
+   "cash": 1804000000,
+   "operating_income": 1106808000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.15707471988465646,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2013-01-01",
+   "period_end": "2013-03-31",
+   "revenue": 2532000000,
+   "rnd": 497632000,
+   "ocf": 672101000,
+   "cash": 1863972000,
+   "operating_income": 1025259000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.13845390048205505,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2013-04-01",
+   "period_end": "2013-06-30",
+   "revenue": 2767000000,
+   "rnd": 523902000,
+   "ocf": 953004000,
+   "cash": 2202176000,
+   "operating_income": 1153838000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.14475653000946873,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2013-07-01",
+   "period_end": "2013-09-30",
+   "revenue": 2783000000,
+   "rnd": 546244000,
+   "ocf": 753096000,
+   "cash": 2010736000,
+   "operating_income": 1147861000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.14554286223470442,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2013-10-01",
+   "period_end": "2013-12-31",
+   "revenue": 3120000000,
+   "rnd": 552222000,
+   "ocf": 726799000,
+   "cash": 2113000000,
+   "operating_income": 1197042000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.1545457740501769,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2014-01-01",
+   "period_end": "2014-03-31",
+   "revenue": 4999000000,
+   "rnd": 595000000,
+   "ocf": 1568000000,
+   "cash": 6404000000,
+   "operating_income": 3043000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.37348338053960245,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2014-04-01",
+   "period_end": "2014-06-30",
+   "revenue": 6535000000,
+   "rnd": 584000000,
+   "ocf": 4185000000,
+   "cash": 8731000000,
+   "operating_income": 4412000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.6906340406066309,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2014-07-01",
+   "period_end": "2014-09-30",
+   "revenue": 6042000000,
+   "rnd": 630000000,
+   "ocf": 4044000000,
+   "cash": 6209000000,
+   "operating_income": 3480000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.9395920540079294,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2014-10-01",
+   "period_end": "2014-12-31",
+   "revenue": 7314000000,
+   "rnd": 1045000000,
+   "ocf": 3021000000,
+   "cash": 10027000000,
+   "operating_income": 4330000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 1.221924656311373,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2015-01-01",
+   "period_end": "2015-03-31",
+   "revenue": 7594000000,
+   "rnd": 696000000,
+   "ocf": 5701000000,
+   "cash": 10635000000,
+   "operating_income": 5371000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 1.0107542614675544,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2015-04-01",
+   "period_end": "2015-06-30",
+   "revenue": 8244000000,
+   "rnd": 818000000,
+   "ocf": 5658000000,
+   "cash": 7417000000,
+   "operating_income": 5616000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.674255892642083,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2015-07-01",
+   "period_end": "2015-09-30",
+   "revenue": 8295000000,
+   "rnd": 743000000,
+   "ocf": 4096000000,
+   "cash": 13965000000,
+   "operating_income": 5585000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.5194723618090452,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2015-10-01",
+   "period_end": "2015-12-31",
+   "revenue": 8506000000,
+   "rnd": 757000000,
+   "ocf": 5795000000,
+   "cash": 12851000000,
+   "operating_income": 5621000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.31132985134592206,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2016-01-01",
+   "period_end": "2016-03-31",
+   "revenue": 7794000000,
+   "rnd": 1265000000,
+   "ocf": 4130000000,
+   "cash": 6315000000,
+   "operating_income": 4651000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.19479716208841186,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2016-04-01",
+   "period_end": "2016-06-30",
+   "revenue": 7776000000,
+   "rnd": 1484000000,
+   "ocf": 4985000000,
+   "cash": 6485000000,
+   "operating_income": 4538000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10882373090361033,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2016-07-01",
+   "period_end": "2016-09-30",
+   "revenue": 7500000000,
+   "rnd": 1141000000,
+   "ocf": 4393000000,
+   "cash": 9809000000,
+   "operating_income": 4399000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.004102140108754412,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2016-10-01",
+   "period_end": "2016-12-31",
+   "revenue": 7320000000,
+   "rnd": 1208000000,
+   "ocf": 3539000000,
+   "cash": 8229000000,
+   "operating_income": 4045000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.06890529734366861,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2017-01-01",
+   "period_end": "2017-03-31",
+   "revenue": 6505000000,
+   "rnd": 931000000,
+   "ocf": 2925000000,
+   "cash": 10285000000,
+   "operating_income": 3767000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.11382807028228631,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2017-04-01",
+   "period_end": "2017-06-30",
+   "revenue": 7141000000,
+   "rnd": 864000000,
+   "ocf": 3526000000,
+   "cash": 8712000000,
+   "operating_income": 4254000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.12063266503969602,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2017-07-01",
+   "period_end": "2017-09-30",
+   "revenue": 6512000000,
+   "rnd": 789000000,
+   "ocf": 2694000000,
+   "cash": 11508000000,
+   "operating_income": 3812000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.12978211299721307,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2017-10-01",
+   "period_end": "2017-12-31",
+   "revenue": 5949000000,
+   "rnd": 1150000000,
+   "ocf": 2753000000,
+   "cash": 7588000000,
+   "operating_income": 2291000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.14093451793353076,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2018-01-01",
+   "period_end": "2018-03-31",
+   "revenue": 5088000000,
+   "rnd": 937000000,
+   "ocf": 2270000000,
+   "cash": 7643000000,
+   "operating_income": 2153000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.15157554723205388,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2018-04-01",
+   "period_end": "2018-06-30",
+   "revenue": 5648000000,
+   "rnd": 1192000000,
+   "ocf": 1573000000,
+   "cash": 13234000000,
+   "operating_income": 2280000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.1850980116630366,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2018-07-01",
+   "period_end": "2018-09-30",
+   "revenue": 5596000000,
+   "rnd": 939000000,
+   "ocf": 2212000000,
+   "cash": 14569000000,
+   "operating_income": 2623000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.18913312468156343,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2018-10-01",
+   "period_end": "2018-12-31",
+   "revenue": 5795000000,
+   "rnd": 1950000000,
+   "ocf": 2345000000,
+   "cash": 17940000000,
+   "operating_income": 1144000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:tag_basis_uncertain"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.15244953460757651,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-01-01",
+   "period_end": "2019-03-31",
+   "revenue": 5281000000,
+   "rnd": 1057000000,
+   "ocf": 1577000000,
+   "cash": 16927000000,
+   "operating_income": 2237000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.0959902794653706,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-04-01",
+   "period_end": "2019-06-30",
+   "revenue": 5685000000,
+   "rnd": 1160000000,
+   "ocf": 2342000000,
+   "cash": 11240000000,
+   "operating_income": 2430000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.03621157908350218,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-07-01",
+   "period_end": "2019-09-30",
+   "revenue": 5604000000,
+   "rnd": 4990000000,
+   "ocf": 2645000000,
+   "cash": null,
+   "operating_income": -1473000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.003770028275212064,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-10-01",
+   "period_end": "2019-12-31",
+   "revenue": 5879000000,
+   "rnd": 1899000000,
+   "ocf": 2580000000,
+   "cash": 11631000000,
+   "operating_income": 1093000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:tag_basis_uncertain"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.014552356849098386,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-01-01",
+   "period_end": "2020-03-31",
+   "revenue": 5548000000,
+   "rnd": 1101000000,
+   "ocf": 1436000000,
+   "cash": null,
+   "operating_income": 2402000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.017741935483870968,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-04-01",
+   "period_end": "2020-06-30",
+   "revenue": 5143000000,
+   "rnd": 1299000000,
+   "ocf": 2566000000,
+   "cash": null,
+   "operating_income": -2983000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.008185355816970077,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-07-01",
+   "period_end": "2020-09-30",
+   "revenue": 6577000000,
+   "rnd": 1158000000,
+   "ocf": 2250000000,
+   "cash": null,
+   "operating_income": 2001000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.03496534764140398,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-10-01",
+   "period_end": "2020-12-31",
+   "revenue": 7421000000,
+   "rnd": 1466000000,
+   "ocf": 1916000000,
+   "cash": 5997000000,
+   "operating_income": 2651000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09978172747115685,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "revenue": 6423000000,
+   "rnd": 1055000000,
+   "ocf": 2610000000,
+   "cash": null,
+   "operating_income": 2890000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:restated_fiscal_year"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.12537418559605565,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "revenue": 6217000000,
+   "rnd": 1092000000,
+   "ocf": 2316000000,
+   "cash": null,
+   "operating_income": 2246000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:restated_fiscal_year"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.20131685758095066,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-07-01",
+   "period_end": "2021-09-30",
+   "revenue": 7421000000,
+   "rnd": 1101000000,
+   "ocf": 3253000000,
+   "cash": null,
+   "operating_income": 3842000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:restated_fiscal_year"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.18728128915194195,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-10-01",
+   "period_end": "2021-12-31",
+   "revenue": 7244000000,
+   "rnd": 1358000000,
+   "ocf": 3205000000,
+   "cash": 5338000000,
+   "operating_income": 940000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [
+    "rnd:restated_fiscal_year"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10595811900036453,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "revenue": 6590000000,
+   "rnd": 1178000000,
+   "ocf": 1840000000,
+   "cash": null,
+   "operating_income": 197000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.07463620716632764,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-04-01",
+   "period_end": "2022-06-30",
+   "revenue": 6260000000,
+   "rnd": 1102000000,
+   "ocf": 1802000000,
+   "cash": null,
+   "operating_income": 2029000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.03292289210901719,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-07-01",
+   "period_end": "2022-09-30",
+   "revenue": 7042000000,
+   "rnd": 1149000000,
+   "ocf": 2863000000,
+   "cash": null,
+   "operating_income": 2837000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.012590058947674843,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-10-01",
+   "period_end": "2022-12-31",
+   "revenue": 7389000000,
+   "rnd": 1548000000,
+   "ocf": 2567000000,
+   "cash": 5412000000,
+   "operating_income": 2267000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.0008789598974546786,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-01-01",
+   "period_end": "2023-03-31",
+   "revenue": 6352000000,
+   "rnd": 1447000000,
+   "ocf": 1744000000,
+   "cash": null,
+   "operating_income": 1705000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.015615899825276645,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-04-01",
+   "period_end": "2023-06-30",
+   "revenue": 6599000000,
+   "rnd": 1407000000,
+   "ocf": 2338000000,
+   "cash": null,
+   "operating_income": 1665000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.004833727057968381,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-07-01",
+   "period_end": "2023-09-30",
+   "revenue": 7051000000,
+   "rnd": 1457000000,
+   "ocf": 1755000000,
+   "cash": null,
+   "operating_income": 2623000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.009397110849056603,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-10-01",
+   "period_end": "2023-12-31",
+   "revenue": 7114000000,
+   "rnd": 1408000000,
+   "ocf": 2169000000,
+   "cash": null,
+   "operating_income": 1612000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.006048165389831751,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "revenue": 6686000000,
+   "rnd": 1520000000,
+   "ocf": 2219000000,
+   "cash": null,
+   "operating_income": -4322000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.01505010538771586,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-04-01",
+   "period_end": "2024-06-30",
+   "revenue": 6954000000,
+   "rnd": 1351000000,
+   "ocf": 1325000000,
+   "cash": null,
+   "operating_income": 2644000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.015448104594259002,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-07-01",
+   "period_end": "2024-09-30",
+   "revenue": 7545000000,
+   "rnd": 1395000000,
+   "ocf": 4309000000,
+   "cash": null,
+   "operating_income": 888000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.03314957467781388,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-10-01",
+   "period_end": "2024-12-31",
+   "revenue": 7569000000,
+   "rnd": 1641000000,
+   "ocf": 2975000000,
+   "cash": null,
+   "operating_income": 2452000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.060407139696120375,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-01-01",
+   "period_end": "2025-03-31",
+   "revenue": 6667000000,
+   "rnd": 1379000000,
+   "ocf": 1757000000,
+   "cash": null,
+   "operating_income": 2237000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.04681238615664845,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-04-01",
+   "period_end": "2025-06-30",
+   "revenue": 7082000000,
+   "rnd": 1491000000,
+   "ocf": 827000000,
+   "cash": null,
+   "operating_income": 2474000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.038050710303902176,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-07-01",
+   "period_end": "2025-09-30",
+   "revenue": 7769000000,
+   "rnd": 1346000000,
+   "ocf": 4108000000,
+   "cash": null,
+   "operating_income": 3327000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.02784550690837132,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-10-01",
+   "period_end": "2025-12-31",
+   "revenue": 7925000000,
+   "rnd": 1584000000,
+   "ocf": 3327000000,
+   "cash": null,
+   "operating_income": 1984000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.023961883564025874,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2026-01-01",
+   "period_end": "2026-03-31",
+   "revenue": 6960000000,
+   "rnd": 1372000000,
+   "ocf": 2544000000,
+   "cash": null,
+   "operating_income": 2586000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.034835566382460416,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2026-04-01",
+   "period_end": "2026-06-30",
+   "revenue": 7803000000,
+   "rnd": 1764000000,
+   "ocf": 3573000000,
+   "cash": null,
+   "operating_income": -10394000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05522641444063334,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  }
+ ],
+ "annual": [
+  {
+   "period_start": "2007-01-01",
+   "period_end": "2007-12-31",
+   "revenue": 4230045000,
+   "rnd": 591026000,
+   "ocf": 1669082000,
+   "cash": 968086000,
+   "operating_income": 2164507000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2008-01-01",
+   "period_end": "2008-12-31",
+   "revenue": 5335750000,
+   "rnd": 721768000,
+   "ocf": 2143384000,
+   "cash": 1459302000,
+   "operating_income": 2678541000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2009-01-01",
+   "period_end": "2009-12-31",
+   "revenue": 7011383000,
+   "rnd": 939918000,
+   "ocf": 3080054000,
+   "cash": 1272958000,
+   "operating_income": 3529221000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2010-01-01",
+   "period_end": "2010-12-31",
+   "revenue": 7949420000,
+   "rnd": 1072930000,
+   "ocf": 2833913000,
+   "cash": 907879000,
+   "operating_income": 3962222000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.13378772775642123,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2009-03-31",
+     "2009-06-30",
+     "2009-09-30",
+     "2009-12-31",
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2011-01-01",
+   "period_end": "2011-12-31",
+   "revenue": 8385385000,
+   "rnd": 1229151000,
+   "ocf": 3639010000,
+   "cash": 9884000000,
+   "operating_income": 3789841000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05484236585813808,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2010-03-31",
+     "2010-06-30",
+     "2010-09-30",
+     "2010-12-31",
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2012-01-01",
+   "period_end": "2012-12-31",
+   "revenue": 9702517000,
+   "rnd": 1760000000,
+   "ocf": 3195000000,
+   "cash": 1804000000,
+   "operating_income": 4010000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.15707471988465646,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31",
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2013-01-01",
+   "period_end": "2013-12-31",
+   "revenue": 11202000000,
+   "rnd": 2120000000,
+   "ocf": 3105000000,
+   "cash": 2113000000,
+   "operating_income": 4524000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.1545457740501769,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2012-03-31",
+     "2012-06-30",
+     "2012-09-30",
+     "2012-12-31",
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2014-01-01",
+   "period_end": "2014-12-31",
+   "revenue": 24890000000,
+   "rnd": 2854000000,
+   "ocf": 12818000000,
+   "cash": 10027000000,
+   "operating_income": 15265000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 1.221924656311373,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2013-03-31",
+     "2013-06-30",
+     "2013-09-30",
+     "2013-12-31",
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2015-01-01",
+   "period_end": "2015-12-31",
+   "revenue": 32639000000,
+   "rnd": 3014000000,
+   "ocf": 21250000000,
+   "cash": 12851000000,
+   "operating_income": 22193000000,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.31132985134592206,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2014-03-31",
+     "2014-06-30",
+     "2014-09-30",
+     "2014-12-31",
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2016-01-01",
+   "period_end": "2016-12-31",
+   "revenue": 30390000000,
+   "rnd": 5098000000,
+   "ocf": 17047000000,
+   "cash": 8229000000,
+   "operating_income": 17633000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.06890529734366861,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2015-03-31",
+     "2015-06-30",
+     "2015-09-30",
+     "2015-12-31",
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2017-01-01",
+   "period_end": "2017-12-31",
+   "revenue": 26107000000,
+   "rnd": 3734000000,
+   "ocf": 11898000000,
+   "cash": 7588000000,
+   "operating_income": 14124000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.14093451793353076,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2016-03-31",
+     "2016-06-30",
+     "2016-09-30",
+     "2016-12-31",
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2018-01-01",
+   "period_end": "2018-12-31",
+   "revenue": 22127000000,
+   "rnd": 5018000000,
+   "ocf": 8400000000,
+   "cash": 17940000000,
+   "operating_income": 8200000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.15244953460757651,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-01-01",
+   "period_end": "2019-12-31",
+   "revenue": 22449000000,
+   "rnd": 9106000000,
+   "ocf": 9144000000,
+   "cash": 11631000000,
+   "operating_income": 4287000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.014552356849098386,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-01-01",
+   "period_end": "2020-12-31",
+   "revenue": 24689000000,
+   "rnd": 4927000000,
+   "ocf": 8168000000,
+   "cash": 5997000000,
+   "operating_income": 4071000000,
+   "source_tags": {
+    "revenue": "Revenues",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09978172747115685,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-01-01",
+   "period_end": "2021-12-31",
+   "revenue": 27305000000,
+   "rnd": 4601000000,
+   "ocf": 11384000000,
+   "cash": 5338000000,
+   "operating_income": 9918000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10595811900036453,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-01-01",
+   "period_end": "2022-12-31",
+   "revenue": 27281000000,
+   "rnd": 4977000000,
+   "ocf": 9072000000,
+   "cash": 5412000000,
+   "operating_income": 7330000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.0008789598974546786,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-01-01",
+   "period_end": "2023-12-31",
+   "revenue": 27116000000,
+   "rnd": 5718000000,
+   "ocf": 8006000000,
+   "cash": null,
+   "operating_income": 7605000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.006048165389831751,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-01-01",
+   "period_end": "2024-12-31",
+   "revenue": 28754000000,
+   "rnd": 5907000000,
+   "ocf": 10828000000,
+   "cash": null,
+   "operating_income": 1662000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.060407139696120375,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "revenue": 29443000000,
+   "rnd": 5799000000,
+   "ocf": 10019000000,
+   "cash": null,
+   "operating_income": 10022000000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": null,
+    "operating_income": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": null,
+    "operating_income": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.023961883564025874,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   }
+  }
+ ],
+ "concepts": {
+  "revenue": {
+   "label": "Revenue",
+   "kind": "duration",
+   "candidates": [
+    "Revenues",
+    "SalesRevenueNet",
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "selection": "largest",
+   "tags_available": [
+    "Revenues",
+    "SalesRevenueNet",
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "tags_used": [
+    "Revenues",
+    "SalesRevenueNet",
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "primary_tag": "Revenues",
+   "uses_fallback": true,
+   "measurement_bases": [
+    "revenue_total",
+    "revenue_contracts_with_customers"
+   ],
+   "basis_segments": [
+    {
+     "basis": "revenue_total",
+     "first_period_end": "2008-06-30",
+     "last_period_end": "2020-12-31",
+     "periods": 51
+    },
+    {
+     "basis": "revenue_contracts_with_customers",
+     "first_period_end": "2021-03-31",
+     "last_period_end": "2026-06-30",
+     "periods": 22
+    }
+   ],
+   "basis_cutovers": [
+    {
+     "from_basis": "revenue_total",
+     "to_basis": "revenue_contracts_with_customers",
+     "last_period_end_before": "2020-12-31",
+     "first_period_end_after": "2021-03-31"
+    }
+   ],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05522641444063334,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "rnd": {
+   "label": "R&D expense",
+   "kind": "duration",
+   "candidates": [
+    "ResearchAndDevelopmentExpense",
+    "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "ResearchAndDevelopmentExpense",
+    "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"
+   ],
+   "tags_used": [
+    "ResearchAndDevelopmentExpense",
+    "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"
+   ],
+   "primary_tag": "ResearchAndDevelopmentExpense",
+   "uses_fallback": true,
+   "measurement_bases": [
+    "rnd_excluding_acquired_iprd",
+    "rnd_including_acquired_iprd"
+   ],
+   "basis_segments": [
+    {
+     "basis": "rnd_excluding_acquired_iprd",
+     "first_period_end": "2008-06-30",
+     "last_period_end": "2011-12-31",
+     "periods": 15
+    },
+    {
+     "basis": "rnd_including_acquired_iprd",
+     "first_period_end": "2012-03-31",
+     "last_period_end": "2020-03-31",
+     "periods": 33
+    },
+    {
+     "basis": "rnd_excluding_acquired_iprd",
+     "first_period_end": "2020-06-30",
+     "last_period_end": "2026-06-30",
+     "periods": 25
+    }
+   ],
+   "basis_cutovers": [
+    {
+     "from_basis": "rnd_excluding_acquired_iprd",
+     "to_basis": "rnd_including_acquired_iprd",
+     "last_period_end_before": "2011-12-31",
+     "first_period_end_after": "2012-03-31"
+    },
+    {
+     "from_basis": "rnd_including_acquired_iprd",
+     "to_basis": "rnd_excluding_acquired_iprd",
+     "last_period_end_before": "2020-03-31",
+     "first_period_end_after": "2020-06-30"
+    }
+   ],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "rnd_growth_yoy",
+    "value": 0.027091093802912292,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "ocf": {
+   "label": "Operating cash flow",
+   "kind": "duration",
+   "candidates": [
+    "NetCashProvidedByUsedInOperatingActivities",
+    "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "NetCashProvidedByUsedInOperatingActivities"
+   ],
+   "tags_used": [
+    "NetCashProvidedByUsedInOperatingActivities"
+   ],
+   "primary_tag": "NetCashProvidedByUsedInOperatingActivities",
+   "uses_fallback": false,
+   "measurement_bases": [
+    "ocf_total"
+   ],
+   "basis_segments": [
+    {
+     "basis": "ocf_total",
+     "first_period_end": "2008-09-30",
+     "last_period_end": "2026-06-30",
+     "periods": 72
+    }
+   ],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "ocf_growth_yoy",
+    "value": 0.3733279286582894,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "cash": {
+   "label": "Cash",
+   "kind": "instant",
+   "candidates": [
+    "CashAndCashEquivalentsAtCarryingValue"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "CashAndCashEquivalentsAtCarryingValue"
+   ],
+   "tags_used": [
+    "CashAndCashEquivalentsAtCarryingValue"
+   ],
+   "primary_tag": "CashAndCashEquivalentsAtCarryingValue",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2022-12-31",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 1277,
+   "is_stale": true,
+   "growth_yoy": {
+    "name": "cash_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "operating_income": {
+   "label": "Operating income",
+   "kind": "duration",
+   "candidates": [
+    "OperatingIncomeLoss"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "OperatingIncomeLoss"
+   ],
+   "tags_used": [
+    "OperatingIncomeLoss"
+   ],
+   "primary_tag": "OperatingIncomeLoss",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "operating_income_growth_yoy",
+    "value": -1.3101478077257485,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  }
+ },
+ "data_quality": [
+  {
+   "code": "basis_cutover",
+   "concept": "revenue",
+   "period_start": null,
+   "period_end": "2021-03-31",
+   "detail": {
+    "from_basis": "revenue_total",
+    "to_basis": "revenue_contracts_with_customers",
+    "last_period_end_before": "2020-12-31",
+    "first_period_end_after": "2021-03-31"
+   }
+  },
+  {
+   "code": "fallback_tag",
+   "concept": "revenue",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "Revenues",
+    "tags_used": [
+     "Revenues",
+     "SalesRevenueNet",
+     "RevenueFromContractWithCustomerExcludingAssessedTax"
+    ],
+    "tag_spans": {
+     "Revenues": [
+      "2008-06-30",
+      "2020-12-31"
+     ],
+     "SalesRevenueNet": [
+      "2013-03-31",
+      "2016-12-31"
+     ],
+     "RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "2021-03-31",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_tags",
+   "concept": "revenue",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "tag_spans": {
+     "Revenues": [
+      "2008-06-30",
+      "2020-12-31"
+     ],
+     "SalesRevenueNet": [
+      "2013-03-31",
+      "2016-12-31"
+     ],
+     "RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "2021-03-31",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_measurement_basis",
+   "concept": "revenue",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "bases": [
+     {
+      "basis": "revenue_total",
+      "first_period_end": "2008-06-30",
+      "last_period_end": "2020-12-31",
+      "periods": 51
+     },
+     {
+      "basis": "revenue_contracts_with_customers",
+      "first_period_end": "2021-03-31",
+      "last_period_end": "2026-06-30",
+      "periods": 22
+     }
+    ]
+   }
+  },
+  {
+   "code": "basis_cutover",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": "2012-03-31",
+   "detail": {
+    "from_basis": "rnd_excluding_acquired_iprd",
+    "to_basis": "rnd_including_acquired_iprd",
+    "last_period_end_before": "2011-12-31",
+    "first_period_end_after": "2012-03-31"
+   }
+  },
+  {
+   "code": "basis_cutover",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": "2020-06-30",
+   "detail": {
+    "from_basis": "rnd_including_acquired_iprd",
+    "to_basis": "rnd_excluding_acquired_iprd",
+    "last_period_end_before": "2020-03-31",
+    "first_period_end_after": "2020-06-30"
+   }
+  },
+  {
+   "code": "fy_reconciliation_failed",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": "2021-12-31",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "fiscal_year_end": "2021-12-31",
+    "annual": 4601000000.0,
+    "quarters_sum": 4606000000.0,
+    "difference": 5000000.0,
+    "quarter_ends": [
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31"
+    ],
+    "ok": false
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2018-01-01",
+   "period_end": "2018-12-31",
+   "detail": {
+    "period_start": "2018-01-01",
+    "period_end": "2018-12-31",
+    "values": {
+     "ResearchAndDevelopmentExpense": 5018000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 3920000000.0
+    },
+    "spread": 1098000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2019-01-01",
+   "period_end": "2019-06-30",
+   "detail": {
+    "period_start": "2019-01-01",
+    "period_end": "2019-06-30",
+    "values": {
+     "ResearchAndDevelopmentExpense": 2217000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 1926000000.0
+    },
+    "spread": 291000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2019-04-01",
+   "period_end": "2019-06-30",
+   "detail": {
+    "period_start": "2019-04-01",
+    "period_end": "2019-06-30",
+    "values": {
+     "ResearchAndDevelopmentExpense": 1160000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 995000000.0
+    },
+    "spread": 165000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2019-01-01",
+   "period_end": "2019-09-30",
+   "detail": {
+    "period_start": "2019-01-01",
+    "period_end": "2019-09-30",
+    "values": {
+     "ResearchAndDevelopmentExpense": 7207000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 2956000000.0
+    },
+    "spread": 4251000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2019-07-01",
+   "period_end": "2019-09-30",
+   "detail": {
+    "period_start": "2019-07-01",
+    "period_end": "2019-09-30",
+    "values": {
+     "ResearchAndDevelopmentExpense": 4990000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 1030000000.0
+    },
+    "spread": 3960000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2019-01-01",
+   "period_end": "2019-12-31",
+   "detail": {
+    "period_start": "2019-01-01",
+    "period_end": "2019-12-31",
+    "values": {
+     "ResearchAndDevelopmentExpense": 9106000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 4055000000.0
+    },
+    "spread": 5051000000.0
+   }
+  },
+  {
+   "code": "chain_tags_diverge",
+   "concept": "rnd",
+   "period_start": "2020-01-01",
+   "period_end": "2020-03-31",
+   "detail": {
+    "period_start": "2020-01-01",
+    "period_end": "2020-03-31",
+    "values": {
+     "ResearchAndDevelopmentExpense": 1101000000.0,
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": 1004000000.0
+    },
+    "spread": 97000000.0
+   }
+  },
+  {
+   "code": "tag_basis_uncertain",
+   "concept": "rnd",
+   "period_start": "2018-10-01",
+   "period_end": "2018-12-31",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpense",
+    "measurement_basis": "rnd_including_acquired_iprd"
+   }
+  },
+  {
+   "code": "tag_basis_uncertain",
+   "concept": "rnd",
+   "period_start": "2019-10-01",
+   "period_end": "2019-12-31",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpense",
+    "measurement_basis": "rnd_including_acquired_iprd"
+   }
+  },
+  {
+   "code": "restated_fiscal_year",
+   "concept": "rnd",
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "measurement_basis": "rnd_excluding_acquired_iprd"
+   }
+  },
+  {
+   "code": "restated_fiscal_year",
+   "concept": "rnd",
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "measurement_basis": "rnd_excluding_acquired_iprd"
+   }
+  },
+  {
+   "code": "restated_fiscal_year",
+   "concept": "rnd",
+   "period_start": "2021-07-01",
+   "period_end": "2021-09-30",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "measurement_basis": "rnd_excluding_acquired_iprd"
+   }
+  },
+  {
+   "code": "restated_fiscal_year",
+   "concept": "rnd",
+   "period_start": "2021-10-01",
+   "period_end": "2021-12-31",
+   "detail": {
+    "tag": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "measurement_basis": "rnd_excluding_acquired_iprd"
+   }
+  },
+  {
+   "code": "fallback_tag",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "ResearchAndDevelopmentExpense",
+    "tags_used": [
+     "ResearchAndDevelopmentExpense",
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"
+    ],
+    "tag_spans": {
+     "ResearchAndDevelopmentExpense": [
+      "2012-03-31",
+      "2020-03-31"
+     ],
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": [
+      "2008-06-30",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_tags",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "tag_spans": {
+     "ResearchAndDevelopmentExpense": [
+      "2012-03-31",
+      "2020-03-31"
+     ],
+     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": [
+      "2008-06-30",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_measurement_basis",
+   "concept": "rnd",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "bases": [
+     {
+      "basis": "rnd_excluding_acquired_iprd",
+      "first_period_end": "2008-06-30",
+      "last_period_end": "2011-12-31",
+      "periods": 15
+     },
+     {
+      "basis": "rnd_including_acquired_iprd",
+      "first_period_end": "2012-03-31",
+      "last_period_end": "2020-03-31",
+      "periods": 33
+     },
+     {
+      "basis": "rnd_excluding_acquired_iprd",
+      "first_period_end": "2020-06-30",
+      "last_period_end": "2026-06-30",
+      "periods": 25
+     }
+    ]
+   }
+  },
+  {
+   "code": "stale_series",
+   "concept": "cash",
+   "period_start": null,
+   "period_end": "2022-12-31",
+   "detail": {
+    "latest_period_end": "2022-12-31",
+    "reference_period_end": "2026-06-30",
+    "days_behind": 1277,
+    "tag": "CashAndCashEquivalentsAtCarryingValue"
+   }
+  }
+ ],
+ "filings": [
+  {
+   "accession": "0000882095-26-000031",
+   "form": "10-Q",
+   "filed": "2026-08-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/0000882095-26-000031-index.htm"
+  },
+  {
+   "accession": "0000882095-26-000024",
+   "form": "10-Q",
+   "filed": "2026-05-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/0000882095-26-000024-index.htm"
+  },
+  {
+   "accession": "0000882095-26-000006",
+   "form": "10-K",
+   "filed": "2026-02-24",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/0000882095-26-000006-index.htm"
+  },
+  {
+   "accession": "0000882095-25-000047",
+   "form": "10-Q",
+   "filed": "2025-11-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209525000047/0000882095-25-000047-index.htm"
+  },
+  {
+   "accession": "0000882095-25-000032",
+   "form": "10-Q",
+   "filed": "2025-08-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209525000032/0000882095-25-000032-index.htm"
+  },
+  {
+   "accession": "0000882095-25-000012",
+   "form": "10-Q",
+   "filed": "2025-05-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209525000012/0000882095-25-000012-index.htm"
+  },
+  {
+   "accession": "0000882095-25-000006",
+   "form": "10-K",
+   "filed": "2025-02-28",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209525000006/0000882095-25-000006-index.htm"
+  },
+  {
+   "accession": "0000882095-24-000028",
+   "form": "10-Q",
+   "filed": "2024-11-12",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209524000028/0000882095-24-000028-index.htm"
+  },
+  {
+   "accession": "0000882095-24-000022",
+   "form": "10-Q",
+   "filed": "2024-08-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209524000022/0000882095-24-000022-index.htm"
+  },
+  {
+   "accession": "0000882095-24-000013",
+   "form": "10-Q",
+   "filed": "2024-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209524000013/0000882095-24-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-24-000007",
+   "form": "10-K",
+   "filed": "2024-02-23",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209524000007/0000882095-24-000007-index.htm"
+  },
+  {
+   "accession": "0000882095-23-000031",
+   "form": "10-Q",
+   "filed": "2023-11-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209523000031/0000882095-23-000031-index.htm"
+  },
+  {
+   "accession": "0000882095-23-000025",
+   "form": "10-Q",
+   "filed": "2023-08-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209523000025/0000882095-23-000025-index.htm"
+  },
+  {
+   "accession": "0000882095-23-000017",
+   "form": "10-Q",
+   "filed": "2023-05-03",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209523000017/0000882095-23-000017-index.htm"
+  },
+  {
+   "accession": "0000882095-23-000007",
+   "form": "10-K",
+   "filed": "2023-02-22",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209523000007/0000882095-23-000007-index.htm"
+  },
+  {
+   "accession": "0000882095-22-000027",
+   "form": "10-Q",
+   "filed": "2022-11-02",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209522000027/0000882095-22-000027-index.htm"
+  },
+  {
+   "accession": "0000882095-22-000019",
+   "form": "10-Q",
+   "filed": "2022-08-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209522000019/0000882095-22-000019-index.htm"
+  },
+  {
+   "accession": "0000882095-22-000013",
+   "form": "10-Q",
+   "filed": "2022-05-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209522000013/0000882095-22-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-22-000007",
+   "form": "10-K",
+   "filed": "2022-02-23",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209522000007/0000882095-22-000007-index.htm"
+  },
+  {
+   "accession": "0000882095-21-000029",
+   "form": "10-Q",
+   "filed": "2021-11-03",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209521000029/0000882095-21-000029-index.htm"
+  },
+  {
+   "accession": "0000882095-21-000021",
+   "form": "10-Q",
+   "filed": "2021-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209521000021/0000882095-21-000021-index.htm"
+  },
+  {
+   "accession": "0000882095-21-000013",
+   "form": "10-Q",
+   "filed": "2021-05-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209521000013/0000882095-21-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-21-000008",
+   "form": "10-K",
+   "filed": "2021-02-25",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209521000008/0000882095-21-000008-index.htm"
+  },
+  {
+   "accession": "0000882095-20-000027",
+   "form": "10-Q",
+   "filed": "2020-11-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209520000027/0000882095-20-000027-index.htm"
+  },
+  {
+   "accession": "0000882095-20-000019",
+   "form": "10-Q",
+   "filed": "2020-08-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209520000019/0000882095-20-000019-index.htm"
+  },
+  {
+   "accession": "0000882095-20-000013",
+   "form": "10-Q",
+   "filed": "2020-05-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209520000013/0000882095-20-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-20-000006",
+   "form": "10-K",
+   "filed": "2020-02-25",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209520000006/0000882095-20-000006-index.htm"
+  },
+  {
+   "accession": "0000882095-19-000027",
+   "form": "10-Q",
+   "filed": "2019-11-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209519000027/0000882095-19-000027-index.htm"
+  },
+  {
+   "accession": "0000882095-19-000020",
+   "form": "10-Q",
+   "filed": "2019-08-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209519000020/0000882095-19-000020-index.htm"
+  },
+  {
+   "accession": "0000882095-19-000014",
+   "form": "10-Q",
+   "filed": "2019-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209519000014/0000882095-19-000014-index.htm"
+  },
+  {
+   "accession": "0000882095-19-000006",
+   "form": "10-K",
+   "filed": "2019-02-26",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209519000006/0000882095-19-000006-index.htm"
+  },
+  {
+   "accession": "0000882095-18-000029",
+   "form": "10-Q",
+   "filed": "2018-11-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000029/0000882095-18-000029-index.htm"
+  },
+  {
+   "accession": "0000882095-18-000022",
+   "form": "10-Q",
+   "filed": "2018-08-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000022/0000882095-18-000022-index.htm"
+  },
+  {
+   "accession": "0000882095-18-000015",
+   "form": "10-Q",
+   "filed": "2018-05-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000015/0000882095-18-000015-index.htm"
+  },
+  {
+   "accession": "0000882095-18-000008",
+   "form": "10-K",
+   "filed": "2018-02-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209518000008/0000882095-18-000008-index.htm"
+  },
+  {
+   "accession": "0000882095-17-000027",
+   "form": "10-Q",
+   "filed": "2017-11-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209517000027/0000882095-17-000027-index.htm"
+  },
+  {
+   "accession": "0000882095-17-000020",
+   "form": "10-Q",
+   "filed": "2017-08-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209517000020/0000882095-17-000020-index.htm"
+  },
+  {
+   "accession": "0000882095-17-000013",
+   "form": "10-Q",
+   "filed": "2017-05-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209517000013/0000882095-17-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-17-000006",
+   "form": "10-K",
+   "filed": "2017-02-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209517000006/0000882095-17-000006-index.htm"
+  },
+  {
+   "accession": "0000882095-16-000060",
+   "form": "10-Q",
+   "filed": "2016-11-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209516000060/0000882095-16-000060-index.htm"
+  },
+  {
+   "accession": "0000882095-16-000054",
+   "form": "10-Q",
+   "filed": "2016-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209516000054/0000882095-16-000054-index.htm"
+  },
+  {
+   "accession": "0000882095-16-000046",
+   "form": "10-Q",
+   "filed": "2016-05-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209516000046/0000882095-16-000046-index.htm"
+  },
+  {
+   "accession": "0000882095-16-000039",
+   "form": "10-K",
+   "filed": "2016-02-24",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209516000039/0000882095-16-000039-index.htm"
+  },
+  {
+   "accession": "0000882095-15-000033",
+   "form": "10-Q",
+   "filed": "2015-11-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209515000033/0000882095-15-000033-index.htm"
+  },
+  {
+   "accession": "0000882095-15-000026",
+   "form": "10-Q",
+   "filed": "2015-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209515000026/0000882095-15-000026-index.htm"
+  },
+  {
+   "accession": "0000882095-15-000017",
+   "form": "10-Q",
+   "filed": "2015-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209515000017/0000882095-15-000017-index.htm"
+  },
+  {
+   "accession": "0000882095-15-000008",
+   "form": "10-K",
+   "filed": "2015-02-25",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209515000008/0000882095-15-000008-index.htm"
+  },
+  {
+   "accession": "0000882095-14-000051",
+   "form": "10-Q",
+   "filed": "2014-11-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209514000051/0000882095-14-000051-index.htm"
+  },
+  {
+   "accession": "0000882095-14-000038",
+   "form": "10-Q",
+   "filed": "2014-08-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209514000038/0000882095-14-000038-index.htm"
+  },
+  {
+   "accession": "0000882095-14-000024",
+   "form": "10-Q",
+   "filed": "2014-05-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209514000024/0000882095-14-000024-index.htm"
+  },
+  {
+   "accession": "0000882095-14-000013",
+   "form": "10-K",
+   "filed": "2014-02-25",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209514000013/0000882095-14-000013-index.htm"
+  },
+  {
+   "accession": "0000882095-13-000046",
+   "form": "10-Q",
+   "filed": "2013-10-31",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209513000046/0000882095-13-000046-index.htm"
+  },
+  {
+   "accession": "0000882095-13-000038",
+   "form": "10-Q",
+   "filed": "2013-08-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209513000038/0000882095-13-000038-index.htm"
+  },
+  {
+   "accession": "0000882095-13-000029",
+   "form": "10-Q",
+   "filed": "2013-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209513000029/0000882095-13-000029-index.htm"
+  },
+  {
+   "accession": "0000882095-13-000015",
+   "form": "10-K",
+   "filed": "2013-02-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209513000015/0000882095-13-000015-index.htm"
+  },
+  {
+   "accession": "0000882095-12-000029",
+   "form": "10-Q",
+   "filed": "2012-11-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209512000029/0000882095-12-000029-index.htm"
+  },
+  {
+   "accession": "0000882095-12-000013",
+   "form": "10-Q",
+   "filed": "2012-08-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209512000013/0000882095-12-000013-index.htm"
+  },
+  {
+   "accession": "0001445305-12-001487",
+   "form": "10-Q",
+   "filed": "2012-05-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000144530512001487/0001445305-12-001487-index.htm"
+  },
+  {
+   "accession": "0001193125-12-075335",
+   "form": "10-K",
+   "filed": "2012-02-23",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312512075335/0001193125-12-075335-index.htm"
+  },
+  {
+   "accession": "0001193125-11-297580",
+   "form": "10-Q",
+   "filed": "2011-11-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312511297580/0001193125-11-297580-index.htm"
+  },
+  {
+   "accession": "0001193125-11-212453",
+   "form": "10-Q",
+   "filed": "2011-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312511212453/0001193125-11-212453-index.htm"
+  },
+  {
+   "accession": "0001193125-11-132405",
+   "form": "10-Q",
+   "filed": "2011-05-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312511132405/0001193125-11-132405-index.htm"
+  },
+  {
+   "accession": "0001193125-11-050041",
+   "form": "10-K",
+   "filed": "2011-02-28",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312511050041/0001193125-11-050041-index.htm"
+  },
+  {
+   "accession": "0001193125-10-252253",
+   "form": "10-Q",
+   "filed": "2010-11-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510252253/0001193125-10-252253-index.htm"
+  },
+  {
+   "accession": "0001193125-10-182351",
+   "form": "10-Q",
+   "filed": "2010-08-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510182351/0001193125-10-182351-index.htm"
+  },
+  {
+   "accession": "0001193125-10-114616",
+   "form": "10-Q",
+   "filed": "2010-05-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510114616/0001193125-10-114616-index.htm"
+  },
+  {
+   "accession": "0001193125-10-044753",
+   "form": "10-K",
+   "filed": "2010-03-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312510044753/0001193125-10-044753-index.htm"
+  },
+  {
+   "accession": "0001193125-09-225660",
+   "form": "10-Q",
+   "filed": "2009-11-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312509225660/0001193125-09-225660-index.htm"
+  },
+  {
+   "accession": "0001193125-09-165506",
+   "form": "10-Q",
+   "filed": "2009-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312509165506/0001193125-09-165506-index.htm"
+  }
+ ],
+ "pipeline": null,
+ "regulatory": null
+}

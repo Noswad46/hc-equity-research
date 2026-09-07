@@ -443,11 +443,68 @@ def test_unknown_concept_is_rejected(ytd_only):
         quarterly_series(ytd_only, "ebitda")
 
 
-@pytest.mark.parametrize("concept", ["cash", "short_term_investments", "debt"])
-def test_non_duration_concepts_are_out_of_m1_scope(ytd_only, concept):
-    """SPEC §5.1 defines them; M1 implements the duration concepts only."""
+def test_summed_concepts_are_still_unimplemented(ytd_only):
+    """Total debt is `LongTermDebtNoncurrent + LongTermDebtCurrent`, not a chain."""
     with pytest.raises(UnsupportedConcept):
-        quarterly_series(ytd_only, concept)
+        quarterly_series(ytd_only, "debt")
+
+
+@pytest.mark.parametrize("concept", ["cash", "short_term_investments"])
+def test_instant_concepts_resolve_without_raising(ytd_only, concept):
+    """Balance-sheet concepts are supported now; the M2 pages need a cash column."""
+    series = quarterly_series(ytd_only, concept)
+
+    assert series.kind is ConceptKind.INSTANT
+    assert series.values == ()  # this fixture carries no balance-sheet facts
+
+
+def test_instant_values_are_read_at_the_date_they_are_struck():
+    payload = {
+        "facts": {
+            "us-gaap": {
+                "CashAndCashEquivalentsAtCarryingValue": {
+                    "units": {
+                        "USD": [
+                            {"end": "2024-03-31", "val": 500 * M, "form": "10-Q",
+                             "accn": "a", "filed": "2024-05-01"},
+                            {"end": "2024-06-30", "val": 450 * M, "form": "10-Q",
+                             "accn": "b", "filed": "2024-08-01"},
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    series = quarterly_series(payload, "cash")
+
+    assert [(v.end, v.val) for v in series.values] == [
+        (D("2024-03-31"), 500 * M),
+        (D("2024-06-30"), 450 * M),
+    ]
+    assert all(v.start == v.end for v in series.values)
+
+
+def test_balances_are_never_summed_into_a_trailing_total():
+    """Four cash readings summed would report four times the cash on hand."""
+    payload = {
+        "facts": {
+            "us-gaap": {
+                "CashAndCashEquivalentsAtCarryingValue": {
+                    "units": {
+                        "USD": [
+                            {"end": e, "val": 500 * M, "form": "10-Q", "accn": e, "filed": "2025-01-01"}
+                            for e in ("2024-03-31", "2024-06-30", "2024-09-30", "2024-12-31")
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    series = quarterly_series(payload, "cash")
+
+    assert series.trailing_twelve_months() is None
+    assert series.growth().value is None
+    assert series.growth().suppressed_by == ("not_a_flow_concept",)
 
 
 def test_concept_definitions_are_pinned():

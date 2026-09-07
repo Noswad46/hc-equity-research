@@ -1,0 +1,14 @@
+{
+ "generated_at": "2026-09-07T01:34:57Z",
+ "universe_size": 10,
+ "sources": {
+  "edgar": {
+   "fetched_at": "2026-09-07T01:34:57Z",
+   "companies_ok": 10,
+   "companies_failed": []
+  },
+  "clinicaltrials": null,
+  "openfda": null
+ },
+ "pipeline_version": "1.0.0"
+}

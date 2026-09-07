@@ -1,0 +1,60 @@
+---
+/** Index of covered companies. Values are printed as the pipeline emitted them. */
+import Base from "../../layouts/Base.astro";
+import meta from "../../data/meta.json";
+import screener from "../../data/screener.json";
+import { raw } from "../../lib/flags";
+
+const companies = [...screener.companies].sort((a, b) => a.ticker.localeCompare(b.ticker));
+---
+
+<Base title="Companies">
+  <h1>Companies</h1>
+  <p class="muted">
+    {companies.length} covered filers. Data as of {meta.generated_at}, pipeline version{" "}
+    {meta.pipeline_version}.
+  </p>
+  <p>
+    Figures are trailing twelve months in USD, printed exactly as the pipeline produced them —
+    unrounded and unscaled. <span class="null">null</span> means the pipeline did not produce a
+    value, which is not the same as zero.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Name</th>
+        <th>Subsector</th>
+        <th>Fiscal period end</th>
+        <th class="num">Revenue TTM</th>
+        <th class="num">R&D TTM</th>
+        <th class="num">OCF TTM</th>
+        <th class="num">Flags</th>
+      </tr>
+    </thead>
+    <tbody>
+      {companies.map((c) => (
+        <tr>
+          <td><a href={`/companies/${c.ticker}/`}>{c.ticker}</a></td>
+          <td>{c.name}</td>
+          <td class="muted">{c.subsector}</td>
+          <td class={c.fiscal_period_end === null ? "null" : ""}>{raw(c.fiscal_period_end)}</td>
+          <td class={`num ${c.revenue_ttm === null ? "null" : ""}`}>{raw(c.revenue_ttm)}</td>
+          <td class={`num ${c.rnd_ttm === null ? "null" : ""}`}>{raw(c.rnd_ttm)}</td>
+          <td class={`num ${c.ocf_ttm === null ? "null" : ""}`}>{raw(c.ocf_ttm)}</td>
+          <td class="num">{c.data_quality_flags.length}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Not covered</h2>
+  <p>
+    GSK, AstraZeneca, Sanofi and BioNTech are excluded. All report under IFRS, where IAS 38
+    capitalises qualifying development costs while US GAAP expenses essentially all R&D as
+    incurred, so R&D intensity and cash runway are not comparable across the two bases. Several
+    also file annually on 20-F rather than quarterly, so the discrete quarterly series this site is
+    built on does not exist for them.
+  </p>
+</Base>

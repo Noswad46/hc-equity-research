@@ -66,9 +66,13 @@ __all__ = [
     "CONCEPT_CHAINS",
     "FLAG_WINDOW_START",
     "M1_CONCEPTS",
+    "M2_CONCEPTS",
     "PERIODIC_FORMS",
     "QUARTER_DAYS",
+    "STALE_TOLERANCE_DAYS",
     "Basis",
+    "BasisCutover",
+    "BasisSegment",
     "Concept",
     "ConceptKind",
     "ConceptResolution",
@@ -83,14 +87,18 @@ __all__ = [
     "Selection",
     "TagDivergence",
     "UnsupportedConcept",
+    "annual_series",
     "annual_totals",
+    "basis_segments",
     "build_quarterly_table",
     "detect_tag_divergence",
     "discrete_quarters",
     "extract_facts",
     "guard_metric",
+    "instant_values",
     "interchangeable_tag_pairs",
     "latest_by_period",
+    "latest_reported_period_end",
     "quarterly_series",
     "reconcile_fiscal_years",
     "resolve_concept",
@@ -295,6 +303,10 @@ CONCEPT_CHAINS: Mapping[str, Concept] = dict(
 #: The three concepts M1 delivers.
 M1_CONCEPTS: tuple[str, ...] = ("revenue", "rnd", "ocf")
 
+#: What the M2 company pages render. `cash` is a balance rather than a flow, and
+#: `operating_income` is carried because SPEC §7's quarterly schema names it.
+M2_CONCEPTS: tuple[str, ...] = ("revenue", "rnd", "ocf", "cash", "operating_income")
+
 #: Tags close enough to a chain entry to be worth naming when the chain resolves
 #: to nothing — the difference between "this filer reports no R&D" and "this
 #: filer reports R&D under a tag the chain does not list".
@@ -329,6 +341,19 @@ FLAG_MIXED_MEASUREMENT_BASIS = "mixed_measurement_basis"
 # inputs are usable.
 FLAG_RESTATED_FISCAL_YEAR = "restated_fiscal_year"
 FLAG_OVERLAPPING_PERIODS = "overlapping_periods"
+FLAG_STALE_SERIES = "stale_series"
+FLAG_BASIS_CUTOVER = "basis_cutover"
+
+#: How far a concept may lag the filer's most recent reported period before it is
+#: called stale. One quarter of slack, because a concept legitimately appears in
+#: the 10-K but not the following 10-Q.
+#:
+#: Gilead is why this exists. Its `ResearchAndDevelopmentExpense` tag stops in
+#: 2020, so before the R&D candidates were widened its latest trailing-twelve-month
+#: window was a 2019-20 one, presented as current with nothing marking it. The
+#: instance was fixed by widening the candidates; the class was not, because any
+#: filer that abandons a tag reproduces it silently.
+STALE_TOLERANCE_DAYS = QUARTER_DAYS[1]
 
 #: Period flags that make a value unusable as an input to a comparison metric.
 #:
@@ -672,6 +697,78 @@ def discrete_quarters(
             )
 
     return out
+
+
+def instant_values(
+    facts: Iterable[Fact], *, concept: str = "", measurement_basis: str | None = None
+) -> dict[dt.date, PeriodValue]:
+    """Balance-sheet figures for a single tag, keyed by the date they were struck.
+
+    An instant fact has no `start`, so there is nothing to unwind and nothing to
+    difference — the balance at a date is simply the balance at that date. Start
+    and end are set equal so an instant carries the same shape as a duration
+    value and can share the merge, selection and flagging machinery.
+    """
+    out: dict[dt.date, PeriodValue] = {}
+    for (start, end), fact in latest_by_period(facts).items():
+        if start is not None:  # a duration fact; not a balance
+            continue
+        out[end] = PeriodValue(
+            concept=concept,
+            tag=fact.tag,
+            start=end,
+            end=end,
+            val=fact.val,
+            basis=Basis.REPORTED,
+            filed=fact.filed,
+            accns=(fact.accn,),
+            forms=(fact.form,),
+            taxonomy=fact.taxonomy,
+            unit=fact.unit,
+            measurement_basis=measurement_basis,
+        )
+    return out
+
+
+def latest_reported_period_end(
+    companyfacts: Mapping[str, Any],
+    *,
+    taxonomy: str = DEFAULT_TAXONOMY,
+    forms: Sequence[str] = PERIODIC_FORMS,
+) -> dt.date | None:
+    """The most recent period end this filer reports anything for.
+
+    The reference point for staleness. Scanning every tag rather than the tracked
+    concepts is deliberate: if all the tracked tags were abandoned together, a
+    reference drawn from them would be stale too and the check would pass while
+    the whole record sat years behind.
+    """
+    node = companyfacts.get("facts", {})
+    tags = node.get(taxonomy) if isinstance(node, Mapping) else None
+    if not isinstance(tags, Mapping):
+        return None
+
+    allowed = frozenset(forms)
+    latest: dt.date | None = None
+    for entry in tags.values():
+        if not isinstance(entry, Mapping):
+            continue
+        units = entry.get("units")
+        if not isinstance(units, Mapping):
+            continue
+        for rows in units.values():
+            if not isinstance(rows, list):
+                continue
+            for raw in rows:
+                if not isinstance(raw, Mapping):
+                    continue
+                form = raw.get("form")
+                if not isinstance(form, str) or form.split("/", 1)[0] not in allowed:
+                    continue
+                end = _parse_date(raw.get("end"))
+                if end is not None and (latest is None or end > latest):
+                    latest = end
+    return latest
 
 
 def annual_totals(
@@ -1131,6 +1228,80 @@ def select_period_value(
 
 
 @dataclass(frozen=True)
+class BasisSegment:
+    """A contiguous run of periods measured on one basis."""
+
+    basis: str
+    first_end: dt.date
+    last_end: dt.date
+    count: int
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "basis": self.basis,
+            "first_period_end": self.first_end.isoformat(),
+            "last_period_end": self.last_end.isoformat(),
+            "periods": self.count,
+        }
+
+
+@dataclass(frozen=True)
+class BasisCutover:
+    """The point where a series stops measuring one thing and starts measuring another."""
+
+    from_basis: str
+    to_basis: str
+    last_end_before: dt.date
+    first_end_after: dt.date
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "from_basis": self.from_basis,
+            "to_basis": self.to_basis,
+            "last_period_end_before": self.last_end_before.isoformat(),
+            "first_period_end_after": self.first_end_after.isoformat(),
+        }
+
+
+def basis_segments(values: Sequence[PeriodValue]) -> tuple[list[BasisSegment], list[BasisCutover]]:
+    """Split a series into runs of constant measurement basis.
+
+    Per-value basis labels are enough to stop one company being compared against
+    another on the wrong footing, but they do not help a chart. Gilead and Vertex
+    both report R&D including acquired IPR&D for part of their history and
+    excluding it for the rest, and a single line drawn through that shows a step
+    change that never happened — the spending did not move, the definition did.
+    Naming the cutover lets the presentation layer break the series there or
+    annotate it. It is emphatically not a licence to normalise the two.
+    """
+    segments: list[BasisSegment] = []
+    cutovers: list[BasisCutover] = []
+
+    for value in values:
+        basis = value.measurement_basis
+        if basis is None:
+            continue
+        if segments and segments[-1].basis == basis:
+            last = segments[-1]
+            segments[-1] = replace(last, last_end=value.end, count=last.count + 1)
+        else:
+            if segments:
+                cutovers.append(
+                    BasisCutover(
+                        from_basis=segments[-1].basis,
+                        to_basis=basis,
+                        last_end_before=segments[-1].last_end,
+                        first_end_after=value.end,
+                    )
+                )
+            segments.append(
+                BasisSegment(basis=basis, first_end=value.end, last_end=value.end, count=1)
+            )
+
+    return segments, cutovers
+
+
+@dataclass(frozen=True)
 class QuarterlySeries:
     """Discrete quarterly values for one concept, plus how they were obtained."""
 
@@ -1151,6 +1322,18 @@ class QuarterlySeries:
     #: tag-composition flag to the span it actually affects, instead of letting
     #: one pre-2019 tag change label a whole company "mixed".
     tag_spans: Mapping[str, tuple[dt.date, dt.date]] = field(default_factory=dict)
+    #: Runs of constant measurement basis, and the points between them. A series
+    #: with more than one segment must be drawn segmented or annotated, never as
+    #: one continuous line.
+    segments: tuple[BasisSegment, ...] = ()
+    cutovers: tuple[BasisCutover, ...] = ()
+    #: Periods discarded because they overlapped a neighbour. Kept so the flag can
+    #: name what was lost rather than just asserting that something was.
+    dropped_overlaps: tuple[PeriodValue, ...] = ()
+    kind: ConceptKind = ConceptKind.DURATION
+    #: The most recent period end the filer reports anything for, against which
+    #: this concept's own latest period is judged.
+    reference_period_end: dt.date | None = None
     flags: tuple[str, ...] = ()
 
     def by_end(self) -> dict[dt.date, PeriodValue]:
@@ -1166,6 +1349,22 @@ class QuarterlySeries:
     @property
     def measurement_bases(self) -> tuple[str, ...]:
         return tuple(dict.fromkeys(v.measurement_basis for v in self.values if v.measurement_basis))
+
+    @property
+    def latest_period_end(self) -> dt.date | None:
+        return self.values[-1].end if self.values else None
+
+    @property
+    def staleness_days(self) -> int | None:
+        """How far this concept lags the filer's most recent reported period."""
+        if self.reference_period_end is None or self.latest_period_end is None:
+            return None
+        return (self.reference_period_end - self.latest_period_end).days
+
+    @property
+    def is_stale(self) -> bool:
+        days = self.staleness_days
+        return days is not None and days > STALE_TOLERANCE_DAYS
 
     def window(self, end: dt.date, quarters: int = 4) -> tuple[PeriodValue, ...] | None:
         """The `quarters` contiguous periods ending at `end`, or None if they do not tile."""
@@ -1194,8 +1393,11 @@ class QuarterlySeries:
         spanning them measures the Organon spin-off rather than trading, so the
         honest answer is null.
         """
+        name = f"{self.concept}_growth_yoy"
         if not self.values:
-            return MetricResult(name="revenue_growth_yoy", value=None, suppressed_by=("no_inputs",))
+            return MetricResult(name=name, value=None, suppressed_by=("no_inputs",))
+        if self.kind is not ConceptKind.DURATION:
+            return MetricResult(name=name, value=None, suppressed_by=("not_a_flow_concept",))
 
         end = as_of or self.values[-1].end
         current = self.trailing_twelve_months(end)
@@ -1206,7 +1408,6 @@ class QuarterlySeries:
         earlier = self.window(prior_end, 4) if prior_end else None
         inputs = tuple(earlier or ()) + tuple(recent)
 
-        name = f"{self.concept}_growth_yoy"
         if current is None or prior is None or not prior.val:
             return MetricResult(
                 name=name,
@@ -1240,7 +1441,9 @@ class QuarterlySeries:
         A multi-tag window is held to the stricter test because it also has to
         assume two tags mean the same thing.
         """
-        if not self.values:
+        if not self.values or self.kind is not ConceptKind.DURATION:
+            # Summing four balance-sheet readings would produce four times the
+            # cash the company holds.
             return None
         end = as_of or self.values[-1].end
         index = self.by_end()
@@ -1302,6 +1505,7 @@ def quarterly_series(
     taxonomy: str = DEFAULT_TAXONOMY,
     unit: str = DEFAULT_UNIT,
     since: dt.date | None = None,
+    reference_period_end: dt.date | None = None,
 ) -> QuarterlySeries:
     """Discrete quarterly values for one concept, resolved through its chain.
 
@@ -1318,30 +1522,39 @@ def quarterly_series(
     the reported window is narrowed.
     """
     concept = _lookup_concept(concept)
-    if concept.kind is not ConceptKind.DURATION:
+    if concept.kind is ConceptKind.SUM:
         raise UnsupportedConcept(
-            f"{concept.name!r} is a {concept.kind.value} concept; M1 implements the "
-            "duration concepts (revenue, R&D, operating cash flow) only"
+            f"{concept.name!r} is a {concept.kind.value} concept; summed concepts "
+            "(total debt) are not implemented yet"
         )
 
+    is_duration = concept.kind is ConceptKind.DURATION
     annuals: dict[str, dict[dt.date, PeriodValue]] = {}
     quarters_by_tag: dict[str, dict[dt.date, PeriodValue]] = {}
     observed_by_tag: dict[str, dict[tuple[dt.date | None, dt.date], Fact]] = {}
     available: list[str] = []
 
     for tag in concept.tags:
-        facts = extract_facts(companyfacts, tag, taxonomy=taxonomy, unit=unit)
+        facts = extract_facts(
+            companyfacts, tag, taxonomy=taxonomy, unit=unit, duration_only=is_duration
+        )
         if not facts:
             continue
         available.append(tag)
         measurement_basis = concept.basis_of(tag)
         observed_by_tag[tag] = latest_by_period(facts)
-        quarters_by_tag[tag] = discrete_quarters(
-            facts, concept=concept.name, measurement_basis=measurement_basis
-        )
-        annuals[tag] = annual_totals(
-            facts, concept=concept.name, measurement_basis=measurement_basis
-        )
+        if is_duration:
+            quarters_by_tag[tag] = discrete_quarters(
+                facts, concept=concept.name, measurement_basis=measurement_basis
+            )
+            annuals[tag] = annual_totals(
+                facts, concept=concept.name, measurement_basis=measurement_basis
+            )
+        else:
+            quarters_by_tag[tag] = instant_values(
+                facts, concept=concept.name, measurement_basis=measurement_basis
+            )
+            annuals[tag] = {}
 
     # Reconcile every tag against its own annuals first, so the selection rule
     # can prefer a candidate whose fiscal year actually adds up.
@@ -1441,7 +1654,16 @@ def quarterly_series(
     if overlapping:
         flags.append(f"{concept.name}:{FLAG_OVERLAPPING_PERIODS}")
 
-    return QuarterlySeries(
+    segments, cutovers = basis_segments(values)
+    if cutovers:
+        flags.append(f"{concept.name}:{FLAG_BASIS_CUTOVER}")
+
+    if reference_period_end is None:
+        reference_period_end = latest_reported_period_end(
+            companyfacts, taxonomy=taxonomy, forms=PERIODIC_FORMS
+        )
+
+    series = QuarterlySeries(
         concept=concept.name,
         resolution=resolution,
         values=values,
@@ -1450,7 +1672,88 @@ def quarterly_series(
         interchangeable=interchangeable,
         suspect_ends=suspect,
         tag_spans=tag_spans,
+        segments=tuple(segments),
+        cutovers=tuple(cutovers),
+        dropped_overlaps=tuple(overlapping),
+        kind=concept.kind,
+        reference_period_end=reference_period_end,
         flags=tuple(flags),
+    )
+    if series.is_stale:
+        series = replace(series, flags=series.flags + (f"{concept.name}:{FLAG_STALE_SERIES}",))
+    return series
+
+
+def annual_series(
+    companyfacts: Mapping[str, Any],
+    concept: str | Concept,
+    *,
+    taxonomy: str = DEFAULT_TAXONOMY,
+    unit: str = DEFAULT_UNIT,
+    quarterly: QuarterlySeries | None = None,
+) -> QuarterlySeries:
+    """Full fiscal-year figures for one concept, resolved by the same rules.
+
+    Duration concepts come from the filer's own 10-K annuals rather than from
+    summing four derived quarters — the reported year is the authority, and where
+    the two disagree that disagreement is itself a flag (`reconcile_fiscal_years`),
+    not something to paper over by substituting one for the other.
+
+    Instant concepts have no annual of their own; the year-end balance is the
+    balance struck on the fiscal year end, so it is looked up from the quarterly
+    instant series at the year-end dates the duration concepts establish.
+    """
+    concept = _lookup_concept(concept)
+    if concept.kind is ConceptKind.SUM:
+        raise UnsupportedConcept(f"{concept.name!r} is a summed concept; not implemented yet")
+
+    reference = latest_reported_period_end(companyfacts, taxonomy=taxonomy, forms=PERIODIC_FORMS)
+
+    if concept.kind is ConceptKind.INSTANT:
+        source = quarterly or quarterly_series(
+            companyfacts, concept, taxonomy=taxonomy, unit=unit, reference_period_end=reference
+        )
+        return replace(source, values=source.values)
+
+    annuals_by_tag: dict[str, dict[dt.date, PeriodValue]] = {}
+    available: list[str] = []
+    for tag in concept.tags:
+        facts = extract_facts(companyfacts, tag, taxonomy=taxonomy, unit=unit)
+        if not facts:
+            continue
+        available.append(tag)
+        annuals_by_tag[tag] = annual_totals(
+            facts, concept=concept.name, measurement_basis=concept.basis_of(tag)
+        )
+
+    candidates: dict[dt.date, list[PeriodValue]] = {}
+    for tag in available:
+        for end, value in annuals_by_tag[tag].items():
+            candidates.setdefault(end, []).append(value)
+
+    selected = [
+        select_period_value(group, selection=concept.selection, chain=concept.tags)
+        for group in candidates.values()
+    ]
+    values = tuple(sorted(selected, key=lambda v: v.end))
+
+    used = {v.tag for v in values}
+    tags_used = tuple(tag for tag in concept.tags if tag in used)
+    segments, cutovers = basis_segments(values)
+
+    return QuarterlySeries(
+        concept=concept.name,
+        resolution=ConceptResolution(
+            concept=concept.name,
+            chain=concept.tags,
+            tags_available=tuple(available),
+            tags_used=tags_used,
+        ),
+        values=values,
+        segments=tuple(segments),
+        cutovers=tuple(cutovers),
+        kind=concept.kind,
+        reference_period_end=reference,
     )
 
 
@@ -1516,6 +1819,15 @@ class QuarterlyTable:
                         for tag, span in s.tag_spans.items()
                     },
                     "measurement_bases": list(s.measurement_bases),
+                    "basis_segments": [seg.to_dict() for seg in s.segments],
+                    "basis_cutovers": [c.to_dict() for c in s.cutovers],
+                    "latest_period_end": s.latest_period_end.isoformat()
+                    if s.latest_period_end
+                    else None,
+                    "reference_period_end": s.reference_period_end.isoformat()
+                    if s.reference_period_end
+                    else None,
+                    "staleness_days": s.staleness_days,
                     "growth_yoy": s.growth().to_dict(),
                 }
                 for name, s in self.series.items()
@@ -1538,8 +1850,16 @@ def build_quarterly_table(
     concepts disagree on the period start — they should not, since one fiscal
     calendar governs all of them — the earliest is kept and the row is flagged.
     """
+    reference = latest_reported_period_end(companyfacts, taxonomy=taxonomy, forms=PERIODIC_FORMS)
     series = {
-        name: quarterly_series(companyfacts, name, taxonomy=taxonomy, unit=unit, since=since)
+        name: quarterly_series(
+            companyfacts,
+            name,
+            taxonomy=taxonomy,
+            unit=unit,
+            since=since,
+            reference_period_end=reference,
+        )
         for name in concepts
     }
 

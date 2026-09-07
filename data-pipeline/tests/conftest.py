@@ -72,6 +72,11 @@ def jnj() -> dict[str, Any]:
     return load_fixture("jnj_companyfacts")
 
 
+@pytest.fixture(scope="session")
+def vrtx() -> dict[str, Any]:
+    return load_fixture("vrtx_companyfacts")
+
+
 # Hand-built payloads with round numbers, so the arithmetic can be checked by eye.
 @pytest.fixture(scope="session")
 def ytd_only() -> dict[str, Any]:

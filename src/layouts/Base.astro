@@ -1,0 +1,173 @@
+---
+/**
+ * Minimal shell. Styling here is confined to legibility — a readable measure,
+ * ruled tables, and tabular figures so numeric columns line up (SPEC §9). The
+ * token system and typography of SPEC §9 proper are not part of M2.
+ */
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --ink: #16222e;
+        --ink-muted: #5a6b7a;
+        --field: #eef1f3;
+        --rule: #d3dae0;
+        --paper: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: 2rem 1.25rem 4rem;
+        max-width: 68rem;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.25rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+        margin: 2.5rem 0 0.75rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      h3 {
+        font-size: 0.95rem;
+        margin: 1.5rem 0 0.5rem;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      p {
+        max-width: 42rem;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0.5rem 0 1rem;
+        font-size: 14px;
+      }
+
+      caption {
+        text-align: left;
+        color: var(--ink-muted);
+        padding-bottom: 0.4rem;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--rule);
+        padding: 0.35rem 0.6rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      thead th {
+        border-bottom: 1px solid var(--ink);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      tbody tr:nth-child(even) {
+        background: var(--field);
+      }
+
+      /* Numeric cells: right-aligned with tabular figures so columns align. */
+      .num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        white-space: nowrap;
+      }
+
+      .null {
+        color: var(--ink-muted);
+        font-style: italic;
+      }
+
+      .muted {
+        color: var(--ink-muted);
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.15rem 1.25rem;
+        margin: 1rem 0 0;
+        font-size: 14px;
+      }
+
+      .meta dt {
+        color: var(--ink-muted);
+      }
+
+      .meta dd {
+        margin: 0;
+      }
+
+      .flag {
+        border-left: 3px solid var(--rule);
+        padding: 0.4rem 0 0.4rem 0.75rem;
+        margin: 0 0 0.75rem;
+        max-width: 52rem;
+      }
+
+      .flag[data-severity="high"] {
+        border-left-color: #9b2c2c;
+      }
+
+      .flag[data-severity="medium"] {
+        border-left-color: #b07d2b;
+      }
+
+      .flag code {
+        font-size: 12px;
+        color: var(--ink-muted);
+      }
+
+      footer {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--rule);
+        color: var(--ink-muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+    <footer>
+      <p>
+        This site is a personal project for research and educational purposes. It presents
+        publicly available data from SEC EDGAR, ClinicalTrials.gov, and openFDA, together with
+        metrics derived from that data. Nothing here is investment advice, a recommendation, or
+        an offer to buy or sell any security. Figures may be incomplete, delayed, or incorrect.
+      </p>
+    </footer>
+  </body>
+</html>

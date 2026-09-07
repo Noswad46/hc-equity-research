@@ -1,0 +1,251 @@
+---
+/**
+ * One statically generated page per covered company (SPEC §8).
+ *
+ * Every figure on this page is printed exactly as `run.py` emitted it. There is
+ * no rounding, no scaling to millions and no substitution of a dash for a
+ * missing value — a null renders as the word "null", because a figure that does
+ * not exist must not look like a zero.
+ */
+import Base from "../../layouts/Base.astro";
+import meta from "../../data/meta.json";
+import {
+  describeFlag,
+  severityOf,
+  SEVERITY_ORDER,
+  conceptLabel,
+  basisLabel,
+  raw,
+  type QualityRecord,
+} from "../../lib/flags";
+
+const QUARTERS_SHOWN = 12;
+const YEARS_SHOWN = 5;
+const COLUMNS = ["revenue", "rnd", "ocf", "cash"] as const;
+
+export async function getStaticPaths() {
+  const files = import.meta.glob("../../data/companies/*.json", { eager: true });
+  return Object.values(files).map((mod: any) => {
+    const company = mod.default ?? mod;
+    return { params: { ticker: company.ticker }, props: { company } };
+  });
+}
+
+const { company } = Astro.props;
+
+const quarters = company.quarterly.slice(-QUARTERS_SHOWN).reverse();
+const years = company.annual.slice(-YEARS_SHOWN).reverse();
+
+const flags: QualityRecord[] = [...company.data_quality].sort(
+  (a: QualityRecord, b: QualityRecord) => {
+    const bySeverity = SEVERITY_ORDER[severityOf(a.code)] - SEVERITY_ORDER[severityOf(b.code)];
+    if (bySeverity !== 0) return bySeverity;
+    return (b.period_end ?? "").localeCompare(a.period_end ?? "");
+  },
+);
+
+const conceptEntries = Object.entries(company.concepts) as [string, any][];
+---
+
+<Base title={`${company.ticker} — ${company.name}`}>
+  <p class="muted"><a href="/companies/">← All companies</a></p>
+
+  <h1>{company.name}</h1>
+  <p class="muted">{company.ticker} · {company.subsector}</p>
+
+  <dl class="meta">
+    <dt>Ticker</dt><dd>{company.ticker}</dd>
+    <dt>CIK</dt><dd>{company.cik}</dd>
+    <dt>Registrant</dt><dd>{company.entity_name}</dd>
+    <dt>Subsector</dt><dd>{company.subsector}</dd>
+    <dt>Therapeutic focus</dt><dd>{company.therapeutic_focus.join(", ") || "—"}</dd>
+    <dt>Fiscal period end</dt>
+    <dd class={company.fiscal_period_end === null ? "null" : ""}>
+      {raw(company.fiscal_period_end)}
+    </dd>
+    <dt>Data as of</dt><dd>{meta.generated_at}</dd>
+    <dt>Taxonomies</dt><dd>{company.taxonomies.join(", ")}</dd>
+  </dl>
+
+  <h2>Trailing twelve months</h2>
+  <table>
+    <caption>Sum of the four most recent discrete quarters. Null where they do not tile cleanly.</caption>
+    <thead>
+      <tr><th>Measure</th><th class="num">Value (USD)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Revenue</td>
+        <td class={`num ${company.revenue_ttm === null ? "null" : ""}`}>{raw(company.revenue_ttm)}</td>
+      </tr>
+      <tr>
+        <td>R&D expense</td>
+        <td class={`num ${company.rnd_ttm === null ? "null" : ""}`}>{raw(company.rnd_ttm)}</td>
+      </tr>
+      <tr>
+        <td>Operating cash flow</td>
+        <td class={`num ${company.ocf_ttm === null ? "null" : ""}`}>{raw(company.ocf_ttm)}</td>
+      </tr>
+      <tr>
+        <td>Cash (latest balance)</td>
+        <td class={`num ${company.cash === null ? "null" : ""}`}>{raw(company.cash)}</td>
+      </tr>
+      <tr>
+        <td>Revenue growth, year on year</td>
+        <td class={`num ${company.revenue_growth_yoy === null ? "null" : ""}`}>
+          {raw(company.revenue_growth_yoy)}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Quarterly</h2>
+  <table>
+    <caption>Last {QUARTERS_SHOWN} discrete quarters, most recent first. Figures in USD, as filed.</caption>
+    <thead>
+      <tr>
+        <th>Period start</th>
+        <th>Period end</th>
+        {COLUMNS.map((c) => <th class="num">{conceptLabel(c)}</th>)}
+        <th>Basis</th>
+        <th>Flags</th>
+      </tr>
+    </thead>
+    <tbody>
+      {quarters.map((row: any) => (
+        <tr>
+          <td>{row.period_start}</td>
+          <td>{row.period_end}</td>
+          {COLUMNS.map((c) => (
+            <td class={`num ${row[c] === null ? "null" : ""}`}>{raw(row[c])}</td>
+          ))}
+          <td class="muted">
+            {COLUMNS.filter((c) => row.source_basis[c])
+              .map((c) => `${c}: ${row.source_basis[c]}`)
+              .join(", ")}
+          </td>
+          <td class="muted">{row.flags.length ? row.flags.join(", ") : "—"}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Annual</h2>
+  <table>
+    <caption>
+      Last {YEARS_SHOWN} fiscal years, most recent first. Flow figures are the filer's own reported
+      year, not a sum of quarters. Cash is the balance at the fiscal year end.
+    </caption>
+    <thead>
+      <tr>
+        <th>Fiscal year end</th>
+        {COLUMNS.map((c) => <th class="num">{conceptLabel(c)}</th>)}
+        <th class="num">Revenue growth YoY</th>
+        <th>Suppressed by</th>
+      </tr>
+    </thead>
+    <tbody>
+      {years.map((row: any) => (
+        <tr>
+          <td>{row.period_end}</td>
+          {COLUMNS.map((c) => (
+            <td class={`num ${row[c] === null ? "null" : ""}`}>{raw(row[c])}</td>
+          ))}
+          <td class={`num ${row.revenue_growth_yoy.value === null ? "null" : ""}`}>
+            {raw(row.revenue_growth_yoy.value)}
+          </td>
+          <td class="muted">
+            {row.revenue_growth_yoy.suppressed_by.length
+              ? row.revenue_growth_yoy.suppressed_by.join(", ")
+              : "—"}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Tag basis</h2>
+  <table>
+    <caption>
+      Which XBRL tag supplied each concept, and what it measures. Where a series changes basis
+      partway, the cutover is named — the step at that point is a change of definition, not of the
+      business.
+    </caption>
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>Tags used</th>
+        <th>Measurement basis</th>
+        <th>Basis cutover</th>
+        <th>Latest period</th>
+      </tr>
+    </thead>
+    <tbody>
+      {conceptEntries.map(([name, c]) => (
+        <tr>
+          <td>{conceptLabel(name)}</td>
+          <td class="muted">{c.tags_used.length ? c.tags_used.join(", ") : "—"}</td>
+          <td class="muted">
+            {c.measurement_bases.length
+              ? c.measurement_bases.map((b: string) => basisLabel(b)).join(" → ")
+              : "—"}
+          </td>
+          <td class="muted">
+            {c.basis_cutovers.length
+              ? c.basis_cutovers
+                  .map(
+                    (x: any) =>
+                      `${basisLabel(x.from_basis)} → ${basisLabel(x.to_basis)}, between ${x.last_period_end_before} and ${x.first_period_end_after}`,
+                  )
+                  .join("; ")
+              : "—"}
+          </td>
+          <td class={c.latest_period_end === null ? "null" : ""}>
+            {raw(c.latest_period_end)}
+            {c.is_stale && <span class="muted"> ({c.staleness_days} days behind)</span>}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Data quality</h2>
+  {flags.length === 0 ? (
+    <p>No flags were raised on this record.</p>
+  ) : (
+    <>
+      <p class="muted">
+        {flags.length} item{flags.length === 1 ? "" : "s"}. Everything the pipeline noticed about
+        this record is listed here, most serious first.
+      </p>
+      {flags.map((record) => (
+        <div class="flag" data-severity={severityOf(record.code)}>
+          <div>{describeFlag(record)}</div>
+          <code>
+            {record.code}
+            {record.period_end ? ` · period ${record.period_start ?? "?"} to ${record.period_end}` : ""}
+          </code>
+        </div>
+      ))}
+    </>
+  )}
+
+  <h2>Sources</h2>
+  <p class="muted">
+    The SEC filings these figures were read from. Every number on this page traces to one of them.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Form</th><th>Filed</th><th>Accession</th></tr>
+    </thead>
+    <tbody>
+      {company.filings.map((f: any) => (
+        <tr>
+          <td>{f.form}</td>
+          <td>{f.filed}</td>
+          <td><a href={f.url}>{f.accession}</a></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Base>
