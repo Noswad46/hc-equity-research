@@ -81,26 +81,31 @@ def test_moderna_2022_revenue_matches_reported_year(mrna):
     )
 
 
-def test_moderna_ttm_spans_a_tag_switch_that_was_proven_harmless(mrna):
-    """Moderna moves tags partway through 2022, but the two agree where they overlap.
+def test_moderna_2022_now_resolves_to_a_single_tag(mrna):
+    """Largest-wins removed a tag switch that used to sit inside FY2022.
 
-    Q1 and Q2 2022 come from `Revenues`, Q3 and Q4 from
-    `RevenueFromContractWithCustomerExcludingAssessedTax`. Refusing every
-    multi-tag window would throw away a correct year; the tags are allowed to be
-    combined here because they match on every period the filer reports under
-    both. Contrast `test_pfizer_revenue_chain_tags_diverge_on_annuals_only`.
+    Both tags cover Q3 and Q4 2022 with identical values, so chain order used to
+    hand those quarters to the contracts-with-customers tag while Q1 and Q2 came
+    from `Revenues`. The year is now uniformly on `Revenues` and totals the same
+    $19,263M, which is what Moderna reported.
     """
     series = quarterly_series(mrna, "revenue")
     window = [series.by_end()[D(e)] for e in ("2022-03-31", "2022-06-30", "2022-09-30", "2022-12-31")]
     ttm = series.trailing_twelve_months(D("2022-12-31"))
 
-    assert len({q.tag for q in window}) == 2
-    assert series.divergences == ()
-    assert frozenset(
-        ("Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax")
-    ) in series.interchangeable
+    assert {q.tag for q in window} == {"Revenues"}
     assert ttm.val == pytest.approx(19_263 * M, abs=M)
-    assert len(ttm.contributing_tags) == 2
+    assert ttm.contributing_tags == ("Revenues",)
+
+
+def test_moderna_still_switches_tags_where_it_has_no_choice(mrna):
+    """Moderna stops tagging `Revenues` after 2022, so 2023 onward has one candidate."""
+    series = quarterly_series(mrna, "revenue")
+    spans = series.tag_spans
+
+    assert spans["Revenues"][1] == D("2022-12-31")
+    assert spans["RevenueFromContractWithCustomerExcludingAssessedTax"][0] == D("2023-03-31")
+    assert "revenue:mixed_tags" in series.flags
 
 
 def test_pfizer_single_tag_ttm_is_computed_but_carries_a_flag(pfe):
@@ -195,21 +200,57 @@ def test_pfizer_q3_2021_matches_the_reported_figure(pfe):
     assert quarters(pfe, "revenue")[D("2021-10-03")].val == pytest.approx(24_035 * M, abs=M)
 
 
-def test_pfizer_rnd_does_not_resolve_under_the_spec_chain(pfe):
-    """SPEC §5.1's R&D chain has one entry, and Pfizer does not use it.
+def test_pfizer_rnd_resolves_on_the_excluding_iprd_basis(pfe):
+    """Pfizer reports R&D excluding acquired IPR&D, and now produces a full series.
 
-    Pfizer tags R&D as `ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost`.
-    Widening the chain is a deliberate decision, not something this module should
-    do implicitly, so R&D is empty and the near miss is named instead of the gap
-    being passed off as "this company reports no R&D".
+    The tag is not an alternative spelling of `ResearchAndDevelopmentExpense` —
+    Moderna's version of that tag includes acquired IPR&D — so the basis is
+    recorded on every value and left un-normalised.
     """
     series = quarterly_series(pfe, "rnd")
 
-    assert series.values == ()
-    assert "rnd:no_tag_resolved" in series.flags
-    assert series.resolution.near_miss_tags == (
+    assert len(series.values) >= 30
+    assert series.resolution.tags_used == (
         "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     )
+    assert series.measurement_bases == ("rnd_excluding_acquired_iprd",)
+    assert all(v.measurement_basis == "rnd_excluding_acquired_iprd" for v in series.values)
+    assert "rnd:no_tag_resolved" not in series.flags
+
+
+def test_pfizer_rnd_quarters_are_contiguous(pfe):
+    """The fixture covers 2018 onward, where Pfizer's R&D series has no holes."""
+    values = quarterly_series(pfe, "rnd").values
+
+    for earlier, later in zip(values, values[1:]):
+        assert (later.start - earlier.end).days == 1, (earlier.end, later.start)
+
+
+def test_pfizer_rnd_ttm_is_plausible(pfe):
+    """Pfizer's trailing R&D runs around $11bn on the excluding-IPR&D basis."""
+    ttm = quarterly_series(pfe, "rnd").trailing_twelve_months()
+
+    assert 9_000 * M < ttm.val < 13_000 * M
+    assert ttm.measurement_basis == "rnd_excluding_acquired_iprd"
+
+
+def test_moderna_rnd_uses_the_including_iprd_basis(mrna):
+    """The counterpart case: the same concept, the other basis, on the same run."""
+    series = quarterly_series(mrna, "rnd")
+
+    assert series.resolution.tags_used == ("ResearchAndDevelopmentExpense",)
+    assert series.measurement_bases == ("rnd_including_acquired_iprd",)
+
+
+def test_the_two_rnd_bases_are_recorded_never_reconciled(pfe, mrna):
+    """Comparing these two directly is not valid, and nothing here pretends otherwise."""
+    pfizer = quarterly_series(pfe, "rnd").values[-1]
+    moderna = quarterly_series(mrna, "rnd").values[-1]
+
+    assert pfizer.measurement_basis != moderna.measurement_basis
+    # No normalisation factor, adjustment or blending exists on either value.
+    assert pfizer.contributing_bases == ("rnd_excluding_acquired_iprd",)
+    assert moderna.contributing_bases == ("rnd_including_acquired_iprd",)
 
 
 def test_pfizer_revenue_chain_tags_diverge_on_annuals_only(pfe):
@@ -225,20 +266,57 @@ def test_pfizer_revenue_chain_tags_diverge_on_annuals_only(pfe):
     assert all((d.end - d.start).days > 300 for d in divergences)
 
 
-def test_pfizer_q4s_derived_from_a_disputed_annual_are_flagged(pfe):
-    """This is the number that would otherwise be quietly wrong.
+def test_pfizer_q4_2022_now_resolves_to_the_revenues_basis(pfe):
+    """The $9bn error, corrected by the selection rule.
 
-    Q4 2022 comes out at $15,753M because the annual is tagged on the
-    revenue-from-contracts basis while the nine-month figure under the same tag
-    is the total. The same filing supports $25,135M under `Revenues`. The value
-    is still emitted, but marked, because choosing between the two means guessing
-    what the filer meant.
+    Both candidates cover Q4 2022 and both reconcile within their own tag, so the
+    larger wins: $25,135M on `Revenues` rather than $15,753M on the
+    contracts-with-customers component. The component figure was never wrong
+    arithmetic — it was the wrong measure presented as the total.
+    """
+    q4 = quarterly_series(pfe, "revenue").by_end()[D("2022-12-31")]
+
+    assert q4.val == pytest.approx(25_135 * M, abs=M)
+    assert q4.tag == "Revenues"
+    assert q4.measurement_basis == "revenue_total"
+
+
+def test_pfizer_q4_2023_is_on_the_revenues_basis(pfe):
+    q4 = quarterly_series(pfe, "revenue").by_end()[D("2023-12-31")]
+
+    assert q4.val == pytest.approx(14_569 * M, abs=M)
+    assert q4.tag == "Revenues"
+
+
+def test_pfizer_q4_2021_stays_on_the_component_basis_and_says_so(pfe):
+    """The one Q4 the selection rule cannot move, because there is nothing to move to.
+
+    Under `Revenues` Pfizer filed only the FY2021 annual — no year-to-date facts
+    for 2021 at all — so no Q4 2021 candidate exists on that basis. Producing one
+    would mean subtracting the contracts-with-customers nine-month figure from
+    the `Revenues` annual, and that cross-tag subtraction is exactly what
+    produced the $9bn error in the first place. A flagged figure on a known basis
+    beats a clean-looking figure built from two different ones.
     """
     series = quarterly_series(pfe, "revenue")
+    q4 = series.by_end()[D("2021-12-31")]
 
-    assert series.suspect_ends == {D("2021-12-31"), D("2022-12-31"), D("2023-12-31")}
+    assert q4.tag == "RevenueFromContractWithCustomerExcludingAssessedTax"
+    assert q4.val == pytest.approx(16_186 * M, abs=M)
+    assert "tag_basis_uncertain" in q4.flags
     assert "revenue:chain_tags_diverge" in series.flags
-    assert series.by_end()[D("2022-12-31")].val == pytest.approx(15_753 * M, abs=M)
+
+
+def test_pfizer_divergence_detection_survives_the_selection_rule(pfe):
+    """Selecting correctly is not a reason to stop reporting the disagreement."""
+    divergences = quarterly_series(pfe, "revenue").divergences
+    disputed = {(d.start, d.end) for d in divergences}
+
+    assert disputed == {
+        (D("2021-01-01"), D("2021-12-31")),
+        (D("2022-01-01"), D("2022-12-31")),
+        (D("2023-01-01"), D("2023-12-31")),
+    }
 
 
 def test_pfizer_flagged_quarters_are_visible_on_the_row(pfe):
@@ -254,6 +332,54 @@ def test_pfizer_undisputed_quarters_are_not_flagged(pfe):
     row = {r.period_end: r for r in table.rows}[D("2022-07-03")]
 
     assert "revenue:tag_basis_uncertain" not in row.flags
+
+
+# --------------------------------------------------------------------------- #
+# Johnson & Johnson — the other filer the one-entry R&D chain lost
+# --------------------------------------------------------------------------- #
+
+
+def test_jnj_rnd_produces_a_complete_quarterly_series(jnj):
+    """J&J tags quarterly R&D only under the excluding-IPR&D name.
+
+    `ResearchAndDevelopmentExpense` does exist for J&J, but carries annual
+    figures alone — nine facts, all 10-K — so the single-entry chain yielded no
+    quarters whatsoever.
+    """
+    series = quarterly_series(jnj, "rnd")
+
+    assert len(series.values) >= 30
+    assert series.resolution.tags_used == (
+        "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    )
+    assert "rnd:no_quarters_derived" not in series.flags
+    assert "rnd:no_tag_resolved" not in series.flags
+
+
+def test_jnj_rnd_quarters_are_contiguous(jnj):
+    """A complete series means no holes, not just a non-empty one."""
+    values = quarterly_series(jnj, "rnd").values
+
+    for earlier, later in zip(values, values[1:]):
+        assert (later.start - earlier.end).days == 1, (earlier.end, later.start)
+
+
+def test_jnj_rnd_ttm_is_plausible(jnj):
+    """J&J's trailing R&D runs around $15bn."""
+    ttm = quarterly_series(jnj, "rnd").trailing_twelve_months()
+
+    assert 12_000 * M < ttm.val < 18_000 * M
+    assert ttm.measurement_basis == "rnd_excluding_acquired_iprd"
+
+
+def test_jnj_annual_only_tag_contributes_no_quarters(jnj):
+    """The including-IPR&D tag has annuals but no year-to-date facts to difference."""
+    from transform.fundamentals import discrete_quarters, extract_facts
+
+    facts = extract_facts(jnj, "ResearchAndDevelopmentExpense")
+
+    assert facts  # the tag is present
+    assert discrete_quarters(facts) == {}  # but yields nothing
 
 
 # --------------------------------------------------------------------------- #
@@ -279,13 +405,23 @@ def test_bdx_fourth_quarter_falls_in_september(bdx):
     assert (q4.start, q4.end) == (D("2024-07-01"), D("2024-09-30"))
 
 
-def test_bdx_revenue_uses_a_fallback_tag(bdx):
-    """BD has no RevenueFromContractWithCustomer tag at all."""
+def test_bdx_revenue_sits_on_the_primary_tag(bdx):
+    """BD has no RevenueFromContractWithCustomer tag at all, and `Revenues` is now primary."""
     series = quarterly_series(bdx, "revenue")
 
     assert series.resolution.tags_used == ("Revenues",)
-    assert series.resolution.uses_fallback
-    assert "revenue:fallback_tag" in series.flags
+    assert not series.resolution.uses_fallback
+    assert "revenue:fallback_tag" not in series.flags
+    assert "revenue:mixed_tags" not in series.flags
+
+
+def test_bdx_revenue_figures_are_unchanged_by_the_selection_rule(bdx):
+    """BD's candidates never overlap, so largest-wins has nothing to change here."""
+    index = quarterly_series(bdx, "revenue").by_end()
+
+    assert index[D("2024-09-30")].val == pytest.approx(5_437 * M, abs=M)
+    assert index[D("2024-09-30")].basis is Basis.DERIVED
+    assert index[D("2023-12-31")].start == D("2023-10-01")
 
 
 def test_bdx_ocf_gap_where_a_quarter_would_need_cross_tag_arithmetic(bdx):
@@ -345,7 +481,7 @@ def test_twenty_f_forms_are_excluded(bntx):
 # --------------------------------------------------------------------------- #
 
 
-@pytest.fixture(params=["pfe", "mrna", "bdx", "mrk"])
+@pytest.fixture(params=["pfe", "mrna", "bdx", "mrk", "jnj"])
 def real_payload(request):
     return request.getfixturevalue(request.param)
 
@@ -375,6 +511,28 @@ def test_derived_values_carry_their_sources(real_payload):
                 assert len(value.accns) == 2
             else:
                 assert value.derived_from == ()
+
+
+def test_every_value_declares_its_measurement_basis(real_payload):
+    """All three M1 concepts have tags that measure different things."""
+    for concept in ("revenue", "rnd", "ocf"):
+        for value in quarterly_series(real_payload, concept).values:
+            assert value.measurement_basis is not None, value.to_dict()
+
+
+def test_arithmetic_never_crosses_tags(real_payload):
+    """The rule that kept the Pfizer revenue error to one flagged quarter.
+
+    A derived value subtracts two year-to-date periods; both must come from the
+    tag the value is attributed to. Selection happens after derivation, never
+    inside it.
+    """
+    for concept in ("revenue", "rnd", "ocf"):
+        series = quarterly_series(real_payload, concept)
+        for value in series.values:
+            if value.basis is Basis.DERIVED:
+                assert value.contributing_tags == (value.tag,)
+                assert len(set(value.contributing_bases)) == 1
 
 
 def test_table_is_json_serialisable(real_payload):

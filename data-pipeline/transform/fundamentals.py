@@ -2,56 +2,69 @@
 
 This is the transform half of SPEC §5.1, and the warning in SPEC §11 applies:
 every metric downstream inherits errors made here, and those errors are hard to
-spot once they are rendered as confident-looking numbers in a table. Three
-behaviours exist specifically to keep that from happening.
+spot once they are rendered as confident-looking numbers in a table.
 
-**Tag resolution is per period, not per company.** Filers migrate tags mid-life —
-Pfizer's `RevenueFromContractWithCustomerExcludingAssessedTax` stops in 2023 and
-`Revenues` takes over — so resolving one tag for the whole company either loses
-recent data or loses history. Instead the chain is walked once per period and the
-tag that supplied each value is recorded on that value, which is what makes the
-footnote rule in SPEC §6 possible.
+**Tag resolution is per period, not per company.** Filers migrate tags mid-life,
+so resolving one tag for a whole company either loses recent data or loses
+history. Candidates are resolved once per period and the tag that supplied each
+value is recorded on that value, which is what makes the footnote rule in SPEC §6
+possible.
 
 **Arithmetic never crosses tags.** Discrete quarters are derived inside a single
-tag's fact set and only then merged by chain preference. Differencing an annual
-figure tagged `Revenues` against a nine-month figure tagged
+tag's fact set, and only the finished quarters are compared against each other.
+Differencing an annual tagged `Revenues` against a nine-month figure tagged
 `RevenueFromContractWithCustomerExcludingAssessedTax` would subtract two
-different definitions of revenue and produce a plausible, wrong number.
+different measures and produce a plausible, wrong number. This rule is why the
+Pfizer revenue problem below stayed confined to one flagged quarter.
 
-**Restatements resolve to the most recently filed value.** A period is often
-reported several times across filings; the latest wins, on both sides of every
+**Restatements resolve to the most recently filed value**, on both sides of every
 subtraction, so a derived quarter is never a mix of vintages.
 
-Two things that discipline still cannot fix are detected and flagged instead of
-being quietly emitted:
+**Candidates are not always alternative spellings.** SPEC §5.1 models every
+concept as a fallback chain, which assumes the tags mean the same thing. For
+revenue that is false: alliance revenue, royalties, collaboration income and
+grant revenue all sit outside ASC 606, so `Revenues` is the income statement
+total and `RevenueFromContractWithCustomerExcludingAssessedTax` is a component of
+it. Taking the component wherever the total was missing turned Pfizer's Q4 2022
+revenue into $15.8bn instead of $25.1bn. Revenue is therefore a candidate set
+resolved by `Selection.LARGEST` — a total is at least as large as any component —
+gated on internal consistency, because Emergent reports a component *exceeding*
+its total and the larger figure there is the wrong one. R&D and operating cash
+flow remain chain-ordered; their tags are not totals and components.
 
-* A period whose annual figure was restated while its quarters were not. Merck's
-  FY2020 was restated for the Organon spin-off, so its 2020 quarters no longer
-  sum to its annual. `reconcile_fiscal_years` catches this.
-* A filer whose chain tags are not interchangeable. Pfizer tags total revenue as
-  `RevenueFromContractWithCustomerExcludingAssessedTax` in its 10-Qs, but in the
-  10-K uses that tag for the narrower revenue-from-contracts subtotal and
-  `Revenues` for the total. The two agree on every quarterly and year-to-date
-  period and disagree only on annuals, so a Q4 derived as annual-minus-nine-months
-  silently absorbs the difference — $15.8bn against the $25.1bn the same filing
-  supports under the other tag. `detect_tag_divergence` finds the disagreeing
-  periods and marks every quarter derived from one.
+**Some tags measure genuinely different things, and that is recorded rather than
+resolved.** `ResearchAndDevelopmentExpense` includes acquired IPR&D while
+`...ExcludingAcquiredInProcessCost` does not, and IPR&D charges are lumpy and
+deal-driven. Both are read, because the alternative was Pfizer and J&J having no
+R&D at all, but every value carries its `measurement_basis` and nothing here
+attempts to normalise between them. That decision belongs with the derived
+metrics, not the fact layer.
 
-Neither is corrected automatically. Picking a winner would mean encoding a guess
-about which tag the filer meant, and SPEC §4's warning about silent,
-plausible-looking errors applies to tag choice as much as to name matching.
+What none of this can fix is detected and flagged rather than quietly emitted: a
+fiscal year restated above unrestated quarters (`reconcile_fiscal_years`), and
+candidate tags that disagree about a period (`detect_tag_divergence`).
+
+**Flags suppress as well as annotate.** A period marked `restated_fiscal_year`
+disqualifies any growth or comparison metric spanning it, via `guard_metric`.
+Merck's FY2020 quarters are real filed figures, but a year-on-year comparison
+across them measures the Organon spin-off rather than trading. Annotating alone
+would fix the confident-looking-wrong-number problem at the fact layer and let it
+reappear at the metric layer, where a dropped footnote is invisible and a null is
+not.
 """
 
 from __future__ import annotations
 
 import datetime as dt
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from enum import Enum
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Callable, Iterable, Mapping, Sequence
 
 __all__ = [
     "ANNUAL_DAYS",
+    "BLOCKING_FLAGS",
     "CONCEPT_CHAINS",
+    "FLAG_WINDOW_START",
     "M1_CONCEPTS",
     "PERIODIC_FORMS",
     "QUARTER_DAYS",
@@ -61,11 +74,13 @@ __all__ = [
     "ConceptResolution",
     "Fact",
     "FundamentalsError",
+    "MetricResult",
     "PeriodValue",
     "QuarterRow",
     "QuarterlySeries",
     "QuarterlyTable",
     "Reconciliation",
+    "Selection",
     "TagDivergence",
     "UnsupportedConcept",
     "annual_totals",
@@ -73,11 +88,14 @@ __all__ = [
     "detect_tag_divergence",
     "discrete_quarters",
     "extract_facts",
+    "guard_metric",
     "interchangeable_tag_pairs",
     "latest_by_period",
     "quarterly_series",
     "reconcile_fiscal_years",
     "resolve_concept",
+    "resolve_overlaps",
+    "select_period_value",
 ]
 
 
@@ -126,48 +144,132 @@ class Basis(str, Enum):
     DERIVED = "derived"
 
 
+class Selection(str, Enum):
+    """How to choose between candidate tags that both cover a period."""
+
+    #: Take the first tag in the list that covers the period. Correct when the
+    #: list really is a fallback chain — alternative spellings of one measure,
+    #: in order of preference.
+    CHAIN_ORDER = "chain_order"
+    #: Take the largest value among candidates that are internally consistent.
+    #: Correct when the candidates stand in a total/component relationship, since
+    #: a total is by definition at least as large as any component of it.
+    LARGEST = "largest"
+
+
+#: Measurement-basis labels. Two tags can both be "R&D" and still not be
+#: comparable; the label travels with every value so a downstream metric can see
+#: what it is mixing.
+BASIS_RND_INCLUDING_IPRD = "rnd_including_acquired_iprd"
+BASIS_RND_EXCLUDING_IPRD = "rnd_excluding_acquired_iprd"
+BASIS_REVENUE_TOTAL = "revenue_total"
+BASIS_REVENUE_CONTRACTS_ONLY = "revenue_contracts_with_customers"
+BASIS_OCF_TOTAL = "ocf_total"
+BASIS_OCF_CONTINUING = "ocf_continuing_operations"
+
+
 @dataclass(frozen=True)
 class Concept:
-    """A named concept and its ordered tag fallback chain (SPEC §5.1)."""
+    """A named concept, its candidate tags, and how to choose between them.
+
+    `tags` is ordered. Under `Selection.CHAIN_ORDER` that order is the decision.
+    Under `Selection.LARGEST` it only breaks ties, but it still determines which
+    tag counts as primary for `uses_fallback` reporting.
+    """
 
     name: str
     kind: ConceptKind
     tags: tuple[str, ...]
     label: str
+    selection: Selection = Selection.CHAIN_ORDER
+    #: Tag -> measurement-basis label, for tags that measure materially different
+    #: things. Absent means "no basis distinction worth recording".
+    tag_basis: Mapping[str, str] = field(default_factory=dict)
 
     @property
     def primary_tag(self) -> str:
         return self.tags[0]
 
+    def basis_of(self, tag: str) -> str | None:
+        return self.tag_basis.get(tag)
 
-def _concept(name: str, kind: ConceptKind, label: str, *tags: str) -> tuple[str, Concept]:
-    return name, Concept(name=name, kind=kind, tags=tags, label=label)
+
+def _concept(
+    name: str,
+    kind: ConceptKind,
+    label: str,
+    *tags: str,
+    selection: Selection = Selection.CHAIN_ORDER,
+    tag_basis: Mapping[str, str] | None = None,
+) -> tuple[str, Concept]:
+    return name, Concept(
+        name=name,
+        kind=kind,
+        tags=tags,
+        label=label,
+        selection=selection,
+        tag_basis=dict(tag_basis or {}),
+    )
 
 
-#: The fallback chains exactly as SPEC §5.1 defines them.
+#: Concept definitions. Two deliberately depart from the SPEC §5.1 table.
 #:
-#: Known gap, left in place rather than silently widened: the R&D chain has a
-#: single entry, and neither Pfizer nor Johnson & Johnson tags quarterly R&D that
-#: way — both use `ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost`.
-#: R&D therefore resolves to nothing for those two filers, and the resolution
-#: reports the near-miss tags it saw so the gap is visible rather than silent.
+#: **Revenue.** SPEC orders `RevenueFromContractWithCustomerExcludingAssessedTax`
+#: first. That is wrong for pharma. Alliance revenue, royalties, collaboration
+#: income and grant revenue all sit outside ASC 606, so `Revenues` is the income
+#: statement total and the contracts-with-customers tag is a *component* of it —
+#: not an alternative spelling. Treating them as a fallback chain silently
+#: reported a component as the total wherever the total was missing, most
+#: visibly turning Pfizer's Q4 2022 revenue into $15.8bn instead of $25.1bn.
+#: They are therefore a candidate set resolved by `Selection.LARGEST`. Affects
+#: PFE, VRTX, GILD, NVAX and VIR.
+#:
+#: **R&D.** SPEC lists one tag. Pfizer and Johnson & Johnson do not use it —
+#: both report `ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost` —
+#: so R&D resolved to nothing at all for them, which is worse than any
+#: comparability concern. The tag is added, but the two are *not* interchangeable:
+#: Moderna's `ResearchAndDevelopmentExpense` includes acquired IPR&D while
+#: Pfizer's and J&J's excludes it, and IPR&D charges are lumpy and deal-driven.
+#: Selection stays chain-order, the fuller measure first, and every value carries
+#: the basis it was measured on. The two bases are recorded, never normalised —
+#: that belongs with the derived-metrics work, not here.
 CONCEPT_CHAINS: Mapping[str, Concept] = dict(
     [
         _concept(
             "revenue",
             ConceptKind.DURATION,
             "Revenue",
-            "RevenueFromContractWithCustomerExcludingAssessedTax",
             "Revenues",
             "SalesRevenueNet",
+            "RevenueFromContractWithCustomerExcludingAssessedTax",
+            selection=Selection.LARGEST,
+            tag_basis={
+                "Revenues": BASIS_REVENUE_TOTAL,
+                "SalesRevenueNet": BASIS_REVENUE_TOTAL,
+                "RevenueFromContractWithCustomerExcludingAssessedTax": BASIS_REVENUE_CONTRACTS_ONLY,
+            },
         ),
-        _concept("rnd", ConceptKind.DURATION, "R&D expense", "ResearchAndDevelopmentExpense"),
+        _concept(
+            "rnd",
+            ConceptKind.DURATION,
+            "R&D expense",
+            "ResearchAndDevelopmentExpense",
+            "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+            tag_basis={
+                "ResearchAndDevelopmentExpense": BASIS_RND_INCLUDING_IPRD,
+                "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": BASIS_RND_EXCLUDING_IPRD,
+            },
+        ),
         _concept(
             "ocf",
             ConceptKind.DURATION,
             "Operating cash flow",
             "NetCashProvidedByUsedInOperatingActivities",
             "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+            tag_basis={
+                "NetCashProvidedByUsedInOperatingActivities": BASIS_OCF_TOTAL,
+                "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations": BASIS_OCF_CONTINUING,
+            },
         ),
         _concept("operating_income", ConceptKind.DURATION, "Operating income", "OperatingIncomeLoss"),
         _concept("net_income", ConceptKind.DURATION, "Net income", "NetIncomeLoss"),
@@ -220,6 +322,35 @@ FLAG_FY_RECONCILIATION_FAILED = "fy_reconciliation_failed"
 FLAG_CHAIN_TAGS_DIVERGE = "chain_tags_diverge"
 FLAG_TAG_BASIS_UNCERTAIN = "tag_basis_uncertain"
 FLAG_PERIOD_START_MISMATCH = "period_start_mismatch"
+FLAG_MIXED_MEASUREMENT_BASIS = "mixed_measurement_basis"
+
+# Period-level flags. These attach to individual `PeriodValue`s rather than to a
+# whole series, which is what lets a metric decide period by period whether its
+# inputs are usable.
+FLAG_RESTATED_FISCAL_YEAR = "restated_fiscal_year"
+FLAG_OVERLAPPING_PERIODS = "overlapping_periods"
+
+#: Period flags that make a value unusable as an input to a comparison metric.
+#:
+#: A restated fiscal year is the case this exists for. Merck's FY2020 annual was
+#: restated for the Organon spin-off while its 2020 quarters were not, so the
+#: quarters are real filed figures that no longer describe the same entity as the
+#: year around them. Reporting them is right; computing growth *across* them is
+#: not, because the result measures a divestment rather than trading. Annotating
+#: alone would solve the confident-looking-wrong-number problem at the fact layer
+#: and let it reappear at the metric layer, where it is much harder to see.
+#:
+#: `tag_basis_uncertain` is deliberately *not* here. It marks a figure whose
+#: tagging is ambiguous, not one that is wrong, and suppressing on it would erase
+#: several years of Pfizer revenue over a footnote.
+BLOCKING_FLAGS: frozenset[str] = frozenset({FLAG_RESTATED_FISCAL_YEAR})
+
+#: Tag-composition flags describe a *span*, and essentially every filer crossed
+#: the ASC 606 revenue transition around 2018. Computed over full history they
+#: fire for the entire universe and carry no information, so they are evaluated
+#: only over periods ending on or after this date. The underlying data still runs
+#: as far back as the filer reported it.
+FLAG_WINDOW_START = dt.date(2019, 1, 1)
 
 
 # --------------------------------------------------------------------------- #
@@ -297,10 +428,16 @@ def extract_facts(
 ) -> list[Fact]:
     """Pull one tag's facts out of a `companyfacts` payload.
 
-    Filters to the named taxonomy and unit and to periodic forms. Taxonomy is
-    matched explicitly rather than by tag name, because IFRS filers publish an
-    `ifrs-full:ResearchAndDevelopmentExpense` whose local name collides with the
-    us-gaap tag while its figures are not on a comparable basis.
+    Filters to the named taxonomy and unit and to periodic forms.
+
+    Taxonomy is matched explicitly rather than by tag name. IFRS filers publish
+    an `ifrs-full:ResearchAndDevelopmentExpense` whose local name is identical to
+    the us-gaap tag, and the figures are not comparable: under IAS 38 development
+    costs that meet the capitalisation criteria go onto the balance sheet, while
+    US GAAP expenses essentially all R&D as incurred. Reading one into the other
+    would understate R&D for the IFRS filer and corrupt R&D intensity and cash
+    runway alike. Falling back on a name match would do exactly that silently,
+    which is why the taxonomy is checked first. See `content/methodology/`.
     """
     node = companyfacts.get("facts", {})
     if not isinstance(node, Mapping):
@@ -400,14 +537,36 @@ class PeriodValue:
     #: Every tag behind this figure. One entry for a single quarter; possibly
     #: several for an aggregate such as a trailing twelve months.
     contributing_tags: tuple[str, ...] = ()
+    #: What this figure actually measures, where the concept's tags differ on
+    #: that. R&D under `ResearchAndDevelopmentExpense` includes acquired IPR&D;
+    #: under `...ExcludingAcquiredInProcessCost` it does not. Recorded, never
+    #: normalised.
+    measurement_basis: str | None = None
+    #: Every measurement basis behind this figure, for aggregates that span more
+    #: than one.
+    contributing_bases: tuple[str, ...] = ()
+    #: Quality flags specific to this period. `BLOCKING_FLAGS` names the subset
+    #: that disqualifies a value as a metric input.
+    flags: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.contributing_tags:
             object.__setattr__(self, "contributing_tags", (self.tag,))
+        if not self.contributing_bases and self.measurement_basis is not None:
+            object.__setattr__(self, "contributing_bases", (self.measurement_basis,))
 
     @property
     def days(self) -> int:
         return (self.end - self.start).days + 1
+
+    @property
+    def blocking_flags(self) -> tuple[str, ...]:
+        return tuple(f for f in self.flags if f in BLOCKING_FLAGS)
+
+    def with_flags(self, *flags: str) -> PeriodValue:
+        """Return a copy carrying `flags` in addition to its own, order preserved."""
+        merged = tuple(dict.fromkeys(self.flags + flags))
+        return replace(self, flags=merged)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -419,11 +578,14 @@ class PeriodValue:
             "tag": self.tag,
             "taxonomy": self.taxonomy,
             "basis": self.basis.value,
+            "measurement_basis": self.measurement_basis,
             "filed": self.filed.isoformat(),
             "accns": list(self.accns),
             "forms": list(self.forms),
             "derived_from": [[s.isoformat(), e.isoformat()] for s, e in self.derived_from],
             "contributing_tags": list(self.contributing_tags),
+            "contributing_bases": list(self.contributing_bases),
+            "flags": list(self.flags),
         }
 
 
@@ -432,7 +594,9 @@ def _preference(value: PeriodValue) -> tuple[int, dt.date, str]:
     return (0 if value.basis is Basis.REPORTED else -1, value.filed, value.accns[0])
 
 
-def discrete_quarters(facts: Iterable[Fact], *, concept: str = "") -> dict[dt.date, PeriodValue]:
+def discrete_quarters(
+    facts: Iterable[Fact], *, concept: str = "", measurement_basis: str | None = None
+) -> dict[dt.date, PeriodValue]:
     """Discrete quarters for a *single* tag, keyed by period end.
 
     Two sources, in preference order:
@@ -472,6 +636,7 @@ def discrete_quarters(facts: Iterable[Fact], *, concept: str = "") -> dict[dt.da
                     forms=(fact.form,),
                     taxonomy=fact.taxonomy,
                     unit=fact.unit,
+                    measurement_basis=measurement_basis,
                 )
             )
 
@@ -502,13 +667,16 @@ def discrete_quarters(facts: Iterable[Fact], *, concept: str = "") -> dict[dt.da
                     taxonomy=longer.taxonomy,
                     unit=longer.unit,
                     derived_from=((start, later), (start, earlier)),
+                    measurement_basis=measurement_basis,
                 )
             )
 
     return out
 
 
-def annual_totals(facts: Iterable[Fact], *, concept: str = "") -> dict[dt.date, PeriodValue]:
+def annual_totals(
+    facts: Iterable[Fact], *, concept: str = "", measurement_basis: str | None = None
+) -> dict[dt.date, PeriodValue]:
     """Full-year figures for a single tag, keyed by fiscal year end.
 
     Restricted to 10-K forms: a 10-K is the only filing that reports a complete
@@ -530,6 +698,7 @@ def annual_totals(facts: Iterable[Fact], *, concept: str = "") -> dict[dt.date, 
             forms=(fact.form,),
             taxonomy=fact.taxonomy,
             unit=fact.unit,
+            measurement_basis=measurement_basis,
         )
     return out
 
@@ -803,6 +972,164 @@ def reconcile_fiscal_years(
     return out
 
 
+# --------------------------------------------------------------------------- #
+# Metric suppression
+# --------------------------------------------------------------------------- #
+
+
+@dataclass(frozen=True)
+class MetricResult:
+    """A derived figure, or the reason there isn't one.
+
+    Flags on this project annotate *and* suppress. A metric built from periods
+    that carry a blocking flag returns `value=None` and says which flag stopped
+    it, rather than returning a number with a footnote attached. The distinction
+    matters because a footnote is easy to drop on the way to a table cell, and a
+    null is not.
+    """
+
+    name: str
+    value: float | None
+    inputs: tuple[PeriodValue, ...] = ()
+    flags: tuple[str, ...] = ()
+    suppressed_by: tuple[str, ...] = ()
+
+    @property
+    def suppressed(self) -> bool:
+        return bool(self.suppressed_by)
+
+    @property
+    def period_ends(self) -> tuple[dt.date, ...]:
+        return tuple(v.end for v in self.inputs)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "name": self.name,
+            "value": self.value,
+            "suppressed": self.suppressed,
+            "suppressed_by": list(self.suppressed_by),
+            "flags": list(self.flags),
+            "period_ends": [d.isoformat() for d in self.period_ends],
+        }
+
+
+def guard_metric(
+    name: str,
+    compute: Callable[[], float | None],
+    inputs: Sequence[PeriodValue],
+    *,
+    blocking: frozenset[str] = BLOCKING_FLAGS,
+    extra_flags: Sequence[str] = (),
+) -> MetricResult:
+    """Compute a metric unless one of its inputs disqualifies it.
+
+    This is the general mechanism; `QuarterlySeries.growth` is one caller. Any
+    later derived metric (SPEC §6) should route through it rather than reading
+    `PeriodValue.val` directly, so that suppression is decided in one place from
+    the flags the fact layer already produces.
+
+    `compute` is a thunk so a suppressed metric costs nothing and, more usefully,
+    cannot raise on inputs that were never fit to use.
+    """
+    collected = tuple(dict.fromkeys([f for v in inputs for f in v.flags] + list(extra_flags)))
+    blocked = tuple(f for f in collected if f in blocking)
+    if blocked or not inputs:
+        return MetricResult(
+            name=name,
+            value=None,
+            inputs=tuple(inputs),
+            flags=collected,
+            suppressed_by=blocked or ("no_inputs",),
+        )
+    return MetricResult(name=name, value=compute(), inputs=tuple(inputs), flags=collected)
+
+
+#: Consistency of a candidate value, judged by whether its own tag's quarters add
+#: back up to its own tag's annual for the fiscal year the value sits in.
+_CONSISTENT = 2
+_UNKNOWN = 1  # no tileable fiscal year to check against — most recent quarters
+_INCONSISTENT = 0
+
+
+def _consistency(
+    value: PeriodValue, reconciliations: Sequence[Reconciliation]
+) -> int:
+    for r in reconciliations:
+        if r.tag == value.tag and value.end in r.quarter_ends:
+            return _CONSISTENT if r.ok else _INCONSISTENT
+    return _UNKNOWN
+
+
+def resolve_overlaps(
+    values: Sequence[PeriodValue],
+) -> tuple[list[PeriodValue], list[PeriodValue]]:
+    """Drop quarters that overlap their neighbour, returning `(kept, dropped)`.
+
+    Quarters keyed on their end date can still overlap when a filer is
+    inconsistent about where a period starts. Pfizer is the case here: on its
+    52/53-week calendar Q1 2011 ends 3 April, but the Q2 2011 facts declare a
+    start of 1 April, so the two quarters share two days. Left alone that
+    double-counts inside any trailing sum and breaks the assumption every
+    aggregate makes about the series tiling cleanly.
+
+    `values` must be sorted by end. The better-provenanced quarter wins — a
+    reported figure over a derived one, then the more recently filed.
+    """
+    kept: list[PeriodValue] = []
+    dropped: list[PeriodValue] = []
+
+    for value in values:
+        while kept and value.start <= kept[-1].end:
+            if _preference(value) > _preference(kept[-1]):
+                dropped.append(kept.pop())
+            else:
+                dropped.append(value)
+                break
+        else:
+            kept.append(value)
+
+    return kept, dropped
+
+
+def select_period_value(
+    candidates: Sequence[PeriodValue],
+    *,
+    selection: Selection,
+    chain: Sequence[str],
+    reconciliations: Sequence[Reconciliation] = (),
+) -> PeriodValue:
+    """Choose between tags that all cover the same period.
+
+    `CHAIN_ORDER` takes the earliest candidate in the chain — right when the tags
+    are alternative spellings of one measure.
+
+    `LARGEST` takes the biggest internally consistent candidate — right when the
+    tags stand in a total/component relationship, since a total is by definition
+    at least as large as any component of it. Consistency is checked first and
+    matters: Emergent's Q2 2021 comes out at $398m under the
+    contracts-with-customers tag against $377m under `Revenues`, which is
+    impossible for a component. The larger figure belongs to a tag whose quarters
+    never tile a fiscal year, so it cannot be checked, while `Revenues`
+    reconciles exactly — so `Revenues` wins despite being smaller. Ranking on
+    size alone would have taken the anomaly.
+    """
+    if len(candidates) == 1:
+        return candidates[0]
+
+    order = {tag: i for i, tag in enumerate(chain)}
+    if selection is Selection.CHAIN_ORDER:
+        return min(candidates, key=lambda v: order.get(v.tag, len(order)))
+
+    return max(
+        candidates,
+        key=lambda v: (
+            _consistency(v, reconciliations),
+            v.val,
+            -order.get(v.tag, len(order)),
+        ),
+    )
+
+
 @dataclass(frozen=True)
 class QuarterlySeries:
     """Discrete quarterly values for one concept, plus how they were obtained."""
@@ -820,6 +1147,10 @@ class QuarterlySeries:
     #: about. The figure is still reported — it is the filer's own arithmetic —
     #: but it should carry a footnote rather than be read at face value.
     suspect_ends: frozenset[dt.date] = frozenset()
+    #: First and last period end supplied by each tag. This is what scopes a
+    #: tag-composition flag to the span it actually affects, instead of letting
+    #: one pre-2019 tag change label a whole company "mixed".
+    tag_spans: Mapping[str, tuple[dt.date, dt.date]] = field(default_factory=dict)
     flags: tuple[str, ...] = ()
 
     def by_end(self) -> dict[dt.date, PeriodValue]:
@@ -827,6 +1158,70 @@ class QuarterlySeries:
 
     def latest(self, n: int = 1) -> tuple[PeriodValue, ...]:
         return self.values[-n:] if n else ()
+
+    def period_flags(self, end: dt.date) -> tuple[str, ...]:
+        value = self.by_end().get(end)
+        return value.flags if value else ()
+
+    @property
+    def measurement_bases(self) -> tuple[str, ...]:
+        return tuple(dict.fromkeys(v.measurement_basis for v in self.values if v.measurement_basis))
+
+    def window(self, end: dt.date, quarters: int = 4) -> tuple[PeriodValue, ...] | None:
+        """The `quarters` contiguous periods ending at `end`, or None if they do not tile."""
+        index = self.by_end()
+        parts: list[PeriodValue] = []
+        cursor = end
+        for _ in range(quarters):
+            quarter = index.get(cursor)
+            if quarter is None:
+                return None
+            parts.append(quarter)
+            cursor = quarter.start - dt.timedelta(days=1)
+        return tuple(reversed(parts))
+
+    def growth(
+        self,
+        as_of: dt.date | None = None,
+        *,
+        blocking: frozenset[str] = BLOCKING_FLAGS,
+    ) -> MetricResult:
+        """Trailing-twelve-month growth against the prior twelve months (SPEC §6).
+
+        Returns a suppressed result when any of the eight contributing quarters
+        carries a blocking flag. Merck's FY2020 is the case that matters: the
+        2020 quarters are real filed figures, but a year-on-year comparison
+        spanning them measures the Organon spin-off rather than trading, so the
+        honest answer is null.
+        """
+        if not self.values:
+            return MetricResult(name="revenue_growth_yoy", value=None, suppressed_by=("no_inputs",))
+
+        end = as_of or self.values[-1].end
+        current = self.trailing_twelve_months(end)
+        prior_end = current.start - dt.timedelta(days=1) if current else None
+        prior = self.trailing_twelve_months(prior_end) if prior_end else None
+
+        recent = self.window(end, 4) or ()
+        earlier = self.window(prior_end, 4) if prior_end else None
+        inputs = tuple(earlier or ()) + tuple(recent)
+
+        name = f"{self.concept}_growth_yoy"
+        if current is None or prior is None or not prior.val:
+            return MetricResult(
+                name=name,
+                value=None,
+                inputs=inputs,
+                flags=tuple(dict.fromkeys(f for v in inputs for f in v.flags)),
+                suppressed_by=("incomplete_window",),
+            )
+
+        return guard_metric(
+            name,
+            lambda: (current.val - prior.val) / abs(prior.val),
+            inputs,
+            blocking=blocking,
+        )
 
     def trailing_twelve_months(self, as_of: dt.date | None = None) -> PeriodValue | None:
         """Sum the four contiguous quarters ending at `as_of` (default: the latest).
@@ -876,6 +1271,11 @@ class QuarterlySeries:
                 return None
 
         ordered = tuple(t for t in self.resolution.chain if t in tags)
+        bases = tuple(dict.fromkeys(p.measurement_basis for p in parts if p.measurement_basis))
+        aggregate_flags = tuple(dict.fromkeys(f for p in parts for f in p.flags))
+        if len(bases) > 1:
+            aggregate_flags += (FLAG_MIXED_MEASUREMENT_BASIS,)
+
         return PeriodValue(
             concept=self.concept,
             tag=ordered[0],
@@ -889,6 +1289,9 @@ class QuarterlySeries:
             taxonomy=parts[0].taxonomy,
             unit=parts[0].unit,
             contributing_tags=ordered,
+            measurement_basis=bases[0] if len(bases) == 1 else None,
+            contributing_bases=bases,
+            flags=tuple(dict.fromkeys(aggregate_flags)),
         )
 
 
@@ -921,7 +1324,6 @@ def quarterly_series(
             "duration concepts (revenue, R&D, operating cash flow) only"
         )
 
-    merged: dict[dt.date, PeriodValue] = {}
     annuals: dict[str, dict[dt.date, PeriodValue]] = {}
     quarters_by_tag: dict[str, dict[dt.date, PeriodValue]] = {}
     observed_by_tag: dict[str, dict[tuple[dt.date | None, dt.date], Fact]] = {}
@@ -932,21 +1334,69 @@ def quarterly_series(
         if not facts:
             continue
         available.append(tag)
+        measurement_basis = concept.basis_of(tag)
         observed_by_tag[tag] = latest_by_period(facts)
-        tag_quarters = discrete_quarters(facts, concept=concept.name)
-        quarters_by_tag[tag] = tag_quarters
-        annuals[tag] = annual_totals(facts, concept=concept.name)
-        for end, value in tag_quarters.items():
-            merged.setdefault(end, value)  # chain order: first tag to cover a period wins
-
-    values = tuple(
-        sorted(
-            (v for v in merged.values() if since is None or v.end >= since),
-            key=lambda v: v.end,
+        quarters_by_tag[tag] = discrete_quarters(
+            facts, concept=concept.name, measurement_basis=measurement_basis
         )
+        annuals[tag] = annual_totals(
+            facts, concept=concept.name, measurement_basis=measurement_basis
+        )
+
+    # Reconcile every tag against its own annuals first, so the selection rule
+    # can prefer a candidate whose fiscal year actually adds up.
+    all_reconciliations = tuple(
+        r
+        for tag in available
+        for r in reconcile_fiscal_years(quarters_by_tag[tag], annuals.get(tag, {}))
     )
+
+    candidates: dict[dt.date, list[PeriodValue]] = {}
+    for tag in available:
+        for end, value in quarters_by_tag[tag].items():
+            candidates.setdefault(end, []).append(value)
+
+    selected = {
+        end: select_period_value(
+            group,
+            selection=concept.selection,
+            chain=concept.tags,
+            reconciliations=all_reconciliations,
+        )
+        for end, group in candidates.items()
+    }
+
+    divergences_all = detect_tag_divergence(observed_by_tag)
+    disputed = {(d.start, d.end) for d in divergences_all}
+    failed_years = {
+        (r.tag, end) for r in all_reconciliations if not r.ok for end in r.quarter_ends
+    }
+
+    # Attach period-level flags. These are what `guard_metric` reads, so they
+    # have to live on the value rather than only on the series around it.
+    flagged: dict[dt.date, PeriodValue] = {}
+    for end, value in selected.items():
+        marks: list[str] = []
+        if (value.tag, end) in failed_years:
+            marks.append(FLAG_RESTATED_FISCAL_YEAR)
+        if any(period in disputed for period in value.derived_from):
+            marks.append(FLAG_TAG_BASIS_UNCERTAIN)
+        flagged[end] = value.with_flags(*marks) if marks else value
+
+    ordered = sorted(
+        (v for v in flagged.values() if since is None or v.end >= since),
+        key=lambda v: v.end,
+    )
+    kept, overlapping = resolve_overlaps(ordered)
+    values = tuple(kept)
     used = {v.tag for v in values}
     tags_used = tuple(tag for tag in concept.tags if tag in used)  # chain order, for determinism
+
+    tag_spans = {
+        tag: (min(ends), max(ends))
+        for tag in tags_used
+        if (ends := [v.end for v in values if v.tag == tag])
+    }
 
     resolution = ConceptResolution(
         concept=concept.name,
@@ -960,33 +1410,36 @@ def quarterly_series(
 
     reconciliations = tuple(
         r
-        for tag in tags_used
-        for r in reconcile_fiscal_years(quarters_by_tag[tag], annuals.get(tag, {}))
-        if since is None or r.fiscal_year_end >= since
+        for r in all_reconciliations
+        if r.tag in tags_used and (since is None or r.fiscal_year_end >= since)
     )
-
-    divergences = tuple(
-        d for d in detect_tag_divergence(observed_by_tag) if since is None or d.end >= since
-    )
+    divergences = tuple(d for d in divergences_all if since is None or d.end >= since)
     interchangeable = interchangeable_tag_pairs(observed_by_tag)
-    disputed = {(d.start, d.end) for d in divergences}
-    suspect = frozenset(
-        v.end for v in values if any(period in disputed for period in v.derived_from)
-    )
+    suspect = frozenset(v.end for v in values if FLAG_TAG_BASIS_UNCERTAIN in v.flags)
+
+    # Tag-composition flags are judged only over the flag window; see
+    # FLAG_WINDOW_START. Everything else is judged over the whole series.
+    windowed = [v for v in values if v.end >= FLAG_WINDOW_START]
+    windowed_tags = {v.tag for v in windowed}
+    windowed_bases = {v.measurement_basis for v in windowed if v.measurement_basis}
 
     flags: list[str] = []
     if not available:
         flags.append(f"{concept.name}:{FLAG_NO_TAG_RESOLVED}")
     elif not values:
         flags.append(f"{concept.name}:{FLAG_NO_QUARTERS}")
-    if resolution.uses_fallback:
+    if windowed_tags and any(tag != concept.primary_tag for tag in windowed_tags):
         flags.append(f"{concept.name}:{FLAG_FALLBACK_TAG}")
-    if resolution.mixed:
+    if len(windowed_tags) > 1:
         flags.append(f"{concept.name}:{FLAG_MIXED_TAGS}")
+    if len(windowed_bases) > 1:
+        flags.append(f"{concept.name}:{FLAG_MIXED_MEASUREMENT_BASIS}")
     if any(not r.ok for r in reconciliations):
         flags.append(f"{concept.name}:{FLAG_FY_RECONCILIATION_FAILED}")
     if suspect:
         flags.append(f"{concept.name}:{FLAG_CHAIN_TAGS_DIVERGE}")
+    if overlapping:
+        flags.append(f"{concept.name}:{FLAG_OVERLAPPING_PERIODS}")
 
     return QuarterlySeries(
         concept=concept.name,
@@ -996,6 +1449,7 @@ def quarterly_series(
         divergences=divergences,
         interchangeable=interchangeable,
         suspect_ends=suspect,
+        tag_spans=tag_spans,
         flags=tuple(flags),
     )
 
@@ -1014,6 +1468,9 @@ class QuarterRow:
     values: Mapping[str, float | None]
     source_tags: Mapping[str, str | None]
     source_basis: Mapping[str, str | None]
+    #: What each figure measures, where the concept's tags differ on that —
+    #: notably R&D including or excluding acquired IPR&D.
+    measurement_basis: Mapping[str, str | None] = field(default_factory=dict)
     flags: tuple[str, ...] = ()
 
     def to_dict(self) -> dict[str, Any]:
@@ -1024,6 +1481,7 @@ class QuarterRow:
         row.update(self.values)
         row["source_tags"] = dict(self.source_tags)
         row["source_basis"] = dict(self.source_basis)
+        row["measurement_basis"] = dict(self.measurement_basis)
         if self.flags:
             row["flags"] = list(self.flags)
         return row
@@ -1053,6 +1511,12 @@ class QuarterlyTable:
                     "resolution": s.resolution.to_dict(),
                     "reconciliations": [r.to_dict() for r in s.reconciliations if not r.ok],
                     "tag_divergences": [d.to_dict() for d in s.divergences],
+                    "tag_spans": {
+                        tag: [span[0].isoformat(), span[1].isoformat()]
+                        for tag, span in s.tag_spans.items()
+                    },
+                    "measurement_bases": list(s.measurement_bases),
+                    "growth_yoy": s.growth().to_dict(),
                 }
                 for name, s in self.series.items()
             },
@@ -1101,9 +1565,10 @@ def build_quarterly_table(
         starts = {v.start for v in present}
         row_flags = [] if len(starts) == 1 else [FLAG_PERIOD_START_MISMATCH]
         row_flags += [
-            f"{name}:{FLAG_TAG_BASIS_UNCERTAIN}"
-            for name, s in series.items()
-            if end in s.suspect_ends
+            f"{name}:{flag}"
+            for name in concepts
+            if end in indexed[name]
+            for flag in indexed[name][end].flags
         ]
         rows.append(
             QuarterRow(
@@ -1114,7 +1579,11 @@ def build_quarterly_table(
                 source_basis={
                     name: (indexed[name][end].basis.value if end in indexed[name] else None) for name in concepts
                 },
-                flags=tuple(row_flags),
+                measurement_basis={
+                    name: (indexed[name][end].measurement_basis if end in indexed[name] else None)
+                    for name in concepts
+                },
+                flags=tuple(dict.fromkeys(row_flags)),
             )
         )
 

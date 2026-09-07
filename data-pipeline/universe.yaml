@@ -12,9 +12,23 @@
 # the values below as first drafts to be confirmed, not as working mappings.
 #
 # Deliberately excluded from v1: GSK, AstraZeneca, Sanofi and BioNTech. All four
-# are foreign private issuers that file 20-F under the `ifrs-full` taxonomy, so
-# the us-gaap tag chains in SPEC §5.1 return nothing for them. Adding them needs
-# an IFRS concept mapping, which is out of scope for M1.
+# are foreign private issuers reporting under IFRS, and the exclusion is a
+# comparability decision, not only a plumbing one.
+#
+#   1. Accounting basis. Under IAS 38 development costs that meet the
+#      capitalisation criteria are carried on the balance sheet and amortised,
+#      while US GAAP expenses essentially all R&D as incurred. R&D intensity and
+#      cash runway therefore measure different things on the two bases, and a
+#      screener that ranked them side by side would be comparing an expense line
+#      against a partly capitalised one. There is no adjustment available from
+#      companyfacts that would fix this.
+#   2. Reporting frequency. Several of these issuers do not file quarterly with
+#      the SEC at all — they file 20-F annually — so the discrete quarterly
+#      series this pipeline is built on does not exist for them in companyfacts.
+#
+# Covering them properly needs an IFRS concept mapping and a separate,
+# clearly-labelled comparability treatment. See
+# content/methodology/coverage-exclusions.md.
 
 - ticker: MRNA
   cik: "0001682852"
@@ -74,9 +88,11 @@
     - "PFIZER INC"
   index_membership: [sp500]
   notes: >-
-    52/53-week fiscal calendar, so quarter ends drift by a few days. Tags R&D as
-    ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost, which is not in
-    the SPEC §5.1 chain, so R&D resolves to nothing.
+    52/53-week fiscal calendar, so quarter ends drift by a few days. Reports R&D
+    excluding acquired IPR&D, so its R&D is not directly comparable with filers
+    that include it. Its two revenue tags agree on quarters and disagree on
+    annuals; Q4 2021 has no Revenues-basis candidate at all and stays on the
+    contracts-with-customers basis, flagged.
 
 - ticker: MRK
   cik: "0000310158"
@@ -101,9 +117,9 @@
     - "JANSSEN BIOTECH INC"
   index_membership: [sp500]
   notes: >-
-    Tags quarterly R&D as ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost.
-    ResearchAndDevelopmentExpense exists but carries annual figures only, so the
-    SPEC §5.1 chain yields no quarterly R&D.
+    Reports quarterly R&D excluding acquired IPR&D. Its
+    ResearchAndDevelopmentExpense tag carries annual figures only, so that tag
+    contributes no quarters and the whole series sits on the excluding basis.
 
 - ticker: GILD
   cik: "0000882095"
@@ -115,7 +131,10 @@
   fda_applicant_names:
     - "GILEAD SCIENCES INC"
   index_membership: [sp500]
-  notes: ""
+  notes: >-
+    Reports R&D on both bases across its history, so the R&D series is mixed and
+    flagged. Its including-IPR&D tag stops in 2020; before the chain was widened
+    the latest available R&D window was a stale 2019-20 one.
 
 - ticker: VRTX
   cik: "0000875320"

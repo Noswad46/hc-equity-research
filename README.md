@@ -14,13 +14,61 @@ data-pipeline/
 ├── universe.yaml              # 10 tickers — hand-maintained coverage list
 ├── sources/edgar.py           # SEC companyfacts client
 ├── transform/fundamentals.py  # tag resolution, YTD -> discrete quarters
-└── tests/                     # 136 tests, real and synthetic fixtures
+└── tests/                     # 184 tests, real and synthetic fixtures
+content/
+├── methodology/               # coverage and exclusion rationale
+└── subsectors/                # per-subsector notes
 ```
 
-Revenue, R&D and operating cash flow are resolved through the fallback chains in
+Revenue, R&D and operating cash flow are resolved from the candidate tags in
 SPEC §5.1 and converted from year-to-date filings into discrete quarters. Every
-value records the XBRL tag it came from and whether it was reported directly or
-derived by differencing.
+value records the XBRL tag it came from, whether it was reported directly or
+derived by differencing, and what it measures where the tags differ on that.
+
+Three rules keep derived figures honest. Tags are resolved **per period**, not
+per company, since filers migrate tags mid-life. **Arithmetic never crosses
+tags** — quarters are derived inside one tag's fact set, and only finished
+quarters are compared. **Restatements resolve to the most recently filed value**,
+on both sides of every subtraction.
+
+### Two departures from SPEC §5.1
+
+**Revenue is a candidate set, not a fallback chain.** SPEC orders
+`RevenueFromContractWithCustomerExcludingAssessedTax` first. That is wrong for
+pharma: alliance revenue, royalties, collaboration income and grant revenue sit
+outside ASC 606, so `Revenues` is the income statement total and the
+contracts-with-customers tag is a *component* of it. Where several candidates
+cover a period and each is internally consistent, the largest wins — a total is
+by definition at least as large as any component. This resolves Pfizer's Q4 2022
+revenue to $25.1bn rather than $15.8bn.
+
+The consistency gate is load-bearing. Emergent reports a Q2 2021 component
+*exceeding* its own total, which is impossible; that tag's quarters never tile a
+fiscal year so it cannot be reconciled, while `Revenues` reconciles exactly, so
+`Revenues` wins despite being smaller. Ranking on size alone would take the
+anomaly.
+
+**The R&D chain carries both IPR&D bases.** SPEC lists one tag, which Pfizer and
+J&J do not use, leaving them with no R&D at all.
+`ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost` is now read too —
+but the two are not interchangeable. Moderna's `ResearchAndDevelopmentExpense`
+includes acquired IPR&D; Pfizer's and J&J's excludes it, and IPR&D charges are
+lumpy and deal-driven. Every value carries its `measurement_basis` and **nothing
+normalises between them**. R&D intensity across a mixed basis is not comparable,
+and deciding what to do about that belongs with the derived metrics.
+
+### Flags suppress, not just annotate
+
+A period flagged `restated_fiscal_year` disqualifies any growth or comparison
+metric spanning it. Merck's FY2020 quarters are real filed figures and are still
+emitted, but a year-on-year comparison across them measures the Organon spin-off
+rather than trading, so `growth()` returns null with a reason rather than a
+footnoted percentage. `guard_metric` is the general mechanism; route any SPEC §6
+metric through it rather than reading `PeriodValue.val` directly.
+
+Annotating alone would solve the confident-looking-wrong-number problem at the
+fact layer and let it reappear at the metric layer, where a dropped footnote is
+invisible and a null is not.
 
 ## Running it
 
@@ -43,32 +91,44 @@ These are real properties of the filings, found while building M1. Each is
 detected and flagged rather than silently corrected — see the module docstring in
 `transform/fundamentals.py` for the reasoning.
 
-**The SPEC §5.1 R&D chain has one entry, and Pfizer and J&J do not use it.** Both
-tag R&D as `ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost`. Pfizer
-resolves to no R&D at all; J&J resolves to annual figures only, so no quarters.
-The chain is implemented exactly as specified rather than widened silently; the
-resolution names the near-miss tag instead. Widening it is a one-line change to
-`CONCEPT_CHAINS`, but it changes what "R&D" means and should be a deliberate call.
+**Pfizer's Q4 2021 revenue cannot be moved to the `Revenues` basis.** Under that
+tag Pfizer filed only the FY2021 annual — no year-to-date facts for 2021 at all —
+so no Q4 2021 candidate exists to select. Producing one would mean subtracting a
+contracts-with-customers nine-month figure from a `Revenues` annual, and that
+cross-tag subtraction is what created the $9bn error in the first place. The
+quarter stays on the component basis, flagged `tag_basis_uncertain`. Q4 2022 and
+Q4 2023 both resolve correctly.
 
-**Pfizer's two revenue tags are not interchangeable.** They agree on every
-quarterly and year-to-date period and disagree *only* on annuals: Pfizer uses
-`RevenueFromContractWithCustomerExcludingAssessedTax` for total revenue in its
-10-Qs, but for the narrower revenue-from-contracts subtotal in the 10-K. A Q4
-derived as annual-minus-nine-months therefore absorbs the whole difference —
-$15.8bn for Q4 2022, against the $25.1bn the same filing supports under
-`Revenues`. `detect_tag_divergence` finds the disagreeing periods and marks every
-quarter derived from one. Affects Q4 2021, 2022 and 2023.
+`detect_tag_divergence` still reports the disagreeing periods even where
+selection now picks correctly, because a divergence that large is worth seeing
+downstream.
 
 **Restated annuals sitting above unrestated quarters.** Merck's FY2020 was
 restated for the Organon spin-off and Becton Dickinson's for the Embecta
 separation, so four quarters no longer sum to the year. `reconcile_fiscal_years`
-checks every tileable fiscal year and flags the mismatches.
+checks every tileable fiscal year, flags the mismatches, and those flags suppress
+growth metrics spanning them.
 
-**IFRS filers are out of scope.** GSK, AstraZeneca, Sanofi and BioNTech file 20-F
-under the `ifrs-full` taxonomy, so the us-gaap chains return nothing for them.
-They are deliberately excluded from `universe.yaml`. Note that BioNTech publishes
-an `ifrs-full:ResearchAndDevelopmentExpense` whose local name collides with the
-us-gaap tag, so facts are matched on taxonomy, never on tag name alone.
+**Pfizer's 2011 period boundaries overlap.** Its Q1 2011 ends 3 April on the
+52/53-week calendar while its Q2 2011 facts declare a start of 1 April, so the
+two quarters share two days. `resolve_overlaps` keeps the better-provenanced one,
+which costs a quarter of 2011 history and leaves a flagged hole. Only Pfizer, only
+2011; every series is contiguous from 2018 onward. Older gaps elsewhere (Merck
+2011–17, J&J 2012–17) are periods those filers simply did not tag.
+
+**IFRS filers are excluded on comparability grounds, not just plumbing.** GSK,
+AstraZeneca, Sanofi and BioNTech report under IFRS. Under IAS 38 qualifying
+development costs are capitalised and amortised, while US GAAP expenses
+essentially all R&D as incurred — so R&D intensity and cash runway measure
+different things on the two bases, and no adjustment available from
+`companyfacts` fixes that. Several of them also file annually on 20-F rather than
+quarterly, so the discrete quarterly series does not exist for them at all.
+
+BioNTech publishes an `ifrs-full:ResearchAndDevelopmentExpense` whose local name
+is identical to the us-gaap tag, so facts are matched on taxonomy, never on tag
+name alone. Full reasoning in `content/methodology/coverage-exclusions.md`; the
+vaccines subsector page carries a "not covered, and why" note, since GSK and
+Sanofi being absent is a visible hole on a vaccines-focused page.
 
 **Some quarters are legitimately empty.** Where a filer switches tags mid-year —
 Becton Dickinson's operating cash flow in FY2026 — deriving the missing quarter
