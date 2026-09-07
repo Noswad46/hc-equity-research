@@ -4,8 +4,8 @@ A public, static screener and company-profile site covering US-listed healthcare
 companies, combining SEC financial fundamentals with clinical-pipeline and
 regulatory data. See [`SPEC.md`](SPEC.md) for the full build specification.
 
-**Status: Milestone 1.** EDGAR fetch and quarterly assembly, with tests against
-known figures. No site pages yet.
+**Status: Milestone 1 complete.** EDGAR fetch and quarterly assembly, with tests
+against known figures. The Astro site is scaffolded but has no real pages yet.
 
 ## What exists
 
@@ -18,7 +18,17 @@ data-pipeline/
 content/
 ├── methodology/               # coverage and exclusion rationale
 └── subsectors/                # per-subsector notes
+src/pages/                     # Astro scaffold — placeholder index only
 ```
+
+### A note on the Astro version
+
+SPEC §2 specifies Astro 5. The project is scaffolded on **Astro 7**, which is
+what `npm create astro@latest` installs today. The reasons SPEC gives for
+choosing Astro — static output, islands architecture, familiarity — all still
+hold, and the build is confirmed static. Pinning back to 5 is a one-line change
+to `package.json` if the version in SPEC was deliberate rather than simply
+current at the time of writing.
 
 Revenue, R&D and operating cash flow are resolved from the candidate tags in
 SPEC §5.1 and converted from year-to-date filings into discrete quarters. Every

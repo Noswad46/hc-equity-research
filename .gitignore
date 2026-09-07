@@ -14,7 +14,19 @@ venv/
 # Raw API responses are re-fetchable and large; SPEC §3 keeps them out of the repo.
 data-pipeline/cache/
 
-# Node / Astro (from M2 onward)
+# Node / Astro
 node_modules/
 dist/
 .astro/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment. SPEC §2: the site ships no runtime secrets, but the pipeline
+# reads SEC_USER_AGENT and (later) OPENFDA_API_KEY from the environment.
+.env
+.env.production
+
+# Editors
+.idea/
