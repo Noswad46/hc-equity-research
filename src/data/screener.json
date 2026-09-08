@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-07T03:30:45Z",
+ "generated_at": "2026-09-08T16:21:28Z",
  "companies": [
   {
    "ticker": "MRNA",
@@ -33,10 +33,11 @@
    "rnd_ttm": 2876000000,
    "ocf_ttm": -1073000000,
    "operating_income_ttm": -3320000000,
+   "net_income_ttm": -3151000000,
    "cash": 1723000000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": -1.4901256732495511,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -1.4142728904847397,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -48,6 +49,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": -0.48159784560143626,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -1.4901256732495511,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -94,11 +106,50 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 20,
+   "phase_3_trials": 2,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 78.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.06375000000000001,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.11475409836065574,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 221230769.23076922,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:mixed_tags",
@@ -143,10 +194,11 @@
    "rnd_ttm": 340315000,
    "ocf_ttm": -36901000,
    "operating_income_ttm": -234124000,
+   "net_income_ttm": -247730000,
    "cash": 191458000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": -0.565795706096724,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.5986766425968352,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -158,6 +210,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": -0.08917679242911966,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.565795706096724,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -204,11 +267,52 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 1,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 12.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.5,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -4.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.08695652173913043,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
@@ -251,10 +355,11 @@
    "rnd_ttm": 45300000,
    "ocf_ttm": 97700000,
    "operating_income_ttm": -66000000,
+   "net_income_ttm": -176800000,
    "cash": 139700000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": -0.08569202804466372,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.22955076603479616,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -266,6 +371,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": 0.12685016878732797,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.08569202804466372,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -314,11 +430,52 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 2,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 24.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.5,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.10714285714285714,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:mixed_tags",
@@ -371,10 +528,11 @@
    "rnd_ttm": 484017000,
    "ocf_ttm": -202506000,
    "operating_income_ttm": -280187000,
+   "net_income_ttm": -251679000,
    "cash": 278729000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": -0.9240173203573561,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.8300019457370221,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -386,6 +544,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": -0.6678363074528324,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.9240173203573561,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -431,14 +600,52 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 6,
+   "phase_3_trials": 2,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 26.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.3148148148148148,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -4.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.25,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 96803400.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "cash:basis_cutover",
-    "operating_income:chain_tags_diverge",
     "short_term_investments:fallback_tag",
     "debt:no_tag_resolved",
     "opex:fallback_tag",
@@ -478,16 +685,16 @@
    "rnd_ttm": 11051000000,
    "ocf_ttm": 13401000000,
    "operating_income_ttm": null,
+   "net_income_ttm": 4332000000,
    "cash": 976000000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "incomplete_window"
-    ],
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.06801055011303693,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
+     "2026-06-28",
      "2026-06-28"
     ]
    },
@@ -499,6 +706,18 @@
     "flags": [],
     "period_ends": [
      "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
      "2026-06-28"
     ]
    },
@@ -540,11 +759,50 @@
      "2026-06-28"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 167,
+   "phase_3_trials": 84,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 932.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.013929376848359242,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 7.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.1954916439953362,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 85666666.66666667,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:mixed_tags",
@@ -558,6 +816,7 @@
     "rnd:overlapping_periods",
     "ocf:chain_tags_diverge",
     "operating_income:no_tag_resolved",
+    "net_income:overlapping_periods",
     "short_term_investments:fallback_tag",
     "short_term_investments:mixed_tags",
     "debt:fallback_tag",
@@ -597,16 +856,16 @@
    "rnd_ttm": 30453000000,
    "ocf_ttm": 19967000000,
    "operating_income_ttm": null,
+   "net_income_ttm": 3173000000,
    "cash": 6849000000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "incomplete_window"
-    ],
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.047664828974447564,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
+     "2026-06-30",
      "2026-06-30"
     ]
    },
@@ -618,6 +877,18 @@
     "flags": [],
     "period_ends": [
      "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
      "2026-06-30"
     ]
    },
@@ -661,11 +932,50 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 211,
+   "phase_3_trials": 95,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 1072.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.019541082152658713,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -11.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.175366568914956,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 167324175.82417583,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fy_reconciliation_failed",
     "revenue:chain_tags_diverge",
@@ -716,16 +1026,16 @@
    "rnd_ttm": 15104000000,
    "ocf_ttm": 27608000000,
    "operating_income_ttm": 21767000000,
+   "net_income_ttm": 21037000000,
    "cash": 20422000000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "incomplete_window"
-    ],
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.21481889940671303,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
+     "2026-06-28",
      "2026-06-28"
     ]
    },
@@ -737,6 +1047,18 @@
     "flags": [],
     "period_ends": [
      "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
      "2026-06-28"
     ]
    },
@@ -782,11 +1104,52 @@
      "2026-06-28"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 175,
+   "phase_3_trials": 80,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 835.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.035863038548752835,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 6.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.14956930305403288,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 126924369.74789916,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:basis_cutover",
@@ -835,15 +1198,14 @@
    "rnd_ttm": 6066000000,
    "ocf_ttm": 13552000000,
    "operating_income_ttm": -2497000000,
+   "net_income_ttm": -3240000000,
    "cash": 3179000000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": -0.08198443707522081,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.10637948583248515,
     "suppressed": false,
     "suppressed_by": [],
-    "flags": [
-     "tag_basis_uncertain"
-    ],
+    "flags": [],
     "period_ends": [
      "2026-06-30",
      "2026-06-30"
@@ -852,6 +1214,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": 0.4449551827166169,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.08198443707522081,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -900,11 +1273,50 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 68,
+   "phase_3_trials": 30,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 326.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.04121611880046137,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -9.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.2448559670781893,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 112333333.33333333,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:mixed_tags",
@@ -920,7 +1332,7 @@
     "cash:mixed_tags",
     "cash:mixed_measurement_basis",
     "cash:basis_cutover",
-    "operating_income:chain_tags_diverge",
+    "net_income:fy_reconciliation_failed",
     "short_term_investments:fallback_tag",
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
@@ -959,10 +1371,11 @@
    "rnd_ttm": 3906800000,
    "ocf_ttm": 4292900000,
    "operating_income_ttm": 4777100000,
+   "net_income_ttm": 4405200000,
    "cash": 6143500000,
-   "operating_margin": {
-    "name": "operating_margin",
-    "value": 0.379520465234524,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.3499745773484174,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -974,6 +1387,17 @@
    "ocf_margin": {
     "name": "ocf_margin",
     "value": 0.3410528155586628,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.379520465234524,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1021,11 +1445,50 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 24,
+   "phase_3_trials": 14,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 136.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.0862582671957672,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.1038961038961039,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 186038095.23809522,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fallback_tag",
     "revenue:basis_cutover",
@@ -1081,9 +1544,10 @@
    "rnd_ttm": 1372000000,
    "ocf_ttm": null,
    "operating_income_ttm": 2482000000,
+   "net_income_ttm": 941000000,
    "cash": 708000000,
-   "operating_margin": {
-    "name": "operating_margin",
+   "net_margin": {
+    "name": "net_margin",
     "value": null,
     "suppressed": true,
     "suppressed_by": [
@@ -1102,10 +1566,25 @@
     "value": null,
     "suppressed": true,
     "suppressed_by": [
-     "incomplete_window"
+     "period_mismatch"
     ],
     "flags": [],
     "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
+    "period_ends": [
+     "2026-06-30",
      "2026-06-30"
     ]
    },
@@ -1147,11 +1626,52 @@
      "2026-06-30"
     ]
    },
-   "active_trials": null,
-   "phase_3_trials": null,
-   "pipeline_depth_score": null,
-   "pipeline_concentration": null,
-   "clinical_momentum": null,
+   "active_trials": 10,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.09666666666666668,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.17391304347826086,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
    "data_quality_flags": [
     "revenue:fy_reconciliation_failed",
     "rnd:fy_reconciliation_failed",

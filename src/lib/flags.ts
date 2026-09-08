@@ -21,6 +21,16 @@ const CONCEPT_LABELS: Record<string, string> = {
   ocf: "Operating cash flow",
   cash: "Cash",
   operating_income: "Operating income",
+  net_income: "Net income",
+  opex: "Operating expenses",
+  debt: "Total debt",
+  short_term_investments: "Short-term investments",
+  restricted_cash: "Restricted cash",
+  pipeline_depth_score: "Pipeline depth score",
+  pipeline_concentration: "Pipeline concentration",
+  clinical_momentum: "Clinical momentum",
+  discontinuation_rate: "Discontinuation rate",
+  rnd_per_late_stage_programme: "R&D per late-stage programme",
 };
 
 const BASIS_LABELS: Record<string, string> = {
@@ -109,8 +119,6 @@ export function describeFlag(record: QualityRecord): string {
       return `${concept} is drawn from more than one XBRL tag across this series.`;
     case "cash_includes_restricted":
       return `${concept} was read from the cash-flow statement's reconciling figure, which includes restricted cash — the filer stopped tagging the balance-sheet figure that excludes it. For a cash position this overstates slightly. Anything dividing by a burn rate nets the restricted portion off, or declines to answer where the filer does not tag it separately.`;
-    case "derived_subtotal":
-      return `${concept} is not presented by this filer, so it was reconstructed as pre-tax income from continuing operations less the non-operating block. It is the filer's own figures, but not a subtotal the filer published.`;
     case "incomplete_sum":
       return `${concept} was summed from fewer components than it is defined by — typically a filer with no current maturities of long-term debt. A company that genuinely has none and one that failed to tag them are indistinguishable here.`;
     default:
@@ -138,12 +146,24 @@ export function describeReason(code: string, concept = "This metric"): string {
       return `No runway figure: trailing operating cash flow is positive, so there is no burn rate to divide into. This is not a short runway — it is the absence of one.`;
     case "restated_fiscal_year":
       return `Suppressed because the window spans a fiscal year whose annual figure was restated while its quarters were not. A comparison across it would measure the restatement rather than the business.`;
+    case "period_mismatch":
+      return `No value: the two sides of this ratio do not cover the same twelve months, so dividing one by the other would describe neither. This is usually a concept whose tag was abandoned while the other side kept reporting.`;
     case "incomplete_window":
       return `No value: the twelve-month window does not tile cleanly, or the two sides of the ratio do not cover the same period.`;
     case "no_denominator":
       return `No value: neither revenue nor operating expenses were available as a denominator.`;
     case "no_cash_figure":
       return `No value: no cash balance could be resolved for this filer.`;
+    case "no_active_trials":
+      return `No value: this company has no active trials, so there is nothing to score.`;
+    case "no_active_late_stage_trials":
+      return `No value: no active Phase 2 or Phase 3 trials to divide R&D across. Common for device makers, whose studies carry no phase.`;
+    case "too_few_resolved_trials":
+      return `Discontinuation rate is suppressed below ten resolved trials: on a handful, one termination moves the rate by tens of percentage points and the figure describes the sample rather than the company.`;
+    case "no_rnd_figure":
+      return `No value: no trailing-twelve-month R&D figure to divide.`;
+    case "cross_source_date_gap":
+      return `This ratio spans two sources with different as-of dates — a trailing-twelve-month R&D figure ending on a fiscal quarter end, against a trial count taken from the registry at fetch time. The two were never true at the same instant.`;
     case "no_inputs":
       return `No value: the underlying series is empty.`;
     case "not_a_flow_concept":

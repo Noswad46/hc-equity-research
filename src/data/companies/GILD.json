@@ -14,6 +14,7 @@
  "rnd_ttm": 6066000000,
  "ocf_ttm": 13552000000,
  "operating_income_ttm": -2497000000,
+ "net_income_ttm": -3240000000,
  "cash": 3179000000,
  "revenue_growth_yoy": {
   "name": "revenue_growth_yoy",
@@ -32,14 +33,12 @@
    "2026-06-30"
   ]
  },
- "operating_margin": {
-  "name": "operating_margin",
-  "value": -0.08198443707522081,
+ "net_margin": {
+  "name": "net_margin",
+  "value": -0.10637948583248515,
   "suppressed": false,
   "suppressed_by": [],
-  "flags": [
-   "tag_basis_uncertain"
-  ],
+  "flags": [],
   "period_ends": [
    "2026-06-30",
    "2026-06-30"
@@ -48,6 +47,17 @@
  "ocf_margin": {
   "name": "ocf_margin",
   "value": 0.4449551827166169,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2026-06-30"
+  ]
+ },
+ "operating_margin": {
+  "name": "operating_margin",
+  "value": -0.08198443707522081,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -96,11 +106,50 @@
    "2026-06-30"
   ]
  },
- "active_trials": null,
- "phase_3_trials": null,
- "pipeline_depth_score": null,
- "pipeline_concentration": null,
- "clinical_momentum": null,
+ "active_trials": 68,
+ "phase_3_trials": 30,
+ "pipeline_depth_score": {
+  "name": "pipeline_depth_score",
+  "value": 326.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "pipeline_concentration": {
+  "name": "pipeline_concentration",
+  "value": 0.04121611880046137,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "clinical_momentum": {
+  "name": "clinical_momentum",
+  "value": -9.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "discontinuation_rate": {
+  "name": "discontinuation_rate",
+  "value": 0.2448559670781893,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "rnd_per_late_stage_programme": {
+  "name": "rnd_per_late_stage_programme",
+  "value": 112333333.33333333,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30"
+  ]
+ },
  "data_quality_flags": [
   "revenue:fallback_tag",
   "revenue:mixed_tags",
@@ -116,7 +165,7 @@
   "cash:mixed_tags",
   "cash:mixed_measurement_basis",
   "cash:basis_cutover",
-  "operating_income:chain_tags_diverge",
+  "net_income:fy_reconciliation_failed",
   "short_term_investments:fallback_tag",
   "debt:fallback_tag",
   "restricted_cash:no_tag_resolved",
@@ -138,6 +187,7 @@
    "ocf": null,
    "cash": 816007000,
    "operating_income": null,
+   "net_income": null,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -148,6 +198,7 @@
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -159,6 +210,7 @@
     "ocf": null,
     "cash": "reported",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -170,6 +222,7 @@
     "ocf": null,
     "cash": "cash_excluding_restricted",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -195,6 +248,7 @@
    "ocf": null,
    "cash": 968086000,
    "operating_income": null,
+   "net_income": null,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -205,6 +259,7 @@
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -216,6 +271,7 @@
     "ocf": null,
     "cash": "reported",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -227,6 +283,7 @@
     "ocf": null,
     "cash": "cash_excluding_restricted",
     "operating_income": null,
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -252,6 +309,7 @@
    "ocf": null,
    "cash": 1119599000,
    "operating_income": 605515000,
+   "net_income": 434783000,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -262,6 +320,7 @@
     "ocf": null,
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -273,6 +332,7 @@
     "ocf": null,
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -284,6 +344,7 @@
     "ocf": null,
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -309,6 +370,7 @@
    "ocf": 518516000,
    "cash": 1209424000,
    "operating_income": 693834000,
+   "net_income": 495853000,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -319,6 +381,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -330,6 +393,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -341,6 +405,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -366,6 +431,7 @@
    "ocf": 578287000,
    "cash": 1459302000,
    "operating_income": 711146000,
+   "net_income": 559963000,
    "short_term_investments": 330760000,
    "debt": null,
    "restricted_cash": null,
@@ -376,6 +442,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -387,6 +454,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -398,6 +466,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -423,6 +492,7 @@
    "ocf": 641330000,
    "cash": 1663646000,
    "operating_income": 808316000,
+   "net_income": 589112000,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -433,6 +503,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -444,6 +515,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -455,6 +527,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -485,6 +558,7 @@
    "ocf": 622917000,
    "cash": 1040874000,
    "operating_income": 761061000,
+   "net_income": 571398000,
    "short_term_investments": 203394000,
    "debt": null,
    "restricted_cash": null,
@@ -495,6 +569,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -506,6 +581,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -517,6 +593,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -547,6 +624,7 @@
    "ocf": 860531000,
    "cash": 1024599000,
    "operating_income": 894406000,
+   "net_income": 673033000,
    "short_term_investments": 330713000,
    "debt": null,
    "restricted_cash": null,
@@ -557,6 +635,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -568,6 +647,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -579,6 +659,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -609,6 +690,7 @@
    "ocf": 955276000,
    "cash": 1272958000,
    "operating_income": 1065438000,
+   "net_income": 802212000,
    "short_term_investments": 384017000,
    "debt": null,
    "restricted_cash": null,
@@ -619,6 +701,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -630,6 +713,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -641,6 +725,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -671,6 +756,7 @@
    "ocf": 670569000,
    "cash": 936880000,
    "operating_income": 1161141000,
+   "net_income": 854901000,
    "short_term_investments": 715308000,
    "debt": null,
    "restricted_cash": null,
@@ -681,6 +767,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -692,6 +779,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -703,6 +791,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -735,6 +824,7 @@
    "ocf": 699079000,
    "cash": 1482639000,
    "operating_income": 992627000,
+   "net_income": 712061000,
    "short_term_investments": 518286000,
    "debt": null,
    "restricted_cash": null,
@@ -745,6 +835,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -756,6 +847,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -767,6 +859,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -799,6 +892,7 @@
    "ocf": 739422000,
    "cash": 1022993000,
    "operating_income": 979073000,
+   "net_income": 704876000,
    "short_term_investments": 1284538000,
    "debt": null,
    "restricted_cash": null,
@@ -809,6 +903,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -820,6 +915,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -831,6 +927,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -863,6 +960,7 @@
    "ocf": 724843000,
    "cash": 907879000,
    "operating_income": 829381000,
+   "net_income": 629419000,
    "short_term_investments": 1190789000,
    "debt": null,
    "restricted_cash": null,
@@ -873,6 +971,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -884,6 +983,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -895,6 +995,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -927,6 +1028,7 @@
    "ocf": 820542000,
    "cash": 1835978000,
    "operating_income": 901969000,
+   "net_income": 651141000,
    "short_term_investments": 1175321000,
    "debt": null,
    "restricted_cash": null,
@@ -937,6 +1039,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -948,6 +1051,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -959,12 +1063,15 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [],
+   "flags": [
+    "net_income:restated_fiscal_year"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": 0.02945574178487641,
@@ -991,6 +1098,7 @@
    "ocf": 943255000,
    "cash": 905779000,
    "operating_income": 1016718000,
+   "net_income": 746227000,
    "short_term_investments": 1364539000,
    "debt": null,
    "restricted_cash": null,
@@ -1001,6 +1109,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -1012,6 +1121,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -1023,12 +1133,15 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [],
+   "flags": [
+    "net_income:restated_fiscal_year"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": 0.019478529268769806,
@@ -1055,6 +1168,7 @@
    "ocf": 897106000,
    "cash": 909359000,
    "operating_income": 1003678000,
+   "net_income": 441956000,
    "short_term_investments": 1347776000,
    "debt": null,
    "restricted_cash": null,
@@ -1065,6 +1179,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -1076,6 +1191,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -1087,12 +1203,15 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [],
+   "flags": [
+    "net_income:restated_fiscal_year"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": 0.025125790543838043,
@@ -1119,6 +1238,7 @@
    "ocf": 978107000,
    "cash": 9884000000,
    "operating_income": 867476000,
+   "net_income": 665145000,
    "short_term_investments": 16491000,
    "debt": 7605734000,
    "restricted_cash": null,
@@ -1129,6 +1249,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1140,6 +1261,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1151,12 +1273,15 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [],
+   "flags": [
+    "net_income:restated_fiscal_year"
+   ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": 0.05484236585813808,
@@ -1183,6 +1308,7 @@
    "ocf": 452969000,
    "cash": 1451942000,
    "operating_income": 800186000,
+   "net_income": 441956000,
    "short_term_investments": 0,
    "debt": 9427246000,
    "restricted_cash": null,
@@ -1193,6 +1319,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1204,6 +1331,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1215,6 +1343,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1247,6 +1376,7 @@
    "ocf": 1290651000,
    "cash": 1625500000,
    "operating_income": 1059092000,
+   "net_income": 711564000,
    "short_term_investments": 82044000,
    "debt": 9099140000,
    "restricted_cash": null,
@@ -1257,6 +1387,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1268,6 +1399,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1279,6 +1411,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1311,6 +1444,7 @@
    "ocf": 745368000,
    "cash": 1550710000,
    "operating_income": 1043914000,
+   "net_income": 675505000,
    "short_term_investments": 144775000,
    "debt": 8771220000,
    "restricted_cash": null,
@@ -1321,6 +1455,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1332,6 +1467,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1343,6 +1479,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1375,6 +1512,7 @@
    "ocf": 706012000,
    "cash": 1804000000,
    "operating_income": 1106808000,
+   "net_income": 762541000,
    "short_term_investments": 58556000,
    "debt": 8223988000,
    "restricted_cash": null,
@@ -1385,6 +1523,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1396,6 +1535,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1407,6 +1547,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1439,6 +1580,7 @@
    "ocf": 672101000,
    "cash": 1863972000,
    "operating_income": 1025259000,
+   "net_income": 722000000,
    "short_term_investments": 78804000,
    "debt": 6112037000,
    "restricted_cash": null,
@@ -1449,6 +1591,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1460,6 +1603,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1471,6 +1615,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1503,6 +1648,7 @@
    "ocf": 953004000,
    "cash": 2202176000,
    "operating_income": 1153838000,
+   "net_income": 773000000,
    "short_term_investments": 85194000,
    "debt": 4361382000,
    "restricted_cash": null,
@@ -1513,6 +1659,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1524,6 +1671,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1535,6 +1683,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1567,6 +1716,7 @@
    "ocf": 753096000,
    "cash": 2010736000,
    "operating_income": 1147861000,
+   "net_income": 789000000,
    "short_term_investments": 79758000,
    "debt": 7313415000,
    "restricted_cash": null,
@@ -1577,6 +1727,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1588,6 +1739,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1599,6 +1751,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1631,6 +1784,7 @@
    "ocf": 726799000,
    "cash": 2113000000,
    "operating_income": 1197042000,
+   "net_income": 791000000,
    "short_term_investments": 19000000,
    "debt": 6636000000,
    "restricted_cash": null,
@@ -1641,6 +1795,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1652,6 +1807,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1663,6 +1819,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1695,6 +1852,7 @@
    "ocf": 1568000000,
    "cash": 6404000000,
    "operating_income": 3043000000,
+   "net_income": 2227000000,
    "short_term_investments": 64877000,
    "debt": 9803770000,
    "restricted_cash": null,
@@ -1705,6 +1863,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1716,6 +1875,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1727,6 +1887,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1759,6 +1920,7 @@
    "ocf": 4185000000,
    "cash": 8731000000,
    "operating_income": 4412000000,
+   "net_income": 3656000000,
    "short_term_investments": 68546000,
    "debt": 9504543000,
    "restricted_cash": null,
@@ -1769,6 +1931,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1780,6 +1943,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1791,6 +1955,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1823,6 +1988,7 @@
    "ocf": 4044000000,
    "cash": 6209000000,
    "operating_income": 3480000000,
+   "net_income": 2731000000,
    "short_term_investments": 107266000,
    "debt": 9410059000,
    "restricted_cash": null,
@@ -1833,6 +1999,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1844,6 +2011,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1855,6 +2023,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1887,6 +2056,7 @@
    "ocf": 3021000000,
    "cash": 10027000000,
    "operating_income": 4330000000,
+   "net_income": 3487000000,
    "short_term_investments": 101000000,
    "debt": 12404000000,
    "restricted_cash": null,
@@ -1897,6 +2067,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1908,6 +2079,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1919,6 +2091,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -1951,6 +2124,7 @@
    "ocf": 5701000000,
    "cash": 10635000000,
    "operating_income": 5371000000,
+   "net_income": 4333000000,
    "short_term_investments": 659000000,
    "debt": 12363000000,
    "restricted_cash": null,
@@ -1961,6 +2135,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -1972,6 +2147,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -1983,6 +2159,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2015,6 +2192,7 @@
    "ocf": 5658000000,
    "cash": 7417000000,
    "operating_income": 5616000000,
+   "net_income": 4492000000,
    "short_term_investments": 1194000000,
    "debt": 12274000000,
    "restricted_cash": null,
@@ -2025,6 +2203,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2036,6 +2215,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2047,6 +2227,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2079,6 +2260,7 @@
    "ocf": 4096000000,
    "cash": 13965000000,
    "operating_income": 5585000000,
+   "net_income": 4600000000,
    "short_term_investments": 1749000000,
    "debt": 22225000000,
    "restricted_cash": null,
@@ -2089,6 +2271,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2100,6 +2283,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2111,6 +2295,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2143,6 +2328,7 @@
    "ocf": 5795000000,
    "cash": 12851000000,
    "operating_income": 5621000000,
+   "net_income": 4683000000,
    "short_term_investments": 1756000000,
    "debt": 22055000000,
    "restricted_cash": null,
@@ -2153,6 +2339,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2164,6 +2351,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2175,6 +2363,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2207,6 +2396,7 @@
    "ocf": 4130000000,
    "cash": 6315000000,
    "operating_income": 4651000000,
+   "net_income": 3566000000,
    "short_term_investments": 2004000000,
    "debt": 22030000000,
    "restricted_cash": null,
@@ -2217,6 +2407,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2228,6 +2419,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2239,6 +2431,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2271,6 +2464,7 @@
    "ocf": 4985000000,
    "cash": 6485000000,
    "operating_income": 4538000000,
+   "net_income": 3497000000,
    "short_term_investments": 2267000000,
    "debt": 22127000000,
    "restricted_cash": null,
@@ -2281,6 +2475,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2292,6 +2487,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2303,6 +2499,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2335,6 +2532,7 @@
    "ocf": 4393000000,
    "cash": 9809000000,
    "operating_income": 4399000000,
+   "net_income": 3330000000,
    "short_term_investments": 2457000000,
    "debt": 27071000000,
    "restricted_cash": null,
@@ -2345,6 +2543,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2356,6 +2555,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2367,6 +2567,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2399,6 +2600,7 @@
    "ocf": 3539000000,
    "cash": 8229000000,
    "operating_income": 4045000000,
+   "net_income": 3108000000,
    "short_term_investments": 3666000000,
    "debt": 26346000000,
    "restricted_cash": null,
@@ -2409,6 +2611,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2420,6 +2623,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2431,6 +2635,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2463,6 +2668,7 @@
    "ocf": 2925000000,
    "cash": 10285000000,
    "operating_income": 3767000000,
+   "net_income": 2702000000,
    "short_term_investments": 3830000000,
    "debt": 26321000000,
    "restricted_cash": null,
@@ -2473,6 +2679,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2484,6 +2691,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2495,6 +2703,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2527,6 +2736,7 @@
    "ocf": 3526000000,
    "cash": 8712000000,
    "operating_income": 4254000000,
+   "net_income": 3073000000,
    "short_term_investments": 12384000000,
    "debt": 26296000000,
    "restricted_cash": null,
@@ -2537,6 +2747,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2548,6 +2759,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2559,6 +2771,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2591,6 +2804,7 @@
    "ocf": 2694000000,
    "cash": 11508000000,
    "operating_income": 3812000000,
+   "net_income": 2718000000,
    "short_term_investments": 16879000000,
    "debt": 29262000000,
    "restricted_cash": null,
@@ -2601,6 +2815,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2612,6 +2827,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2623,6 +2839,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2655,6 +2872,7 @@
    "ocf": 2753000000,
    "cash": 7588000000,
    "operating_income": 2291000000,
+   "net_income": -3865000000,
    "short_term_investments": 17922000000,
    "debt": 33542000000,
    "restricted_cash": null,
@@ -2665,6 +2883,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2676,6 +2895,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2687,6 +2907,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2719,6 +2940,7 @@
    "ocf": 2270000000,
    "cash": 7643000000,
    "operating_income": 2153000000,
+   "net_income": 1538000000,
    "short_term_investments": 16355000000,
    "debt": 29054000000,
    "restricted_cash": null,
@@ -2729,6 +2951,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2740,6 +2963,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2751,6 +2975,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2783,6 +3008,7 @@
    "ocf": 1573000000,
    "cash": 13234000000,
    "operating_income": 2280000000,
+   "net_income": 1817000000,
    "short_term_investments": 12683000000,
    "debt": 29060000000,
    "restricted_cash": null,
@@ -2793,6 +3019,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2804,6 +3031,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2815,6 +3043,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2847,6 +3076,7 @@
    "ocf": 2212000000,
    "cash": 14569000000,
    "operating_income": 2623000000,
+   "net_income": 2097000000,
    "short_term_investments": 13897000000,
    "debt": 27316000000,
    "restricted_cash": null,
@@ -2857,6 +3087,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2868,6 +3099,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2879,6 +3111,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2911,6 +3144,7 @@
    "ocf": 2345000000,
    "cash": 17940000000,
    "operating_income": 1144000000,
+   "net_income": 3000000,
    "short_term_investments": 12149000000,
    "debt": 27322000000,
    "restricted_cash": null,
@@ -2921,6 +3155,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2932,6 +3167,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -2943,6 +3179,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -2977,6 +3214,7 @@
    "ocf": 1577000000,
    "cash": 16927000000,
    "operating_income": 2237000000,
+   "net_income": 1975000000,
    "short_term_investments": 10977000000,
    "debt": 26578000000,
    "restricted_cash": null,
@@ -2987,6 +3225,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -2998,6 +3237,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3009,6 +3249,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3041,6 +3282,7 @@
    "ocf": 2342000000,
    "cash": 11240000000,
    "operating_income": 2430000000,
+   "net_income": 1880000000,
    "short_term_investments": 15943000000,
    "debt": 26083000000,
    "restricted_cash": null,
@@ -3051,6 +3293,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3062,6 +3305,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3073,6 +3317,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3105,6 +3350,7 @@
    "ocf": 2645000000,
    "cash": 9474000000,
    "operating_income": -1473000000,
+   "net_income": -1165000000,
    "short_term_investments": 13382000000,
    "debt": 24588000000,
    "restricted_cash": null,
@@ -3115,6 +3361,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3126,6 +3373,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3137,6 +3385,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3171,6 +3420,7 @@
    "ocf": 2580000000,
    "cash": 11631000000,
    "operating_income": 1093000000,
+   "net_income": 2696000000,
    "short_term_investments": 12721000000,
    "debt": 24593000000,
    "restricted_cash": null,
@@ -3181,6 +3431,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3192,6 +3443,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3203,13 +3455,13 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
    "flags": [
-    "operating_income:tag_basis_uncertain",
     "rnd:tag_basis_uncertain"
    ],
    "revenue_growth_yoy": {
@@ -3238,6 +3490,7 @@
    "ocf": 1436000000,
    "cash": 10051000000,
    "operating_income": 2402000000,
+   "net_income": 1551000000,
    "short_term_investments": 10734000000,
    "debt": 24097000000,
    "restricted_cash": null,
@@ -3248,6 +3501,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3259,6 +3513,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3270,6 +3525,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3304,6 +3560,7 @@
    "ocf": 2566000000,
    "cash": 6746000000,
    "operating_income": -2983000000,
+   "net_income": -3339000000,
    "short_term_investments": 12168000000,
    "debt": 24102000000,
    "restricted_cash": null,
@@ -3314,6 +3571,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3325,6 +3583,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3336,6 +3595,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3370,6 +3630,7 @@
    "ocf": 2250000000,
    "cash": 12886000000,
    "operating_income": 2001000000,
+   "net_income": 360000000,
    "short_term_investments": 11089000000,
    "debt": 29290000000,
    "restricted_cash": null,
@@ -3380,6 +3641,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3391,6 +3653,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3402,6 +3665,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3436,6 +3700,7 @@
    "ocf": 1916000000,
    "cash": 5997000000,
    "operating_income": 2651000000,
+   "net_income": 1551000000,
    "short_term_investments": 1411000000,
    "debt": 31402000000,
    "restricted_cash": null,
@@ -3446,6 +3711,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3457,6 +3723,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3468,14 +3735,13 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [
-    "operating_income:tag_basis_uncertain"
-   ],
+   "flags": [],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": 0.09978172747115685,
@@ -3502,6 +3768,7 @@
    "ocf": 2610000000,
    "cash": 4065000000,
    "operating_income": 2890000000,
+   "net_income": 1729000000,
    "short_term_investments": 1601000000,
    "debt": 30166000000,
    "restricted_cash": null,
@@ -3512,6 +3779,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3523,6 +3791,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3534,6 +3803,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3569,6 +3839,7 @@
    "ocf": 2316000000,
    "cash": 4893000000,
    "operating_income": 2246000000,
+   "net_income": 1522000000,
    "short_term_investments": 1632000000,
    "debt": 30175000000,
    "restricted_cash": null,
@@ -3579,6 +3850,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3590,6 +3862,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3601,6 +3874,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3636,6 +3910,7 @@
    "ocf": 3253000000,
    "cash": 4362000000,
    "operating_income": 3842000000,
+   "net_income": 2592000000,
    "short_term_investments": 1376000000,
    "debt": 27686000000,
    "restricted_cash": null,
@@ -3646,6 +3921,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3657,6 +3933,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3668,6 +3945,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3703,6 +3981,7 @@
    "ocf": 3205000000,
    "cash": 5338000000,
    "operating_income": 940000000,
+   "net_income": 382000000,
    "short_term_investments": 1182000000,
    "debt": 26695000000,
    "restricted_cash": null,
@@ -3713,6 +3992,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3724,6 +4004,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3735,13 +4016,13 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
    "flags": [
-    "operating_income:tag_basis_uncertain",
     "rnd:restated_fiscal_year"
    ],
    "revenue_growth_yoy": {
@@ -3770,6 +4051,7 @@
    "ocf": 1840000000,
    "cash": 4296000000,
    "operating_income": 197000000,
+   "net_income": 19000000,
    "short_term_investments": 1029000000,
    "debt": 26208000000,
    "restricted_cash": null,
@@ -3780,6 +4062,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3791,6 +4074,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3802,6 +4086,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3836,6 +4121,7 @@
    "ocf": 1802000000,
    "cash": 4739000000,
    "operating_income": 2029000000,
+   "net_income": 1144000000,
    "short_term_investments": 924000000,
    "debt": 26216000000,
    "restricted_cash": null,
@@ -3846,6 +4132,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3857,6 +4144,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3868,6 +4156,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3902,6 +4191,7 @@
    "ocf": 2863000000,
    "cash": 4699000000,
    "operating_income": 2837000000,
+   "net_income": 1789000000,
    "short_term_investments": 961000000,
    "debt": 25223000000,
    "restricted_cash": null,
@@ -3912,6 +4202,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3923,6 +4214,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -3934,6 +4226,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -3968,6 +4261,7 @@
    "ocf": 2567000000,
    "cash": 5412000000,
    "operating_income": 2267000000,
+   "net_income": 1640000000,
    "short_term_investments": 973000000,
    "debt": 25230000000,
    "restricted_cash": null,
@@ -3978,6 +4272,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -3989,6 +4284,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4000,14 +4296,13 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
-   "flags": [
-    "operating_income:tag_basis_uncertain"
-   ],
+   "flags": [],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": -0.0008789598974546786,
@@ -4034,6 +4329,7 @@
    "ocf": 1744000000,
    "cash": 4936000000,
    "operating_income": 1705000000,
+   "net_income": 1010000000,
    "short_term_investments": 936000000,
    "debt": 25239000000,
    "restricted_cash": null,
@@ -4044,6 +4340,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4055,6 +4352,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4066,6 +4364,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4100,6 +4399,7 @@
    "ocf": 2338000000,
    "cash": 5704000000,
    "operating_income": 1665000000,
+   "net_income": 1045000000,
    "short_term_investments": 963000000,
    "debt": 25246000000,
    "restricted_cash": null,
@@ -4110,6 +4410,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4121,6 +4422,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4132,6 +4434,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4166,6 +4469,7 @@
    "ocf": 1755000000,
    "cash": 5705000000,
    "operating_income": 2623000000,
+   "net_income": 2180000000,
    "short_term_investments": 1159000000,
    "debt": 24982000000,
    "restricted_cash": null,
@@ -4176,6 +4480,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4187,6 +4492,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4198,6 +4504,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4232,6 +4539,7 @@
    "ocf": 2169000000,
    "cash": 6085000000,
    "operating_income": 1612000000,
+   "net_income": 1429000000,
    "short_term_investments": 1179000000,
    "debt": 24987000000,
    "restricted_cash": null,
@@ -4242,6 +4550,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4253,6 +4562,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4264,14 +4574,14 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
    "flags": [
-    "cash:cash_includes_restricted",
-    "operating_income:tag_basis_uncertain"
+    "cash:cash_includes_restricted"
    ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
@@ -4299,6 +4609,7 @@
    "ocf": 2219000000,
    "cash": 4718000000,
    "operating_income": -4322000000,
+   "net_income": -4170000000,
    "short_term_investments": 0,
    "debt": 25194000000,
    "restricted_cash": null,
@@ -4309,6 +4620,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4320,6 +4632,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4331,6 +4644,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4365,6 +4679,7 @@
    "ocf": 1325000000,
    "cash": 2772000000,
    "operating_income": 2644000000,
+   "net_income": 1614000000,
    "short_term_investments": 0,
    "debt": 23349000000,
    "restricted_cash": null,
@@ -4375,6 +4690,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4386,6 +4702,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4397,6 +4714,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4431,6 +4749,7 @@
    "ocf": 4309000000,
    "cash": 5037000000,
    "operating_income": 888000000,
+   "net_income": 1253000000,
    "short_term_investments": 0,
    "debt": 23249000000,
    "restricted_cash": null,
@@ -4441,6 +4760,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4452,6 +4772,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4463,6 +4784,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4497,6 +4819,7 @@
    "ocf": 2975000000,
    "cash": 9991000000,
    "operating_income": 2452000000,
+   "net_income": 1783000000,
    "short_term_investments": 0,
    "debt": 26711000000,
    "restricted_cash": null,
@@ -4507,6 +4830,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4518,6 +4842,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4529,14 +4854,14 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
    "flags": [
-    "cash:cash_includes_restricted",
-    "operating_income:tag_basis_uncertain"
+    "cash:cash_includes_restricted"
    ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
@@ -4564,6 +4889,7 @@
    "ocf": 1757000000,
    "cash": 7926000000,
    "operating_income": 2237000000,
+   "net_income": 1315000000,
    "short_term_investments": null,
    "debt": 24952000000,
    "restricted_cash": null,
@@ -4574,6 +4900,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4585,6 +4912,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": null,
     "debt": "reported",
     "restricted_cash": null,
@@ -4596,6 +4924,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4630,6 +4959,7 @@
    "ocf": 827000000,
    "cash": 5144000000,
    "operating_income": 2474000000,
+   "net_income": 1960000000,
    "short_term_investments": 69000000,
    "debt": 24946000000,
    "restricted_cash": null,
@@ -4640,6 +4970,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4651,6 +4982,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4662,6 +4994,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4696,6 +5029,7 @@
    "ocf": 4108000000,
    "cash": 7330000000,
    "operating_income": 3327000000,
+   "net_income": 3052000000,
    "short_term_investments": 19000000,
    "debt": 24941000000,
    "restricted_cash": null,
@@ -4706,6 +5040,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4717,6 +5052,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4728,6 +5064,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4762,6 +5099,7 @@
    "ocf": 3327000000,
    "cash": 7564000000,
    "operating_income": 1984000000,
+   "net_income": 2183000000,
    "short_term_investments": 68000000,
    "debt": 24936000000,
    "restricted_cash": null,
@@ -4772,6 +5110,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4783,6 +5122,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "derived",
+    "net_income": "derived",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4794,14 +5134,14 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
     "opex": null
    },
    "flags": [
-    "cash:cash_includes_restricted",
-    "operating_income:tag_basis_uncertain"
+    "cash:cash_includes_restricted"
    ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
@@ -4829,6 +5169,7 @@
    "ocf": 2544000000,
    "cash": 7628000000,
    "operating_income": 2586000000,
+   "net_income": 2021000000,
    "short_term_investments": 15000000,
    "debt": 22174000000,
    "restricted_cash": null,
@@ -4839,6 +5180,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4850,6 +5192,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4861,6 +5204,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4895,6 +5239,7 @@
    "ocf": 3573000000,
    "cash": 3179000000,
    "operating_income": -10394000000,
+   "net_income": -10496000000,
    "short_term_investments": 0,
    "debt": 26246000000,
    "restricted_cash": null,
@@ -4905,6 +5250,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -4916,6 +5262,7 @@
     "ocf": "derived",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -4927,6 +5274,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4963,6 +5311,7 @@
    "ocf": 1669082000,
    "cash": 968086000,
    "operating_income": 2164507000,
+   "net_income": 1584902000,
    "short_term_investments": null,
    "debt": null,
    "restricted_cash": null,
@@ -4973,6 +5322,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4984,6 +5334,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -4995,6 +5346,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5020,6 +5372,7 @@
    "ocf": 2143384000,
    "cash": 1459302000,
    "operating_income": 2678541000,
+   "net_income": 1978899000,
    "short_term_investments": 330760000,
    "debt": null,
    "restricted_cash": null,
@@ -5030,6 +5383,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -5041,6 +5395,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -5052,6 +5407,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5077,6 +5433,7 @@
    "ocf": 3080054000,
    "cash": 1272958000,
    "operating_income": 3529221000,
+   "net_income": 2635755000,
    "short_term_investments": 384017000,
    "debt": null,
    "restricted_cash": null,
@@ -5087,6 +5444,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -5098,6 +5456,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -5109,6 +5468,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5139,6 +5499,7 @@
    "ocf": 2833913000,
    "cash": 907879000,
    "operating_income": 3962222000,
+   "net_income": 2901257000,
    "short_term_investments": 1190789000,
    "debt": null,
    "restricted_cash": null,
@@ -5149,6 +5510,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": null,
     "restricted_cash": null,
@@ -5160,6 +5522,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": null,
     "restricted_cash": null,
@@ -5171,6 +5534,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5203,6 +5567,7 @@
    "ocf": 3639010000,
    "cash": 9884000000,
    "operating_income": 3789841000,
+   "net_income": 2803637000,
    "short_term_investments": 16491000,
    "debt": 7605734000,
    "restricted_cash": null,
@@ -5213,6 +5578,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5224,6 +5590,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5235,6 +5602,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5267,6 +5635,7 @@
    "ocf": 3195000000,
    "cash": 1804000000,
    "operating_income": 4010000000,
+   "net_income": 2592000000,
    "short_term_investments": 58556000,
    "debt": 8223988000,
    "restricted_cash": null,
@@ -5277,6 +5646,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5288,6 +5658,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5299,6 +5670,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5331,6 +5703,7 @@
    "ocf": 3105000000,
    "cash": 2113000000,
    "operating_income": 4524000000,
+   "net_income": 3075000000,
    "short_term_investments": 19000000,
    "debt": 6636000000,
    "restricted_cash": null,
@@ -5341,6 +5714,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5352,6 +5726,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5363,6 +5738,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5395,6 +5771,7 @@
    "ocf": 12818000000,
    "cash": 10027000000,
    "operating_income": 15265000000,
+   "net_income": 12101000000,
    "short_term_investments": 101000000,
    "debt": 12404000000,
    "restricted_cash": null,
@@ -5405,6 +5782,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5416,6 +5794,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5427,6 +5806,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5459,6 +5839,7 @@
    "ocf": 21250000000,
    "cash": 12851000000,
    "operating_income": 22193000000,
+   "net_income": 18108000000,
    "short_term_investments": 1756000000,
    "debt": 22055000000,
    "restricted_cash": null,
@@ -5469,6 +5850,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5480,6 +5862,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5491,6 +5874,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5523,6 +5907,7 @@
    "ocf": 17047000000,
    "cash": 8229000000,
    "operating_income": 17633000000,
+   "net_income": 13501000000,
    "short_term_investments": 3666000000,
    "debt": 26346000000,
    "restricted_cash": null,
@@ -5533,6 +5918,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5544,6 +5930,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5555,6 +5942,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5587,6 +5975,7 @@
    "ocf": 11898000000,
    "cash": 7588000000,
    "operating_income": 14124000000,
+   "net_income": 4628000000,
    "short_term_investments": 17922000000,
    "debt": 33542000000,
    "restricted_cash": null,
@@ -5597,6 +5986,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5608,6 +5998,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5619,6 +6010,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5651,6 +6043,7 @@
    "ocf": 8400000000,
    "cash": 17940000000,
    "operating_income": 8200000000,
+   "net_income": 5455000000,
    "short_term_investments": 12149000000,
    "debt": 27322000000,
    "restricted_cash": null,
@@ -5661,6 +6054,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5672,6 +6066,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5683,6 +6078,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5715,6 +6111,7 @@
    "ocf": 9144000000,
    "cash": 11631000000,
    "operating_income": 4287000000,
+   "net_income": 5386000000,
    "short_term_investments": 12721000000,
    "debt": 24593000000,
    "restricted_cash": null,
@@ -5725,6 +6122,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5736,6 +6134,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5747,6 +6146,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5779,6 +6179,7 @@
    "ocf": 8168000000,
    "cash": 5997000000,
    "operating_income": 4071000000,
+   "net_income": 123000000,
    "short_term_investments": 1411000000,
    "debt": 31402000000,
    "restricted_cash": null,
@@ -5789,6 +6190,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5800,6 +6202,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5811,6 +6214,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5843,6 +6247,7 @@
    "ocf": 11384000000,
    "cash": 5338000000,
    "operating_income": 9918000000,
+   "net_income": 6225000000,
    "short_term_investments": 1182000000,
    "debt": 26695000000,
    "restricted_cash": null,
@@ -5853,6 +6258,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5864,6 +6270,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5875,6 +6282,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5907,6 +6315,7 @@
    "ocf": 9072000000,
    "cash": 5412000000,
    "operating_income": 7330000000,
+   "net_income": 4592000000,
    "short_term_investments": 973000000,
    "debt": 25230000000,
    "restricted_cash": null,
@@ -5917,6 +6326,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5928,6 +6338,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -5939,6 +6350,7 @@
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -5971,6 +6383,7 @@
    "ocf": 8006000000,
    "cash": 6085000000,
    "operating_income": 7605000000,
+   "net_income": 5665000000,
    "short_term_investments": 1179000000,
    "debt": 24987000000,
    "restricted_cash": null,
@@ -5981,6 +6394,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -5992,6 +6406,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -6003,6 +6418,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -6037,6 +6453,7 @@
    "ocf": 10828000000,
    "cash": 9991000000,
    "operating_income": 1662000000,
+   "net_income": 480000000,
    "short_term_investments": 0,
    "debt": 26711000000,
    "restricted_cash": null,
@@ -6047,6 +6464,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -6058,6 +6476,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -6069,6 +6488,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -6103,6 +6523,7 @@
    "ocf": 10019000000,
    "cash": 7564000000,
    "operating_income": 10022000000,
+   "net_income": 8510000000,
    "short_term_investments": 68000000,
    "debt": 24936000000,
    "restricted_cash": null,
@@ -6113,6 +6534,7 @@
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
     "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
     "short_term_investments": "MarketableSecuritiesCurrent",
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
     "restricted_cash": null,
@@ -6124,6 +6546,7 @@
     "ocf": "reported",
     "cash": "reported",
     "operating_income": "reported",
+    "net_income": "reported",
     "short_term_investments": "reported",
     "debt": "reported",
     "restricted_cash": null,
@@ -6135,6 +6558,7 @@
     "ocf": "ocf_total",
     "cash": "cash_including_restricted",
     "operating_income": "operating_income_reported",
+    "net_income": null,
     "short_term_investments": null,
     "debt": null,
     "restricted_cash": null,
@@ -6523,8 +6947,7 @@
    ],
    "selection": "chain_order",
    "tags_available": [
-    "OperatingIncomeLoss",
-    "OperatingIncomeLoss(derived)"
+    "OperatingIncomeLoss"
    ],
    "tags_used": [
     "OperatingIncomeLoss"
@@ -6552,9 +6975,47 @@
     "value": -1.3101478077257485,
     "suppressed": false,
     "suppressed_by": [],
-    "flags": [
-     "tag_basis_uncertain"
-    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "net_income": {
+   "label": "Net income",
+   "kind": "duration",
+   "candidates": [
+    "NetIncomeLoss"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "NetIncomeLoss"
+   ],
+   "tags_used": [
+    "NetIncomeLoss"
+   ],
+   "primary_tag": "NetIncomeLoss",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "net_income_growth_yoy",
+    "value": -1.5133893202345112,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
     "period_ends": [
      "2024-09-30",
      "2024-12-31",
@@ -7535,628 +7996,63 @@
    }
   },
   {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2019-01-01",
-   "period_end": "2019-12-31",
+   "code": "fy_reconciliation_failed",
+   "concept": "net_income",
+   "period_start": null,
+   "period_end": "2011-12-31",
    "detail": {
-    "period_start": "2019-01-01",
-    "period_end": "2019-12-31",
-    "values": {
-     "OperatingIncomeLoss": 4287000000.0,
-     "OperatingIncomeLoss(derived)": 3292000000.0
-    },
-    "spread": 995000000.0
+    "tag": "NetIncomeLoss",
+    "fiscal_year_end": "2011-12-31",
+    "annual": 2803637000.0,
+    "quarters_sum": 2504469000.0,
+    "difference": -299168000.0,
+    "quarter_ends": [
+     "2011-03-31",
+     "2011-06-30",
+     "2011-09-30",
+     "2011-12-31"
+    ],
+    "ok": false
    }
   },
   {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2020-01-01",
-   "period_end": "2020-09-30",
+   "code": "restated_fiscal_year",
+   "concept": "net_income",
+   "period_start": "2011-01-01",
+   "period_end": "2011-03-31",
    "detail": {
-    "period_start": "2020-01-01",
-    "period_end": "2020-09-30",
-    "values": {
-     "OperatingIncomeLoss": 1420000000.0,
-     "OperatingIncomeLoss(derived)": 703000000.0
-    },
-    "spread": 717000000.0
+    "tag": "NetIncomeLoss",
+    "measurement_basis": null
    }
   },
   {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2020-07-01",
-   "period_end": "2020-09-30",
+   "code": "restated_fiscal_year",
+   "concept": "net_income",
+   "period_start": "2011-04-01",
+   "period_end": "2011-06-30",
    "detail": {
-    "period_start": "2020-07-01",
-    "period_end": "2020-09-30",
-    "values": {
-     "OperatingIncomeLoss": 2001000000.0,
-     "OperatingIncomeLoss(derived)": 1765000000.0
-    },
-    "spread": 236000000.0
+    "tag": "NetIncomeLoss",
+    "measurement_basis": null
    }
   },
   {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2020-01-01",
-   "period_end": "2020-12-31",
+   "code": "restated_fiscal_year",
+   "concept": "net_income",
+   "period_start": "2011-07-01",
+   "period_end": "2011-09-30",
    "detail": {
-    "period_start": "2020-01-01",
-    "period_end": "2020-12-31",
-    "values": {
-     "OperatingIncomeLoss": 4071000000.0,
-     "OperatingIncomeLoss(derived)": 3087000000.0
-    },
-    "spread": 984000000.0
+    "tag": "NetIncomeLoss",
+    "measurement_basis": null
    }
   },
   {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-01-01",
-   "period_end": "2021-03-31",
+   "code": "restated_fiscal_year",
+   "concept": "net_income",
+   "period_start": "2011-10-01",
+   "period_end": "2011-12-31",
    "detail": {
-    "period_start": "2021-01-01",
-    "period_end": "2021-03-31",
-    "values": {
-     "OperatingIncomeLoss": 2890000000.0,
-     "OperatingIncomeLoss(derived)": 2633000000.0
-    },
-    "spread": 257000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-01-01",
-   "period_end": "2021-06-30",
-   "detail": {
-    "period_start": "2021-01-01",
-    "period_end": "2021-06-30",
-    "values": {
-     "OperatingIncomeLoss": 5136000000.0,
-     "OperatingIncomeLoss(derived)": 4623000000.0
-    },
-    "spread": 513000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-04-01",
-   "period_end": "2021-06-30",
-   "detail": {
-    "period_start": "2021-04-01",
-    "period_end": "2021-06-30",
-    "values": {
-     "OperatingIncomeLoss": 2246000000.0,
-     "OperatingIncomeLoss(derived)": 1990000000.0
-    },
-    "spread": 256000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-01-01",
-   "period_end": "2021-09-30",
-   "detail": {
-    "period_start": "2021-01-01",
-    "period_end": "2021-09-30",
-    "values": {
-     "OperatingIncomeLoss": 8978000000.0,
-     "OperatingIncomeLoss(derived)": 8215000000.0
-    },
-    "spread": 763000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-07-01",
-   "period_end": "2021-09-30",
-   "detail": {
-    "period_start": "2021-07-01",
-    "period_end": "2021-09-30",
-    "values": {
-     "OperatingIncomeLoss": 3842000000.0,
-     "OperatingIncomeLoss(derived)": 3592000000.0
-    },
-    "spread": 250000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2021-01-01",
-   "period_end": "2021-12-31",
-   "detail": {
-    "period_start": "2021-01-01",
-    "period_end": "2021-12-31",
-    "values": {
-     "OperatingIncomeLoss": 9918000000.0,
-     "OperatingIncomeLoss(derived)": 8917000000.0
-    },
-    "spread": 1001000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-01-01",
-   "period_end": "2022-03-31",
-   "detail": {
-    "period_start": "2022-01-01",
-    "period_end": "2022-03-31",
-    "values": {
-     "OperatingIncomeLoss": 197000000.0,
-     "OperatingIncomeLoss(derived)": -41000000.0
-    },
-    "spread": 238000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-01-01",
-   "period_end": "2022-06-30",
-   "detail": {
-    "period_start": "2022-01-01",
-    "period_end": "2022-06-30",
-    "values": {
-     "OperatingIncomeLoss": 2226000000.0,
-     "OperatingIncomeLoss(derived)": 1746000000.0
-    },
-    "spread": 480000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-04-01",
-   "period_end": "2022-06-30",
-   "detail": {
-    "period_start": "2022-04-01",
-    "period_end": "2022-06-30",
-    "values": {
-     "OperatingIncomeLoss": 2029000000.0,
-     "OperatingIncomeLoss(derived)": 1787000000.0
-    },
-    "spread": 242000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-01-01",
-   "period_end": "2022-09-30",
-   "detail": {
-    "period_start": "2022-01-01",
-    "period_end": "2022-09-30",
-    "values": {
-     "OperatingIncomeLoss": 5063000000.0,
-     "OperatingIncomeLoss(derived)": 4354000000.0
-    },
-    "spread": 709000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-07-01",
-   "period_end": "2022-09-30",
-   "detail": {
-    "period_start": "2022-07-01",
-    "period_end": "2022-09-30",
-    "values": {
-     "OperatingIncomeLoss": 2837000000.0,
-     "OperatingIncomeLoss(derived)": 2608000000.0
-    },
-    "spread": 229000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2022-01-01",
-   "period_end": "2022-12-31",
-   "detail": {
-    "period_start": "2022-01-01",
-    "period_end": "2022-12-31",
-    "values": {
-     "OperatingIncomeLoss": 7330000000.0,
-     "OperatingIncomeLoss(derived)": 6395000000.0
-    },
-    "spread": 935000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-01-01",
-   "period_end": "2023-03-31",
-   "detail": {
-    "period_start": "2023-01-01",
-    "period_end": "2023-03-31",
-    "values": {
-     "OperatingIncomeLoss": 1705000000.0,
-     "OperatingIncomeLoss(derived)": 1474000000.0
-    },
-    "spread": 231000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-01-01",
-   "period_end": "2023-06-30",
-   "detail": {
-    "period_start": "2023-01-01",
-    "period_end": "2023-06-30",
-    "values": {
-     "OperatingIncomeLoss": 3370000000.0,
-     "OperatingIncomeLoss(derived)": 2910000000.0
-    },
-    "spread": 460000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-04-01",
-   "period_end": "2023-06-30",
-   "detail": {
-    "period_start": "2023-04-01",
-    "period_end": "2023-06-30",
-    "values": {
-     "OperatingIncomeLoss": 1665000000.0,
-     "OperatingIncomeLoss(derived)": 1436000000.0
-    },
-    "spread": 229000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-01-01",
-   "period_end": "2023-09-30",
-   "detail": {
-    "period_start": "2023-01-01",
-    "period_end": "2023-09-30",
-    "values": {
-     "OperatingIncomeLoss": 5993000000.0,
-     "OperatingIncomeLoss(derived)": 5301000000.0
-    },
-    "spread": 692000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-07-01",
-   "period_end": "2023-09-30",
-   "detail": {
-    "period_start": "2023-07-01",
-    "period_end": "2023-09-30",
-    "values": {
-     "OperatingIncomeLoss": 2623000000.0,
-     "OperatingIncomeLoss(derived)": 2390000000.0
-    },
-    "spread": 233000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2023-01-01",
-   "period_end": "2023-12-31",
-   "detail": {
-    "period_start": "2023-01-01",
-    "period_end": "2023-12-31",
-    "values": {
-     "OperatingIncomeLoss": 7605000000.0,
-     "OperatingIncomeLoss(derived)": 6661000000.0
-    },
-    "spread": 944000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-01-01",
-   "period_end": "2024-03-31",
-   "detail": {
-    "period_start": "2024-01-01",
-    "period_end": "2024-03-31",
-    "values": {
-     "OperatingIncomeLoss": -4322000000.0,
-     "OperatingIncomeLoss(derived)": -4577000000.0
-    },
-    "spread": 255000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-01-01",
-   "period_end": "2024-06-30",
-   "detail": {
-    "period_start": "2024-01-01",
-    "period_end": "2024-06-30",
-    "values": {
-     "OperatingIncomeLoss": -1678000000.0,
-     "OperatingIncomeLoss(derived)": -2168000000.0
-    },
-    "spread": 490000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-04-01",
-   "period_end": "2024-06-30",
-   "detail": {
-    "period_start": "2024-04-01",
-    "period_end": "2024-06-30",
-    "values": {
-     "OperatingIncomeLoss": 2644000000.0,
-     "OperatingIncomeLoss(derived)": 2408000000.0
-    },
-    "spread": 236000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-01-01",
-   "period_end": "2024-09-30",
-   "detail": {
-    "period_start": "2024-01-01",
-    "period_end": "2024-09-30",
-    "values": {
-     "OperatingIncomeLoss": -790000000.0,
-     "OperatingIncomeLoss(derived)": -1518000000.0
-    },
-    "spread": 728000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-07-01",
-   "period_end": "2024-09-30",
-   "detail": {
-    "period_start": "2024-07-01",
-    "period_end": "2024-09-30",
-    "values": {
-     "OperatingIncomeLoss": 888000000.0,
-     "OperatingIncomeLoss(derived)": 650000000.0
-    },
-    "spread": 238000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2024-01-01",
-   "period_end": "2024-12-31",
-   "detail": {
-    "period_start": "2024-01-01",
-    "period_end": "2024-12-31",
-    "values": {
-     "OperatingIncomeLoss": 1662000000.0,
-     "OperatingIncomeLoss(derived)": 684000000.0
-    },
-    "spread": 978000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-01-01",
-   "period_end": "2025-03-31",
-   "detail": {
-    "period_start": "2025-01-01",
-    "period_end": "2025-03-31",
-    "values": {
-     "OperatingIncomeLoss": 2237000000.0,
-     "OperatingIncomeLoss(derived)": 1977000000.0
-    },
-    "spread": 260000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-01-01",
-   "period_end": "2025-06-30",
-   "detail": {
-    "period_start": "2025-01-01",
-    "period_end": "2025-06-30",
-    "values": {
-     "OperatingIncomeLoss": 4711000000.0,
-     "OperatingIncomeLoss(derived)": 4197000000.0
-    },
-    "spread": 514000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-04-01",
-   "period_end": "2025-06-30",
-   "detail": {
-    "period_start": "2025-04-01",
-    "period_end": "2025-06-30",
-    "values": {
-     "OperatingIncomeLoss": 2474000000.0,
-     "OperatingIncomeLoss(derived)": 2221000000.0
-    },
-    "spread": 253000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-01-01",
-   "period_end": "2025-09-30",
-   "detail": {
-    "period_start": "2025-01-01",
-    "period_end": "2025-09-30",
-    "values": {
-     "OperatingIncomeLoss": 8038000000.0,
-     "OperatingIncomeLoss(derived)": 7269000000.0
-    },
-    "spread": 769000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-07-01",
-   "period_end": "2025-09-30",
-   "detail": {
-    "period_start": "2025-07-01",
-    "period_end": "2025-09-30",
-    "values": {
-     "OperatingIncomeLoss": 3327000000.0,
-     "OperatingIncomeLoss(derived)": 3072000000.0
-    },
-    "spread": 255000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2025-01-01",
-   "period_end": "2025-12-31",
-   "detail": {
-    "period_start": "2025-01-01",
-    "period_end": "2025-12-31",
-    "values": {
-     "OperatingIncomeLoss": 10022000000.0,
-     "OperatingIncomeLoss(derived)": 8998000000.0
-    },
-    "spread": 1024000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2026-01-01",
-   "period_end": "2026-03-31",
-   "detail": {
-    "period_start": "2026-01-01",
-    "period_end": "2026-03-31",
-    "values": {
-     "OperatingIncomeLoss": 2586000000.0,
-     "OperatingIncomeLoss(derived)": 2345000000.0
-    },
-    "spread": 241000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2026-01-01",
-   "period_end": "2026-06-30",
-   "detail": {
-    "period_start": "2026-01-01",
-    "period_end": "2026-06-30",
-    "values": {
-     "OperatingIncomeLoss": -7808000000.0,
-     "OperatingIncomeLoss(derived)": -8295000000.0
-    },
-    "spread": 487000000.0
-   }
-  },
-  {
-   "code": "chain_tags_diverge",
-   "concept": "operating_income",
-   "period_start": "2026-04-01",
-   "period_end": "2026-06-30",
-   "detail": {
-    "period_start": "2026-04-01",
-    "period_end": "2026-06-30",
-    "values": {
-     "OperatingIncomeLoss": -10394000000.0,
-     "OperatingIncomeLoss(derived)": -10641000000.0
-    },
-    "spread": 247000000.0
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2019-10-01",
-   "period_end": "2019-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2020-10-01",
-   "period_end": "2020-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2021-10-01",
-   "period_end": "2021-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2022-10-01",
-   "period_end": "2022-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2023-10-01",
-   "period_end": "2023-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2024-10-01",
-   "period_end": "2024-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
-   }
-  },
-  {
-   "code": "tag_basis_uncertain",
-   "concept": "operating_income",
-   "period_start": "2025-10-01",
-   "period_end": "2025-12-31",
-   "detail": {
-    "tag": "OperatingIncomeLoss",
-    "measurement_basis": "operating_income_reported"
+    "tag": "NetIncomeLoss",
+    "measurement_basis": null
    }
   },
   {
@@ -8650,6 +8546,1480 @@
    "url": "https://www.sec.gov/Archives/edgar/data/882095/000119312509165506/0001193125-09-165506-index.htm"
   }
  ],
- "pipeline": null,
+ "pipeline": {
+  "as_of": "2026-09-08",
+  "sponsors": [
+   "Gilead Sciences",
+   "Kite, A Gilead Company"
+  ],
+  "total_trials": 560,
+  "active_trials_total": 68,
+  "by_phase": {
+   "phase_3": 30,
+   "phase_2": 24,
+   "phase_1": 14,
+   "phase_4": 0,
+   "not_applicable": 0
+  },
+  "by_status": {
+   "active_not_recruiting": 48,
+   "recruiting": 20
+  },
+  "top_conditions": [
+   {
+    "condition": "HIV-1-infection",
+    "count": 9
+   },
+   {
+    "condition": "Pre-Exposure Prophylaxis of HIV Infection",
+    "count": 5
+   },
+   {
+    "condition": "HIV-1 Infection",
+    "count": 3
+   },
+   {
+    "condition": "Advanced Solid Tumor",
+    "count": 3
+   },
+   {
+    "condition": "Solid Tumor",
+    "count": 3
+   },
+   {
+    "condition": "Triple Negative Breast Cancer",
+    "count": 3
+   },
+   {
+    "condition": "Advanced Solid Tumors",
+    "count": 3
+   },
+   {
+    "condition": "Chronic Hepatitis B",
+    "count": 2
+   },
+   {
+    "condition": "HIV Infections",
+    "count": 2
+   },
+   {
+    "condition": "Metastatic Urothelial Cancer",
+    "count": 2
+   }
+  ],
+  "upcoming_readouts": [
+   {
+    "nct_id": "NCT05119907",
+    "title": "Study of Sacituzumab Govitecan in Patients With Solid Tumor",
+    "phase": "PHASE2",
+    "condition": "Solid Tumor",
+    "primary_completion_date": "2026-10-01",
+    "enrollment": 53,
+    "url": "https://clinicaltrials.gov/study/NCT05119907"
+   },
+   {
+    "nct_id": "NCT05840224",
+    "title": "Study of GS-4528 in Adults With Solid Tumors",
+    "phase": "PHASE1",
+    "condition": "Solid Tumor",
+    "primary_completion_date": "2026-10-01",
+    "enrollment": 182,
+    "url": "https://clinicaltrials.gov/study/NCT05840224"
+   },
+   {
+    "nct_id": "NCT06539338",
+    "title": "A Study to Investigate Safety of INT2104 Infusions in Participants Aged 18 Years of Age and Older Who Have B-cell Cancers That Came Back After Previous Treatment",
+    "phase": "PHASE1",
+    "condition": "Lymphomas Non-Hodgkin's B-Cell",
+    "primary_completion_date": "2026-10-01",
+    "enrollment": 10,
+    "url": "https://clinicaltrials.gov/study/NCT06539338"
+   },
+   {
+    "nct_id": "NCT06562907",
+    "title": "Study of GS-4571 in Healthy Participants, Nondiabetic Obese Participants, and Nonobese Participants With Type 2 Diabetes Mellitus (T2DM)",
+    "phase": "PHASE1",
+    "condition": "Weight Management",
+    "primary_completion_date": "2026-11-01",
+    "enrollment": 134,
+    "url": "https://clinicaltrials.gov/study/NCT06562907"
+   },
+   {
+    "nct_id": "NCT04639986",
+    "title": "Asian Study of Sacituzumab Govitecan (IMMU-132) in HR+/HER2- Metastatic Breast Cancer (MBC)",
+    "phase": "PHASE3",
+    "condition": "Metastatic Breast Cancer",
+    "primary_completion_date": "2026-12-01",
+    "enrollment": 331,
+    "url": "https://clinicaltrials.gov/study/NCT04639986"
+   },
+   {
+    "nct_id": "NCT05396885",
+    "title": "Study of Anitocabtagene-autoleucel in Relapsed or Refractory Multiple Myeloma (iMMagine-1)",
+    "phase": "PHASE2",
+    "condition": "Multiple Myeloma",
+    "primary_completion_date": "2026-12-01",
+    "enrollment": 136,
+    "url": "https://clinicaltrials.gov/study/NCT05396885"
+   },
+   {
+    "nct_id": "NCT06082960",
+    "title": "Study of GS-9911 With or Without Antibody Treatment for Adults With Solid Tumors",
+    "phase": "PHASE1",
+    "condition": "Solid Tumors",
+    "primary_completion_date": "2026-12-01",
+    "enrollment": 45,
+    "url": "https://clinicaltrials.gov/study/NCT06082960"
+   },
+   {
+    "nct_id": "NCT06029972",
+    "title": "Study of Tilpisertib Fosmecarbil in Participants With Moderately to Severely Active Ulcerative Colitis",
+    "phase": "PHASE2",
+    "condition": "Ulcerative Colitis",
+    "primary_completion_date": "2027-01-01",
+    "enrollment": 176,
+    "url": "https://clinicaltrials.gov/study/NCT06029972"
+   },
+   {
+    "nct_id": "NCT05382286",
+    "title": "Study of Sacituzumab Govitecan-hziy and Pembrolizumab Versus Treatment of Physician's Choice and Pembrolizumab in Patients With Previously Untreated, Locally Advanced Inoperable or Metastatic Triple-Negative Breast Cancer",
+    "phase": "PHASE3",
+    "condition": "Triple Negative Breast Cancer",
+    "primary_completion_date": "2027-02-01",
+    "enrollment": 443,
+    "url": "https://clinicaltrials.gov/study/NCT05382286"
+   },
+   {
+    "nct_id": "NCT06727565",
+    "title": "Study of Novel Treatment Combination Therapies in Participants With Head and Neck Squamous Cell Carcinoma Regardless of PD-L1 Expression Status; Substudy-01",
+    "phase": "PHASE2",
+    "condition": "Head and Neck Squamous Cell Carcinoma",
+    "primary_completion_date": "2027-03-01",
+    "enrollment": 39,
+    "url": "https://clinicaltrials.gov/study/NCT06727565"
+   }
+  ],
+  "started_ttm": 9,
+  "started_prior_ttm": 18,
+  "discontinued_all_time": 119,
+  "completed_all_time": 367,
+  "active_late_stage": 54
+ },
+ "active_trials_detail": [
+  {
+   "nct_id": "NCT01651403",
+   "title": "Study to Evaluate the Antiviral Efficacy, Safety and Tolerability of Tenofovir Disoproxil Fumarate Versus Placebo in Pediatric Participants With Chronic Hepatitis B Infection",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Chronic Hepatitis B"
+   ],
+   "enrollment": 90,
+   "start_date": "2012-12-06",
+   "start_precision": "day",
+   "primary_completion_date": "2017-08-07",
+   "completion_date": "2027-07-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT01651403"
+  },
+  {
+   "nct_id": "NCT02016924",
+   "title": "Study of Cobicistat-Boosted Atazanavir (ATV/co), Cobicistat-Boosted Darunavir (DRV/co) and Emtricitabine/Tenofovir Alafenamide (F/TAF) in Children With HIV",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "Acquired Immune Deficiency Syndrome (AIDS)",
+    "HIV Infections"
+   ],
+   "enrollment": 133,
+   "start_date": "2014-01-16",
+   "start_precision": "day",
+   "primary_completion_date": "2025-06-13",
+   "completion_date": "2027-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT02016924"
+  },
+  {
+   "nct_id": "NCT02881320",
+   "title": "Study of Bictegravir/Emtricitabine/Tenofovir Alafenamide Fixed Dose Combination in Adolescents and Children With Human Immunodeficiency Virus-1",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1 Infection"
+   ],
+   "enrollment": 177,
+   "start_date": "2016-09-21",
+   "start_precision": "day",
+   "primary_completion_date": "2025-03-24",
+   "completion_date": "2026-11-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT02881320"
+  },
+  {
+   "nct_id": "NCT02932150",
+   "title": "Study of Tenofovir Alafenamide (TAF) in Children and Teen Participants With Chronic Hepatitis B Virus Infection",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Chronic Hepatitis B"
+   ],
+   "enrollment": 150,
+   "start_date": "2016-11-01",
+   "start_precision": "month",
+   "primary_completion_date": "2026-09-01",
+   "completion_date": "2029-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT02932150"
+  },
+  {
+   "nct_id": "NCT03301506",
+   "title": "Study of Seladelpar in Participants With Primary Biliary Cholangitis (PBC)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Primary Biliary Cirrhosis"
+   ],
+   "enrollment": 340,
+   "start_date": "2017-12-12",
+   "start_precision": "day",
+   "primary_completion_date": "2028-11-01",
+   "completion_date": "2028-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT03301506"
+  },
+  {
+   "nct_id": "NCT03547973",
+   "title": "Study of Sacituzumab Govitecan in Participants With Urothelial Cancer That Cannot Be Removed or Has Spread",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Metastatic Urothelial Cancer"
+   ],
+   "enrollment": 502,
+   "start_date": "2018-08-13",
+   "start_precision": "day",
+   "primary_completion_date": "2030-04-01",
+   "completion_date": "2030-04-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT03547973"
+  },
+  {
+   "nct_id": "NCT03964727",
+   "title": "Study of Sacituzumab Govitecan in Participants With Metastatic Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Metastatic Solid Tumor"
+   ],
+   "enrollment": 227,
+   "start_date": "2019-10-15",
+   "start_precision": "day",
+   "primary_completion_date": "2025-01-15",
+   "completion_date": "2026-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT03964727"
+  },
+  {
+   "nct_id": "NCT04150068",
+   "title": "Study to Evaluate the Safety and Efficacy of Lenacapavir (GS-6207) in Combination With an Optimized Background Regimen (OBR) in Heavily Treatment Experienced Participants Living With HIV-1 Infection With Multidrug Resistance",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 72,
+   "start_date": "2019-11-21",
+   "start_precision": "day",
+   "primary_completion_date": "2020-10-05",
+   "completion_date": "2027-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04150068"
+  },
+  {
+   "nct_id": "NCT04155749",
+   "title": "Study of Anitocabtagene-autoleucel in Participants With Relapsed Refractory Multiple Myeloma",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Relapsed and Refractory Multiple Myeloma"
+   ],
+   "enrollment": 40,
+   "start_date": "2019-12-23",
+   "start_precision": "day",
+   "primary_completion_date": "2024-10-03",
+   "completion_date": "2027-05-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04155749"
+  },
+  {
+   "nct_id": "NCT04454437",
+   "title": "Study of Sacituzumab Govitecan in Chinese Patients With Metastatic Triple-negative Breast Cancer Who Received at Least Two Prior Treatments",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Metastatic Triple-negative Breast Cancer"
+   ],
+   "enrollment": 80,
+   "start_date": "2020-10-23",
+   "start_precision": "day",
+   "primary_completion_date": "2021-08-06",
+   "completion_date": "2027-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04454437"
+  },
+  {
+   "nct_id": "NCT04639986",
+   "title": "Asian Study of Sacituzumab Govitecan (IMMU-132) in HR+/HER2- Metastatic Breast Cancer (MBC)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Metastatic Breast Cancer"
+   ],
+   "enrollment": 331,
+   "start_date": "2020-11-23",
+   "start_precision": "day",
+   "primary_completion_date": "2026-12-01",
+   "completion_date": "2026-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04639986"
+  },
+  {
+   "nct_id": "NCT04925752",
+   "title": "Study of Lenacapavir for HIV Pre-Exposure Prophylaxis in People Who Are at Risk for HIV Infection",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Pre-Exposure Prophylaxis of HIV Infection"
+   ],
+   "enrollment": 3292,
+   "start_date": "2021-06-28",
+   "start_precision": "day",
+   "primary_completion_date": "2024-08-21",
+   "completion_date": "2028-08-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04925752"
+  },
+  {
+   "nct_id": "NCT04989803",
+   "title": "Study of KITE-363 or KITE-753 in Participants With Relapsed and/or Refractory B-cell Lymphoma",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "conditions": [
+    "Relapsed and/or Refractory B-cell Lymphoma"
+   ],
+   "enrollment": 247,
+   "start_date": "2021-10-27",
+   "start_precision": "day",
+   "primary_completion_date": "2030-02-01",
+   "completion_date": "2030-02-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04989803"
+  },
+  {
+   "nct_id": "NCT04994509",
+   "title": "Pre-Exposure Prophylaxis Study of Lenacapavir and Emtricitabine/Tenofovir Alafenamide in Adolescent Girls and Young Women at Risk of HIV Infection",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Pre-Exposure Prophylaxis of HIV Infection"
+   ],
+   "enrollment": 5368,
+   "start_date": "2021-08-30",
+   "start_precision": "day",
+   "primary_completion_date": "2024-05-27",
+   "completion_date": "2028-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT04994509"
+  },
+  {
+   "nct_id": "NCT05007782",
+   "title": "Study of Denikitug (GS-1811) Given Alone or With Zimberelimab in Adults With Advanced Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Advanced Solid Tumor"
+   ],
+   "enrollment": 416,
+   "start_date": "2021-08-18",
+   "start_precision": "day",
+   "primary_completion_date": "2028-12-01",
+   "completion_date": "2028-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05007782"
+  },
+  {
+   "nct_id": "NCT05052996",
+   "title": "Study Evaluating the Safety and Efficacy of Islatravir in Combination With Lenacapavir in Virologically Suppressed People With HIV",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "HIV-1 Infection"
+   ],
+   "enrollment": 142,
+   "start_date": "2021-10-05",
+   "start_precision": "day",
+   "primary_completion_date": "2023-12-19",
+   "completion_date": "2028-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05052996"
+  },
+  {
+   "nct_id": "NCT05089734",
+   "title": "Study of Sacituzumab Govitecan (SG) Versus Docetaxel in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Non-Small Cell Lung Cancer"
+   ],
+   "enrollment": 603,
+   "start_date": "2021-11-17",
+   "start_precision": "day",
+   "primary_completion_date": "2023-11-29",
+   "completion_date": "2027-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05089734"
+  },
+  {
+   "nct_id": "NCT05101096",
+   "title": "Study of Sacituzumab Govitecan (SG) in Japanese Participants With Advanced Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "conditions": [
+    "Advanced Solid Tumor",
+    "Metastatic Triple-Negative Breast Cancer",
+    "HR+/HER2- Metastatic Breast Cancer",
+    "Metastatic Urothelial Cancer"
+   ],
+   "enrollment": 135,
+   "start_date": "2021-10-20",
+   "start_precision": "day",
+   "primary_completion_date": "2027-05-01",
+   "completion_date": "2027-05-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05101096"
+  },
+  {
+   "nct_id": "NCT05119907",
+   "title": "Study of Sacituzumab Govitecan in Patients With Solid Tumor",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Solid Tumor"
+   ],
+   "enrollment": 53,
+   "start_date": "2021-10-12",
+   "start_precision": "day",
+   "primary_completion_date": "2026-10-01",
+   "completion_date": "2026-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05119907"
+  },
+  {
+   "nct_id": "NCT05186974",
+   "title": "Study of Sacituzumab Govitecan Combinations in First-line Treatment of Participants With Advanced or Metastatic Non-Small-Cell Lung Cancer (NSCLC)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Non-small Cell Lung Cancer"
+   ],
+   "enrollment": 193,
+   "start_date": "2022-05-30",
+   "start_precision": "day",
+   "primary_completion_date": "2026-09-01",
+   "completion_date": "2026-09-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05186974"
+  },
+  {
+   "nct_id": "NCT05371093",
+   "title": "Study of Axicabtagene Ciloleucel Versus Standard of Care Therapy in Participants With Relapsed/Refractory Follicular Lymphoma",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Relapsed/Refractory Follicular Lymphoma"
+   ],
+   "enrollment": 231,
+   "start_date": "2022-09-22",
+   "start_precision": "day",
+   "primary_completion_date": "2030-10-01",
+   "completion_date": "2030-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05371093"
+  },
+  {
+   "nct_id": "NCT05382286",
+   "title": "Study of Sacituzumab Govitecan-hziy and Pembrolizumab Versus Treatment of Physician's Choice and Pembrolizumab in Patients With Previously Untreated, Locally Advanced Inoperable or Metastatic Triple-Negative Breast Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Triple Negative Breast Cancer",
+    "PD-L1 Positive"
+   ],
+   "enrollment": 443,
+   "start_date": "2022-07-25",
+   "start_precision": "day",
+   "primary_completion_date": "2027-02-01",
+   "completion_date": "2027-02-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05382286"
+  },
+  {
+   "nct_id": "NCT05382299",
+   "title": "Study of Sacituzumab Govitecan-hziy Versus Treatment of Physician's Choice in Patients With Previously Untreated Locally Advanced Inoperable or Metastatic Triple-Negative Breast Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Triple Negative Breast Cancer",
+    "PD-L1 Negative"
+   ],
+   "enrollment": 623,
+   "start_date": "2022-07-20",
+   "start_precision": "day",
+   "primary_completion_date": "2028-07-01",
+   "completion_date": "2028-07-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05382299"
+  },
+  {
+   "nct_id": "NCT05396885",
+   "title": "Study of Anitocabtagene-autoleucel in Relapsed or Refractory Multiple Myeloma (iMMagine-1)",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Multiple Myeloma"
+   ],
+   "enrollment": 136,
+   "start_date": "2022-07-15",
+   "start_precision": "day",
+   "primary_completion_date": "2026-12-01",
+   "completion_date": "2026-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05396885"
+  },
+  {
+   "nct_id": "NCT05502237",
+   "title": "Zimberelimab and Domvanalimab in Combination With Chemotherapy Versus Pembrolizumab With Chemotherapy in Patients With Untreated Metastatic Non-Small Cell Lung Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Non-small Cell Lung Cancer"
+   ],
+   "enrollment": 1021,
+   "start_date": "2022-10-12",
+   "start_precision": "day",
+   "primary_completion_date": "2028-06-01",
+   "completion_date": "2029-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05502237"
+  },
+  {
+   "nct_id": "NCT05502341",
+   "title": "Study to Compare Bictegravir/Lenacapavir Versus Current Therapy in People With HIV-1 Who Are Successfully Treated With a Complicated Regimen",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 689,
+   "start_date": "2022-08-16",
+   "start_precision": "day",
+   "primary_completion_date": "2025-09-29",
+   "completion_date": "2028-07-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05502341"
+  },
+  {
+   "nct_id": "NCT05605899",
+   "title": "Study to Compare Axicabtagene Ciloleucel With Standard of Care Therapy as First-line Treatment in Participants With High-risk Large B-cell Lymphoma",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "High-risk Large B-cell Lymphoma (LBCL)"
+   ],
+   "enrollment": 300,
+   "start_date": "2023-02-10",
+   "start_precision": "day",
+   "primary_completion_date": "2031-03-01",
+   "completion_date": "2031-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05605899"
+  },
+  {
+   "nct_id": "NCT05633667",
+   "title": "Study of Novel Treatment Combinations in Patients With Lung Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Lung Cancer",
+    "Advanced or Metastatic Non-Small-Cell Lung Cancer",
+    "Resectable Non-Small-Cell Lung Cancer"
+   ],
+   "enrollment": 192,
+   "start_date": "2023-03-16",
+   "start_precision": "day",
+   "primary_completion_date": "2029-09-01",
+   "completion_date": "2029-09-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05633667"
+  },
+  {
+   "nct_id": "NCT05676931",
+   "title": "Study With Various Immunotherapy Treatments in Participants With Lung Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Advanced Non-Small Cell Lung Cancer"
+   ],
+   "enrollment": 400,
+   "start_date": "2023-02-21",
+   "start_precision": "day",
+   "primary_completion_date": "2027-12-01",
+   "completion_date": "2027-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05676931"
+  },
+  {
+   "nct_id": "NCT05729568",
+   "title": "A Study of Teropavimab and Zinlirvimab in Combination With Capsid Inhibitor Lenacapavir in Virologically Suppressed Adults With HIV-1 Infection",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "HIV-1 Infection"
+   ],
+   "enrollment": 83,
+   "start_date": "2023-05-15",
+   "start_precision": "day",
+   "primary_completion_date": "2024-07-02",
+   "completion_date": "2030-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05729568"
+  },
+  {
+   "nct_id": "NCT05840211",
+   "title": "Study of Sacituzumab Govitecan Versus Treatment of Physician's Choice in Patients With Hormone Receptor-positive/Human Epidermal Growth Factor Receptor 2 Negative (HR+/HER2-) Metastatic Breast Cancer Who Have Received Endocrine Therapy",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Locally Advanced or Unresectable Metastatic Breast Cancer",
+    "Stage IV Breast Cancer"
+   ],
+   "enrollment": 654,
+   "start_date": "2023-05-08",
+   "start_precision": "day",
+   "primary_completion_date": "2028-04-01",
+   "completion_date": "2028-04-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05840211"
+  },
+  {
+   "nct_id": "NCT05840224",
+   "title": "Study of GS-4528 in Adults With Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Solid Tumor"
+   ],
+   "enrollment": 182,
+   "start_date": "2023-05-11",
+   "start_precision": "day",
+   "primary_completion_date": "2026-10-01",
+   "completion_date": "2026-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT05840224"
+  },
+  {
+   "nct_id": "NCT06029972",
+   "title": "Study of Tilpisertib Fosmecarbil in Participants With Moderately to Severely Active Ulcerative Colitis",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Ulcerative Colitis"
+   ],
+   "enrollment": 176,
+   "start_date": "2023-12-05",
+   "start_precision": "day",
+   "primary_completion_date": "2027-01-01",
+   "completion_date": "2028-02-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06029972"
+  },
+  {
+   "nct_id": "NCT06051617",
+   "title": "Seladelpar in Subjects With Primary Biliary Cholangitis (PBC) and Compensated Cirrhosis",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Primary Biliary Cholangitis"
+   ],
+   "enrollment": 318,
+   "start_date": "2023-09-07",
+   "start_precision": "day",
+   "primary_completion_date": "2030-08-01",
+   "completion_date": "2030-08-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06051617"
+  },
+  {
+   "nct_id": "NCT06082960",
+   "title": "Study of GS-9911 With or Without Antibody Treatment for Adults With Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Solid Tumors"
+   ],
+   "enrollment": 45,
+   "start_date": "2023-10-09",
+   "start_precision": "day",
+   "primary_completion_date": "2026-12-01",
+   "completion_date": "2026-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06082960"
+  },
+  {
+   "nct_id": "NCT06101329",
+   "title": "Study of Lenacapavir and Emtricitabine/Tenofovir Disoproxil Fumarate (F/TDF) in Prevention of HIV in Cisgender Women in the United States (HPTN 102)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Pre-Exposure Prophylaxis of HIV Infection"
+   ],
+   "enrollment": 253,
+   "start_date": "2023-11-17",
+   "start_precision": "day",
+   "primary_completion_date": "2026-07-22",
+   "completion_date": "2028-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06101329"
+  },
+  {
+   "nct_id": "NCT06101342",
+   "title": "Study of Lenacapavir and Emtricitabine/Tenofovir Disoproxil Fumarate (F/TDF) for Prevention of HIV in People Who Inject Drugs (HPTN 103)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Pre-Exposure Prophylaxis of HIV Infection"
+   ],
+   "enrollment": 181,
+   "start_date": "2023-12-13",
+   "start_precision": "day",
+   "primary_completion_date": "2026-07-27",
+   "completion_date": "2028-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06101342"
+  },
+  {
+   "nct_id": "NCT06167317",
+   "title": "Study of GS-0201 Alone and in Combination in Participants With Advanced Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Advanced Solid Tumors"
+   ],
+   "enrollment": 278,
+   "start_date": "2024-01-09",
+   "start_precision": "day",
+   "primary_completion_date": "2028-09-01",
+   "completion_date": "2028-09-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06167317"
+  },
+  {
+   "nct_id": "NCT06253663",
+   "title": "Study of KTE-X19 in Adult Japanese Participants With Relapsed/Refractory Mantle Cell Lymphoma or Relapsed/Refractory B-precursor Acute Lymphoblastic Leukemia",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Relapsed/Refractory Mantle Cell Lymphoma",
+    "Relapsed/Refractory B-precursor Acute Lymphoblastic Leukemia"
+   ],
+   "enrollment": 25,
+   "start_date": "2024-03-18",
+   "start_precision": "day",
+   "primary_completion_date": "2027-07-01",
+   "completion_date": "2027-07-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06253663"
+  },
+  {
+   "nct_id": "NCT06290934",
+   "title": "Study of GS-1427 in Participants With Moderately to Severely Active Ulcerative Colitis",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Ulcerative Colitis"
+   ],
+   "enrollment": 228,
+   "start_date": "2024-03-27",
+   "start_precision": "day",
+   "primary_completion_date": "2026-03-04",
+   "completion_date": "2028-04-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06290934"
+  },
+  {
+   "nct_id": "NCT06333808",
+   "title": "Study to Compare Bictegravir/Lenacapavir Versus Current Therapy in People With HIV-1 Who Are Successfully Treated With Biktarvy",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 577,
+   "start_date": "2024-03-25",
+   "start_precision": "day",
+   "primary_completion_date": "2025-10-27",
+   "completion_date": "2029-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06333808"
+  },
+  {
+   "nct_id": "NCT06413498",
+   "title": "A Study Comparing Anitocabtagene Autoleucel to Standard of Care Therapy in Participants With Relapsed/ Refractory Multiple Myeloma",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Multiple Myeloma"
+   ],
+   "enrollment": 452,
+   "start_date": "2024-08-23",
+   "start_precision": "day",
+   "primary_completion_date": "2028-07-01",
+   "completion_date": "2031-07-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06413498"
+  },
+  {
+   "nct_id": "NCT06486441",
+   "title": "Study of Sacituzumab Govitecan Versus Treatment of Physician's Choice in Participants With Endometrial Cancer After Platinum-Based Chemotherapy and Immunotherapy (ASCENT-GYN-01/GOG-3104/ENGOT-en26)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Endometrial Cancer"
+   ],
+   "enrollment": 640,
+   "start_date": "2024-08-28",
+   "start_precision": "day",
+   "primary_completion_date": "2029-06-01",
+   "completion_date": "2029-06-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06486441"
+  },
+  {
+   "nct_id": "NCT06513312",
+   "title": "Study of Lenacapavir Taken Twice a Year for HIV Pre-Exposure Prophylaxis (PrEP)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Pre-Exposure Prophylaxis of HIV Infection"
+   ],
+   "enrollment": 268,
+   "start_date": "2024-10-07",
+   "start_precision": "day",
+   "primary_completion_date": "2026-05-28",
+   "completion_date": "2028-11-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06513312"
+  },
+  {
+   "nct_id": "NCT06532565",
+   "title": "Study of GS-2121 Given Alone or in Combination in Adults With Advanced Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Advanced Solid Tumors"
+   ],
+   "enrollment": 154,
+   "start_date": "2024-07-26",
+   "start_precision": "day",
+   "primary_completion_date": "2028-06-01",
+   "completion_date": "2028-06-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06532565"
+  },
+  {
+   "nct_id": "NCT06532656",
+   "title": "Study of Bictegravir/Lenacapavir in Children and Adolescents With HIV-1",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 75,
+   "start_date": "2024-11-20",
+   "start_precision": "day",
+   "primary_completion_date": "2030-07-01",
+   "completion_date": "2030-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06532656"
+  },
+  {
+   "nct_id": "NCT06539338",
+   "title": "A Study to Investigate Safety of INT2104 Infusions in Participants Aged 18 Years of Age and Older Who Have B-cell Cancers That Came Back After Previous Treatment",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Lymphomas Non-Hodgkin's B-Cell",
+    "Precursor Cell Lymphoblastic Leukemia-Lymphoma"
+   ],
+   "enrollment": 10,
+   "start_date": "2024-09-20",
+   "start_precision": "day",
+   "primary_completion_date": "2026-10-01",
+   "completion_date": "2026-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06539338"
+  },
+  {
+   "nct_id": "NCT06544733",
+   "title": "Study of Oral Weekly Lepetegravir (Formerly GS-1720) and Lenacapavir Pacfosacil (Formerly GS-4182) Versus Biktarvy in People With HIV-1 Who Are Virologically Suppressed",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-Infection"
+   ],
+   "enrollment": 675,
+   "start_date": "2024-08-20",
+   "start_precision": "day",
+   "primary_completion_date": "2028-01-01",
+   "completion_date": "2029-06-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06544733"
+  },
+  {
+   "nct_id": "NCT06562907",
+   "title": "Study of GS-4571 in Healthy Participants, Nondiabetic Obese Participants, and Nonobese Participants With Type 2 Diabetes Mellitus (T2DM)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Weight Management"
+   ],
+   "enrollment": 134,
+   "start_date": "2024-08-28",
+   "start_precision": "day",
+   "primary_completion_date": "2026-11-01",
+   "completion_date": "2026-11-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06562907"
+  },
+  {
+   "nct_id": "NCT06630286",
+   "title": "Study to Compare an Oral Weekly Islatravir/Lenacapavir Regimen With Bictegravir/Emtricitabine/Tenofovir Alafenamide in Virologically Suppressed People With HIV-1",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 609,
+   "start_date": "2024-10-09",
+   "start_precision": "day",
+   "primary_completion_date": "2026-04-17",
+   "completion_date": "2030-08-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06630286"
+  },
+  {
+   "nct_id": "NCT06630299",
+   "title": "Study to Compare an Oral Weekly Islatravir/Lenacapavir Regimen With Standard of Care in Virologically Suppressed People With HIV-1",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-Infection"
+   ],
+   "enrollment": 600,
+   "start_date": "2024-10-08",
+   "start_precision": "day",
+   "primary_completion_date": "2026-04-23",
+   "completion_date": "2030-08-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06630299"
+  },
+  {
+   "nct_id": "NCT06727565",
+   "title": "Study of Novel Treatment Combination Therapies in Participants With Head and Neck Squamous Cell Carcinoma Regardless of PD-L1 Expression Status; Substudy-01",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Head and Neck Squamous Cell Carcinoma"
+   ],
+   "enrollment": 39,
+   "start_date": "2025-02-18",
+   "start_precision": "day",
+   "primary_completion_date": "2027-03-01",
+   "completion_date": "2027-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06727565"
+  },
+  {
+   "nct_id": "NCT06801834",
+   "title": "Study of Sacituzumab Govitecan Versus Standard of Care in Participants With Previously Treated Extensive Stage Small Cell Lung Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Extensive Stage Small Cell Lung Cancer (ES-SCLC)"
+   ],
+   "enrollment": 695,
+   "start_date": "2025-04-04",
+   "start_precision": "day",
+   "primary_completion_date": "2029-10-01",
+   "completion_date": "2029-10-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06801834"
+  },
+  {
+   "nct_id": "NCT06902519",
+   "title": "Study of GS-0151 in Participants With Rheumatoid Arthritis",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Rheumatoid Arthritis"
+   ],
+   "enrollment": 65,
+   "start_date": "2025-05-14",
+   "start_precision": "day",
+   "primary_completion_date": "2027-03-01",
+   "completion_date": "2027-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06902519"
+  },
+  {
+   "nct_id": "NCT06926920",
+   "title": "A Study of Sacituzumab Govitecan Given at an Alternative Dose and Schedule in Participants With Advanced Triple-Negative Breast Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "conditions": [
+    "Triple Negative Breast Cancer"
+   ],
+   "enrollment": 100,
+   "start_date": "2025-04-30",
+   "start_precision": "day",
+   "primary_completion_date": "2028-06-01",
+   "completion_date": "2028-06-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06926920"
+  },
+  {
+   "nct_id": "NCT07047716",
+   "title": "Study of Lenacapavir as a Once-Yearly Injection for HIV Pre-exposure Prophylaxis (PrEP)",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV Pre-exposure Prophylaxis"
+   ],
+   "enrollment": 339,
+   "start_date": "2025-07-22",
+   "start_precision": "day",
+   "primary_completion_date": "2028-09-01",
+   "completion_date": "2028-09-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07047716"
+  },
+  {
+   "nct_id": "NCT07055451",
+   "title": "Study of Bictegravir/Emtricitabine/Tenofovir Alafenamide in Newborns Exposed to HIV",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 16,
+   "start_date": "2025-08-12",
+   "start_precision": "day",
+   "primary_completion_date": "2028-03-01",
+   "completion_date": "2028-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07055451"
+  },
+  {
+   "nct_id": "NCT07096193",
+   "title": "Study of GS-4321 in Healthy Participants and Participants With Chronic Hepatitis Delta Virus",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "conditions": [
+    "Chronic Hepatitis Delta"
+   ],
+   "enrollment": 200,
+   "start_date": "2025-07-31",
+   "start_precision": "day",
+   "primary_completion_date": "2030-01-01",
+   "completion_date": "2030-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07096193"
+  },
+  {
+   "nct_id": "NCT07128303",
+   "title": "Study of GS-5319 Given Alone or in Combination in Adults With Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Advanced Solid Tumor"
+   ],
+   "enrollment": 476,
+   "start_date": "2025-08-28",
+   "start_precision": "day",
+   "primary_completion_date": "2028-05-01",
+   "completion_date": "2028-05-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07128303"
+  },
+  {
+   "nct_id": "NCT07479797",
+   "title": "Study Evaluating the Efficacy of KITE-753 Versus Axicabtagene Ciloleucel in Participants With Relapsed or Refractory Large B-Cell Lymphoma After First-Line Therapy",
+   "lead_sponsor": "Kite, A Gilead Company",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "Relapsed or Refractory Large B-cell Lymphoma"
+   ],
+   "enrollment": 550,
+   "start_date": "2026-05-22",
+   "start_precision": "day",
+   "primary_completion_date": "2031-05-01",
+   "completion_date": "2031-05-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07479797"
+  },
+  {
+   "nct_id": "NCT07527858",
+   "title": "Study of Denikitug (GS-1811) Given Alone or With Nivolumab or With Chemotherapy in Adults With Advanced Colorectal Cancer",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Advanced Microsatellite Stable Colorectal Cancer"
+   ],
+   "enrollment": 170,
+   "start_date": "2026-05-19",
+   "start_precision": "day",
+   "primary_completion_date": "2028-12-01",
+   "completion_date": "2028-12-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07527858"
+  },
+  {
+   "nct_id": "NCT07601243",
+   "title": "Study of GS-2426 in Participants With Advanced Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Advanced Solid Tumors"
+   ],
+   "enrollment": 174,
+   "start_date": "2026-06-02",
+   "start_precision": "day",
+   "primary_completion_date": "2029-01-01",
+   "completion_date": "2029-01-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07601243"
+  },
+  {
+   "nct_id": "NCT07645287",
+   "title": "A Study of GS-3242 in Combination With Lenacapavir Versus Biktarvy in Virologically Suppressed People With HIV-1",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 175,
+   "start_date": "2026-06-15",
+   "start_precision": "day",
+   "primary_completion_date": "2027-08-01",
+   "completion_date": "2033-04-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07645287"
+  },
+  {
+   "nct_id": "NCT07682961",
+   "title": "Study of Lenacapavir, Teropavimab, and Zinlirvimab Versus Cabotegravir and Rilpivirine in Virologically Suppressed Adults With HIV-1 on Oral Daily Antiretroviral Therapy",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV Infections"
+   ],
+   "enrollment": 590,
+   "start_date": "2026-07-14",
+   "start_precision": "day",
+   "primary_completion_date": "2029-03-01",
+   "completion_date": "2033-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07682961"
+  },
+  {
+   "nct_id": "NCT07683000",
+   "title": "Study of Lenacapavir, Teropavimab, and Zinlirvimab in Virologically Suppressed Adults With HIV-1 on Stable Oral Treatment Regimens",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 590,
+   "start_date": "2026-07-14",
+   "start_precision": "day",
+   "primary_completion_date": "2029-03-01",
+   "completion_date": "2033-03-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07683000"
+  },
+  {
+   "nct_id": "NCT07703878",
+   "title": "A Study to Evaluate the Safety and Antitumor Activity of GS-1206 in Adults With Solid Tumors",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "Solid Tumor"
+   ],
+   "enrollment": 302,
+   "start_date": "2026-07-17",
+   "start_precision": "day",
+   "primary_completion_date": "2029-09-01",
+   "completion_date": "2029-09-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07703878"
+  },
+  {
+   "nct_id": "NCT07708727",
+   "title": "Study of an Injectable Regimen of GS-3242 With Lenacapavir Compared to Biktarvy in People New to HIV-1 Treatment",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "conditions": [
+    "HIV-1-infection"
+   ],
+   "enrollment": 700,
+   "start_date": "2026-07-29",
+   "start_precision": "day",
+   "primary_completion_date": "2030-10-01",
+   "completion_date": "2033-04-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07708727"
+  },
+  {
+   "nct_id": "NCT07719491",
+   "title": "Study of GS-0415 and How It Works in People With HIV",
+   "lead_sponsor": "Gilead Sciences",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE1"
+   ],
+   "conditions": [
+    "HIV -1 Infection"
+   ],
+   "enrollment": 112,
+   "start_date": "2026-07-22",
+   "start_precision": "day",
+   "primary_completion_date": "2029-08-01",
+   "completion_date": "2029-08-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT07719491"
+  }
+ ],
  "regulatory": null
 }

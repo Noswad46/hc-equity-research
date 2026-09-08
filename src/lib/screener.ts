@@ -28,18 +28,22 @@ export interface CompanyRow {
   rnd_ttm: number | null;
   ocf_ttm: number | null;
   operating_income_ttm: number | null;
+  net_income_ttm: number | null;
   cash: number | null;
   revenue_growth_yoy: MetricResult | null;
   operating_margin: MetricResult | null;
   ocf_margin: MetricResult | null;
+  net_margin: MetricResult | null;
   net_cash: MetricResult | null;
   cash_runway_quarters: MetricResult | null;
   rnd_intensity: MetricResult | null;
   active_trials: number | null;
   phase_3_trials: number | null;
-  pipeline_depth_score: number | null;
-  pipeline_concentration: number | null;
-  clinical_momentum: number | null;
+  pipeline_depth_score: MetricResult | null;
+  pipeline_concentration: MetricResult | null;
+  clinical_momentum: MetricResult | null;
+  discontinuation_rate: MetricResult | null;
+  rnd_per_late_stage_programme: MetricResult | null;
   data_quality_flags: string[];
 }
 
@@ -176,14 +180,22 @@ export const REVENUE_BANDS: Band[] = [
 ];
 
 /**
- * Profitability is judged on operating income, not net income, and a company
- * whose operating income could not be established is in neither bucket — it is
- * excluded from both filters rather than assumed to be lossmaking.
+ * Profitability is judged on operating cash flow first, then net income.
+ *
+ * It used to key on operating income, which left Pfizer, Merck and J&J in
+ * neither bucket — none of the three tags an operating income subtotal, so a
+ * third of the universe vanished from a filter that is supposed to split it.
+ * Cash generative versus cash burning is also the more meaningful division for
+ * healthcare: it is what determines whether a company needs the capital markets.
+ *
+ * A company with neither figure is still in neither bucket, rather than assumed
+ * lossmaking.
  */
 function isProfitable(row: CompanyRow): boolean | null {
-  const margin = row.operating_margin?.value ?? null;
-  if (margin !== null) return margin > 0;
-  if (row.operating_income_ttm !== null) return row.operating_income_ttm > 0;
+  if (row.ocf_ttm !== null) return row.ocf_ttm > 0;
+  if (row.net_income_ttm !== null) return row.net_income_ttm > 0;
+  const net = row.net_margin?.value ?? null;
+  if (net !== null) return net > 0;
   return null;
 }
 

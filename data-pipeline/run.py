@@ -27,7 +27,14 @@ import logging
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
+from sources.clinicaltrials import (
+    ClinicalTrialsClient,
+    ClinicalTrialsError,
+    EmptyPipelineError,
+    Study,
+)
 from sources.edgar import Company, EdgarClient, load_universe
+from transform.clinical import Pipeline, all_pipeline_metrics, is_active, summarise
 from transform.derive import GROWTH_FLOOR, all_metrics
 from transform.fundamentals import (
     CONCEPT_CHAINS,
@@ -52,21 +59,28 @@ DEFAULT_OUT = REPO_ROOT / "src" / "data"
 
 #: SPEC §6 metrics computed from fundamentals alone, all live as of M3.
 DERIVED_METRICS = (
-    "operating_margin",
+    "net_margin",
     "ocf_margin",
+    "operating_margin",
     "net_cash",
     "cash_runway_quarters",
     "rnd_intensity",
 )
 
-#: SPEC §5.2 / §5.3. Whole sections, not yet built.
-UNCOMPUTED_PIPELINE_METRICS = (
-    "active_trials",
-    "phase_3_trials",
+#: SPEC §6 pipeline metrics, live as of M4.
+PIPELINE_METRICS = (
     "pipeline_depth_score",
     "pipeline_concentration",
     "clinical_momentum",
+    "discontinuation_rate",
+    "rnd_per_late_stage_programme",
 )
+
+#: Plain counts that sit alongside them in the screener record.
+PIPELINE_COUNTS = ("active_trials", "phase_3_trials")
+
+#: SPEC §5.3. openFDA is M7.
+UNCOMPUTED_REGULATORY = ()
 
 
 # --------------------------------------------------------------------------- #
@@ -304,6 +318,8 @@ def screener_record(
     series_by_concept: Mapping[str, QuarterlySeries],
     flags: Sequence[str],
     metrics: Mapping[str, Any] | None = None,
+    pipeline: Pipeline | None = None,
+    pipeline_metrics: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """The flat per-company record for SPEC §7's `screener.json`."""
     revenue = series_by_concept["revenue"]
@@ -328,6 +344,7 @@ def screener_record(
         "rnd_ttm": ttm("rnd"),
         "ocf_ttm": ttm("ocf"),
         "operating_income_ttm": ttm("operating_income"),
+        "net_income_ttm": ttm("net_income"),
         "cash": number(latest_cash.val) if latest_cash else None,
     }
 
@@ -337,8 +354,10 @@ def screener_record(
     for key in DERIVED_METRICS:
         record[key] = metrics.get(key)
 
-    for key in UNCOMPUTED_PIPELINE_METRICS:
-        record[key] = None
+    record["active_trials"] = pipeline.active_trials_total if pipeline else None
+    record["phase_3_trials"] = pipeline.by_phase.get("phase_3") if pipeline else None
+    for key in PIPELINE_METRICS:
+        record[key] = (pipeline_metrics or {}).get(key)
     record["data_quality_flags"] = list(flags)
     return record
 
@@ -347,6 +366,8 @@ def company_document(
     company: Company,
     companyfacts: Mapping[str, Any],
     concepts: Sequence[str] = M3_CONCEPTS,
+    studies: Sequence[Study] | None = None,
+    as_of: dt.date | None = None,
 ) -> dict[str, Any]:
     """The full per-company record: SPEC §7's screener fields plus the detail."""
     table = build_quarterly_table(companyfacts, concepts)
@@ -363,7 +384,21 @@ def company_document(
     }
 
     metrics = {name: result.to_dict() for name, result in all_metrics(quarterly).items()}
-    document = screener_record(company, quarterly, table.flags, metrics)
+
+    pipeline = None
+    pipeline_metrics: dict[str, Any] = {}
+    if studies is not None:
+        pipeline = summarise(
+            studies, as_of=as_of or dt.date.today(), sponsors=company.ct_sponsor_names
+        )
+        pipeline_metrics = {
+            name: result.to_dict()
+            for name, result in all_pipeline_metrics(studies, pipeline, quarterly.get("rnd")).items()
+        }
+
+    document = screener_record(
+        company, quarterly, table.flags, metrics, pipeline, pipeline_metrics
+    )
 
     used_accns = {
         accn
@@ -404,7 +439,13 @@ def company_document(
             },
             "data_quality": quality_records(quarterly),
             "filings": source_filings(companyfacts, company.cik, used_accns),
-            "pipeline": None,
+            "pipeline": pipeline.to_dict() if pipeline else None,
+            # Active trials only. The aggregates above already summarise the
+            # full history, and carrying every completed study since 1990 put
+            # 2,740 records and 1.4 MB into Pfizer's page for nothing.
+            "active_trials_detail": (
+                [s.to_dict() for s in studies if is_active(s)] if studies is not None else None
+            ),
             "regulatory": None,
         }
     )
@@ -434,10 +475,15 @@ def run(
 ) -> int:
     companies = load_universe(universe_path)
     client = EdgarClient(user_agent=user_agent, cache_dir=cache_dir)
+    ctgov = ClinicalTrialsClient(
+        cache_dir=(cache_dir / "ctgov") if cache_dir else None
+    )
+    trials_as_of = now.date()
 
     generated_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     screener: list[dict[str, Any]] = []
     failed: list[dict[str, str]] = []
+    studies_indexed = 0
 
     companies_dir = out_dir / "companies"
     companies_dir.mkdir(parents=True, exist_ok=True)
@@ -449,10 +495,37 @@ def run(
             log.warning("%s failed: %s", company.ticker, error)
             continue
 
-        document = company_document(company, facts)
+        try:
+            studies = ctgov.studies_for_company(
+                company.ct_sponsor_names,
+                exclusions=company.ct_sponsor_exclusions,
+                ticker=company.ticker,
+                refresh=refresh,
+            )
+        except EmptyPipelineError:
+            # A company with sponsor strings that returns nothing is a broken
+            # mapping, not a company without trials. SPEC §10's resilience rule
+            # covers a source being down; it does not cover a silent zero.
+            raise
+        except ClinicalTrialsError as exc:
+            failed.append({"ticker": company.ticker, "cik": company.cik, "error": str(exc)})
+            log.warning("%s clinical fetch failed: %s", company.ticker, exc)
+            continue
+
+        document = company_document(
+            company, facts, studies=studies, as_of=trials_as_of
+        )
         size = write_json(companies_dir / f"{company.ticker}.json", document)
+        studies_indexed += len(studies)
         screener.append(_screener_view(document))
-        log.info("%-6s %6.1f KB  %3d quarters", company.ticker, size / 1024, len(document["quarterly"]))
+        log.info(
+            "%-6s %6.1f KB  %3d quarters  %4d trials (%d active)",
+            company.ticker,
+            size / 1024,
+            len(document["quarterly"]),
+            len(studies),
+            document["active_trials"] or 0,
+        )
 
     write_json(out_dir / "screener.json", {"generated_at": generated_at, "companies": screener})
     write_json(
@@ -466,7 +539,11 @@ def run(
                     "companies_ok": len(screener),
                     "companies_failed": failed,
                 },
-                "clinicaltrials": None,
+                "clinicaltrials": {
+                    "fetched_at": generated_at,
+                    "studies_indexed": studies_indexed,
+                    "as_of": trials_as_of.isoformat(),
+                },
                 "openfda": None,
             },
             "pipeline_version": PIPELINE_VERSION,
@@ -492,9 +569,11 @@ _SCREENER_KEYS = (
     "rnd_ttm",
     "ocf_ttm",
     "operating_income_ttm",
+    "net_income_ttm",
     "cash",
     *DERIVED_METRICS,
-    *UNCOMPUTED_PIPELINE_METRICS,
+    *PIPELINE_COUNTS,
+    *PIPELINE_METRICS,
     "data_quality_flags",
 )
 

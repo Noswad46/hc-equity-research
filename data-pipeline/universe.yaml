@@ -6,10 +6,27 @@
 # CIKs were taken from https://www.sec.gov/files/company_tickers.json and are
 # zero-padded to 10 digits, as data.sec.gov requires.
 #
-# `ct_sponsor_names` and `fda_applicant_names` are NOT yet verified against live
-# ClinicalTrials.gov / openFDA responses — that happens in M4/M7. SPEC §4 is
-# explicit that these must be curated by hand and never fuzzy-matched, so treat
-# the values below as first drafts to be confirmed, not as working mappings.
+# `ct_sponsor_names` are exact ClinicalTrials.gov lead-sponsor strings, verified
+# against live responses by scripts/enumerate_sponsors.py and confirmed by hand.
+# They are matched whole-field, never fuzzily: SPEC §4 warns that subsidiaries
+# file under their own names for years after an acquisition, so a wrong mapping
+# attributes the wrong pipeline to the wrong company while looking plausible.
+# Rerun the enumeration whenever a ticker is added.
+#
+# `ct_sponsor_exclusions` are strings that must never enter a company's record
+# even if some future query surfaces them. Two reasons appear here: a different
+# listed company sharing a name (Merck KGaA), and divested businesses whose
+# trials left with the divestiture.
+#
+# The governing principle for divestitures: THE CLINICAL PERIMETER MATCHES THE
+# FINANCIAL REPORTING PERIMETER. Merck's FY2020 financials are already restated
+# for the Organon spin-off, so counting pre-spin Organon trials would put the
+# clinical and financial histories on different corporate perimeters and make
+# every cross-source metric compare a broad trial base against a narrow revenue
+# base. Pre-spin clinical history shrinks as a result; a truncated series that
+# matches the financials beats a complete one that does not.
+#
+# `fda_applicant_names` are still unverified — that is M7.
 #
 # Deliberately excluded from v1: GSK, AstraZeneca, Sanofi and BioNTech. All four
 # are foreign private issuers reporting under IFRS, and the exclusion is a
@@ -83,16 +100,28 @@
   subsector: large_cap_pharma
   therapeutic_focus: [vaccines, oncology, immunology, infectious_disease]
   ct_sponsor_names:
+    - "Arena Pharmaceuticals"
+    - "Array BioPharma"
+    - "Array Biopharma, now a wholly owned subsidiary of Pfizer"
+    - "Biohaven Pharmaceuticals, Inc."
+    - "Biohaven Therapeutics Ltd."
+    - "Global Blood Therapeutics"
+    - "Hospira, now a wholly owned subsidiary of Pfizer"
+    - "Medivation, Inc."
     - "Pfizer"
+    - "Seagen Inc."
+    - "Seagen, a wholly owned subsidiary of Pfizer"
+    - "Wyeth is now a wholly owned subsidiary of Pfizer"
+    - "Wyeth-Lederle Vaccines"
+  ct_sponsor_exclusions:
+    - "Pfizer's Upjohn has merged with Mylan to form Viatris Inc."
   fda_applicant_names:
     - "PFIZER INC"
   index_membership: [sp500]
   notes: >-
-    52/53-week fiscal calendar, so quarter ends drift by a few days. Reports R&D
-    excluding acquired IPR&D, so its R&D is not directly comparable with filers
-    that include it. Its two revenue tags agree on quarters and disagree on
-    annuals; Q4 2021 has no Revenues-basis candidate at all and stays on the
-    contracts-with-customers basis, flagged.
+    Acquisitions register as sentences ('Wyeth is now a wholly owned subsidiary
+    of Pfizer'). The Upjohn/Viatris string is excluded: those trials left with
+    the 2020 divestiture, as did the revenue.
 
 - ticker: MRK
   cik: "0000310158"
@@ -100,11 +129,39 @@
   subsector: large_cap_pharma
   therapeutic_focus: [vaccines, oncology, infectious_disease]
   ct_sponsor_names:
+    - "Acceleron Pharma, Inc., a wholly-owned subsidiary of Merck & Co., Inc., Rahway, NJ USA"
+    - "Afferent Pharmaceuticals, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "ArQule, Inc., a subsidiary of Merck Sharp & Dohme LLC, a subsidiary of Merck & Co., Inc. (Rahway, NJ USA)"
+    - "Cidara Therapeutics Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Cubist Pharmaceuticals LLC, a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Harpoon Therapeutics, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Imago BioSciences, Inc., a subsidiary of Merck & Co., Inc., (Rahway, New Jersey USA)"
+    - "Immune Design, a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
     - "Merck Sharp & Dohme LLC"
+    - "NovaCardia, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Oncoethix GmbH, a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Oncoimmune, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Optimer Pharmaceuticals LLC, a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Peloton Therapeutics, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Prometheus Biosciences, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Terns, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Trius Therapeutics LLC, a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "VelosBio Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)"
+    - "Verona Pharma, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA"
+  ct_sponsor_exclusions:
+    - "Merck KGaA, Darmstadt, Germany"
+    - "EMD Serono Research & Development Institute, Inc."
+    - "Merck Healthcare KGaA, Darmstadt, Germany, an affiliate of Merck KGaA, Darmstadt, Germany"
+    - "SpringWorks Therapeutics, Inc., a healthcare company of Merck KGaA, Darmstadt, Germany"
+    - "Organon and Co"
   fda_applicant_names:
     - "MERCK SHARP DOHME"
   index_membership: [sp500]
-  notes: "FY2020 was restated for the Organon spin-off; the 2020 quarters were not, so they do not sum to the annual."
+  notes: >-
+    Merck KGaA of Darmstadt is a different listed company that shares the name;
+    its strings are excluded explicitly and a test asserts none ever enters this
+    record. Organon was spun out in 2021 and is excluded so the clinical
+    perimeter matches the restated FY2020 financials.
 
 - ticker: JNJ
   cik: "0000200406"
@@ -112,14 +169,40 @@
   subsector: large_cap_pharma
   therapeutic_focus: [immunology, oncology, infectious_disease, medtech]
   ct_sponsor_names:
+    - "Abiomed Inc."
+    - "Actelion"
+    - "JANSSEN Alzheimer Immunotherapy Research & Development, LLC"
+    - "Janssen Biotech, Inc."
+    - "Janssen Cilag N.V./S.A."
+    - "Janssen Cilag Pharmaceutica S.A.C.I., Greece"
+    - "Janssen Cilag S.A.S."
+    - "Janssen Pharmaceutical K.K."
     - "Janssen Research & Development, LLC"
+    - "Janssen Vaccines & Prevention B.V."
+    - "Janssen-Cilag A.G., Switzerland"
+    - "Janssen-Cilag B.V."
+    - "Janssen-Cilag Farmaceutica Ltda."
+    - "Janssen-Cilag G.m.b.H"
+    - "Janssen-Cilag International NV"
+    - "Janssen-Cilag Ltd."
+    - "Janssen-Cilag Ltd.,Thailand"
+    - "Janssen-Cilag Pty Ltd"
+    - "Janssen-Cilag S.p.A."
+    - "Janssen-Cilag Turkey"
+    - "Janssen-Cilag, S.A."
+    - "Janssen-Ortho LLC"
+    - "Johnson & Johnson Pharmaceutical Research & Development, L.L.C."
+    - "Shockwave Medical, Inc."
   fda_applicant_names:
     - "JANSSEN BIOTECH INC"
   index_membership: [sp500]
   notes: >-
-    Reports quarterly R&D excluding acquired IPR&D. Its
-    ResearchAndDevelopmentExpense tag carries annual figures only, so that tag
-    contributes no quarters and the whole series sits on the excluding basis.
+    Two lead-sponsor entities span the history — Johnson & Johnson
+    Pharmaceutical Research & Development ends 2020-03, Janssen Research &
+    Development runs from 2004 and is still opening trials. The 2024 'Innovative
+    Medicine' rebrand never reached the registry. Consumer (Kenvue, 2023) and
+    Mead Johnson (2009) are divestitures; Vision Care is still owned but
+    excluded on materiality.
 
 - ticker: GILD
   cik: "0000882095"
@@ -128,6 +211,7 @@
   therapeutic_focus: [infectious_disease, hiv, hepatitis, oncology]
   ct_sponsor_names:
     - "Gilead Sciences"
+    - "Kite, A Gilead Company"
   fda_applicant_names:
     - "GILEAD SCIENCES INC"
   index_membership: [sp500]
@@ -142,6 +226,7 @@
   subsector: commercial_biotech
   therapeutic_focus: [cystic_fibrosis, pain, nephrology]
   ct_sponsor_names:
+    - "Alpine Immune Sciences Inc, A Subsidiary of Vertex"
     - "Vertex Pharmaceuticals Incorporated"
   fda_applicant_names:
     - "VERTEX PHARMACEUTICALS INC"
@@ -155,6 +240,7 @@
   therapeutic_focus: [infectious_disease_diagnostics, injection_devices, specimen_collection]
   ct_sponsor_names:
     - "Becton, Dickinson and Company"
+    - "C. R. Bard"
   fda_applicant_names:
     - "BECTON DICKINSON"
   index_membership: [sp500]

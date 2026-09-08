@@ -43,10 +43,12 @@ function row(overrides: Partial<CompanyRow> = {}): CompanyRow {
     rnd_ttm: 100,
     ocf_ttm: 50,
     operating_income_ttm: 200,
+    net_income_ttm: 150,
     cash: 500,
     revenue_growth_yoy: metric(0.1),
     operating_margin: metric(0.2),
     ocf_margin: metric(0.05),
+    net_margin: metric(0.15),
     net_cash: metric(400),
     cash_runway_quarters: metric(null, ["operating_cash_flow_positive"]),
     rnd_intensity: metric(0.1),
@@ -55,6 +57,8 @@ function row(overrides: Partial<CompanyRow> = {}): CompanyRow {
     pipeline_depth_score: null,
     pipeline_concentration: null,
     clinical_momentum: null,
+    discontinuation_rate: null,
+    rnd_per_late_stage_programme: null,
     data_quality_flags: [],
     ...overrides,
   };
@@ -130,13 +134,22 @@ describe("sorting", () => {
 
 describe("filters", () => {
   const universe = [
-    row({ ticker: "BIG", subsector: "large_cap_pharma", revenue_ttm: 60e9, operating_margin: metric(0.25) }),
+    // Cash generative, and tags no operating income subtotal — the Pfizer shape
+    // that used to fall out of both profitability buckets.
+    row({
+      ticker: "BIG",
+      subsector: "large_cap_pharma",
+      revenue_ttm: 60e9,
+      ocf_ttm: 12e9,
+      operating_margin: metric(null, ["period_mismatch"]),
+      operating_income_ttm: null,
+    }),
     row({
       ticker: "SMALL",
       subsector: "vaccines_infectious_disease",
       therapeutic_focus: ["vaccines"],
       revenue_ttm: 50e6,
-      operating_margin: metric(-0.9),
+      ocf_ttm: -200e6,
       cash_runway_quarters: metric(3),
     }),
     row({
@@ -144,7 +157,9 @@ describe("filters", () => {
       subsector: "medtech",
       therapeutic_focus: ["diagnostics"],
       revenue_ttm: null,
-      operating_margin: metric(null, ["incomplete_window"]),
+      ocf_ttm: null,
+      net_income_ttm: null,
+      net_margin: metric(null, ["period_mismatch"]),
       operating_income_ttm: null,
     }),
   ];
@@ -159,13 +174,13 @@ describe("filters", () => {
     expect(out.map((r) => r.ticker)).toEqual(["BIG", "SMALL"]);
   });
 
-  it("excludes companies with no operating income from both profitability buckets", () => {
+  it("splits on cash generation, so filers with no operating income subtotal still appear", () => {
     const profitable = applyFilters(universe, { ...DEFAULT_STATE.filters, profitability: "profitable" });
     const unprofitable = applyFilters(universe, { ...DEFAULT_STATE.filters, profitability: "unprofitable" });
 
     expect(profitable.map((r) => r.ticker)).toEqual(["BIG"]);
     expect(unprofitable.map((r) => r.ticker)).toEqual(["SMALL"]);
-    // UNKNOWN is assumed to be neither, rather than assumed lossmaking.
+    // UNKNOWN has neither figure and is assumed to be neither, not lossmaking.
     expect([...profitable, ...unprofitable].map((r) => r.ticker)).not.toContain("UNKNOWN");
   });
 

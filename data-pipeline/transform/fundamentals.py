@@ -178,26 +178,6 @@ BASIS_OCF_CONTINUING = "ocf_continuing_operations"
 BASIS_CASH_EXCLUDING_RESTRICTED = "cash_excluding_restricted"
 BASIS_CASH_INCLUDING_RESTRICTED = "cash_including_restricted"
 BASIS_OPERATING_INCOME_REPORTED = "operating_income_reported"
-BASIS_OPERATING_INCOME_DERIVED = "operating_income_derived"
-
-
-@dataclass(frozen=True)
-class Derivation:
-    """A subtotal the filer does not present, reconstructed from two lines it does.
-
-    Both sides are read from the *same accession*, so the arithmetic is internal
-    to one filing and cannot mix vintages or reporting bases. That is a stricter
-    rule than the rest of the pipeline needs, and it is deliberate: a subtotal
-    assembled from two filings would be a number no filer ever asserted.
-    """
-
-    #: Candidate tags for the figure being reduced. First available wins.
-    minuend: tuple[str, ...]
-    #: Candidate tags for the figure being removed from it.
-    subtrahend: tuple[str, ...]
-    #: Synthetic tag name recorded on every value this produces.
-    tag: str
-    basis: str
 
 
 @dataclass(frozen=True)
@@ -217,9 +197,6 @@ class Concept:
     #: Tag -> measurement-basis label, for tags that measure materially different
     #: things. Absent means "no basis distinction worth recording".
     tag_basis: Mapping[str, str] = field(default_factory=dict)
-    #: Last-resort reconstruction where the filer presents no such subtotal.
-    #: Ranks below every real tag, so a reported figure always wins.
-    derivation: Derivation | None = None
     #: For SUM concepts: an aggregate tag to use at dates where none of the
     #: components are present. Novavax tags `LongTermDebt` and neither of the
     #: current/noncurrent splits.
@@ -240,7 +217,6 @@ def _concept(
     *tags: str,
     selection: Selection = Selection.CHAIN_ORDER,
     tag_basis: Mapping[str, str] | None = None,
-    derivation: Derivation | None = None,
     sum_fallback: tuple[str, ...] = (),
 ) -> tuple[str, Concept]:
     return name, Concept(
@@ -250,32 +226,8 @@ def _concept(
         label=label,
         selection=selection,
         tag_basis=dict(tag_basis or {}),
-        derivation=derivation,
         sum_fallback=sum_fallback,
     )
-
-
-#: SPEC §6's operating margin needs an operating income subtotal, and large
-#: pharma frequently presents none — the income statement runs from expense lines
-#: straight to pre-tax earnings. Pfizer, Merck and J&J all tag no
-#: `OperatingIncomeLoss` at all.
-#:
-#: Reconstructing it as revenue − COGS − R&D − SG&A would be wrong for exactly
-#: these filers: amortisation of acquired intangibles, restructuring, litigation
-#: provisions and acquired IPR&D are real operating costs outside those three
-#: lines and are large here, so that route systematically overstates operating
-#: income for the companies being patched. The bottom-up route removes the
-#: non-operating block from pre-tax earnings instead, which cannot miss an
-#: operating cost by construction.
-OPERATING_INCOME_DERIVATION = Derivation(
-    minuend=(
-        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
-        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
-    ),
-    subtrahend=("NonoperatingIncomeExpense",),
-    tag="OperatingIncomeLoss(derived)",
-    basis=BASIS_OPERATING_INCOME_DERIVED,
-)
 
 
 #: Concept definitions. Two deliberately depart from the SPEC §5.1 table.
@@ -337,13 +289,20 @@ CONCEPT_CHAINS: Mapping[str, Concept] = dict(
                 "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations": BASIS_OCF_CONTINUING,
             },
         ),
+        #: Reported only, permanently. Two derivations were attempted and both
+        #: failed for the same structural reason: the composition of the
+        #: non-operating block is filer-specific in XBRL, so there is no stable
+        #: identity to invert. Back-testing the nearest available substitute
+        #: against filers that do report the subtotal gave TTM margin errors of
+        #: 1.8 to 12.6 percentage points — plausible-looking numbers, wrong by
+        #: enough to reorder a ranking. Net margin and OCF margin carry the
+        #: headline instead; this is a secondary column, populated where tagged.
         _concept(
             "operating_income",
             ConceptKind.DURATION,
             "Operating income",
             "OperatingIncomeLoss",
             tag_basis={"OperatingIncomeLoss": BASIS_OPERATING_INCOME_REPORTED},
-            derivation=OPERATING_INCOME_DERIVATION,
         ),
         _concept("net_income", ConceptKind.DURATION, "Net income", "NetIncomeLoss"),
         _concept(
@@ -414,6 +373,7 @@ M2_CONCEPTS: tuple[str, ...] = ("revenue", "rnd", "ocf", "cash", "operating_inco
 #: net cash and runway, and operating expenses for the pre-revenue R&D-intensity
 #: variant.
 M3_CONCEPTS: tuple[str, ...] = M2_CONCEPTS + (
+    "net_income",
     "short_term_investments",
     "debt",
     "restricted_cash",
@@ -456,10 +416,6 @@ FLAG_RESTATED_FISCAL_YEAR = "restated_fiscal_year"
 FLAG_OVERLAPPING_PERIODS = "overlapping_periods"
 FLAG_STALE_SERIES = "stale_series"
 FLAG_BASIS_CUTOVER = "basis_cutover"
-#: The filer presents no such subtotal; this figure was reconstructed from lines
-#: it does present. A column mixing reported and reconstructed figures has to show
-#: which is which.
-FLAG_DERIVED_SUBTOTAL = "derived_subtotal"
 #: A summed concept was built from fewer components than it defines.
 FLAG_INCOMPLETE_SUM = "incomplete_sum"
 #: Cash was read from the cash-flow statement's reconciling figure, which includes
@@ -849,51 +805,6 @@ def instant_values(
             taxonomy=fact.taxonomy,
             unit=fact.unit,
             measurement_basis=measurement_basis,
-        )
-    return out
-
-
-def derive_facts(
-    companyfacts: Mapping[str, Any],
-    derivation: Derivation,
-    *,
-    taxonomy: str = DEFAULT_TAXONOMY,
-    unit: str = DEFAULT_UNIT,
-) -> list[Fact]:
-    """Reconstruct a missing subtotal as `minuend − subtrahend`.
-
-    Both sides must come from the same accession. A subtotal stitched together
-    from two filings would be a figure no filer ever asserted, and the whole
-    point of deriving it is to stand in for one they would have.
-    """
-    def first_available(candidates: Sequence[str]) -> list[Fact]:
-        for tag in candidates:
-            facts = extract_facts(companyfacts, tag, taxonomy=taxonomy, unit=unit)
-            if facts:
-                return facts
-        return []
-
-    minuends = first_available(derivation.minuend)
-    subtrahends = first_available(derivation.subtrahend)
-    if not minuends or not subtrahends:
-        return []
-
-    by_key: dict[tuple[dt.date | None, dt.date, str], Fact] = {
-        (f.start, f.end, f.accn): f for f in subtrahends
-    }
-
-    out: list[Fact] = []
-    for fact in minuends:
-        other = by_key.get((fact.start, fact.end, fact.accn))
-        if other is None:
-            continue
-        out.append(
-            replace(
-                fact,
-                tag=derivation.tag,
-                val=fact.val - other.val,
-                filed=max(fact.filed, other.filed),
-            )
         )
     return out
 
@@ -1766,24 +1677,11 @@ def quarterly_series(
                 end: tags for end, tags in present.items() if len(tags) < len(concept.tags)
             }
     else:
-        candidate_tags = list(concept.tags)
-        derived_facts: list[Fact] = []
-        if concept.derivation is not None:
-            derived_facts = derive_facts(
-                companyfacts, concept.derivation, taxonomy=taxonomy, unit=unit
+        for tag in concept.tags:
+            facts = extract_facts(
+                companyfacts, tag, taxonomy=taxonomy, unit=unit, duration_only=is_duration
             )
-            if derived_facts:
-                candidate_tags.append(concept.derivation.tag)
-
-        for tag in candidate_tags:
-            if concept.derivation is not None and tag == concept.derivation.tag:
-                facts = derived_facts
-                measurement_basis = concept.derivation.basis
-            else:
-                facts = extract_facts(
-                    companyfacts, tag, taxonomy=taxonomy, unit=unit, duration_only=is_duration
-                )
-                measurement_basis = concept.basis_of(tag)
+            measurement_basis = concept.basis_of(tag)
             if not facts:
                 continue
             available.append(tag)
@@ -1832,7 +1730,6 @@ def quarterly_series(
 
     # Attach period-level flags. These are what `guard_metric` reads, so they
     # have to live on the value rather than only on the series around it.
-    derived_tag = concept.derivation.tag if concept.derivation else None
     flagged: dict[dt.date, PeriodValue] = {}
     for end, value in selected.items():
         marks: list[str] = []
@@ -1840,8 +1737,6 @@ def quarterly_series(
             marks.append(FLAG_RESTATED_FISCAL_YEAR)
         if any(period in disputed for period in value.derived_from):
             marks.append(FLAG_TAG_BASIS_UNCERTAIN)
-        if derived_tag is not None and value.tag == derived_tag:
-            marks.append(FLAG_DERIVED_SUBTOTAL)
         if end in incomplete_sums:
             marks.append(FLAG_INCOMPLETE_SUM)
         if value.measurement_basis == BASIS_CASH_INCLUDING_RESTRICTED:

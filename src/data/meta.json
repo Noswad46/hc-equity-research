@@ -1,13 +1,17 @@
 {
- "generated_at": "2026-09-07T03:30:45Z",
+ "generated_at": "2026-09-08T16:21:28Z",
  "universe_size": 10,
  "sources": {
   "edgar": {
-   "fetched_at": "2026-09-07T03:30:45Z",
+   "fetched_at": "2026-09-08T16:21:28Z",
    "companies_ok": 10,
    "companies_failed": []
   },
-  "clinicaltrials": null,
+  "clinicaltrials": {
+   "fetched_at": "2026-09-08T16:21:28Z",
+   "studies_indexed": 7153,
+   "as_of": "2026-09-08"
+  },
   "openfda": null
  },
  "pipeline_version": "1.0.0",

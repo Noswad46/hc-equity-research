@@ -52,17 +52,56 @@ def _ttm(series: QuarterlySeries | None, as_of: dt.date | None = None) -> Period
 
 
 def _aligned_ttm(series: QuarterlySeries | None, as_of: dt.date | None) -> PeriodValue | None:
-    """A trailing year ending exactly at `as_of`, or nothing.
-
-    Ratios must be built from windows covering the same twelve months. Without
-    this, a stale numerator silently pairs with a current denominator: J&J stopped
-    tagging `OperatingIncomeLoss` in 2015, and dividing that by 2026 revenue
-    produced a 22% operating margin that described neither year.
-    """
+    """A trailing year ending exactly at `as_of`, or nothing."""
     if series is None or as_of is None:
         return None
     value = series.trailing_twelve_months(as_of)
     return value if value is not None and value.end == as_of else None
+
+
+PERIOD_MISMATCH = "period_mismatch"
+
+
+def ratio(
+    name: str,
+    numerator: QuarterlySeries | None,
+    denominator: QuarterlySeries | None,
+    *,
+    as_of: dt.date | None,
+    extra_flags: tuple[str, ...] = (),
+    allow_negative_denominator: bool = False,
+) -> MetricResult:
+    """Every two-sided metric in this module is built here, and only here.
+
+    The alignment rule is a property of this constructor rather than a check
+    inside each metric, because a check repeated per metric is a check that the
+    next metric forgets. Both sides must produce a trailing year ending on
+    exactly the same date or the result is null: J&J stopped tagging
+    `OperatingIncomeLoss` in 2015, and pairing that with 2026 revenue produced a
+    22% operating margin describing neither year.
+
+    Cross-source ratios use `cross_source_ratio`, which adds the source-date gap
+    on top of this.
+    """
+    top = _aligned_ttm(numerator, as_of)
+    bottom = _aligned_ttm(denominator, as_of)
+    inputs = tuple(v for v in (top, bottom) if v is not None)
+
+    if denominator is None or not denominator.values:
+        # No denominator series at all is a different failure from two series
+        # that exist but cannot be lined up.
+        return MetricResult(
+            name=name, value=None, inputs=inputs, suppressed_by=("no_denominator",)
+        )
+    if top is None or bottom is None:
+        return MetricResult(
+            name=name, value=None, inputs=inputs, suppressed_by=(PERIOD_MISMATCH,)
+        )
+    if not bottom.val or (bottom.val < 0 and not allow_negative_denominator):
+        return MetricResult(
+            name=name, value=None, inputs=inputs, suppressed_by=("no_denominator",)
+        )
+    return guard_metric(name, lambda: top.val / bottom.val, inputs, extra_flags=extra_flags)
 
 
 def _anchor_end(revenue: QuarterlySeries) -> dt.date | None:
@@ -106,28 +145,20 @@ def operating_margin(
     Carries whatever flags the operating income series carried, so a margin built
     on a reconstructed subtotal is marked as such wherever it is shown.
     """
-    end = _anchor_end(revenue)
-    income = _aligned_ttm(operating_income, end)
-    sales = _aligned_ttm(revenue, end)
-    inputs = tuple(v for v in (income, sales) if v is not None)
-
-    if income is None or sales is None or not sales.val:
-        return MetricResult(
-            name="operating_margin", value=None, inputs=inputs, suppressed_by=("incomplete_window",)
-        )
-    return guard_metric("operating_margin", lambda: income.val / sales.val, inputs)
+    return ratio("operating_margin", operating_income, revenue, as_of=_anchor_end(revenue))
 
 
 def ocf_margin(ocf: QuarterlySeries, revenue: QuarterlySeries) -> MetricResult:
-    end = _anchor_end(revenue)
-    flow = _aligned_ttm(ocf, end)
-    sales = _aligned_ttm(revenue, end)
-    inputs = tuple(v for v in (flow, sales) if v is not None)
-    if flow is None or sales is None or not sales.val:
-        return MetricResult(
-            name="ocf_margin", value=None, inputs=inputs, suppressed_by=("incomplete_window",)
-        )
-    return guard_metric("ocf_margin", lambda: flow.val / sales.val, inputs)
+    return ratio("ocf_margin", ocf, revenue, as_of=_anchor_end(revenue))
+
+
+def net_margin(net_income: QuarterlySeries, revenue: QuarterlySeries) -> MetricResult:
+    """Net income TTM over revenue TTM.
+
+    `NetIncomeLoss` is universally tagged, which is why this carries the headline
+    alongside OCF margin while operating margin sits behind them.
+    """
+    return ratio("net_margin", net_income, revenue, as_of=_anchor_end(revenue))
 
 
 def rnd_intensity(
@@ -140,29 +171,13 @@ def rnd_intensity(
     company earns goes into research, the other how much of what it spends does.
     """
     end = _anchor_end(revenue)
-    spend = _aligned_ttm(rnd, end)
     sales = _aligned_ttm(revenue, end)
-    if spend is None:
-        return MetricResult(name="rnd_intensity", value=None, suppressed_by=("incomplete_window",))
 
     if sales is not None and sales.val > 0:
-        return guard_metric(
-            "rnd_intensity", lambda: spend.val / sales.val, (spend, sales)
-        )
+        return ratio("rnd_intensity", rnd, revenue, as_of=end)
 
-    costs = _aligned_ttm(opex, end)
-    if costs is None or not costs.val:
-        return MetricResult(
-            name="rnd_intensity",
-            value=None,
-            inputs=tuple(v for v in (spend, sales) if v is not None),
-            suppressed_by=("no_denominator",),
-        )
-    return guard_metric(
-        "rnd_intensity",
-        lambda: spend.val / costs.val,
-        (spend, costs),
-        extra_flags=("rnd_intensity_over_opex",),
+    return ratio(
+        "rnd_intensity", rnd, opex, as_of=end, extra_flags=("rnd_intensity_over_opex",)
     )
 
 
@@ -294,6 +309,7 @@ def all_metrics(series: Mapping[str, QuarterlySeries]) -> dict[str, MetricResult
         "revenue_growth_yoy": revenue_growth(revenue),
         "operating_margin": operating_margin(series["operating_income"], revenue),
         "ocf_margin": ocf_margin(series["ocf"], revenue),
+        "net_margin": net_margin(series["net_income"], revenue),
         "rnd_intensity": rnd_intensity(series["rnd"], revenue, series.get("opex")),
         "net_cash": net_cash(
             series["cash"],

@@ -11,6 +11,7 @@ import Base from "../../layouts/Base.astro";
 import meta from "../../data/meta.json";
 import {
   describeFlag,
+  describeReason,
   severityOf,
   SEVERITY_ORDER,
   conceptLabel,
@@ -45,6 +46,9 @@ const flags: QualityRecord[] = [...company.data_quality].sort(
 );
 
 const conceptEntries = Object.entries(company.concepts) as [string, any][];
+const activeTrials = (company.active_trials_detail ?? []).slice().sort(
+  (a: any, b: any) => (b.start_date ?? "").localeCompare(a.start_date ?? ""),
+);
 ---
 
 <Base title={`${company.ticker} — ${company.name}`}>
@@ -208,6 +212,130 @@ const conceptEntries = Object.entries(company.concepts) as [string, any][];
       ))}
     </tbody>
   </table>
+
+  <h2>Clinical pipeline</h2>
+  {company.pipeline === null ? (
+    <p class="muted">No clinical data for this company.</p>
+  ) : (
+    <>
+      <p class="muted">
+        Interventional studies where this company is the <strong>lead</strong> sponsor, from
+        ClinicalTrials.gov as of {company.pipeline.as_of}. Sponsor strings are matched whole-field:{" "}
+        {company.pipeline.sponsors.map((s: string) => <code>{s}</code>).reduce((a: any, b: any) => [a, ", ", b])}.
+      </p>
+
+      <table>
+        <caption>Active trials by phase. A trial declaring several phases counts once, at its highest.</caption>
+        <thead>
+          <tr><th>Phase</th><th class="num">Active trials</th></tr>
+        </thead>
+        <tbody>
+          {[["phase_1","Phase 1"],["phase_2","Phase 2"],["phase_3","Phase 3"],["phase_4","Phase 4"],["not_applicable","Not applicable"]].map(([key,label]) => (
+            <tr>
+              <td>{label}</td>
+              <td class="num">{raw(company.pipeline.by_phase[key] ?? 0)}</td>
+            </tr>
+          ))}
+          <tr>
+            <td><strong>Total active</strong></td>
+            <td class="num"><strong>{raw(company.pipeline.active_trials_total)}</strong></td>
+          </tr>
+          <tr>
+            <td class="muted">All trials, all time</td>
+            <td class="num muted">{raw(company.pipeline.total_trials)}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>Pipeline metrics. Weights and thresholds are on the <a href="/methodology/">methodology page</a>.</caption>
+        <thead>
+          <tr><th>Metric</th><th class="num">Value</th><th>Suppressed by</th></tr>
+        </thead>
+        <tbody>
+          {[
+            ["pipeline_depth_score","Depth score"],
+            ["pipeline_concentration","Concentration (HHI)"],
+            ["clinical_momentum","Clinical momentum"],
+            ["discontinuation_rate","Discontinuation rate"],
+            ["rnd_per_late_stage_programme","R&D per late-stage programme (USD)"],
+          ].map(([key,label]) => (
+            <tr>
+              <td>{label}</td>
+              <td class={`num ${company[key]?.value === null ? "null" : ""}`}>{raw(company[key]?.value)}</td>
+              <td class="muted">
+                {company[key]?.suppressed_by?.length
+                  ? company[key].suppressed_by.map((c: string) => describeReason(c, label)).join(" ")
+                  : "—"}
+              </td>
+            </tr>
+          ))}
+          <tr>
+            <td class="muted">Trials started, trailing 12m / prior 12m</td>
+            <td class="num muted">{raw(company.pipeline.started_ttm)} / {raw(company.pipeline.started_prior_ttm)}</td>
+            <td class="muted">Registration lags the start date, so recent months under-count.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {company.pipeline.top_conditions.length > 0 && (
+        <table>
+          <caption>Most-addressed conditions across active trials.</caption>
+          <thead><tr><th>Condition</th><th class="num">Active trials</th></tr></thead>
+          <tbody>
+            {company.pipeline.top_conditions.map((c: any) => (
+              <tr><td>{c.condition}</td><td class="num">{raw(c.count)}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {company.pipeline.upcoming_readouts.length > 0 && (
+        <table>
+          <caption>Next primary completion dates among active trials.</caption>
+          <thead>
+            <tr><th>Primary completion</th><th>Phase</th><th>Condition</th><th class="num">Enrolment</th><th>NCT</th></tr>
+          </thead>
+          <tbody>
+            {company.pipeline.upcoming_readouts.map((r: any) => (
+              <tr>
+                <td>{raw(r.primary_completion_date)}</td>
+                <td>{raw(r.phase)}</td>
+                <td>{r.condition ?? "—"}</td>
+                <td class={`num ${r.enrollment === null ? "null" : ""}`}>{raw(r.enrollment)}</td>
+                <td><a href={r.url}>{r.nct_id}</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {activeTrials.length > 0 && (
+        <>
+          <h3>Active trials ({activeTrials.length})</h3>
+          <div style="max-height: 30rem; overflow: auto;">
+            <table>
+              <thead>
+                <tr><th>NCT</th><th>Phase</th><th>Status</th><th>Started</th><th class="num">Enrolment</th><th>Title</th></tr>
+              </thead>
+              <tbody>
+                {activeTrials.map((t: any) => (
+                  <tr>
+                    <td><a href={t.url}>{t.nct_id}</a></td>
+                    <td>{t.phases.length ? t.phases.join(", ") : "—"}</td>
+                    <td class="muted">{t.status}</td>
+                    <td>{raw(t.start_date)}</td>
+                    <td class={`num ${t.enrollment === null ? "null" : ""}`}>{raw(t.enrollment)}</td>
+                    <td>{t.title}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+    </>
+  )}
 
   <h2>Data quality</h2>
   {flags.length === 0 ? (

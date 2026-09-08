@@ -99,6 +99,11 @@ const growthFloor = meta.thresholds.growth_floor_usd;
         </td>
       </tr>
       <tr>
+        <td>Net margin</td>
+        <td>Net income TTM ÷ revenue TTM</td>
+        <td><code>NetIncomeLoss</code> is universally tagged, which is why this and OCF margin carry the headline.</td>
+      </tr>
+      <tr>
         <td>Cash runway</td>
         <td>(cash + short-term investments) ÷ mean(|quarterly OCF|) over the trailing four</td>
         <td>
@@ -110,20 +115,121 @@ const growthFloor = meta.thresholds.growth_floor_usd;
     </tbody>
   </table>
 
+  <h2>Clinical pipeline metrics</h2>
+  <p>
+    Counted from ClinicalTrials.gov, restricted to <strong>interventional</strong> studies where the
+    company is the <strong>lead</strong> sponsor. Both restrictions matter: including observational
+    work counts investigator-initiated studies the company did not run, and including collaborator
+    roles counts other people's trials.
+  </p>
+  <p>
+    Sponsor names are matched whole-field against an explicit list per company, never by free text.
+    Subsidiaries register under their own names — Pfizer's appear as sentences such as
+    <code>Wyeth is now a wholly owned subsidiary of Pfizer</code> — so the list is built by an
+    enumeration tool and confirmed by hand. Fuzzy matching here produces silent, plausible-looking
+    misattribution.
+  </p>
+  <p>
+    A trial declaring several phases counts once, at the highest phase it reaches. "Active" means
+    recruiting, active but not recruiting, enrolling by invitation, or not yet recruiting.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Formula</th><th>Limitations</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pipeline depth score</td>
+        <td>1×Phase 1 + 3×Phase 2 + 8×Phase 3 + 12×Phase 4, active trials only</td>
+        <td>
+          A transparent heuristic, not a proprietary model. The weights rise steeply because a
+          Phase 3 represents far more committed capital than a Phase 1. Zero for companies whose
+          trials carry no phase, which is normal for device studies.
+        </td>
+      </tr>
+      <tr>
+        <td>Pipeline concentration</td>
+        <td>Herfindahl index across the conditions of active trials</td>
+        <td>
+          1.0 means every active trial addresses one condition — single-asset risk. A trial listing
+          several conditions contributes a fraction to each, so one broad trial is not counted as
+          several narrow ones.
+        </td>
+      </tr>
+      <tr>
+        <td>Clinical momentum</td>
+        <td>Trials started in the trailing 12 months − the prior 12 months</td>
+        <td>
+          Registration lags the start date, so recent months are systematically under-counted. A
+          small negative reading is not evidence of contraction.
+        </td>
+      </tr>
+      <tr>
+        <td>Discontinuation rate</td>
+        <td>(terminated + withdrawn) ÷ (completed + terminated + withdrawn), all time</td>
+        <td>
+          Suppressed below ten resolved trials. On a handful, one termination moves the rate by
+          tens of percentage points and describes the sample rather than the company.
+        </td>
+      </tr>
+      <tr>
+        <td>R&D per late-stage programme</td>
+        <td>R&D TTM ÷ count of active Phase 2 and 3 trials</td>
+        <td>
+          Crude, and comparable only within a subsector. This is the one metric spanning both data
+          sources: the R&D figure ends on a fiscal quarter end while the trial count is whatever the
+          registry said at fetch time, so the two were never true at the same instant. Where that
+          gap exceeds a quarter the value is flagged.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
   <h2>Known limitations</h2>
+
+  <h3>The clinical perimeter matches the financial reporting perimeter</h3>
+  <p>
+    Where a business has been divested, its trials are excluded even for the years before the
+    divestiture. Merck's FY2020 financials are already restated for the Organon spin-off, so
+    counting pre-spin Organon trials would put the clinical and financial histories on different
+    corporate perimeters, and every metric spanning both — R&D per late-stage programme above all —
+    would compare a broad trial base against a narrow revenue base.
+  </p>
+  <p>
+    Two exclusions follow from this: Organon from Merck, and the Upjohn business that became
+    Viatris from Pfizer. Pre-divestiture clinical history shrinks as a result. That is the intended
+    trade-off: a truncated series that matches the financials beats a complete one that does not.
+  </p>
+  <p>
+    Acquisitions need no such treatment, because ClinicalTrials.gov rewrites sponsor records
+    retroactively. Immunomedics' trials, including those started in 2012, now carry
+    <code>Gilead Sciences</code> as lead sponsor — matching how the financials consolidate them.
+  </p>
+
+  <h3>Two companies are called Merck</h3>
+  <p>
+    Merck &amp; Co (MRK, this universe) and Merck KGaA of Darmstadt are unrelated listed companies
+    sharing a name; outside North America the branding is reversed. A query on the bare word
+    returns both. Merck KGaA's strings — including
+    <code>SpringWorks Therapeutics, Inc., a healthcare company of Merck KGaA</code>, which reads
+    exactly like a Merck &amp; Co subsidiary — are on an explicit exclusion list, and a test fails
+    the build if any of their trials ever enters Merck's record.
+  </p>
 
   <h3>Operating income is not universally reported</h3>
   <p>
     Large pharmaceutical companies often present no operating income subtotal, running from expense
-    lines straight to pre-tax earnings. Where the subtotal is absent it is reconstructed as pre-tax
-    income from continuing operations less the non-operating block, and every such figure is marked
-    as derived. Reconstructing it instead as revenue less cost of sales, R&D and SG&A would be
-    wrong for these companies: amortisation of acquired intangibles, restructuring, litigation
-    provisions and acquired in-process R&D are real operating costs outside those three lines.
+    lines straight to pre-tax earnings. Pfizer, Merck and Johnson &amp; Johnson all tag none.
   </p>
   <p>
-    Some filers tag neither the subtotal nor the non-operating line it would be reconstructed from.
-    For those, operating margin is null rather than estimated.
+    It is not reconstructed. Two approaches were tried and both failed for the same structural
+    reason: the composition of the non-operating block is filer-specific in XBRL, so there is no
+    stable identity to invert. Back-tested against filers that do report the subtotal, the nearest
+    available substitute was wrong by 1.8 to 12.6 percentage points of margin — plausible-looking
+    figures, wrong by enough to reorder a ranking. Operating margin is therefore reported where
+    tagged and null where not, and net margin and OCF margin carry the headline instead. For this
+    universe OCF margin is arguably the better measure anyway: cash-based, and harder to flatter
+    with amortisation and one-off charges.
   </p>
 
   <h3>Cash sometimes includes restricted balances</h3>

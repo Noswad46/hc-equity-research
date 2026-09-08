@@ -31,7 +31,6 @@ interface Column {
   numeric: boolean;
   /** Units, so a raw unrounded figure is at least interpretable. */
   note?: string;
-  pending?: boolean;
 }
 
 const IDENTITY: Column[] = [
@@ -50,8 +49,11 @@ const PRESETS: { id: string; label: string; columns: Column[] }[] = [
       { key: "revenue_growth_yoy", label: "Revenue growth YoY", numeric: true, note: "fraction" },
       { key: "rnd_ttm", label: "R&D TTM", numeric: true, note: "USD" },
       { key: "rnd_intensity", label: "R&D intensity", numeric: true, note: "fraction" },
-      { key: "operating_margin", label: "Operating margin", numeric: true, note: "fraction" },
+      // OCF and net margin lead: both are universally tagged. Operating margin
+      // follows, blank for the filers that present no such subtotal.
       { key: "ocf_margin", label: "OCF margin", numeric: true, note: "fraction" },
+      { key: "net_margin", label: "Net margin", numeric: true, note: "fraction" },
+      { key: "operating_margin", label: "Operating margin", numeric: true, note: "fraction" },
     ],
   },
   {
@@ -71,11 +73,13 @@ const PRESETS: { id: string; label: string; columns: Column[] }[] = [
     label: "Pipeline",
     columns: [
       ...IDENTITY,
-      { key: "active_trials", label: "Active trials", numeric: true, pending: true },
-      { key: "phase_3_trials", label: "Phase 3", numeric: true, pending: true },
-      { key: "pipeline_depth_score", label: "Depth score", numeric: true, pending: true },
-      { key: "pipeline_concentration", label: "Concentration", numeric: true, pending: true },
-      { key: "clinical_momentum", label: "Momentum", numeric: true, pending: true },
+      { key: "active_trials", label: "Active trials", numeric: true },
+      { key: "phase_3_trials", label: "Phase 3", numeric: true },
+      { key: "pipeline_depth_score", label: "Depth score", numeric: true, note: "weighted" },
+      { key: "pipeline_concentration", label: "Concentration", numeric: true, note: "HHI" },
+      { key: "clinical_momentum", label: "Momentum", numeric: true, note: "trials" },
+      { key: "discontinuation_rate", label: "Discontinuation", numeric: true, note: "fraction" },
+      { key: "rnd_per_late_stage_programme", label: "R&D per late-stage", numeric: true, note: "USD" },
     ],
   },
 ];
@@ -222,8 +226,8 @@ export default function Screener({ companies, generatedAt, growthFloor }: Props)
             ))}
           </div>
           <p className="hint">
-            Judged on operating income. Companies whose operating income could not be established
-            are in neither bucket.
+            Judged on trailing operating cash flow, falling back to net income. Companies with
+            neither are in neither bucket.
           </p>
         </fieldset>
 
@@ -295,8 +299,10 @@ export default function Screener({ companies, generatedAt, growthFloor }: Props)
 
       {preset.id === "pipeline" && (
         <p className="notice">
-          Pipeline metrics come from ClinicalTrials.gov, which is Milestone 4. These columns are
-          present so the shape of the record is stable, and are empty until then.
+          Interventional studies where the company is the <strong>lead</strong> sponsor, counted
+          from ClinicalTrials.gov by exact sponsor name. Weights and thresholds are on the{" "}
+          <a href="/methodology/">methodology page</a>. Depth score is zero for companies whose
+          trials carry no phase, which is normal for device studies.
         </p>
       )}
 
@@ -399,13 +405,6 @@ function SortButton({
 function Cell({ row, column }: { row: CompanyRow; column: Column }) {
   const cell = cellOf(row, column.key);
 
-  if (column.pending) {
-    return (
-      <td className="num null" title="Awaiting ClinicalTrials.gov integration (Milestone 4)">
-        —
-      </td>
-    );
-  }
 
   // Flags attached to the metric's own inputs, plus any company-level flag for
   // the concept this column is built from.

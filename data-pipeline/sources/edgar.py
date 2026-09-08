@@ -144,6 +144,11 @@ class Company:
     subsector: str
     therapeutic_focus: tuple[str, ...] = ()
     ct_sponsor_names: tuple[str, ...] = ()
+    #: Lead-sponsor strings that must never enter this company's record, even if
+    #: a future query surfaces them. Merck KGaA of Darmstadt is a different
+    #: listed company sharing a name; Organon and Upjohn/Viatris are divested
+    #: businesses whose trials left with the divestiture.
+    ct_sponsor_exclusions: tuple[str, ...] = ()
     fda_applicant_names: tuple[str, ...] = ()
     index_membership: tuple[str, ...] = ()
     notes: str = ""
@@ -166,6 +171,7 @@ _REQUIRED_FIELDS = ("ticker", "cik", "name", "subsector")
 _LIST_FIELDS = (
     "therapeutic_focus",
     "ct_sponsor_names",
+    "ct_sponsor_exclusions",
     "fda_applicant_names",
     "index_membership",
 )
@@ -234,6 +240,13 @@ def load_universe(path: str | os.PathLike[str]) -> list[Company]:
             )
 
         lists = {f: _as_str_tuple(entry.get(f), ticker=ticker, field_name=f) for f in _LIST_FIELDS}
+
+        contradiction = set(lists["ct_sponsor_names"]) & set(lists["ct_sponsor_exclusions"])
+        if contradiction:
+            raise UniverseError(
+                f"{ticker}: sponsor string(s) both included and excluded: "
+                f"{', '.join(sorted(contradiction))}"
+            )
 
         companies.append(
             Company(

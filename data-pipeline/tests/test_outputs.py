@@ -15,7 +15,8 @@ import pytest
 
 from run import (
     DERIVED_METRICS,
-    UNCOMPUTED_PIPELINE_METRICS,
+    PIPELINE_COUNTS,
+    PIPELINE_METRICS,
     _SCREENER_KEYS,
     company_document,
     number,
@@ -92,9 +93,9 @@ def test_every_screener_key_is_present(pfe_doc):
         assert key in pfe_doc, key
 
 
-def test_uncomputed_pipeline_metrics_are_null_not_absent(pfe_doc):
-    """SPEC §5.2 clinical metrics are M4; the keys must still exist."""
-    for key in UNCOMPUTED_PIPELINE_METRICS:
+def test_pipeline_keys_exist_even_without_clinical_data(pfe_doc):
+    """`company_document` is called without studies here; the keys must still exist."""
+    for key in PIPELINE_COUNTS + PIPELINE_METRICS:
         assert key in pfe_doc
         assert pfe_doc[key] is None
 
@@ -107,8 +108,8 @@ def test_derived_metrics_are_present_as_result_objects(pfe_doc):
 
 
 def test_unbuilt_sections_are_null(pfe_doc):
-    assert pfe_doc["pipeline"] is None
-    assert pfe_doc["regulatory"] is None
+    assert pfe_doc["pipeline"] is None  # no studies passed in this fixture
+    assert pfe_doc["regulatory"] is None  # openFDA is M7
 
 
 def test_quarterly_rows_carry_every_concept_key(pfe_doc):

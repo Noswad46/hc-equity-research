@@ -105,6 +105,7 @@ def test_a_stale_numerator_cannot_pair_with_a_current_denominator():
     """J&J's shape: operating income stops in 2015, revenue runs to 2026.
 
     Dividing one by the other produced a margin that described neither year.
+    The refusal is a property of `ratio`, not a check inside this metric.
     """
     doc = payload(
         flows("Revenues", {2025: [1000 * M] * 4, 2026: [1000 * M] * 4}),
@@ -113,7 +114,7 @@ def test_a_stale_numerator_cannot_pair_with_a_current_denominator():
     result = operating_margin(series(doc, "operating_income"), series(doc, "revenue"))
 
     assert result.value is None
-    assert result.suppressed_by == ("incomplete_window",)
+    assert result.suppressed_by == ("period_mismatch",)
 
 
 def test_aligned_windows_produce_a_margin():
@@ -126,6 +127,39 @@ def test_aligned_windows_produce_a_margin():
     assert result.value == pytest.approx(0.2)
 
 
+@pytest.mark.parametrize(
+    "metric,numerator_tag",
+    [
+        ("operating_margin", "OperatingIncomeLoss"),
+        ("ocf_margin", "NetCashProvidedByUsedInOperatingActivities"),
+        ("net_margin", "NetIncomeLoss"),
+        ("rnd_intensity", "ResearchAndDevelopmentExpense"),
+    ],
+)
+def test_every_ratio_refuses_misaligned_windows(metric, numerator_tag):
+    """The invariant is a property of `ratio`, not a check inside each metric.
+
+    M4 adds more two-sided metrics; a rule enforced per metric is a rule the
+    next metric forgets. This asserts it holds for all of them at once.
+    """
+    from transform import derive
+
+    doc = payload(
+        flows("Revenues", {2026: [1000 * M] * 4}),
+        flows(numerator_tag, {2015: [200 * M] * 4}),
+    )
+    concept = {
+        "operating_margin": "operating_income",
+        "ocf_margin": "ocf",
+        "net_margin": "net_income",
+        "rnd_intensity": "rnd",
+    }[metric]
+    result = getattr(derive, metric)(series(doc, concept), series(doc, "revenue"))
+
+    assert result.value is None, metric
+    assert "period_mismatch" in result.suppressed_by, (metric, result.suppressed_by)
+
+
 def test_jnj_operating_margin_is_not_computed_from_stale_data(jnj):
     """Guard against the real regression, not just its synthetic shape."""
     result = operating_margin(quarterly_series(jnj, "operating_income"), quarterly_series(jnj, "revenue"))
@@ -134,42 +168,21 @@ def test_jnj_operating_margin_is_not_computed_from_stale_data(jnj):
 
 
 # --------------------------------------------------------------------------- #
-# Operating income derivation
+# Operating income is reported-only
 # --------------------------------------------------------------------------- #
 
 
-def test_operating_income_is_reconstructed_where_the_subtotal_is_absent():
-    """pre-tax income less the non-operating block, both from one filing."""
+def test_operating_income_is_never_reconstructed():
+    """Policy, not an accident: two derivations were tried and both failed.
+
+    The composition of the non-operating block is filer-specific in XBRL, so
+    there is no stable identity to invert. The nearest available substitute
+    back-tested at 1.8 to 12.6 percentage points of margin error against filers
+    that do report the subtotal — plausible-looking figures, wrong by enough to
+    reorder a ranking. Where the subtotal is not tagged, the answer is null.
+    """
     doc = {
         "facts": {"us-gaap": {
-            "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": {
-                "units": {"USD": [
-                    {"start": "2026-01-01", "end": "2026-03-31", "val": 300 * M,
-                     "form": "10-Q", "accn": "same", "filed": "2026-05-01"}
-                ]}
-            },
-            "NonoperatingIncomeExpense": {
-                "units": {"USD": [
-                    {"start": "2026-01-01", "end": "2026-03-31", "val": 50 * M,
-                     "form": "10-Q", "accn": "same", "filed": "2026-05-01"}
-                ]}
-            },
-        }}
-    }
-    result = series(doc, "operating_income")
-
-    assert result.values[-1].val == 250 * M
-    assert "derived_subtotal" in result.values[-1].flags
-    assert result.values[-1].measurement_basis == "operating_income_derived"
-
-
-def test_a_reported_subtotal_always_beats_a_reconstructed_one():
-    doc = {
-        "facts": {"us-gaap": {
-            "OperatingIncomeLoss": {"units": {"USD": [
-                {"start": "2026-01-01", "end": "2026-03-31", "val": 999 * M,
-                 "form": "10-Q", "accn": "same", "filed": "2026-05-01"}
-            ]}},
             "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": {
                 "units": {"USD": [
                     {"start": "2026-01-01", "end": "2026-03-31", "val": 300 * M,
@@ -179,33 +192,24 @@ def test_a_reported_subtotal_always_beats_a_reconstructed_one():
             "NonoperatingIncomeExpense": {"units": {"USD": [
                 {"start": "2026-01-01", "end": "2026-03-31", "val": 50 * M,
                  "form": "10-Q", "accn": "same", "filed": "2026-05-01"}
-            ]}},
-        }}
-    }
-    value = series(doc, "operating_income").values[-1]
-
-    assert value.val == 999 * M
-    assert "derived_subtotal" not in value.flags
-
-
-def test_the_two_sides_must_come_from_the_same_filing():
-    """A subtotal stitched from two filings is a figure no filer ever asserted."""
-    doc = {
-        "facts": {"us-gaap": {
-            "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": {
-                "units": {"USD": [
-                    {"start": "2026-01-01", "end": "2026-03-31", "val": 300 * M,
-                     "form": "10-Q", "accn": "filing-a", "filed": "2026-05-01"}
-                ]}
-            },
-            "NonoperatingIncomeExpense": {"units": {"USD": [
-                {"start": "2026-01-01", "end": "2026-03-31", "val": 50 * M,
-                 "form": "10-Q", "accn": "filing-b", "filed": "2026-05-02"}
             ]}},
         }}
     }
 
     assert series(doc, "operating_income").values == ()
+
+
+def test_operating_income_reads_the_subtotal_where_it_is_tagged():
+    doc = payload(flows("OperatingIncomeLoss", {2026: [200 * M] * 4}))
+
+    assert series(doc, "operating_income").values[-1].val == 200 * M
+
+
+def test_the_concept_has_exactly_one_candidate_tag():
+    """A second candidate would be a third derivation attempt in disguise."""
+    from transform.fundamentals import CONCEPT_CHAINS
+
+    assert CONCEPT_CHAINS["operating_income"].tags == ("OperatingIncomeLoss",)
 
 
 # --------------------------------------------------------------------------- #
