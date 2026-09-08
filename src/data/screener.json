@@ -1,6 +1,344 @@
 {
- "generated_at": "2026-09-08T16:37:15Z",
+ "generated_at": "2026-09-08T23:09:59Z",
  "companies": [
+  {
+   "ticker": "ARCT",
+   "cik": "0001768224",
+   "name": "Arcturus Therapeutics Holdings Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "vaccines",
+    "infectious_disease",
+    "mrna",
+    "rare_disease"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 29367000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.7595273578880136,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 86783000,
+   "ocf_ttm": -72729000,
+   "operating_income_ttm": -102295000,
+   "net_income_ttm": -93276000,
+   "cash": 191483000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -3.1762182041066502,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -2.4765553171927674,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -3.4833316307419895,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 191483000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 10.53131488127157,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 2.955119692171485,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 1,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.2,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "cash:basis_cutover",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags"
+   ]
+  },
+  {
+   "ticker": "EBS",
+   "cik": "0001367644",
+   "name": "Emergent BioSolutions Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "vaccines",
+    "infectious_disease",
+    "medical_countermeasures"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 770200000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 45300000,
+   "ocf_ttm": 97700000,
+   "operating_income_ttm": -66000000,
+   "net_income_ttm": -176800000,
+   "cash": 139700000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.22955076603479616,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.12685016878732797,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.08569202804466372,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -442100000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.058815891976110105,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 2,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 24.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.10714285714285714,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:fy_reconciliation_failed",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "rnd:fy_reconciliation_failed",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "opex:stale_series"
+   ]
+  },
   {
    "ticker": "MRNA",
    "cik": "0001682852",
@@ -324,23 +662,23 @@
    ]
   },
   {
-   "ticker": "EBS",
-   "cik": "0001367644",
-   "name": "Emergent BioSolutions Inc.",
+   "ticker": "OCGN",
+   "cik": "0001372299",
+   "name": "Ocugen, Inc.",
    "subsector": "vaccines_infectious_disease",
    "therapeutic_focus": [
     "vaccines",
-    "infectious_disease",
-    "medical_countermeasures"
+    "ophthalmology",
+    "gene_therapy"
    ],
    "fiscal_period_end": "2026-06-30",
-   "revenue_ttm": 770200000,
+   "revenue_ttm": 4580000,
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
     "value": null,
     "suppressed": true,
     "suppressed_by": [
-     "incomplete_window"
+     "not_meaningful_small_base"
     ],
     "flags": [],
     "period_ends": [
@@ -354,14 +692,14 @@
      "2026-06-30"
     ]
    },
-   "rnd_ttm": 45300000,
-   "ocf_ttm": 97700000,
-   "operating_income_ttm": -66000000,
-   "net_income_ttm": -176800000,
-   "cash": 139700000,
+   "rnd_ttm": 43763000,
+   "ocf_ttm": -60869000,
+   "operating_income_ttm": -68903000,
+   "net_income_ttm": -81811000,
+   "cash": 100051000,
    "net_margin": {
     "name": "net_margin",
-    "value": -0.22955076603479616,
+    "value": -17.862663755458517,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -372,7 +710,7 @@
    },
    "ocf_margin": {
     "name": "ocf_margin",
-    "value": 0.12685016878732797,
+    "value": -13.290174672489083,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -383,7 +721,7 @@
    },
    "operating_margin": {
     "name": "operating_margin",
-    "value": -0.08569202804466372,
+    "value": -15.044323144104803,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -394,12 +732,10 @@
    },
    "net_cash": {
     "name": "net_cash",
-    "value": -442100000.0,
+    "value": 98302000.0,
     "suppressed": false,
     "suppressed_by": [],
-    "flags": [
-     "incomplete_sum"
-    ],
+    "flags": [],
     "period_ends": [
      "2026-06-30",
      "2026-06-30"
@@ -407,11 +743,9 @@
    },
    "cash_runway_quarters": {
     "name": "cash_runway_quarters",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "operating_cash_flow_positive"
-    ],
+    "value": 6.574841052095484,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
      "2026-06-30",
@@ -423,7 +757,7 @@
    },
    "rnd_intensity": {
     "name": "rnd_intensity",
-    "value": 0.058815891976110105,
+    "value": 9.55524017467249,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -432,13 +766,337 @@
      "2026-06-30"
     ]
    },
-   "active_trials": 2,
+   "active_trials": 6,
+   "phase_3_trials": 3,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 31.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.16666666666666666,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 8752600.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "rnd:mixed_tags",
+    "rnd:mixed_measurement_basis",
+    "rnd:basis_cutover",
+    "ocf:basis_cutover",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:fy_reconciliation_failed"
+   ]
+  },
+  {
+   "ticker": "PCVX",
+   "cik": "0001649094",
+   "name": "Vaxcyte, Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "vaccines",
+    "pneumococcal",
+    "infectious_disease"
+   ],
+   "fiscal_period_end": null,
+   "revenue_ttm": null,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_inputs"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_ttm": 1032624000,
+   "ocf_ttm": -881233000,
+   "operating_income_ttm": -1165290000,
+   "net_income_ttm": -1064261000,
+   "cash": 183190000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 1486838000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 6.748898418465945,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "active_trials": 5,
+   "phase_3_trials": 3,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 28.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.6800000000000002,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 258156000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:no_tag_resolved",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "debt:no_tag_resolved",
+    "restricted_cash:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "SCYX",
+   "cik": "0001178253",
+   "name": "Scynexis, Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "antifungals",
+    "infectious_disease"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 19215000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_meaningful_small_base"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 26239000,
+   "ocf_ttm": -13309000,
+   "operating_income_ttm": -22598000,
+   "net_income_ttm": -10235000,
+   "cash": 10487000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.5326567785584179,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.6926359614884205,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -1.1760603695029925,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 54083000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 4.317056135379458,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 1.3655477491543064,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
    "phase_3_trials": 0,
    "pipeline_depth_score": {
     "name": "pipeline_depth_score",
-    "value": 24.0,
-    "suppressed": false,
-    "suppressed_by": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
     "flags": [],
     "period_ends": []
    },
@@ -462,7 +1120,7 @@
    },
    "discontinuation_rate": {
     "name": "discontinuation_rate",
-    "value": 0.10714285714285714,
+    "value": 0.125,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -482,20 +1140,359 @@
    },
    "data_quality_flags": [
     "revenue:fallback_tag",
-    "revenue:mixed_tags",
-    "revenue:mixed_measurement_basis",
     "revenue:fy_reconciliation_failed",
     "revenue:chain_tags_diverge",
     "revenue:basis_cutover",
-    "rnd:fy_reconciliation_failed",
-    "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
-    "operating_income:fy_reconciliation_failed",
-    "short_term_investments:stale_series",
     "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "SIGA",
+   "cik": "0001010086",
+   "name": "SIGA Technologies, Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "antivirals",
+    "infectious_disease",
+    "medical_countermeasures"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 53658917,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.701296541127278,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 20431593,
+   "ocf_ttm": -20165412,
+   "operating_income_ttm": -11137900,
+   "net_income_ttm": -2786555,
+   "cash": 117584444,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.05193088410636391,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.37580728660625035,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.20756848297925953,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 117584444.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 9.31124412976476,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.38076789734686595,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "debt:stale_series",
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags",
-    "opex:stale_series"
+    "restricted_cash:stale_series",
+    "opex:fallback_tag",
+    "opex:mixed_tags"
+   ]
+  },
+  {
+   "ticker": "SPRO",
+   "cik": "0001701108",
+   "name": "Spero Therapeutics, Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "antibacterials",
+    "infectious_disease"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 46997000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_meaningful_small_base"
+    ],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 20532000,
+   "ocf_ttm": 19580000,
+   "operating_income_ttm": 6025000,
+   "net_income_ttm": 7383000,
+   "cash": 50774000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.15709513373194034,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.41662233759601675,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.12819967231950977,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 50774000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.4368789497201949,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.1,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "cash:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:stale_series",
+    "debt:no_tag_resolved",
+    "restricted_cash:no_tag_resolved"
    ]
   },
   {
@@ -654,6 +1651,1176 @@
     "debt:no_tag_resolved",
     "opex:fallback_tag",
     "opex:mixed_tags"
+   ]
+  },
+  {
+   "ticker": "VXRT",
+   "cik": "0000072444",
+   "name": "Vaxart, Inc.",
+   "subsector": "vaccines_infectious_disease",
+   "therapeutic_focus": [
+    "vaccines",
+    "infectious_disease",
+    "oral_vaccines"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 243064000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 2.011049997522422,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 184264000,
+   "ocf_ttm": 33982000,
+   "operating_income_ttm": 39613000,
+   "net_income_ttm": 38589000,
+   "cash": 50929000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.15876065562979297,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.13980679985518218,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.16297353783365698,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 63976000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted",
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.7580884046999967,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.058823529411764705,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "revenue:overlapping_periods",
+    "rnd:fy_reconciliation_failed",
+    "rnd:overlapping_periods",
+    "ocf:fy_reconciliation_failed",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "operating_income:overlapping_periods",
+    "net_income:fy_reconciliation_failed",
+    "net_income:overlapping_periods",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series"
+   ]
+  },
+  {
+   "ticker": "ABBV",
+   "cik": "0001551152",
+   "name": "AbbVie Inc.",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "immunology",
+    "oncology",
+    "aesthetics",
+    "neuroscience"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 64386000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10386092442737621,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 9714000000,
+   "ocf_ttm": 19507000000,
+   "operating_income_ttm": 16870000000,
+   "net_income_ttm": 6310000000,
+   "cash": 6569000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.09800267138818998,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.30296958966234894,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.26201348119156337,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 6569000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.1508713074270804,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 166,
+   "phase_3_trials": 67,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 784.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.019328216480379346,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -4.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.14749536178107606,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 85210526.31578948,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "rnd:fallback_tag",
+    "ocf:basis_cutover",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "AMGN",
+   "cik": "0000318154",
+   "name": "Amgen Inc.",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "oncology",
+    "inflammation",
+    "cardiovascular",
+    "obesity"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 38095000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09101583755763668,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 7629000000,
+   "ocf_ttm": 12478000000,
+   "operating_income_ttm": 11426000000,
+   "net_income_ttm": 8743000000,
+   "cash": 13989000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.22950518440740256,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.3275495471846699,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.2999343745898412,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -43315000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.20026250164063525,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 82,
+   "phase_3_trials": 43,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 459.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.018115043955317604,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -4.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.1582537517053206,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 129305084.7457627,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "BMY",
+   "cik": "0000014272",
+   "name": "Bristol-Myers Squibb Company",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "oncology",
+    "haematology",
+    "immunology",
+    "cardiovascular"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 49186000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.03106657722622841,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 10722000000,
+   "ocf_ttm": 12782000000,
+   "operating_income_ttm": null,
+   "net_income_ttm": 9282000000,
+   "cash": 8722000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.1887122351888749,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2598706949131867,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -31794000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.21798885861830603,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 153,
+   "phase_3_trials": 74,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 833.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.013471602632822677,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.18824463860206514,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 87170731.70731707,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "operating_income:stale_series",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "JNJ",
+   "cik": "0000200406",
+   "name": "Johnson & Johnson",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "immunology",
+    "oncology",
+    "infectious_disease",
+    "medtech"
+   ],
+   "fiscal_period_end": "2026-06-28",
+   "revenue_ttm": 97929000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.08057201496242841,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-29",
+     "2024-12-29",
+     "2025-03-30",
+     "2025-06-29",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_ttm": 15104000000,
+   "ocf_ttm": 27608000000,
+   "operating_income_ttm": 21767000000,
+   "net_income_ttm": 21037000000,
+   "cash": 20422000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.21481889940671303,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2819185328145902,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -16586000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.15423419007648398,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "active_trials": 175,
+   "phase_3_trials": 80,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 835.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.035863038548752835,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 6.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.14956930305403288,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 126924369.74789916,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "tag_basis_uncertain"
+    ],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "rnd:fy_reconciliation_failed",
+    "rnd:chain_tags_diverge",
+    "operating_income:stale_series",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "restricted_cash:stale_series",
+    "opex:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "LLY",
+   "cik": "0000059478",
+   "name": "Eli Lilly and Company",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "diabetes",
+    "obesity",
+    "oncology",
+    "alzheimers"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 79665800000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.495812929972662,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 14596200000,
+   "ocf_ttm": 28083000000,
+   "operating_income_ttm": null,
+   "net_income_ttm": 26711200000,
+   "cash": 8950000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.33529067680234176,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.3525101109886551,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -38908000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.18321789274695038,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 205,
+   "phase_3_trials": 94,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 1056.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.01981299949419916,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 15.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.08610451306413301,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 102790140.84507042,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "rnd:fallback_tag",
+    "rnd:mixed_tags",
+    "rnd:mixed_measurement_basis",
+    "rnd:basis_cutover",
+    "operating_income:no_tag_resolved",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:stale_series"
+   ]
+  },
+  {
+   "ticker": "MRK",
+   "cik": "0000310158",
+   "name": "Merck & Co., Inc.",
+   "subsector": "large_cap_pharma",
+   "therapeutic_focus": [
+    "vaccines",
+    "oncology",
+    "infectious_disease"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 66569000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.04641913983903421,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 30453000000,
+   "ocf_ttm": 19967000000,
+   "operating_income_ttm": null,
+   "net_income_ttm": 3173000000,
+   "cash": 6849000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.047664828974447564,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.29994441857320975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -43940000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.4574651864982199,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 211,
+   "phase_3_trials": 95,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 1072.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.019541082152658713,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -11.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.175366568914956,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 167324175.82417583,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "revenue:chain_tags_diverge",
+    "rnd:fy_reconciliation_failed",
+    "ocf:fallback_tag",
+    "ocf:mixed_tags",
+    "ocf:mixed_measurement_basis",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "operating_income:no_tag_resolved",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:no_tag_resolved"
    ]
   },
   {
@@ -829,20 +2996,19 @@
    ]
   },
   {
-   "ticker": "MRK",
-   "cik": "0000310158",
-   "name": "Merck & Co., Inc.",
+   "ticker": "ZTS",
+   "cik": "0001555280",
+   "name": "Zoetis Inc.",
    "subsector": "large_cap_pharma",
    "therapeutic_focus": [
-    "vaccines",
-    "oncology",
-    "infectious_disease"
+    "animal_health",
+    "veterinary_vaccines"
    ],
    "fiscal_period_end": "2026-06-30",
-   "revenue_ttm": 66569000000,
+   "revenue_ttm": 9517000000,
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
-    "value": 0.04641913983903421,
+    "value": 0.01493014823504319,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -857,17 +3023,21 @@
      "2026-06-30"
     ]
    },
-   "rnd_ttm": 30453000000,
-   "ocf_ttm": 19967000000,
+   "rnd_ttm": 722000000,
+   "ocf_ttm": 2840000000,
    "operating_income_ttm": null,
-   "net_income_ttm": 3173000000,
-   "cash": 6849000000,
+   "net_income_ttm": 2616000000,
+   "cash": 1476000000,
    "net_margin": {
     "name": "net_margin",
-    "value": 0.047664828974447564,
-    "suppressed": false,
-    "suppressed_by": [],
-    "flags": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
     "period_ends": [
      "2026-06-30",
      "2026-06-30"
@@ -875,7 +3045,7 @@
    },
    "ocf_margin": {
     "name": "ocf_margin",
-    "value": 0.29994441857320975,
+    "value": 0.2984133655563728,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -898,7 +3068,7 @@
    },
    "net_cash": {
     "name": "net_cash",
-    "value": -43940000000.0,
+    "value": -7372000000.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [
@@ -927,7 +3097,7 @@
    },
    "rnd_intensity": {
     "name": "rnd_intensity",
-    "value": 0.4574651864982199,
+    "value": 0.07586424293369759,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -936,27 +3106,31 @@
      "2026-06-30"
     ]
    },
-   "active_trials": 211,
-   "phase_3_trials": 95,
+   "active_trials": 0,
+   "phase_3_trials": 0,
    "pipeline_depth_score": {
     "name": "pipeline_depth_score",
-    "value": 1072.0,
-    "suppressed": false,
-    "suppressed_by": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
     "flags": [],
     "period_ends": []
    },
    "pipeline_concentration": {
     "name": "pipeline_concentration",
-    "value": 0.019541082152658713,
-    "suppressed": false,
-    "suppressed_by": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
     "flags": [],
     "period_ends": []
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": -11.0,
+    "value": 0.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -964,98 +3138,87 @@
    },
    "discontinuation_rate": {
     "name": "discontinuation_rate",
-    "value": 0.175366568914956,
-    "suppressed": false,
-    "suppressed_by": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
     "flags": [],
     "period_ends": []
    },
    "rnd_per_late_stage_programme": {
     "name": "rnd_per_late_stage_programme",
-    "value": 167324175.82417583,
-    "suppressed": false,
-    "suppressed_by": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
     "flags": [],
     "period_ends": [
      "2026-06-30"
     ]
    },
    "data_quality_flags": [
-    "revenue:fy_reconciliation_failed",
-    "revenue:chain_tags_diverge",
-    "rnd:fy_reconciliation_failed",
-    "ocf:fallback_tag",
-    "ocf:mixed_tags",
-    "ocf:mixed_measurement_basis",
-    "ocf:chain_tags_diverge",
-    "ocf:basis_cutover",
+    "rnd:fallback_tag",
     "operating_income:no_tag_resolved",
-    "short_term_investments:fallback_tag",
-    "short_term_investments:mixed_tags",
+    "net_income:fy_reconciliation_failed",
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
-    "opex:no_tag_resolved"
+    "opex:fallback_tag",
+    "opex:stale_series"
    ]
   },
   {
-   "ticker": "JNJ",
-   "cik": "0000200406",
-   "name": "Johnson & Johnson",
-   "subsector": "large_cap_pharma",
+   "ticker": "ALNY",
+   "cik": "0001178670",
+   "name": "Alnylam Pharmaceuticals, Inc.",
+   "subsector": "commercial_biotech",
    "therapeutic_focus": [
-    "immunology",
-    "oncology",
-    "infectious_disease",
-    "medtech"
+    "rna_interference",
+    "amyloidosis",
+    "cardiology"
    ],
-   "fiscal_period_end": "2026-06-28",
-   "revenue_ttm": 97929000000,
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 4804182000,
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
-    "value": 0.08057201496242841,
+    "value": 0.9513623884680639,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
     "period_ends": [
-     "2024-09-29",
-     "2024-12-29",
-     "2025-03-30",
-     "2025-06-29",
-     "2025-09-28",
-     "2025-12-28",
-     "2026-03-29",
-     "2026-06-28"
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
     ]
    },
-   "rnd_ttm": 15104000000,
-   "ocf_ttm": 27608000000,
-   "operating_income_ttm": 21767000000,
-   "net_income_ttm": 21037000000,
-   "cash": 20422000000,
+   "rnd_ttm": 1509032000,
+   "ocf_ttm": 524080000,
+   "operating_income_ttm": 999777000,
+   "net_income_ttm": 733112000,
+   "cash": 1708318000,
    "net_margin": {
     "name": "net_margin",
-    "value": 0.21481889940671303,
-    "suppressed": false,
-    "suppressed_by": [],
-    "flags": [],
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year"
+    ],
     "period_ends": [
-     "2026-06-28",
-     "2026-06-28"
+     "2026-06-30",
+     "2026-06-30"
     ]
    },
    "ocf_margin": {
     "name": "ocf_margin",
-    "value": 0.2819185328145902,
-    "suppressed": false,
-    "suppressed_by": [],
-    "flags": [],
-    "period_ends": [
-     "2026-06-28",
-     "2026-06-28"
-    ]
-   },
-   "operating_margin": {
-    "name": "operating_margin",
     "value": null,
     "suppressed": true,
     "suppressed_by": [
@@ -1063,20 +3226,30 @@
     ],
     "flags": [],
     "period_ends": [
-     "2026-06-28"
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.20810556302821168,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
     ]
    },
    "net_cash": {
     "name": "net_cash",
-    "value": -16586000000.0,
+    "value": 3308147000.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [
-     "incomplete_sum"
+     "debt_not_tagged"
     ],
     "period_ends": [
-     "2026-06-28",
-     "2026-06-28"
+     "2026-06-30"
     ]
    },
    "cash_runway_quarters": {
@@ -1088,31 +3261,29 @@
     ],
     "flags": [],
     "period_ends": [
-     "2026-06-28",
-     "2025-09-28",
-     "2025-12-28",
-     "2026-03-29",
-     "2026-06-28"
+     "2026-06-30",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
     ]
    },
    "rnd_intensity": {
     "name": "rnd_intensity",
-    "value": 0.15423419007648398,
+    "value": 0.3141080000716043,
     "suppressed": false,
     "suppressed_by": [],
-    "flags": [
-     "tag_basis_uncertain"
-    ],
+    "flags": [],
     "period_ends": [
-     "2026-06-28",
-     "2026-06-28"
+     "2026-06-30",
+     "2026-06-30"
     ]
    },
-   "active_trials": 175,
-   "phase_3_trials": 80,
+   "active_trials": 20,
+   "phase_3_trials": 5,
    "pipeline_depth_score": {
     "name": "pipeline_depth_score",
-    "value": 835.0,
+    "value": 71.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1120,7 +3291,7 @@
    },
    "pipeline_concentration": {
     "name": "pipeline_concentration",
-    "value": 0.035863038548752835,
+    "value": 0.06250000000000001,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1128,7 +3299,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": 6.0,
+    "value": 4.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1136,7 +3307,7 @@
    },
    "discontinuation_rate": {
     "name": "discontinuation_rate",
-    "value": 0.14956930305403288,
+    "value": 0.20454545454545456,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1144,29 +3315,199 @@
    },
    "rnd_per_late_stage_programme": {
     "name": "rnd_per_late_stage_programme",
-    "value": 126924369.74789916,
+    "value": 116079384.61538461,
     "suppressed": false,
     "suppressed_by": [],
-    "flags": [
-     "tag_basis_uncertain"
-    ],
+    "flags": [],
     "period_ends": [
-     "2026-06-28"
+     "2026-06-30"
     ]
    },
    "data_quality_flags": [
     "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
     "revenue:basis_cutover",
-    "rnd:fallback_tag",
-    "rnd:fy_reconciliation_failed",
-    "rnd:chain_tags_diverge",
-    "operating_income:stale_series",
+    "ocf:basis_cutover",
+    "ocf:stale_series",
+    "net_income:fy_reconciliation_failed",
     "short_term_investments:fallback_tag",
     "debt:fallback_tag",
+    "debt:stale_series",
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags",
     "restricted_cash:stale_series",
-    "opex:no_tag_resolved"
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "BIIB",
+   "cik": "0000875045",
+   "name": "Biogen Inc.",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "neurology",
+    "alzheimers",
+    "multiple_sclerosis"
+   ],
+   "fiscal_period_end": "2026-03-31",
+   "revenue_ttm": 9937400000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.012326311071268489,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_ttm": 1883500000,
+   "ocf_ttm": 2590800000,
+   "operating_income_ttm": 2477500000,
+   "net_income_ttm": 1371900000,
+   "cash": 3382700000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.1380542194135287,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2607120574798237,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -2005800000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted",
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.18953649848048784,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "active_trials": 25,
+   "phase_3_trials": 16,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 154.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.068,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.26785714285714285,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 99131578.94736843,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cross_source_date_gap"
+    ],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "data_quality_flags": [
+    "rnd:fallback_tag",
+    "rnd:basis_cutover",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "operating_income:stale_series",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag",
+    "opex:fy_reconciliation_failed"
    ]
   },
   {
@@ -1344,6 +3685,841 @@
    ]
   },
   {
+   "ticker": "INCY",
+   "cik": "0000879169",
+   "name": "Incyte Corporation",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "oncology",
+    "dermatology",
+    "haematology"
+   ],
+   "fiscal_period_end": "2026-03-31",
+   "revenue_ttm": 5361020000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.21476217170840559,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_ttm": 2128776000,
+   "ocf_ttm": 1516782000,
+   "operating_income_ttm": 1610808000,
+   "net_income_ttm": 1431777000,
+   "cash": 3461114000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.2670717512712133,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.28292787566545174,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.3004667022320379,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 3461114000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.3970841369739341,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "active_trials": 36,
+   "phase_3_trials": 20,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 200.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.05341527042915931,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.3719512195121951,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 66524250.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cross_source_date_gap"
+    ],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:basis_cutover",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "short_term_investments:stale_series",
+    "debt:stale_series",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "IONS",
+   "cik": "0000874015",
+   "name": "Ionis Pharmaceuticals, Inc.",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "antisense",
+    "neurology",
+    "cardiology"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 874089000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.07410828440412648,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 176843000,
+   "ocf_ttm": -496434000,
+   "operating_income_ttm": -594358000,
+   "net_income_ttm": -565174000,
+   "cash": 350065000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.6465863315978121,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -0.5679444541688546,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.6799742360331729,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 2054585000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 5.049683685858521,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 17,
+   "phase_3_trials": 12,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 107.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.10034602076124569,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.08974358974358974,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "restated_fiscal_year"
+    ],
+    "flags": [
+     "restated_fiscal_year",
+     "cross_source_date_gap"
+    ],
+    "period_ends": [
+     "2013-12-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "rnd:fy_reconciliation_failed",
+    "rnd:stale_series",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "NBIX",
+   "cik": "0000914475",
+   "name": "Neurocrine Biosciences, Inc.",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "neurology",
+    "psychiatry",
+    "endocrinology"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 3373900000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.34423682218415075,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 1131100000,
+   "ocf_ttm": 898100000,
+   "operating_income_ttm": 794800000,
+   "net_income_ttm": 705500000,
+   "cash": 332400000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.20910518983965143,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.26619046207652863,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.23557307566910696,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 389800000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.33525000740982247,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 14,
+   "phase_3_trials": 11,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 97.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.2423469387755102,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.16417910447761194,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 80792857.14285715,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "rnd:mixed_tags",
+    "rnd:mixed_measurement_basis",
+    "rnd:basis_cutover",
+    "ocf:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:no_tag_resolved",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag",
+    "opex:mixed_tags"
+   ]
+  },
+  {
+   "ticker": "REGN",
+   "cik": "0000872589",
+   "name": "Regeneron Pharmaceuticals, Inc.",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "ophthalmology",
+    "immunology",
+    "oncology"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 15534700000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09290005768879009,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 6276200000,
+   "ocf_ttm": 4681300000,
+   "operating_income_ttm": 3843100000,
+   "net_income_ttm": 4328700000,
+   "cash": 2455800000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.27864715765351117,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.3013447314721237,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.24738810533837152,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 6008000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.4040116642098013,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 97,
+   "phase_3_trials": 36,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 470.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.015115551304306751,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 18.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.2149122807017544,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 78452500.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "opex:fallback_tag",
+    "opex:fy_reconciliation_failed"
+   ]
+  },
+  {
+   "ticker": "SRPT",
+   "cik": "0000873303",
+   "name": "Sarepta Therapeutics, Inc.",
+   "subsector": "commercial_biotech",
+   "therapeutic_focus": [
+    "gene_therapy",
+    "neuromuscular",
+    "duchenne"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 1974344000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.20438471250208037,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 789444000,
+   "ocf_ttm": 111008000,
+   "operating_income_ttm": -143248000,
+   "net_income_ttm": -136725000,
+   "cash": 571148000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.06925084990254991,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.05622525760455118,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.07255473210342271,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -59134000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.3998512923786331,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 10,
+   "phase_3_trials": 4,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 53.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.22000000000000003,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.42424242424242425,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 131574000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:chain_tags_diverge",
+    "rnd:fallback_tag",
+    "rnd:mixed_tags",
+    "rnd:mixed_measurement_basis",
+    "rnd:basis_cutover",
+    "ocf:basis_cutover",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:fallback_tag"
+   ]
+  },
+  {
    "ticker": "VRTX",
    "cik": "0000875320",
    "name": "Vertex Pharmaceuticals Incorporated",
@@ -1508,6 +4684,1158 @@
     "debt:stale_series",
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags",
+    "opex:fallback_tag",
+    "opex:fy_reconciliation_failed"
+   ]
+  },
+  {
+   "ticker": "ARVN",
+   "cik": "0001655759",
+   "name": "Arvinas, Inc.",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "oncology",
+    "neurodegeneration",
+    "protein_degradation"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": null,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 238700000,
+   "ocf_ttm": -207000000,
+   "operating_income_ttm": -18100000,
+   "net_income_ttm": 9300000,
+   "cash": 94300000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 567400000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 10.97391304347826,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.7129629629629629,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "rnd_intensity_over_opex"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 3,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 7.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.2222222222222222,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "cash:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series"
+   ]
+  },
+  {
+   "ticker": "BEAM",
+   "cik": "0001745999",
+   "name": "Beam Therapeutics Inc.",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "gene_editing",
+    "haematology",
+    "hepatology"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 156035000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 1.5888472259092117,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 408664000,
+   "ocf_ttm": -359377000,
+   "operating_income_ttm": -378024000,
+   "net_income_ttm": -85427000,
+   "cash": 219825000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.5474861409299195,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -2.3031819784022813,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -2.422687217611433,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 1052669000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 12.832507366915523,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 2.6190534175024833,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 5,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 13.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.15333333333333335,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 102166000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:basis_cutover",
+    "cash:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:mixed_tags",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "CRSP",
+   "cik": "0001674416",
+   "name": "CRISPR Therapeutics AG",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "gene_editing",
+    "haematology",
+    "oncology",
+    "diabetes"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 13392000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_meaningful_small_base"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 278154000,
+   "ocf_ttm": -369582000,
+   "operating_income_ttm": -534340000,
+   "net_income_ttm": -451139000,
+   "cash": 291337000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -33.68720131421745,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -27.59722222222222,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -39.89994026284349,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 1778154000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 25.58947134871287,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 20.77016129032258,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 5,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 13.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.06871428571428573,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 69538500.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:basis_cutover",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series"
+   ]
+  },
+  {
+   "ticker": "DNLI",
+   "cik": "0001714899",
+   "name": "Denali Therapeutics Inc.",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "neurodegeneration"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": null,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_ttm": 400720000,
+   "ocf_ttm": -434040000,
+   "operating_income_ttm": -542697000,
+   "net_income_ttm": -511451000,
+   "cash": 201530000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 710471000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 6.547516357939361,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.7335150402433823,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "rnd_intensity_over_opex"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 9,
+   "phase_3_trials": 2,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 31.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.17901234567901234,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 66786666.666666664,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "ocf:basis_cutover",
+    "cash:basis_cutover",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag",
+    "opex:mixed_tags"
+   ]
+  },
+  {
+   "ticker": "NTLA",
+   "cik": "0001652130",
+   "name": "Intellia Therapeutics, Inc.",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "gene_editing",
+    "haematology",
+    "angioedema"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 59506000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.12579223187089694,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 346731000,
+   "ocf_ttm": -346643000,
+   "operating_income_ttm": -423479000,
+   "net_income_ttm": -399975000,
+   "cash": 106128000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -6.721591100057137,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": -5.825345343326723,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -7.116576479682721,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 437759000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 5.0514102405068035,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 5.82682418579639,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 4,
+   "phase_3_trials": 3,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 27.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.315625,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 86682750.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "ocf:basis_cutover",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "RVMD",
+   "cik": "0001628171",
+   "name": "Revolution Medicines, Inc.",
+   "subsector": "clinical_stage_biotech",
+   "therapeutic_focus": [
+    "oncology"
+   ],
+   "fiscal_period_end": "2024-12-31",
+   "revenue_ttm": 0,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_meaningful_small_base"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31"
+    ]
+   },
+   "rnd_ttm": 1296338000,
+   "ocf_ttm": -1223033000,
+   "operating_income_ttm": -1627249000,
+   "net_income_ttm": -1768285000,
+   "cash": 815435000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-12-31",
+     "2024-12-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-12-31",
+     "2024-12-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_denominator"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2024-12-31",
+     "2024-12-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 3937969000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": 12.879354849787372,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.8597249696892348,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "rnd_intensity_over_opex"
+    ],
+    "period_ends": [
+     "2024-12-31",
+     "2024-12-31"
+    ]
+   },
+   "active_trials": 15,
+   "phase_3_trials": 7,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 74.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.04217178130511464,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 5.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 108028166.66666667,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:stale_series",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "restricted_cash:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "ABT",
+   "cik": "0000001800",
+   "name": "Abbott Laboratories",
+   "subsector": "medtech",
+   "therapeutic_focus": [
+    "diagnostics",
+    "medical_devices",
+    "nutrition",
+    "diabetes_care"
+   ],
+   "fiscal_period_end": "2026-03-31",
+   "revenue_ttm": 45134000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.06588890988097487,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_ttm": 2993000000,
+   "ocf_ttm": 9464000000,
+   "operating_income_ttm": 7705000000,
+   "net_income_ttm": 6276000000,
+   "cash": 6803000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.1390525989276377,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.20968671068374176,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.1707138742411486,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -26752000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.06631364381619179,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "active_trials": 43,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.02794088610746263,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -4.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.145578231292517,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "rnd:fy_reconciliation_failed",
+    "rnd:basis_cutover",
+    "ocf:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "debt:fallback_tag",
+    "restricted_cash:stale_series",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
    ]
@@ -1680,18 +6008,3734 @@
    },
    "data_quality_flags": [
     "revenue:fy_reconciliation_failed",
+    "revenue:overlapping_periods",
     "rnd:fy_reconciliation_failed",
+    "rnd:overlapping_periods",
     "ocf:fallback_tag",
     "ocf:mixed_tags",
     "ocf:mixed_measurement_basis",
     "ocf:chain_tags_diverge",
     "ocf:basis_cutover",
     "operating_income:fy_reconciliation_failed",
+    "operating_income:overlapping_periods",
     "short_term_investments:no_tag_resolved",
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag",
+    "opex:fy_reconciliation_failed",
+    "opex:overlapping_periods"
+   ]
+  },
+  {
+   "ticker": "BSX",
+   "cik": "0000885725",
+   "name": "Boston Scientific Corporation",
+   "subsector": "medtech",
+   "therapeutic_focus": [
+    "cardiology",
+    "electrophysiology",
+    "endoscopy"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 20996000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.13528712014707472,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 2153000000,
+   "ocf_ttm": 4529000000,
+   "operating_income_ttm": 4152000000,
+   "net_income_ttm": null,
+   "cash": 539000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2157077538578777,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.1977519527529053,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 539000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.10254334158887407,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 40,
+   "phase_3_trials": 2,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.03293402777777778,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.1804733727810651,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 717666666.6666666,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "net_income:stale_series",
+    "short_term_investments:no_tag_resolved",
+    "debt:stale_series"
+   ]
+  },
+  {
+   "ticker": "ISRG",
+   "cik": "0001035267",
+   "name": "Intuitive Surgical, Inc.",
+   "subsector": "medtech",
+   "therapeutic_focus": [
+    "surgical_robotics"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 11034400000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.20660470202296335,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 1414800000,
+   "ocf_ttm": 3706400000,
+   "operating_income_ttm": 3451200000,
+   "net_income_ttm": 3138800000,
+   "cash": 2760400000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.28445588341912564,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.3358950192126441,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.3127673457550932,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 5216200000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.12821721162908722,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 8,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.0640625,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.16666666666666666,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags",
+    "restricted_cash:stale_series"
+   ]
+  },
+  {
+   "ticker": "MDT",
+   "cik": "0001613103",
+   "name": "Medtronic plc",
+   "subsector": "medtech",
+   "therapeutic_focus": [
+    "cardiology",
+    "neuromodulation",
+    "diabetes",
+    "surgical"
+   ],
+   "fiscal_period_end": "2026-07-31",
+   "revenue_ttm": 37541000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09769005847953216,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-10-25",
+     "2025-01-24",
+     "2025-04-25",
+     "2025-07-25",
+     "2025-10-24",
+     "2026-01-23",
+     "2026-04-24",
+     "2026-07-31"
+    ]
+   },
+   "rnd_ttm": 2918000000,
+   "ocf_ttm": 8035000000,
+   "operating_income_ttm": 6787000000,
+   "net_income_ttm": 5231000000,
+   "cash": 1691000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.13934098718734184,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2140326576276604,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.180789004022269,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 8819000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-07-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2025-10-24",
+     "2026-01-23",
+     "2026-04-24",
+     "2026-07-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.07772835033696492,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "active_trials": 56,
+   "phase_3_trials": 1,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.016106440682333537,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.17615658362989323,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "rnd:fallback_tag",
+    "ocf:basis_cutover",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:no_tag_resolved",
+    "opex:stale_series"
+   ]
+  },
+  {
+   "ticker": "SYK",
+   "cik": "0000310764",
+   "name": "Stryker Corporation",
+   "subsector": "medtech",
+   "therapeutic_focus": [
+    "orthopaedics",
+    "surgical",
+    "neurotechnology"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 25837000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.08476782265513477,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 1658000000,
+   "ocf_ttm": 5525000000,
+   "operating_income_ttm": 5534000000,
+   "net_income_ttm": 3729000000,
+   "cash": 3391000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.14432790184618957,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.21384061617060804,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.21418895382590858,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -10716000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.06417153694314355,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 11,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.0787747605929424,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -1.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": 0.3055555555555556,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "ocf:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "DGX",
+   "cik": "0001022079",
+   "name": "Quest Diagnostics Incorporated",
+   "subsector": "diagnostics",
+   "therapeutic_focus": [
+    "clinical_laboratory",
+    "diagnostics"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 11560000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.09865044668314009,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 1903000000,
+   "operating_income_ttm": 1630000000,
+   "net_income_ttm": 1062000000,
+   "cash": 626000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.09186851211072665,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.16461937716262975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.14100346020761245,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -5016000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "rnd:no_tag_resolved",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "LH",
+   "cik": "0000920148",
+   "name": "Labcorp Holdings Inc.",
+   "subsector": "diagnostics",
+   "therapeutic_focus": [
+    "clinical_laboratory",
+    "diagnostics",
+    "drug_development_services"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 14348000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.06409172488467643,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 1638400000,
+   "operating_income_ttm": 1496600000,
+   "net_income_ttm": 1002300000,
+   "cash": 141800000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.06985642598271537,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.11419013102871481,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.10430722051853918,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -5716700000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "revenue:chain_tags_diverge",
+    "rnd:stale_series",
+    "ocf:chain_tags_diverge",
+    "operating_income:fy_reconciliation_failed",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "NTRA",
+   "cik": "0001604821",
+   "name": "Natera, Inc.",
+   "subsector": "diagnostics",
+   "therapeutic_focus": [
+    "genetic_testing",
+    "oncology",
+    "womens_health"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 2707075000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.378173032034126,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 787378000,
+   "ocf_ttm": 228239000,
+   "operating_income_ttm": -289669000,
+   "net_income_ttm": -192346000,
+   "cash": 1091502000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": -0.07105307388971491,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.08431203420666217,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": -0.10700442359373125,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 1091502000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted",
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.2908593223312985,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 6,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "phase_not_applicable"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.10833333333333332,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 3.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "ocf:fy_reconciliation_failed",
+    "ocf:basis_cutover",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:stale_series",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "A",
+   "cik": "0001090872",
+   "name": "Agilent Technologies, Inc.",
+   "subsector": "life_science_tools",
+   "therapeutic_focus": [
+    "analytical_instruments",
+    "genomics"
+   ],
+   "fiscal_period_end": "2026-07-31",
+   "revenue_ttm": 7372000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.08603417796110784,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-10-31",
+     "2025-01-31",
+     "2025-04-30",
+     "2025-07-31",
+     "2025-10-31",
+     "2026-01-31",
+     "2026-04-30",
+     "2026-07-31"
+    ]
+   },
+   "rnd_ttm": 485000000,
+   "ocf_ttm": 1609000000,
+   "operating_income_ttm": 1639000000,
+   "net_income_ttm": 1440000000,
+   "cash": 1758000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.19533369506239825,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.21825827455236027,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.22232772653282692,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -1887000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2025-10-31",
+     "2026-01-31",
+     "2026-04-30",
+     "2026-07-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.06578947368421052,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "DHR",
+   "cik": "0000313616",
+   "name": "Danaher Corporation",
+   "subsector": "life_science_tools",
+   "therapeutic_focus": [
+    "life_science_tools",
+    "diagnostics",
+    "biotechnology"
+   ],
+   "fiscal_period_end": "2026-06-26",
+   "revenue_ttm": 25107000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.045558655728147254,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-27",
+     "2024-12-31",
+     "2025-03-28",
+     "2025-06-27",
+     "2025-09-26",
+     "2025-12-31",
+     "2026-03-27",
+     "2026-06-26"
+    ]
+   },
+   "rnd_ttm": 1615000000,
+   "ocf_ttm": 6635000000,
+   "operating_income_ttm": 5127000000,
+   "net_income_ttm": 4004000000,
+   "cash": 4348000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.1594774365714741,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26",
+     "2026-06-26"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.2642689289839487,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26",
+     "2026-06-26"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.20420599832715974,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26",
+     "2026-06-26"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -20799000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted",
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-26",
+     "2026-06-26"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26",
+     "2025-09-26",
+     "2025-12-31",
+     "2026-03-27",
+     "2026-06-26"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.06432469032540726,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26",
+     "2026-06-26"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-26"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:overlapping_periods",
+    "revenue:basis_cutover",
+    "rnd:fy_reconciliation_failed",
+    "ocf:chain_tags_diverge",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "operating_income:overlapping_periods",
+    "net_income:overlapping_periods",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:stale_series"
+   ]
+  },
+  {
+   "ticker": "ILMN",
+   "cik": "0001110803",
+   "name": "Illumina, Inc.",
+   "subsector": "life_science_tools",
+   "therapeutic_focus": [
+    "genomic_sequencing",
+    "oncology_testing"
+   ],
+   "fiscal_period_end": "2026-06-28",
+   "revenue_ttm": 4493000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.048786181139122316,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-29",
+     "2024-12-29",
+     "2025-03-30",
+     "2025-06-29",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_ttm": 960000000,
+   "ocf_ttm": 1095000000,
+   "operating_income_ttm": 882000000,
+   "net_income_ttm": 825000000,
+   "cash": 1040000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.18361896283107054,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.24371244157578456,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.19630536389939907,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 1168000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "cash_includes_restricted",
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2025-09-28",
+     "2025-12-28",
+     "2026-03-29",
+     "2026-06-28"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.21366570220342757,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28",
+     "2026-06-28"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-28"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:basis_cutover",
+    "rnd:fy_reconciliation_failed",
+    "cash:fallback_tag",
+    "cash:basis_cutover",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "TMO",
+   "cik": "0000097745",
+   "name": "Thermo Fisher Scientific Inc.",
+   "subsector": "life_science_tools",
+   "therapeutic_focus": [
+    "life_science_tools",
+    "clinical_research_services",
+    "diagnostics"
+   ],
+   "fiscal_period_end": "2026-06-27",
+   "revenue_ttm": 46336000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.07229473294455244,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-28",
+     "2024-12-31",
+     "2025-03-29",
+     "2025-06-28",
+     "2025-09-27",
+     "2025-12-31",
+     "2026-03-28",
+     "2026-06-27"
+    ]
+   },
+   "rnd_ttm": 1402000000,
+   "ocf_ttm": 9013000000,
+   "operating_income_ttm": 8146000000,
+   "net_income_ttm": 6967000000,
+   "cash": 4064000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.15035825276243095,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27",
+     "2026-06-27"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.19451398480662985,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27",
+     "2026-06-27"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.17580283149171272,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27",
+     "2026-06-27"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -38220000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-27",
+     "2026-06-27"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27",
+     "2025-09-27",
+     "2025-12-31",
+     "2026-03-28",
+     "2026-06-27"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.03025725138121547,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27",
+     "2026-06-27"
+    ]
+   },
+   "active_trials": 4,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": 12.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": 0.25,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": -2.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": 350500000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-27"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:overlapping_periods",
+    "revenue:basis_cutover",
+    "ocf:chain_tags_diverge",
+    "net_income:overlapping_periods",
+    "debt:fallback_tag",
+    "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
+   ]
+  },
+  {
+   "ticker": "CVS",
+   "cik": "0000064803",
+   "name": "CVS Health Corporation",
+   "subsector": "payer",
+   "therapeutic_focus": [
+    "pharmacy_benefit",
+    "retail_pharmacy",
+    "health_insurance"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 415086000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.07356953866765294,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 14780000000,
+   "operating_income_ttm": 8288000000,
+   "net_income_ttm": 4890000000,
+   "cash": 11329000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.01178069123025108,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.03560707901495112,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.01996694660865459,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 13958000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "rnd:no_tag_resolved",
+    "operating_income:fy_reconciliation_failed",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag",
+    "opex:fallback_tag",
+    "opex:mixed_tags",
+    "opex:chain_tags_diverge"
+   ]
+  },
+  {
+   "ticker": "ELV",
+   "cik": "0001156039",
+   "name": "Elevance Health, Inc.",
+   "subsector": "payer",
+   "therapeutic_focus": [
+    "health_insurance",
+    "managed_care"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 201113000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.06288084982691647,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 7464000000,
+   "operating_income_ttm": 5453000000,
+   "net_income_ttm": 4963000000,
+   "cash": 10232000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.024677668773276717,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.03711346357520399,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.027114109977972582,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 4907000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "rnd:no_tag_resolved",
+    "short_term_investments:fallback_tag",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "UNH",
+   "cik": "0000731766",
+   "name": "UnitedHealth Group Incorporated",
+   "subsector": "payer",
+   "therapeutic_focus": [
+    "health_insurance",
+    "managed_care",
+    "health_services"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 450129000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.06459280352302882,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 27017000000,
+   "operating_income_ttm": 21676000000,
+   "net_income_ttm": 14122000000,
+   "cash": 28585000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.03137322856336739,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.060020571880505365,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.0481550844313519,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -38033000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "rnd:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "HCA",
+   "cik": "0000860730",
+   "name": "HCA Healthcare, Inc.",
+   "subsector": "provider",
+   "therapeutic_focus": [
+    "acute_care_hospitals"
+   ],
+   "fiscal_period_end": "2026-03-31",
+   "revenue_ttm": 76388000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.06709506181462598,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 12999000000,
+   "operating_income_ttm": null,
+   "net_income_ttm": 6794000000,
+   "cash": 940000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.08894067130962978,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.1701707074409593,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -38551000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-03-31",
+     "2026-03-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-03-31"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "rnd:no_tag_resolved",
+    "ocf:chain_tags_diverge",
+    "ocf:basis_cutover",
+    "operating_income:no_tag_resolved",
+    "short_term_investments:fallback_tag",
+    "short_term_investments:stale_series",
+    "debt:fallback_tag",
+    "restricted_cash:no_tag_resolved",
+    "opex:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "THC",
+   "cik": "0000070318",
+   "name": "Tenet Healthcare Corporation",
+   "subsector": "provider",
+   "therapeutic_focus": [
+    "acute_care_hospitals",
+    "ambulatory_surgery"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 21812000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05407625767167641,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 4015000000,
+   "operating_income_ttm": 4539000000,
+   "net_income_ttm": 208000000,
+   "cash": 2170000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.1840729873464148,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.20809646066385476,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 2170000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:chain_tags_diverge",
+    "revenue:basis_cutover",
+    "rnd:no_tag_resolved",
+    "operating_income:fy_reconciliation_failed",
+    "net_income:stale_series",
+    "short_term_investments:stale_series",
+    "debt:stale_series",
+    "restricted_cash:no_tag_resolved",
+    "opex:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "UHS",
+   "cik": "0000352915",
+   "name": "Universal Health Services, Inc.",
+   "subsector": "provider",
+   "therapeutic_focus": [
+    "acute_care_hospitals",
+    "behavioural_health"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 18114487000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10049655883844053,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 1800302000,
+   "operating_income_ttm": 2058455000,
+   "net_income_ttm": 1526027000,
+   "cash": 138800000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.08424345663225241,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.09938465273678465,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.11363584295818038,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -4713047000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "rnd:no_tag_resolved",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "opex:fy_reconciliation_failed"
+   ]
+  },
+  {
+   "ticker": "DOCS",
+   "cik": "0001516513",
+   "name": "Doximity, Inc.",
+   "subsector": "hcit",
+   "therapeutic_focus": [
+    "clinician_network",
+    "pharma_marketing"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 655568000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.11181813864825078,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": 142380000,
+   "ocf_ttm": 306344000,
+   "operating_income_ttm": 194047000,
+   "net_income_ttm": 167046000,
+   "cash": 273604000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.2548110951114148,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.4672955360847387,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.29599827935469697,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 273604000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.2171857076611427,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "short_term_investments:no_tag_resolved",
+    "debt:no_tag_resolved",
+    "restricted_cash:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "VEEV",
+   "cik": "0001393052",
+   "name": "Veeva Systems Inc.",
+   "subsector": "hcit",
+   "therapeutic_focus": [
+    "clinical_trial_software",
+    "pharma_crm"
+   ],
+   "fiscal_period_end": "2026-07-31",
+   "revenue_ttm": 3458098000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.1650421785199667,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-10-31",
+     "2025-01-31",
+     "2025-04-30",
+     "2025-07-31",
+     "2025-10-31",
+     "2026-01-31",
+     "2026-04-30",
+     "2026-07-31"
+    ]
+   },
+   "rnd_ttm": 821917000,
+   "ocf_ttm": 1665459000,
+   "operating_income_ttm": 1034859000,
+   "net_income_ttm": 1014772000,
+   "cash": 1812012000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.29344801679998656,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.481611278801237,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.29925670122709075,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 7242947000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-07-31"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2025-10-31",
+     "2026-01-31",
+     "2026-04-30",
+     "2026-07-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": 0.23767892060895904,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31",
+     "2026-07-31"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_late_stage_trials"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-07-31"
+    ]
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:mixed_tags",
+    "revenue:mixed_measurement_basis",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "ocf:basis_cutover",
+    "operating_income:fy_reconciliation_failed",
+    "net_income:fy_reconciliation_failed",
+    "short_term_investments:fallback_tag",
+    "debt:no_tag_resolved",
+    "restricted_cash:fallback_tag"
+   ]
+  },
+  {
+   "ticker": "CAH",
+   "cik": "0000721371",
+   "name": "Cardinal Health, Inc.",
+   "subsector": "distributor",
+   "therapeutic_focus": [
+    "pharmaceutical_distribution",
+    "medical_products"
+   ],
+   "fiscal_period_end": "2025-12-31",
+   "revenue_ttm": 244673000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.10076211556803254,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 6099000000,
+   "operating_income_ttm": 2533000000,
+   "net_income_ttm": 1662000000,
+   "cash": 4856000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.006792739697473771,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2025-12-31",
+     "2025-12-31"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.024927147662390212,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2025-12-31",
+     "2025-12-31"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.010352593052768389,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2025-12-31",
+     "2025-12-31"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": 4856000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "debt_not_tagged"
+    ],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2025-12-31"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:overlapping_periods",
+    "revenue:stale_series",
+    "rnd:no_tag_resolved",
+    "ocf:chain_tags_diverge",
+    "ocf:stale_series",
+    "operating_income:fy_reconciliation_failed",
+    "operating_income:stale_series",
+    "net_income:fy_reconciliation_failed",
+    "net_income:overlapping_periods",
+    "net_income:stale_series",
+    "short_term_investments:stale_series",
+    "debt:stale_series",
+    "restricted_cash:no_tag_resolved",
+    "opex:no_tag_resolved"
+   ]
+  },
+  {
+   "ticker": "COR",
+   "cik": "0001140859",
+   "name": "Cencora, Inc.",
+   "subsector": "distributor",
+   "therapeutic_focus": [
+    "pharmaceutical_distribution",
+    "specialty_drugs"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 332771323000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.05089761416873036,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 4820947000,
+   "operating_income_ttm": 3041762000,
+   "net_income_ttm": 2624793000,
+   "cash": 2815291000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.007887677869405833,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.01448726698123564,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.00914069749934552,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -8628795000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fy_reconciliation_failed",
+    "revenue:stale_series",
+    "rnd:no_tag_resolved",
+    "ocf:chain_tags_diverge",
+    "ocf:stale_series",
+    "cash:fallback_tag",
+    "cash:mixed_tags",
+    "cash:mixed_measurement_basis",
+    "cash:basis_cutover",
+    "cash:stale_series",
+    "operating_income:fy_reconciliation_failed",
+    "operating_income:stale_series",
+    "net_income:fy_reconciliation_failed",
+    "net_income:stale_series",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "debt:stale_series",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:stale_series",
+    "opex:stale_series"
+   ]
+  },
+  {
+   "ticker": "MCK",
+   "cik": "0000927653",
+   "name": "McKesson Corporation",
+   "subsector": "distributor",
+   "therapeutic_focus": [
+    "pharmaceutical_distribution",
+    "oncology_services"
+   ],
+   "fiscal_period_end": "2026-06-30",
+   "revenue_ttm": 410983000000,
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.08842278102199447,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_ttm": null,
+   "ocf_ttm": 6853000000,
+   "operating_income_ttm": 6495000000,
+   "net_income_ttm": 4592000000,
+   "cash": 5164000000,
+   "net_margin": {
+    "name": "net_margin",
+    "value": 0.011173211544029801,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "ocf_margin": {
+    "name": "ocf_margin",
+    "value": 0.016674655642690817,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "operating_margin": {
+    "name": "operating_margin",
+    "value": 0.01580357338381393,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "net_cash": {
+    "name": "net_cash",
+    "value": -4565000000.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [
+     "incomplete_sum"
+    ],
+    "period_ends": [
+     "2026-06-30",
+     "2026-06-30"
+    ]
+   },
+   "cash_runway_quarters": {
+    "name": "cash_runway_quarters",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "operating_cash_flow_positive"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   },
+   "rnd_intensity": {
+    "name": "rnd_intensity",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "period_mismatch"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2026-06-30"
+    ]
+   },
+   "active_trials": 0,
+   "phase_3_trials": 0,
+   "pipeline_depth_score": {
+    "name": "pipeline_depth_score",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "pipeline_concentration": {
+    "name": "pipeline_concentration",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_active_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "clinical_momentum": {
+    "name": "clinical_momentum",
+    "value": 0.0,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": []
+   },
+   "discontinuation_rate": {
+    "name": "discontinuation_rate",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "too_few_resolved_trials"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "rnd_per_late_stage_programme": {
+    "name": "rnd_per_late_stage_programme",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_rnd_figure"
+    ],
+    "flags": [],
+    "period_ends": []
+   },
+   "data_quality_flags": [
+    "revenue:fallback_tag",
+    "revenue:fy_reconciliation_failed",
+    "revenue:basis_cutover",
+    "rnd:no_quarters_derived",
+    "short_term_investments:no_tag_resolved",
+    "debt:fallback_tag",
+    "restricted_cash:fallback_tag",
+    "restricted_cash:mixed_tags"
    ]
   }
  ]

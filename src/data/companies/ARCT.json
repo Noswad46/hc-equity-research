@@ -1,0 +1,4048 @@
+{
+ "ticker": "ARCT",
+ "cik": "0001768224",
+ "name": "Arcturus Therapeutics Holdings Inc.",
+ "subsector": "vaccines_infectious_disease",
+ "therapeutic_focus": [
+  "vaccines",
+  "infectious_disease",
+  "mrna",
+  "rare_disease"
+ ],
+ "fiscal_period_end": "2026-06-30",
+ "revenue_ttm": 29367000,
+ "rnd_ttm": 86783000,
+ "ocf_ttm": -72729000,
+ "operating_income_ttm": -102295000,
+ "net_income_ttm": -93276000,
+ "cash": 191483000,
+ "revenue_growth_yoy": {
+  "name": "revenue_growth_yoy",
+  "value": -0.7595273578880136,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2024-09-30",
+   "2024-12-31",
+   "2025-03-31",
+   "2025-06-30",
+   "2025-09-30",
+   "2025-12-31",
+   "2026-03-31",
+   "2026-06-30"
+  ]
+ },
+ "net_margin": {
+  "name": "net_margin",
+  "value": -3.1762182041066502,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2026-06-30"
+  ]
+ },
+ "ocf_margin": {
+  "name": "ocf_margin",
+  "value": -2.4765553171927674,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2026-06-30"
+  ]
+ },
+ "operating_margin": {
+  "name": "operating_margin",
+  "value": -3.4833316307419895,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2026-06-30"
+  ]
+ },
+ "net_cash": {
+  "name": "net_cash",
+  "value": 191483000.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [
+   "debt_not_tagged"
+  ],
+  "period_ends": [
+   "2026-06-30"
+  ]
+ },
+ "cash_runway_quarters": {
+  "name": "cash_runway_quarters",
+  "value": 10.53131488127157,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2025-09-30",
+   "2025-12-31",
+   "2026-03-31",
+   "2026-06-30"
+  ]
+ },
+ "rnd_intensity": {
+  "name": "rnd_intensity",
+  "value": 2.955119692171485,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30",
+   "2026-06-30"
+  ]
+ },
+ "active_trials": 1,
+ "phase_3_trials": 0,
+ "pipeline_depth_score": {
+  "name": "pipeline_depth_score",
+  "value": 3.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "pipeline_concentration": {
+  "name": "pipeline_concentration",
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "too_few_active_trials"
+  ],
+  "flags": [],
+  "period_ends": []
+ },
+ "clinical_momentum": {
+  "name": "clinical_momentum",
+  "value": -2.0,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "discontinuation_rate": {
+  "name": "discontinuation_rate",
+  "value": 0.2,
+  "suppressed": false,
+  "suppressed_by": [],
+  "flags": [],
+  "period_ends": []
+ },
+ "rnd_per_late_stage_programme": {
+  "name": "rnd_per_late_stage_programme",
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "too_few_late_stage_trials"
+  ],
+  "flags": [],
+  "period_ends": [
+   "2026-06-30"
+  ]
+ },
+ "data_quality_flags": [
+  "revenue:fallback_tag",
+  "cash:basis_cutover",
+  "short_term_investments:no_tag_resolved",
+  "debt:fallback_tag",
+  "debt:stale_series",
+  "restricted_cash:fallback_tag",
+  "restricted_cash:mixed_tags"
+ ],
+ "entity_name": "ARCTURUS THERAPEUTICS HOLDINGS INC.",
+ "taxonomies": [
+  "dei",
+  "us-gaap"
+ ],
+ "quarterly": [
+  {
+   "period_start": "2017-12-31",
+   "period_end": "2017-12-31",
+   "revenue": null,
+   "rnd": null,
+   "ocf": null,
+   "cash": 25238000,
+   "operating_income": null,
+   "net_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
+   "source_tags": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "source_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "reported",
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "measurement_basis": {
+    "revenue": null,
+    "rnd": null,
+    "ocf": null,
+    "cash": "cash_including_restricted",
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "cash:cash_includes_restricted"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2018-01-01",
+   "period_end": "2018-03-31",
+   "revenue": 2367000,
+   "rnd": 3941000,
+   "ocf": null,
+   "cash": null,
+   "operating_income": -6672000,
+   "net_income": -6571000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 9039000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": null,
+    "cash": null,
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": null,
+    "cash": null,
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": null,
+    "cash": null,
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2018-04-01",
+   "period_end": "2018-06-30",
+   "revenue": 2386000,
+   "rnd": 4225000,
+   "ocf": null,
+   "cash": 29322000,
+   "operating_income": -10072000,
+   "net_income": -9950000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 12458000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": null,
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": null,
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": null,
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2018-07-01",
+   "period_end": "2018-09-30",
+   "revenue": 3423000,
+   "rnd": 3969000,
+   "ocf": -6795000,
+   "cash": 30331000,
+   "operating_income": -4356000,
+   "net_income": -4253000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 7779000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
+   "period_start": "2018-10-01",
+   "period_end": "2018-12-31",
+   "revenue": 7577000,
+   "rnd": 4847000,
+   "ocf": -5763000,
+   "cash": 36709000,
+   "operating_income": -711000,
+   "net_income": -1011000,
+   "short_term_investments": null,
+   "debt": 9911000,
+   "restricted_cash": null,
+   "opex": 8288000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-01-01",
+   "period_end": "2019-03-31",
+   "revenue": 4350000,
+   "rnd": 7324000,
+   "ocf": -5411000,
+   "cash": 31220000,
+   "operating_income": -6508000,
+   "net_income": -6884000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 10858000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-04-01",
+   "period_end": "2019-06-30",
+   "revenue": 10153000,
+   "rnd": 7269000,
+   "ocf": 9340000,
+   "cash": 55840000,
+   "operating_income": -572000,
+   "net_income": -685000,
+   "short_term_investments": null,
+   "debt": 9980000,
+   "restricted_cash": null,
+   "opex": 10725000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-07-01",
+   "period_end": "2019-09-30",
+   "revenue": 3318000,
+   "rnd": 7053000,
+   "ocf": -2836000,
+   "cash": 74172000,
+   "operating_income": -7616000,
+   "net_income": -7433000,
+   "short_term_investments": null,
+   "debt": 10016000,
+   "restricted_cash": null,
+   "opex": 10934000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-10-01",
+   "period_end": "2019-12-31",
+   "revenue": 2968000,
+   "rnd": 11994000,
+   "ocf": -7538000,
+   "cash": 71353000,
+   "operating_income": -10817000,
+   "net_income": -10989000,
+   "short_term_investments": null,
+   "debt": 14995000,
+   "restricted_cash": null,
+   "opex": 13785000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.3196851393385387,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-01-01",
+   "period_end": "2020-03-31",
+   "revenue": 2646000,
+   "rnd": 7917000,
+   "ocf": -11858000,
+   "cash": 59471000,
+   "operating_income": -9462000,
+   "net_income": -9777000,
+   "short_term_investments": null,
+   "debt": 15028000,
+   "restricted_cash": null,
+   "opex": 12108000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.07605999097880017,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-04-01",
+   "period_end": "2020-06-30",
+   "revenue": 2322000,
+   "rnd": 7944000,
+   "ocf": -8494000,
+   "cash": 136111000,
+   "operating_income": -10042000,
+   "net_income": -10263000,
+   "short_term_investments": null,
+   "debt": 15059000,
+   "restricted_cash": null,
+   "opex": 12364000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.5587185821275928,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-07-01",
+   "period_end": "2020-09-30",
+   "revenue": 2333000,
+   "rnd": 17699000,
+   "ocf": -15877000,
+   "cash": 307023000,
+   "operating_income": -20938000,
+   "net_income": -21004000,
+   "short_term_investments": null,
+   "debt": 15076000,
+   "restricted_cash": null,
+   "opex": 23271000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.5956768249468463,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-10-01",
+   "period_end": "2020-12-31",
+   "revenue": 2238000,
+   "rnd": 24286000,
+   "ocf": -6632000,
+   "cash": 462895000,
+   "operating_income": -31082000,
+   "net_income": -31104000,
+   "short_term_investments": null,
+   "debt": 15095000,
+   "restricted_cash": null,
+   "opex": 33320000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.5411515705421136,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-01-01",
+   "period_end": "2021-03-31",
+   "revenue": 2127000,
+   "rnd": 50050000,
+   "ocf": -42950000,
+   "cash": 466839000,
+   "operating_income": -57666000,
+   "net_income": -56346000,
+   "short_term_investments": null,
+   "debt": 61272000,
+   "restricted_cash": null,
+   "opex": 59793000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.5273775216138329,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-04-01",
+   "period_end": "2021-06-30",
+   "revenue": 2001000,
+   "rnd": 45679000,
+   "ocf": -32943000,
+   "cash": 433574000,
+   "operating_income": -53720000,
+   "net_income": -54581000,
+   "short_term_investments": null,
+   "debt": 61309000,
+   "restricted_cash": null,
+   "opex": 55721000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.22703038919495291,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-07-01",
+   "period_end": "2021-09-30",
+   "revenue": 2437000,
+   "rnd": 45398000,
+   "ocf": -16653000,
+   "cash": 413880000,
+   "operating_income": -53821000,
+   "net_income": -54084000,
+   "short_term_investments": null,
+   "debt": 60827000,
+   "restricted_cash": null,
+   "opex": 56258000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.14275976239166424,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-10-01",
+   "period_end": "2021-12-31",
+   "revenue": 5794000,
+   "rnd": 32633000,
+   "ocf": -42497000,
+   "cash": 370492000,
+   "operating_income": -37645000,
+   "net_income": -38663000,
+   "short_term_investments": null,
+   "debt": 63107000,
+   "restricted_cash": null,
+   "opex": 43439000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.295628472586225,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-01-01",
+   "period_end": "2022-03-31",
+   "revenue": 5244000,
+   "rnd": 44893000,
+   "ocf": -49039000,
+   "cash": 319678000,
+   "operating_income": -50379000,
+   "net_income": -51169000,
+   "short_term_investments": null,
+   "debt": 63495000,
+   "restricted_cash": null,
+   "opex": 55623000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.7157427937915742,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-04-01",
+   "period_end": "2022-06-30",
+   "revenue": 27093000,
+   "rnd": 38189000,
+   "ocf": -36821000,
+   "cash": 283491000,
+   "operating_income": -22089000,
+   "net_income": -21563000,
+   "short_term_investments": null,
+   "debt": 62779000,
+   "restricted_cash": null,
+   "opex": 49182000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 3.6635245430509253,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-07-01",
+   "period_end": "2022-09-30",
+   "revenue": 13369000,
+   "rnd": 37688000,
+   "ocf": -42406000,
+   "cash": 237676000,
+   "operating_income": -36807000,
+   "net_income": -35266000,
+   "short_term_investments": null,
+   "debt": 59740000,
+   "restricted_cash": null,
+   "opex": 50176000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 4.850278314211065,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-10-01",
+   "period_end": "2022-12-31",
+   "revenue": 160293000,
+   "rnd": 26981000,
+   "ocf": 160259000,
+   "cash": 391883000,
+   "operating_income": 121452000,
+   "net_income": 117347000,
+   "short_term_investments": null,
+   "debt": 60655000,
+   "restricted_cash": null,
+   "opex": 38841000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 15.667934298891495,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-01-01",
+   "period_end": "2023-03-31",
+   "revenue": 80285000,
+   "rnd": 51768000,
+   "ocf": -35871000,
+   "cash": 327935000,
+   "operating_income": 14755000,
+   "net_income": 50754000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 65530000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 17.159731196691652,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-04-01",
+   "period_end": "2023-06-30",
+   "revenue": 10519000,
+   "rnd": 52668000,
+   "ocf": 50807000,
+   "cash": 323471000,
+   "operating_income": -55374000,
+   "net_income": -52550000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 65893000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 5.519079077105108,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-07-01",
+   "period_end": "2023-09-30",
+   "revenue": 45140000,
+   "rnd": 51077000,
+   "ocf": -32406000,
+   "cash": 311918000,
+   "operating_income": -19314000,
+   "net_income": -16222000,
+   "short_term_investments": null,
+   "debt": 20000000,
+   "restricted_cash": 35000000,
+   "opex": 64454000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 4.752174757281553,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-10-01",
+   "period_end": "2023-12-31",
+   "revenue": 30855000,
+   "rnd": 36620000,
+   "ocf": -629000,
+   "cash": 292005000,
+   "operating_income": -18272000,
+   "net_income": -11707000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 49127000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.1902921858843975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-01-01",
+   "period_end": "2024-03-31",
+   "revenue": 38012000,
+   "rnd": 53573000,
+   "ocf": -5557000,
+   "cash": 288396000,
+   "operating_income": -30412000,
+   "net_income": -26817000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 68424000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.556910048391688,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-04-01",
+   "period_end": "2024-06-30",
+   "revenue": 49859000,
+   "rnd": 58669000,
+   "ocf": -30142000,
+   "cash": 260329000,
+   "operating_income": -21126000,
+   "net_income": -17216000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 70985000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.3803891615557387,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-07-01",
+   "period_end": "2024-09-30",
+   "revenue": 41673000,
+   "rnd": 39134000,
+   "ocf": -23764000,
+   "cash": 237178000,
+   "operating_income": -10737000,
+   "net_income": -6903000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 52410000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.45854501632139133,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-10-01",
+   "period_end": "2024-12-31",
+   "revenue": 22766000,
+   "rnd": 43780000,
+   "ocf": -284000,
+   "cash": 237028000,
+   "operating_income": -33394000,
+   "net_income": -30005000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 56160000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.08686502916684152,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-01-01",
+   "period_end": "2025-03-31",
+   "revenue": 29382000,
+   "rnd": 34893000,
+   "ocf": -35138000,
+   "cash": 216948000,
+   "operating_income": -16826000,
+   "net_income": -14076000,
+   "short_term_investments": null,
+   "debt": 15000000,
+   "restricted_cash": 38500000,
+   "opex": 46208000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": "RestrictedCashCurrent",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.15381526749433852,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-04-01",
+   "period_end": "2025-06-30",
+   "revenue": 28301000,
+   "rnd": 29579000,
+   "ocf": -5755000,
+   "cash": 196467000,
+   "operating_income": -11616000,
+   "net_income": -9180000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 39917000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCashCurrent",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.25474473045049,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-07-01",
+   "period_end": "2025-09-30",
+   "revenue": 17151000,
+   "rnd": 23265000,
+   "ocf": -17151000,
+   "cash": 180360000,
+   "operating_income": -16512000,
+   "net_income": -13448000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 33663000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCashCurrent",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.391517403475084,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-10-01",
+   "period_end": "2025-12-31",
+   "revenue": 7196000,
+   "rnd": 24476000,
+   "ocf": -16227000,
+   "cash": 230909000,
+   "operating_income": -31307000,
+   "net_income": -29079000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 38503000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "derived",
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "derived"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.4614273521108266,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2026-01-01",
+   "period_end": "2026-03-31",
+   "revenue": 2061000,
+   "rnd": 21527000,
+   "ocf": -19441000,
+   "cash": 211375000,
+   "operating_income": -28931000,
+   "net_income": -26964000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 0,
+   "opex": 30992000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCashCurrent",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.6192302338530067,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2026-04-01",
+   "period_end": "2026-06-30",
+   "revenue": 2959000,
+   "rnd": 17515000,
+   "ocf": -19910000,
+   "cash": 191483000,
+   "operating_income": -25545000,
+   "net_income": -23785000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 0,
+   "opex": 28504000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCashCurrent",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "derived",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.7595273578880136,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  }
+ ],
+ "annual": [
+  {
+   "period_start": "2018-01-01",
+   "period_end": "2018-12-31",
+   "revenue": 15753000,
+   "rnd": 16982000,
+   "ocf": -20760000,
+   "cash": 36709000,
+   "operating_income": -21811000,
+   "net_income": -21785000,
+   "short_term_investments": null,
+   "debt": 9911000,
+   "restricted_cash": null,
+   "opex": 37564000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2019-01-01",
+   "period_end": "2019-12-31",
+   "revenue": 20789000,
+   "rnd": 33640000,
+   "ocf": -6445000,
+   "cash": 71353000,
+   "operating_income": -25513000,
+   "net_income": -25991000,
+   "short_term_investments": null,
+   "debt": 14995000,
+   "restricted_cash": null,
+   "opex": 46302000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.3196851393385387,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2018-03-31",
+     "2018-06-30",
+     "2018-09-30",
+     "2018-12-31",
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2020-01-01",
+   "period_end": "2020-12-31",
+   "revenue": 9539000,
+   "rnd": 57846000,
+   "ocf": -42861000,
+   "cash": 462895000,
+   "operating_income": -71524000,
+   "net_income": -72148000,
+   "short_term_investments": null,
+   "debt": 15095000,
+   "restricted_cash": null,
+   "opex": 81063000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.5411515705421136,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2019-03-31",
+     "2019-06-30",
+     "2019-09-30",
+     "2019-12-31",
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2021-01-01",
+   "period_end": "2021-12-31",
+   "revenue": 12359000,
+   "rnd": 173760000,
+   "ocf": -135043000,
+   "cash": 370492000,
+   "operating_income": -202852000,
+   "net_income": -203674000,
+   "short_term_investments": null,
+   "debt": 63107000,
+   "restricted_cash": null,
+   "opex": 215211000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 0.295628472586225,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2020-03-31",
+     "2020-06-30",
+     "2020-09-30",
+     "2020-12-31",
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2022-01-01",
+   "period_end": "2022-12-31",
+   "revenue": 205999000,
+   "rnd": 147751000,
+   "ocf": 31993000,
+   "cash": 391883000,
+   "operating_income": 12177000,
+   "net_income": 9349000,
+   "short_term_investments": null,
+   "debt": 60655000,
+   "restricted_cash": null,
+   "opex": 193822000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": "reported",
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [
+    "debt:incomplete_sum"
+   ],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": 15.667934298891495,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2021-03-31",
+     "2021-06-30",
+     "2021-09-30",
+     "2021-12-31",
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2023-01-01",
+   "period_end": "2023-12-31",
+   "revenue": 166799000,
+   "rnd": 192133000,
+   "ocf": -18099000,
+   "cash": 292005000,
+   "operating_income": -78205000,
+   "net_income": -29725000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 245004000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.1902921858843975,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2022-03-31",
+     "2022-06-30",
+     "2022-09-30",
+     "2022-12-31",
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2024-01-01",
+   "period_end": "2024-12-31",
+   "revenue": 152310000,
+   "rnd": 195156000,
+   "ocf": -59747000,
+   "cash": 237028000,
+   "operating_income": -95669000,
+   "net_income": -80941000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": 55000000,
+   "opex": 247979000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "RestrictedCash",
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": "reported",
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.08686502916684152,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2023-03-31",
+     "2023-06-30",
+     "2023-09-30",
+     "2023-12-31",
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31"
+    ]
+   }
+  },
+  {
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "revenue": 82031000,
+   "rnd": 112212000,
+   "ocf": -74271000,
+   "cash": 230909000,
+   "operating_income": -76260000,
+   "net_income": -65783000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": 158291000,
+   "source_tags": {
+    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": "NetCashProvidedByUsedInOperatingActivities",
+    "cash": "CashAndCashEquivalentsAtCarryingValue",
+    "operating_income": "OperatingIncomeLoss",
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "OperatingExpenses"
+   },
+   "source_basis": {
+    "revenue": "reported",
+    "rnd": "reported",
+    "ocf": "reported",
+    "cash": "reported",
+    "operating_income": "reported",
+    "net_income": "reported",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": "reported"
+   },
+   "measurement_basis": {
+    "revenue": "revenue_contracts_with_customers",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": "ocf_total",
+    "cash": "cash_excluding_restricted",
+    "operating_income": "operating_income_reported",
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.4614273521108266,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-03-31",
+     "2024-06-30",
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31"
+    ]
+   }
+  }
+ ],
+ "concepts": {
+  "revenue": {
+   "label": "Revenue",
+   "kind": "duration",
+   "candidates": [
+    "Revenues",
+    "SalesRevenueNet",
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "selection": "largest",
+   "tags_available": [
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "tags_used": [
+    "RevenueFromContractWithCustomerExcludingAssessedTax"
+   ],
+   "primary_tag": "Revenues",
+   "uses_fallback": true,
+   "measurement_bases": [
+    "revenue_contracts_with_customers"
+   ],
+   "basis_segments": [
+    {
+     "basis": "revenue_contracts_with_customers",
+     "first_period_end": "2018-03-31",
+     "last_period_end": "2026-06-30",
+     "periods": 34
+    }
+   ],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": -0.7595273578880136,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "rnd": {
+   "label": "R&D expense",
+   "kind": "duration",
+   "candidates": [
+    "ResearchAndDevelopmentExpense",
+    "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "ResearchAndDevelopmentExpense"
+   ],
+   "tags_used": [
+    "ResearchAndDevelopmentExpense"
+   ],
+   "primary_tag": "ResearchAndDevelopmentExpense",
+   "uses_fallback": false,
+   "measurement_bases": [
+    "rnd_including_acquired_iprd"
+   ],
+   "basis_segments": [
+    {
+     "basis": "rnd_including_acquired_iprd",
+     "first_period_end": "2018-03-31",
+     "last_period_end": "2026-06-30",
+     "periods": 34
+    }
+   ],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "rnd_growth_yoy",
+    "value": -0.411185594289824,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "ocf": {
+   "label": "Operating cash flow",
+   "kind": "duration",
+   "candidates": [
+    "NetCashProvidedByUsedInOperatingActivities",
+    "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "NetCashProvidedByUsedInOperatingActivities"
+   ],
+   "tags_used": [
+    "NetCashProvidedByUsedInOperatingActivities"
+   ],
+   "primary_tag": "NetCashProvidedByUsedInOperatingActivities",
+   "uses_fallback": false,
+   "measurement_bases": [
+    "ocf_total"
+   ],
+   "basis_segments": [
+    {
+     "basis": "ocf_total",
+     "first_period_end": "2018-09-30",
+     "last_period_end": "2026-06-30",
+     "periods": 32
+    }
+   ],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "ocf_growth_yoy",
+    "value": -0.11992423892456229,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "cash": {
+   "label": "Cash",
+   "kind": "instant",
+   "candidates": [
+    "CashAndCashEquivalentsAtCarryingValue",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "CashAndCashEquivalentsAtCarryingValue",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+   ],
+   "tags_used": [
+    "CashAndCashEquivalentsAtCarryingValue",
+    "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+   ],
+   "primary_tag": "CashAndCashEquivalentsAtCarryingValue",
+   "uses_fallback": true,
+   "measurement_bases": [
+    "cash_including_restricted",
+    "cash_excluding_restricted"
+   ],
+   "basis_segments": [
+    {
+     "basis": "cash_including_restricted",
+     "first_period_end": "2017-12-31",
+     "last_period_end": "2017-12-31",
+     "periods": 1
+    },
+    {
+     "basis": "cash_excluding_restricted",
+     "first_period_end": "2018-06-30",
+     "last_period_end": "2026-06-30",
+     "periods": 33
+    }
+   ],
+   "basis_cutovers": [
+    {
+     "from_basis": "cash_including_restricted",
+     "to_basis": "cash_excluding_restricted",
+     "last_period_end_before": "2017-12-31",
+     "first_period_end_after": "2018-06-30"
+    }
+   ],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "cash_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "operating_income": {
+   "label": "Operating income",
+   "kind": "duration",
+   "candidates": [
+    "OperatingIncomeLoss"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "OperatingIncomeLoss"
+   ],
+   "tags_used": [
+    "OperatingIncomeLoss"
+   ],
+   "primary_tag": "OperatingIncomeLoss",
+   "uses_fallback": false,
+   "measurement_bases": [
+    "operating_income_reported"
+   ],
+   "basis_segments": [
+    {
+     "basis": "operating_income_reported",
+     "first_period_end": "2018-03-31",
+     "last_period_end": "2026-06-30",
+     "periods": 34
+    }
+   ],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "operating_income_growth_yoy",
+    "value": -0.40954624998277595,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "net_income": {
+   "label": "Net income",
+   "kind": "duration",
+   "candidates": [
+    "NetIncomeLoss"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "NetIncomeLoss"
+   ],
+   "tags_used": [
+    "NetIncomeLoss"
+   ],
+   "primary_tag": "NetIncomeLoss",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "net_income_growth_yoy",
+    "value": -0.5503623429293265,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  },
+  "short_term_investments": {
+   "label": "Short-term investments",
+   "kind": "instant",
+   "candidates": [
+    "ShortTermInvestments",
+    "MarketableSecuritiesCurrent",
+    "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [],
+   "tags_used": [],
+   "primary_tag": "ShortTermInvestments",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": null,
+   "reference_period_end": "2026-06-30",
+   "staleness_days": null,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "short_term_investments_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "no_inputs"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "debt": {
+   "label": "Total debt",
+   "kind": "sum",
+   "candidates": [
+    "LongTermDebtNoncurrent",
+    "LongTermDebtCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "LongTermDebtNoncurrent + LongTermDebtCurrent"
+   ],
+   "tags_used": [
+    "LongTermDebtNoncurrent + LongTermDebtCurrent"
+   ],
+   "primary_tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2025-03-31",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 456,
+   "is_stale": true,
+   "growth_yoy": {
+    "name": "debt_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "restricted_cash": {
+   "label": "Restricted cash",
+   "kind": "instant",
+   "candidates": [
+    "RestrictedCashAndCashEquivalentsAtCarryingValue",
+    "RestrictedCashAndCashEquivalents",
+    "RestrictedCash",
+    "RestrictedCashCurrent"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "RestrictedCash",
+    "RestrictedCashCurrent"
+   ],
+   "tags_used": [
+    "RestrictedCash",
+    "RestrictedCashCurrent"
+   ],
+   "primary_tag": "RestrictedCashAndCashEquivalentsAtCarryingValue",
+   "uses_fallback": true,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "restricted_cash_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "not_a_flow_concept"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  "opex": {
+   "label": "Operating expenses",
+   "kind": "duration",
+   "candidates": [
+    "OperatingExpenses",
+    "CostsAndExpenses"
+   ],
+   "selection": "chain_order",
+   "tags_available": [
+    "OperatingExpenses"
+   ],
+   "tags_used": [
+    "OperatingExpenses"
+   ],
+   "primary_tag": "OperatingExpenses",
+   "uses_fallback": false,
+   "measurement_bases": [],
+   "basis_segments": [],
+   "basis_cutovers": [],
+   "latest_period_end": "2026-06-30",
+   "reference_period_end": "2026-06-30",
+   "staleness_days": 0,
+   "is_stale": false,
+   "growth_yoy": {
+    "name": "opex_growth_yoy",
+    "value": -0.3237525360178741,
+    "suppressed": false,
+    "suppressed_by": [],
+    "flags": [],
+    "period_ends": [
+     "2024-09-30",
+     "2024-12-31",
+     "2025-03-31",
+     "2025-06-30",
+     "2025-09-30",
+     "2025-12-31",
+     "2026-03-31",
+     "2026-06-30"
+    ]
+   }
+  }
+ },
+ "data_quality": [
+  {
+   "code": "fallback_tag",
+   "concept": "revenue",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "Revenues",
+    "tags_used": [
+     "RevenueFromContractWithCustomerExcludingAssessedTax"
+    ],
+    "tag_spans": {
+     "RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "2018-03-31",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "basis_cutover",
+   "concept": "cash",
+   "period_start": null,
+   "period_end": "2018-06-30",
+   "detail": {
+    "from_basis": "cash_including_restricted",
+    "to_basis": "cash_excluding_restricted",
+    "last_period_end_before": "2017-12-31",
+    "first_period_end_after": "2018-06-30"
+   }
+  },
+  {
+   "code": "cash_includes_restricted",
+   "concept": "cash",
+   "period_start": "2017-12-31",
+   "period_end": "2017-12-31",
+   "detail": {
+    "tag": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+    "measurement_basis": "cash_including_restricted"
+   }
+  },
+  {
+   "code": "fallback_tag",
+   "concept": "cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "CashAndCashEquivalentsAtCarryingValue",
+    "tags_used": [
+     "CashAndCashEquivalentsAtCarryingValue",
+     "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+    ],
+    "tag_spans": {
+     "CashAndCashEquivalentsAtCarryingValue": [
+      "2018-06-30",
+      "2026-06-30"
+     ],
+     "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": [
+      "2017-12-31",
+      "2017-12-31"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_tags",
+   "concept": "cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "tag_spans": {
+     "CashAndCashEquivalentsAtCarryingValue": [
+      "2018-06-30",
+      "2026-06-30"
+     ],
+     "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": [
+      "2017-12-31",
+      "2017-12-31"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_measurement_basis",
+   "concept": "cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "bases": [
+     {
+      "basis": "cash_including_restricted",
+      "first_period_end": "2017-12-31",
+      "last_period_end": "2017-12-31",
+      "periods": 1
+     },
+     {
+      "basis": "cash_excluding_restricted",
+      "first_period_end": "2018-06-30",
+      "last_period_end": "2026-06-30",
+      "periods": 33
+     }
+    ]
+   }
+  },
+  {
+   "code": "no_tag_resolved",
+   "concept": "short_term_investments",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "chain": [
+     "ShortTermInvestments",
+     "MarketableSecuritiesCurrent",
+     "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+    ],
+    "near_misses": [
+     "PaymentsToAcquireShortTermInvestments"
+    ]
+   }
+  },
+  {
+   "code": "stale_series",
+   "concept": "debt",
+   "period_start": null,
+   "period_end": "2025-03-31",
+   "detail": {
+    "latest_period_end": "2025-03-31",
+    "reference_period_end": "2026-06-30",
+    "days_behind": 456,
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent"
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2018-12-31",
+   "period_end": "2018-12-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2019-06-30",
+   "period_end": "2019-06-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2019-09-30",
+   "period_end": "2019-09-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2019-12-31",
+   "period_end": "2019-12-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2020-03-31",
+   "period_end": "2020-03-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2020-06-30",
+   "period_end": "2020-06-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2020-09-30",
+   "period_end": "2020-09-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2022-12-31",
+   "period_end": "2022-12-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2023-09-30",
+   "period_end": "2023-09-30",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "incomplete_sum",
+   "concept": "debt",
+   "period_start": "2025-03-31",
+   "period_end": "2025-03-31",
+   "detail": {
+    "tag": "LongTermDebtNoncurrent + LongTermDebtCurrent",
+    "measurement_basis": null
+   }
+  },
+  {
+   "code": "fallback_tag",
+   "concept": "restricted_cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "primary_tag": "RestrictedCashAndCashEquivalentsAtCarryingValue",
+    "tags_used": [
+     "RestrictedCash",
+     "RestrictedCashCurrent"
+    ],
+    "tag_spans": {
+     "RestrictedCash": [
+      "2023-06-30",
+      "2024-12-31"
+     ],
+     "RestrictedCashCurrent": [
+      "2025-03-31",
+      "2026-06-30"
+     ]
+    }
+   }
+  },
+  {
+   "code": "mixed_tags",
+   "concept": "restricted_cash",
+   "period_start": null,
+   "period_end": null,
+   "detail": {
+    "tag_spans": {
+     "RestrictedCash": [
+      "2023-06-30",
+      "2024-12-31"
+     ],
+     "RestrictedCashCurrent": [
+      "2025-03-31",
+      "2026-06-30"
+     ]
+    }
+   }
+  }
+ ],
+ "filings": [
+  {
+   "accession": "0001193125-26-338090",
+   "form": "10-Q",
+   "filed": "2026-08-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000119312526338090/0001193125-26-338090-index.htm"
+  },
+  {
+   "accession": "0001193125-26-211943",
+   "form": "10-Q",
+   "filed": "2026-05-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000119312526211943/0001193125-26-211943-index.htm"
+  },
+  {
+   "accession": "0001193125-26-088391",
+   "form": "10-K",
+   "filed": "2026-03-03",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000119312526088391/0001193125-26-088391-index.htm"
+  },
+  {
+   "accession": "0001193125-25-275758",
+   "form": "10-Q",
+   "filed": "2025-11-12",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000119312525275758/0001193125-25-275758-index.htm"
+  },
+  {
+   "accession": "0000950170-25-106560",
+   "form": "10-Q",
+   "filed": "2025-08-11",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017025106560/0000950170-25-106560-index.htm"
+  },
+  {
+   "accession": "0000950170-25-069210",
+   "form": "10-Q",
+   "filed": "2025-05-12",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017025069210/0000950170-25-069210-index.htm"
+  },
+  {
+   "accession": "0000950170-25-034787",
+   "form": "10-K",
+   "filed": "2025-03-06",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017025034787/0000950170-25-034787-index.htm"
+  },
+  {
+   "accession": "0000950170-24-123469",
+   "form": "10-Q",
+   "filed": "2024-11-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017024123469/0000950170-24-123469-index.htm"
+  },
+  {
+   "accession": "0000950170-24-090905",
+   "form": "10-Q",
+   "filed": "2024-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017024090905/0000950170-24-090905-index.htm"
+  },
+  {
+   "accession": "0000950170-24-055702",
+   "form": "10-Q",
+   "filed": "2024-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017024055702/0000950170-24-055702-index.htm"
+  },
+  {
+   "accession": "0000950170-24-031156",
+   "form": "10-K",
+   "filed": "2024-03-14",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017024031156/0000950170-24-031156-index.htm"
+  },
+  {
+   "accession": "0000950170-23-063778",
+   "form": "10-Q",
+   "filed": "2023-11-14",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017023063778/0000950170-23-063778-index.htm"
+  },
+  {
+   "accession": "0000950170-23-039149",
+   "form": "10-Q",
+   "filed": "2023-08-07",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017023039149/0000950170-23-039149-index.htm"
+  },
+  {
+   "accession": "0000950170-23-019773",
+   "form": "10-Q",
+   "filed": "2023-05-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017023019773/0000950170-23-019773-index.htm"
+  },
+  {
+   "accession": "0000950170-23-010380",
+   "form": "10-K",
+   "filed": "2023-03-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017023010380/0000950170-23-010380-index.htm"
+  },
+  {
+   "accession": "0000950170-22-023969",
+   "form": "10-Q",
+   "filed": "2022-11-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017022023969/0000950170-22-023969-index.htm"
+  },
+  {
+   "accession": "0000950170-22-016043",
+   "form": "10-Q",
+   "filed": "2022-08-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017022016043/0000950170-22-016043-index.htm"
+  },
+  {
+   "accession": "0000950170-22-008524",
+   "form": "10-Q",
+   "filed": "2022-05-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000095017022008524/0000950170-22-008524-index.htm"
+  },
+  {
+   "accession": "0001564590-22-007832",
+   "form": "10-K",
+   "filed": "2022-03-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459022007832/0001564590-22-007832-index.htm"
+  },
+  {
+   "accession": "0001564590-21-055372",
+   "form": "10-Q",
+   "filed": "2021-11-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459021055372/0001564590-21-055372-index.htm"
+  },
+  {
+   "accession": "0001564590-21-042750",
+   "form": "10-Q",
+   "filed": "2021-08-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459021042750/0001564590-21-042750-index.htm"
+  },
+  {
+   "accession": "0001564590-21-026113",
+   "form": "10-Q",
+   "filed": "2021-05-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459021026113/0001564590-21-026113-index.htm"
+  },
+  {
+   "accession": "0001564590-21-009872",
+   "form": "10-K",
+   "filed": "2021-03-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459021009872/0001564590-21-009872-index.htm"
+  },
+  {
+   "accession": "0001564590-20-052527",
+   "form": "10-Q",
+   "filed": "2020-11-09",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459020052527/0001564590-20-052527-index.htm"
+  },
+  {
+   "accession": "0001564590-20-038980",
+   "form": "10-Q",
+   "filed": "2020-08-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459020038980/0001564590-20-038980-index.htm"
+  },
+  {
+   "accession": "0001564590-20-023633",
+   "form": "10-Q",
+   "filed": "2020-05-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459020023633/0001564590-20-023633-index.htm"
+  },
+  {
+   "accession": "0001564590-20-011037",
+   "form": "10-K",
+   "filed": "2020-03-16",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459020011037/0001564590-20-011037-index.htm"
+  },
+  {
+   "accession": "0001564590-19-042017",
+   "form": "10-Q",
+   "filed": "2019-11-08",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459019042017/0001564590-19-042017-index.htm"
+  },
+  {
+   "accession": "0001564590-19-032166",
+   "form": "10-Q",
+   "filed": "2019-08-14",
+   "url": "https://www.sec.gov/Archives/edgar/data/1768224/000156459019032166/0001564590-19-032166-index.htm"
+  }
+ ],
+ "pipeline": {
+  "as_of": "2026-09-08",
+  "sponsors": [
+   "Arcturus Therapeutics, Inc."
+  ],
+  "total_trials": 11,
+  "active_trials_total": 1,
+  "by_phase": {
+   "phase_2": 1,
+   "phase_1": 0,
+   "phase_3": 0,
+   "phase_4": 0,
+   "not_applicable": 0
+  },
+  "by_status": {
+   "recruiting": 1
+  },
+  "top_conditions": [
+   {
+    "condition": "Cystic Fibrosis",
+    "count": 1
+   },
+   {
+    "condition": "CFTR Gene Mutation",
+    "count": 1
+   }
+  ],
+  "upcoming_readouts": [
+   {
+    "nct_id": "NCT06747858",
+    "title": "Safety, Tolerability and Efficacy Study of ARCT-032 in People With Cystic Fibrosis",
+    "phase": "PHASE2",
+    "condition": "Cystic Fibrosis",
+    "primary_completion_date": "2027-06-01",
+    "enrollment": 33,
+    "url": "https://clinicaltrials.gov/study/NCT06747858"
+   }
+  ],
+  "started_ttm": 0,
+  "started_prior_ttm": 2,
+  "discontinued_all_time": 2,
+  "completed_all_time": 8,
+  "active_late_stage": 1
+ },
+ "active_trials_detail": [
+  {
+   "nct_id": "NCT06747858",
+   "title": "Safety, Tolerability and Efficacy Study of ARCT-032 in People With Cystic Fibrosis",
+   "lead_sponsor": "Arcturus Therapeutics, Inc.",
+   "status": "RECRUITING",
+   "phases": [
+    "PHASE2"
+   ],
+   "conditions": [
+    "Cystic Fibrosis",
+    "CFTR Gene Mutation"
+   ],
+   "enrollment": 33,
+   "start_date": "2024-12-12",
+   "start_precision": "day",
+   "primary_completion_date": "2027-06-01",
+   "completion_date": "2027-06-01",
+   "why_stopped": null,
+   "url": "https://clinicaltrials.gov/study/NCT06747858"
+  }
+ ],
+ "regulatory": null
+}

@@ -611,6 +611,63 @@ def test_every_rnd_tag_declares_its_measurement_basis():
 # --------------------------------------------------------------------------- #
 
 
+def test_a_year_to_date_minus_its_closing_quarter_gives_the_leading_stub():
+    """The other direction of differencing: same end, different starts.
+
+    Alnylam files a Q2 10-Q carrying the half-year and the discrete second
+    quarter but no first-quarter year-to-date fact at all. Without this the
+    first quarter is missing entirely, and a missing recent quarter nulls every
+    trailing-twelve-month figure built on it — which nulled Alnylam's revenue,
+    margins and R&D intensity despite $4.8bn of sales.
+    """
+    payload = {
+        "facts": {
+            "us-gaap": {
+                "Revenues": {
+                    "units": {
+                        "USD": [
+                            {"start": "2026-01-01", "end": "2026-06-30", "val": 250 * M,
+                             "form": "10-Q", "accn": "q2", "filed": "2026-07-30"},
+                            {"start": "2026-04-01", "end": "2026-06-30", "val": 150 * M,
+                             "form": "10-Q", "accn": "q2", "filed": "2026-07-30"},
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    quarters = quarterly_series(payload, "revenue").by_end()
+
+    assert quarters[D("2026-03-31")].val == 100 * M
+    assert quarters[D("2026-03-31")].start == D("2026-01-01")
+    assert quarters[D("2026-03-31")].basis is Basis.DERIVED
+    assert quarters[D("2026-06-30")].val == 150 * M
+
+
+def test_same_end_differencing_still_refuses_a_non_quarter_residual():
+    """A nine-month stub is not a quarter and must not be emitted as one."""
+    payload = {
+        "facts": {
+            "us-gaap": {
+                "Revenues": {
+                    "units": {
+                        "USD": [
+                            {"start": "2026-01-01", "end": "2026-12-31", "val": 400 * M,
+                             "form": "10-K", "accn": "fy", "filed": "2027-02-01"},
+                            {"start": "2026-10-01", "end": "2026-12-31", "val": 100 * M,
+                             "form": "10-K", "accn": "fy", "filed": "2027-02-01"},
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    quarters = quarterly_series(payload, "revenue").by_end()
+
+    # Q4 is reported; the 9-month residual is not a quarter and is not invented.
+    assert set(quarters) == {D("2026-12-31")}
+
+
 def test_half_year_gaps_are_not_split_into_quarters():
     """A six-month residual is not a quarter, so nothing may be inferred from it."""
     facts = extract_facts(

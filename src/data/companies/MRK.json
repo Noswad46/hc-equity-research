@@ -298,6 +298,67 @@
    }
   },
   {
+   "period_start": "2008-01-01",
+   "period_end": "2008-03-31",
+   "revenue": 4656000000,
+   "rnd": 880000000,
+   "ocf": null,
+   "cash": null,
+   "operating_income": null,
+   "net_income": 313000000,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
+   "source_tags": {
+    "revenue": "SalesRevenueNet",
+    "rnd": "ResearchAndDevelopmentExpense",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": "NetIncomeLoss",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "source_basis": {
+    "revenue": "derived",
+    "rnd": "derived",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": "derived",
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "measurement_basis": {
+    "revenue": "revenue_total",
+    "rnd": "rnd_including_acquired_iprd",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
    "period_start": "2008-04-01",
    "period_end": "2008-06-30",
    "revenue": 4921000000,
@@ -2532,7 +2593,7 @@
   {
    "period_start": "2017-01-01",
    "period_end": "2017-03-31",
-   "revenue": null,
+   "revenue": 9435000000,
    "rnd": 1830000000,
    "ocf": 286000000,
    "cash": 11708000000,
@@ -2543,7 +2604,7 @@
    "restricted_cash": null,
    "opex": null,
    "source_tags": {
-    "revenue": null,
+    "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpense",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
@@ -2555,7 +2616,7 @@
     "opex": null
    },
    "source_basis": {
-    "revenue": null,
+    "revenue": "derived",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
@@ -2567,7 +2628,7 @@
     "opex": null
    },
    "measurement_basis": {
-    "revenue": null,
+    "revenue": "revenue_total",
     "rnd": "rnd_including_acquired_iprd",
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
@@ -2776,7 +2837,12 @@
      "incomplete_window"
     ],
     "flags": [],
-    "period_ends": []
+    "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31"
+    ]
    }
   },
   {
@@ -3037,13 +3103,15 @@
    ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "incomplete_window"
-    ],
+    "value": 0.05410861600578222,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
      "2018-03-31",
      "2018-06-30",
      "2018-09-30",
@@ -5890,7 +5958,12 @@
      "incomplete_window"
     ],
     "flags": [],
-    "period_ends": []
+    "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31"
+    ]
    }
   },
   {
@@ -5947,13 +6020,15 @@
    ],
    "revenue_growth_yoy": {
     "name": "revenue_growth_yoy",
-    "value": null,
-    "suppressed": true,
-    "suppressed_by": [
-     "incomplete_window"
-    ],
+    "value": 0.05410861600578222,
+    "suppressed": false,
+    "suppressed_by": [],
     "flags": [],
     "period_ends": [
+     "2017-03-31",
+     "2017-06-30",
+     "2017-09-30",
+     "2017-12-31",
      "2018-03-31",
      "2018-06-30",
      "2018-09-30",
@@ -6472,9 +6547,9 @@
    "basis_segments": [
     {
      "basis": "revenue_total",
-     "first_period_end": "2008-06-30",
+     "first_period_end": "2008-03-31",
      "last_period_end": "2026-06-30",
-     "periods": 48
+     "periods": 50
     }
    ],
    "basis_cutovers": [],
@@ -6522,9 +6597,9 @@
    "basis_segments": [
     {
      "basis": "rnd_including_acquired_iprd",
-     "first_period_end": "2008-06-30",
+     "first_period_end": "2008-03-31",
      "last_period_end": "2026-06-30",
-     "periods": 73
+     "periods": 74
     }
    ],
    "basis_cutovers": [],
@@ -7030,7 +7105,7 @@
       "2026-06-30"
      ],
      "SalesRevenueNet": [
-      "2008-06-30",
+      "2008-03-31",
       "2011-03-31"
      ]
     }
@@ -7048,7 +7123,7 @@
       "2026-06-30"
      ],
      "SalesRevenueNet": [
-      "2008-06-30",
+      "2008-03-31",
       "2011-03-31"
      ]
     }

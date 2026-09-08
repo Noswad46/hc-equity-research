@@ -744,6 +744,30 @@ def discrete_quarters(
                 )
             )
 
+    def difference(longer: Fact, shorter: Fact, start: dt.date, end: dt.date) -> None:
+        offer(
+            PeriodValue(
+                concept=concept,
+                tag=longer.tag,
+                start=start,
+                end=end,
+                val=longer.val - shorter.val,
+                basis=Basis.DERIVED,
+                filed=max(longer.filed, shorter.filed),
+                accns=(longer.accn, shorter.accn),
+                forms=(longer.form, shorter.form),
+                taxonomy=longer.taxonomy,
+                unit=longer.unit,
+                derived_from=(
+                    (longer.start, longer.end),  # type: ignore[arg-type]
+                    (shorter.start, shorter.end),  # type: ignore[arg-type]
+                ),
+                measurement_basis=measurement_basis,
+            )
+        )
+
+    # Same start, consecutive ends: nine months minus six gives Q3, and the
+    # annual minus nine months gives the Q4 that is almost never filed alone.
     by_start: dict[dt.date, list[dt.date]] = {}
     for start, end in observed:
         if start is not None:
@@ -753,27 +777,37 @@ def discrete_quarters(
         ends.sort()
         for earlier, later in zip(ends, ends[1:]):
             residual = (later - earlier).days
-            if not QUARTER_DAYS[0] <= residual <= QUARTER_DAYS[1]:
-                continue
-            longer = observed[(start, later)]
-            shorter = observed[(start, earlier)]
-            offer(
-                PeriodValue(
-                    concept=concept,
-                    tag=longer.tag,
-                    start=earlier + dt.timedelta(days=1),
-                    end=later,
-                    val=longer.val - shorter.val,
-                    basis=Basis.DERIVED,
-                    filed=max(longer.filed, shorter.filed),
-                    accns=(longer.accn, shorter.accn),
-                    forms=(longer.form, shorter.form),
-                    taxonomy=longer.taxonomy,
-                    unit=longer.unit,
-                    derived_from=((start, later), (start, earlier)),
-                    measurement_basis=measurement_basis,
+            if QUARTER_DAYS[0] <= residual <= QUARTER_DAYS[1]:
+                difference(
+                    observed[(start, later)],
+                    observed[(start, earlier)],
+                    earlier + dt.timedelta(days=1),
+                    later,
                 )
-            )
+
+    # Same end, different starts: a year-to-date figure minus the discrete
+    # quarter that closes it leaves the stub at the front. Alnylam files a Q2
+    # 10-Q carrying both the half-year and the discrete second quarter but no
+    # first-quarter year-to-date fact at all, so the first quarter exists only
+    # as this difference. Without it a filer's most recent quarters can be
+    # missing entirely, which nulls every trailing-twelve-month figure built on
+    # them.
+    by_end: dict[dt.date, list[dt.date]] = {}
+    for start, end in observed:
+        if start is not None:
+            by_end.setdefault(end, []).append(start)
+
+    for end, starts in by_end.items():
+        starts.sort()
+        for earlier, later in zip(starts, starts[1:]):
+            residual = (later - earlier).days
+            if QUARTER_DAYS[0] <= residual <= QUARTER_DAYS[1]:
+                difference(
+                    observed[(earlier, end)],
+                    observed[(later, end)],
+                    earlier,
+                    later - dt.timedelta(days=1),
+                )
 
     return out
 

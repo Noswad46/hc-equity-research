@@ -232,14 +232,21 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
   </table>
 
   <h2>Clinical pipeline</h2>
-  {company.pipeline === null ? (
-    <p class="muted">No clinical data for this company.</p>
+  {company.pipeline === null || company.pipeline.sponsors.length === 0 ? (
+    <p>
+      <strong>No ClinicalTrials.gov sponsor strings are mapped for this company.</strong>{" "}
+      {company.notes_no_pipeline ?? "It leads no interventional trials on the registry, so every pipeline metric is null. That is a property of the business rather than a gap in the data — a distributor, insurer or instrument maker does not sponsor drug trials."}
+    </p>
   ) : (
     <>
       <p class="muted">
         Interventional studies where this company is the <strong>lead</strong> sponsor, from
-        ClinicalTrials.gov as of {company.pipeline.as_of}. Sponsor strings are matched whole-field:{" "}
-        {company.pipeline.sponsors.map((s: string) => <code>{s}</code>).reduce((a: any, b: any) => [a, ", ", b])}.
+        ClinicalTrials.gov as of {company.pipeline.as_of}. Matched whole-field against{" "}
+        {company.pipeline.sponsors.length} sponsor string{company.pipeline.sponsors.length === 1 ? "" : "s"}:{" "}
+        {company.pipeline.sponsors.slice(0, 6).map((s: string, i: number) => (
+          <>{i > 0 ? ", " : ""}<code>{s}</code></>
+        ))}
+        {company.pipeline.sponsors.length > 6 ? ` and ${company.pipeline.sponsors.length - 6} more` : ""}.
       </p>
 
       {phasesApplicable ? (

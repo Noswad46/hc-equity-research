@@ -1,15 +1,15 @@
 {
- "generated_at": "2026-09-08T16:37:15Z",
- "universe_size": 10,
+ "generated_at": "2026-09-08T23:09:59Z",
+ "universe_size": 58,
  "sources": {
   "edgar": {
-   "fetched_at": "2026-09-08T16:37:15Z",
-   "companies_ok": 10,
+   "fetched_at": "2026-09-08T23:09:59Z",
+   "companies_ok": 58,
    "companies_failed": []
   },
   "clinicaltrials": {
-   "fetched_at": "2026-09-08T16:37:15Z",
-   "studies_indexed": 7153,
+   "fetched_at": "2026-09-08T23:09:59Z",
+   "studies_indexed": 15759,
    "as_of": "2026-09-08"
   },
   "openfda": null

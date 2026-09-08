@@ -99,6 +99,28 @@ CANDIDATE_SUBSIDIARIES: Mapping[str, tuple[str, ...]] = {
     ),
     "GILD": ("Kite Pharma", "Immunomedics", "Forty Seven", "CymaBay Therapeutics"),
     "BDX": ("C. R. Bard", "CareFusion", "Bard Peripheral Vascular"),
+    # Added at M5. Most acquisitions self-resolve — ClinicalTrials.gov rewrites
+    # sponsor records retroactively — so these are here to confirm that rather
+    # than because they are expected to surface separate strings.
+    "LLY": ("Loxo Oncology", "Dermira", "Prevail Therapeutics", "POINT Biopharma", "Morphic"),
+    "ABBV": ("Allergan", "Pharmacyclics", "Stemcentrx", "Cerevel Therapeutics", "ImmunoGen"),
+    "BMY": ("Celgene", "Juno Therapeutics", "MyoKardia", "Turning Point Therapeutics",
+            "RayzeBio", "Karuna Therapeutics", "Mirati Therapeutics"),
+    "AMGN": ("Onyx Pharmaceuticals", "Horizon Therapeutics", "Five Prime Therapeutics",
+             "ChemoCentryx"),
+    "BIIB": ("Reata Pharmaceuticals", "HI-Bio"),
+    "ABT": ("St. Jude Medical", "Alere"),
+    "BSX": ("Guidant", "Preventice", "Axonics", "Baylis Medical"),
+    "MDT": ("Covidien", "Mazor Robotics", "Intersect ENT"),
+    "SYK": ("Wright Medical", "Vocera", "K2M"),
+    "TMO": ("PPD", "Patheon", "Life Technologies"),
+    "DHR": ("Cepheid", "Beckman Coulter", "Cytiva", "Integrated DNA Technologies"),
+    "ILMN": ("GRAIL",),
+    "CVS": ("Aetna", "Oak Street Health", "Signify Health"),
+    "UNH": ("Optum",),
+    "LH": ("Covance", "Labcorp Drug Development"),
+    "IONS": ("Akcea Therapeutics",),
+    "SRPT": ("Myonexus Therapeutics",),
 }
 
 #: Query strings that no mechanical transformation of the registrant name would

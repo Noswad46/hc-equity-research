@@ -62,9 +62,10 @@ def test_normalise_cik_rejects_nonsense(value):
 
 
 def test_universe_loads(universe_path):
+    """SPEC §4 sizes v1 at 40-60 tickers: narrow and complete beats broad and half-populated."""
     companies = load_universe(universe_path)
 
-    assert len(companies) == 10  # SPEC §11 M1
+    assert 40 <= len(companies) <= 60
     assert all(isinstance(c, Company) for c in companies)
 
 

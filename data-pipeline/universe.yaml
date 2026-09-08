@@ -47,6 +47,29 @@
 # clearly-labelled comparability treatment. See
 # content/methodology/coverage-exclusions.md.
 
+- ticker: ARCT
+  cik: "0001768224"
+  name: Arcturus Therapeutics Holdings Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease, mrna, rare_disease]
+  ct_sponsor_names:
+    - "Arcturus Therapeutics, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: EBS
+  cik: "0001367644"
+  name: Emergent BioSolutions Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease, medical_countermeasures]
+  ct_sponsor_names:
+    - "Emergent BioSolutions"
+  fda_applicant_names:
+    - "EMERGENT BIOSOLUTIONS"
+  index_membership: []
+  notes: "Government-contract revenue is lumpy; quarterly figures are not a smooth series."
+
 - ticker: MRNA
   cik: "0001682852"
   name: Moderna, Inc.
@@ -71,17 +94,62 @@
   index_membership: []
   notes: ""
 
-- ticker: EBS
-  cik: "0001367644"
-  name: Emergent BioSolutions Inc.
+- ticker: OCGN
+  cik: "0001372299"
+  name: Ocugen, Inc.
   subsector: vaccines_infectious_disease
-  therapeutic_focus: [vaccines, infectious_disease, medical_countermeasures]
+  therapeutic_focus: [vaccines, ophthalmology, gene_therapy]
   ct_sponsor_names:
-    - "Emergent BioSolutions"
-  fda_applicant_names:
-    - "EMERGENT BIOSOLUTIONS"
+    - "Ocugen"
+  fda_applicant_names: []
   index_membership: []
-  notes: "Government-contract revenue is lumpy; quarterly figures are not a smooth series."
+  notes: ""
+
+- ticker: PCVX
+  cik: "0001649094"
+  name: Vaxcyte, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, pneumococcal, infectious_disease]
+  ct_sponsor_names:
+    - "Vaxcyte, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Pre-revenue: no revenue quarters resolve at all, so R&D intensity falls back
+    to the operating-expense denominator.
+
+- ticker: SCYX
+  cik: "0001178253"
+  name: Scynexis, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [antifungals, infectious_disease]
+  ct_sponsor_names:
+    - "Scynexis, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: SIGA
+  cik: "0001010086"
+  name: SIGA Technologies, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [antivirals, infectious_disease, medical_countermeasures]
+  ct_sponsor_names:
+    - "SIGA Technologies"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: SPRO
+  cik: "0001701108"
+  name: Spero Therapeutics, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [antibacterials, infectious_disease]
+  ct_sponsor_names:
+    - "Spero Therapeutics"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
 
 - ticker: VIR
   cik: "0001706431"
@@ -90,38 +158,132 @@
   therapeutic_focus: [infectious_disease, hepatitis, oncology]
   ct_sponsor_names:
     - "Vir Biotechnology, Inc."
-  fda_applicant_names: []
+  fda_applicant_names:
   index_membership: []
   notes: "Collaboration revenue only; RevenueFromContractWithCustomer coverage is sparse."
 
-- ticker: PFE
-  cik: "0000078003"
-  name: Pfizer Inc.
-  subsector: large_cap_pharma
-  therapeutic_focus: [vaccines, oncology, immunology, infectious_disease]
+- ticker: VXRT
+  cik: "0000072444"
+  name: Vaxart, Inc.
+  subsector: vaccines_infectious_disease
+  therapeutic_focus: [vaccines, infectious_disease, oral_vaccines]
   ct_sponsor_names:
-    - "Arena Pharmaceuticals"
-    - "Array BioPharma"
-    - "Array Biopharma, now a wholly owned subsidiary of Pfizer"
-    - "Biohaven Pharmaceuticals, Inc."
-    - "Biohaven Therapeutics Ltd."
-    - "Global Blood Therapeutics"
-    - "Hospira, now a wholly owned subsidiary of Pfizer"
-    - "Medivation, Inc."
-    - "Pfizer"
-    - "Seagen Inc."
-    - "Seagen, a wholly owned subsidiary of Pfizer"
-    - "Wyeth is now a wholly owned subsidiary of Pfizer"
-    - "Wyeth-Lederle Vaccines"
-  ct_sponsor_exclusions:
-    - "Pfizer's Upjohn has merged with Mylan to form Viatris Inc."
+    - "Vaxart"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: ABBV
+  cik: "0001551152"
+  name: AbbVie Inc.
+  subsector: large_cap_pharma
+  therapeutic_focus: [immunology, oncology, aesthetics, neuroscience]
+  ct_sponsor_names:
+    - "AbbVie"
+    - "Allergan"
+    - "AbbVie (prior sponsor, Abbott)"
+    - "Pharmacyclics LLC."
+    - "Cerevel Therapeutics, LLC"
+    - "Naurex, Inc, an affiliate of Allergan plc"
+    - "ImmunoGen, Inc."
+    - "Allergan Medical"
+    - "Durata Therapeutics Inc., an affiliate of Allergan plc"
+    - "Chase Pharmaceuticals Corporation, an affiliate of Allergan plc"
+    - "Stemcentrx"
+    - "Pharmacyclics Switzerland GmbH"
+    - "Vitae Pharmaceuticals Inc., an Allergan affiliate"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: AMGN
+  cik: "0000318154"
+  name: Amgen Inc.
+  subsector: large_cap_pharma
+  therapeutic_focus: [oncology, inflammation, cardiovascular, obesity]
+  ct_sponsor_names:
+    - "Amgen"
+    - "Amgen Research (Munich) GmbH"
+    - "Five Prime Therapeutics, Inc."
+    - "Horizon Therapeutics Ireland DAC"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: BMY
+  cik: "0000014272"
+  name: Bristol-Myers Squibb Company
+  subsector: large_cap_pharma
+  therapeutic_focus: [oncology, haematology, immunology, cardiovascular]
+  ct_sponsor_names:
+    - "Bristol-Myers Squibb"
+    - "Celgene"
+    - "Karuna Therapeutics, Inc., a Bristol Myers Squibb company"
+    - "Mirati Therapeutics Inc."
+    - "Celgene Corporation"
+    - "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company"
+    - "Juno Therapeutics, a Subsidiary of Celgene"
+    - "Turning Point Therapeutics, Inc."
+    - "MyoKardia, Inc."
+    - "RayzeBio, Inc."
+    - "Adnexus, A Bristol-Myers Squibb R&D Company"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: JNJ
+  cik: "0000200406"
+  name: Johnson & Johnson
+  subsector: large_cap_pharma
+  therapeutic_focus: [immunology, oncology, infectious_disease, medtech]
+  ct_sponsor_names:
+    - "Abiomed Inc."
+    - "Actelion"
+    - "JANSSEN Alzheimer Immunotherapy Research & Development, LLC"
+    - "Janssen Biotech, Inc."
+    - "Janssen Cilag N.V./S.A."
+    - "Janssen Cilag Pharmaceutica S.A.C.I., Greece"
+    - "Janssen Cilag S.A.S."
+    - "Janssen Pharmaceutical K.K."
+    - "Janssen Research & Development, LLC"
+    - "Janssen Vaccines & Prevention B.V."
+    - "Janssen-Cilag A.G., Switzerland"
+    - "Janssen-Cilag B.V."
+    - "Janssen-Cilag Farmaceutica Ltda."
+    - "Janssen-Cilag G.m.b.H"
+    - "Janssen-Cilag International NV"
+    - "Janssen-Cilag Ltd."
+    - "Janssen-Cilag Ltd.,Thailand"
+    - "Janssen-Cilag Pty Ltd"
+    - "Janssen-Cilag S.p.A."
+    - "Janssen-Cilag Turkey"
+    - "Janssen-Cilag, S.A."
+    - "Janssen-Ortho LLC"
+    - "Johnson & Johnson Pharmaceutical Research & Development, L.L.C."
+    - "Shockwave Medical, Inc."
   fda_applicant_names:
-    - "PFIZER INC"
+    - "JANSSEN BIOTECH INC"
   index_membership: [sp500]
-  notes: >-
-    Acquisitions register as sentences ('Wyeth is now a wholly owned subsidiary
-    of Pfizer'). The Upjohn/Viatris string is excluded: those trials left with
-    the 2020 divestiture, as did the revenue.
+  notes: "Two lead-sponsor entities span the history \u2014 Johnson & Johnson Pharmaceutical Research & Development ends 2020-03, Janssen Research & Development runs from 2004 and is still opening trials. The 2024 'Innovative Medicine' rebrand never reached the registry. Consumer (Kenvue, 2023) and Mead Johnson (2009) are divestitures; Vision Care is still owned but excluded on materiality."
+
+- ticker: LLY
+  cik: "0000059478"
+  name: Eli Lilly and Company
+  subsector: large_cap_pharma
+  therapeutic_focus: [diabetes, obesity, oncology, alzheimers]
+  ct_sponsor_names:
+    - "Eli Lilly and Company"
+    - "Loxo Oncology, Inc."
+    - "Dermira, Inc."
+    - "DICE Therapeutics, Inc., a wholly owned subsidiary of Eli Lilly and Company"
+    - "Morphic Therapeutic, Inc. (A Wholly Owned Subsidiary of Eli Lilly and Company)"
+    - "Morphic Medical Inc."
+    - "Prevail Therapeutics"
+    - "POINT Biopharma, a wholly owned subsidiary of Eli Lilly and Company"
+    - "Scorpion Therapeutics, a wholly owned subsidiary of Eli Lilly and Company"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
 
 - ticker: MRK
   cik: "0000310158"
@@ -157,52 +319,70 @@
   fda_applicant_names:
     - "MERCK SHARP DOHME"
   index_membership: [sp500]
-  notes: >-
-    Merck KGaA of Darmstadt is a different listed company that shares the name;
-    its strings are excluded explicitly and a test asserts none ever enters this
-    record. Organon was spun out in 2021 and is excluded so the clinical
-    perimeter matches the restated FY2020 financials.
+  notes: "Merck KGaA of Darmstadt is a different listed company that shares the name; its strings are excluded explicitly and a test asserts none ever enters this record. Organon was spun out in 2021 and is excluded so the clinical perimeter matches the restated FY2020 financials."
 
-- ticker: JNJ
-  cik: "0000200406"
-  name: Johnson & Johnson
+- ticker: PFE
+  cik: "0000078003"
+  name: Pfizer Inc.
   subsector: large_cap_pharma
-  therapeutic_focus: [immunology, oncology, infectious_disease, medtech]
+  therapeutic_focus: [vaccines, oncology, immunology, infectious_disease]
   ct_sponsor_names:
-    - "Abiomed Inc."
-    - "Actelion"
-    - "JANSSEN Alzheimer Immunotherapy Research & Development, LLC"
-    - "Janssen Biotech, Inc."
-    - "Janssen Cilag N.V./S.A."
-    - "Janssen Cilag Pharmaceutica S.A.C.I., Greece"
-    - "Janssen Cilag S.A.S."
-    - "Janssen Pharmaceutical K.K."
-    - "Janssen Research & Development, LLC"
-    - "Janssen Vaccines & Prevention B.V."
-    - "Janssen-Cilag A.G., Switzerland"
-    - "Janssen-Cilag B.V."
-    - "Janssen-Cilag Farmaceutica Ltda."
-    - "Janssen-Cilag G.m.b.H"
-    - "Janssen-Cilag International NV"
-    - "Janssen-Cilag Ltd."
-    - "Janssen-Cilag Ltd.,Thailand"
-    - "Janssen-Cilag Pty Ltd"
-    - "Janssen-Cilag S.p.A."
-    - "Janssen-Cilag Turkey"
-    - "Janssen-Cilag, S.A."
-    - "Janssen-Ortho LLC"
-    - "Johnson & Johnson Pharmaceutical Research & Development, L.L.C."
-    - "Shockwave Medical, Inc."
+    - "Arena Pharmaceuticals"
+    - "Array BioPharma"
+    - "Array Biopharma, now a wholly owned subsidiary of Pfizer"
+    - "Biohaven Pharmaceuticals, Inc."
+    - "Biohaven Therapeutics Ltd."
+    - "Global Blood Therapeutics"
+    - "Hospira, now a wholly owned subsidiary of Pfizer"
+    - "Medivation, Inc."
+    - "Pfizer"
+    - "Seagen Inc."
+    - "Seagen, a wholly owned subsidiary of Pfizer"
+    - "Wyeth is now a wholly owned subsidiary of Pfizer"
+    - "Wyeth-Lederle Vaccines"
+  ct_sponsor_exclusions:
+    - "Pfizer's Upjohn has merged with Mylan to form Viatris Inc."
   fda_applicant_names:
-    - "JANSSEN BIOTECH INC"
+    - "PFIZER INC"
   index_membership: [sp500]
+  notes: "Acquisitions register as sentences ('Wyeth is now a wholly owned subsidiary of Pfizer'). The Upjohn/Viatris string is excluded: those trials left with the 2020 divestiture, as did the revenue."
+
+- ticker: ZTS
+  cik: "0001555280"
+  name: Zoetis Inc.
+  subsector: large_cap_pharma
+  therapeutic_focus: [animal_health, veterinary_vaccines]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
   notes: >-
-    Two lead-sponsor entities span the history — Johnson & Johnson
-    Pharmaceutical Research & Development ends 2020-03, Janssen Research &
-    Development runs from 2004 and is still opening trials. The 2024 'Innovative
-    Medicine' rebrand never reached the registry. Consumer (Kenvue, 2023) and
-    Mead Johnson (2009) are divestitures; Vision Care is still owned but
-    excluded on materiality.
+    Animal health: its trials are veterinary and not registered on
+    ClinicalTrials.gov, which covers human studies.
+
+- ticker: ALNY
+  cik: "0001178670"
+  name: Alnylam Pharmaceuticals, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [rna_interference, amyloidosis, cardiology]
+  ct_sponsor_names:
+    - "Alnylam Pharmaceuticals"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: BIIB
+  cik: "0000875045"
+  name: Biogen Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [neurology, alzheimers, multiple_sclerosis]
+  ct_sponsor_names:
+    - "Biogen"
+    - "HI-Bio, A Biogen Company"
+    - "NightstaRx Ltd, a Biogen Company"
+    - "Reata, a wholly owned subsidiary of Biogen"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
 
 - ticker: GILD
   cik: "0000882095"
@@ -215,10 +395,68 @@
   fda_applicant_names:
     - "GILEAD SCIENCES INC"
   index_membership: [sp500]
+  notes: "Reports R&D on both bases across its history, so the R&D series is mixed and flagged. Its including-IPR&D tag stops in 2020; before the chain was widened the latest available R&D window was a stale 2019-20 one."
+
+- ticker: INCY
+  cik: "0000879169"
+  name: Incyte Corporation
+  subsector: commercial_biotech
+  therapeutic_focus: [oncology, dermatology, haematology]
+  ct_sponsor_names:
+    - "Incyte Corporation"
+    - "Incyte Biosciences International Sàrl"
+    - "Incyte Biosciences Japan GK"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: IONS
+  cik: "0000874015"
+  name: Ionis Pharmaceuticals, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [antisense, neurology, cardiology]
+  ct_sponsor_names:
+    - "Ionis Pharmaceuticals, Inc."
+    - "Akcea Therapeutics"
+  fda_applicant_names: []
+  index_membership: []
   notes: >-
-    Reports R&D on both bases across its history, so the R&D series is mixed and
-    flagged. Its including-IPR&D tag stops in 2020; before the chain was widened
-    the latest available R&D window was a stale 2019-20 one.
+    Reports R&D under a tag with far thinner coverage than its revenue, so the
+    R&D series may flag as stale.
+
+- ticker: NBIX
+  cik: "0000914475"
+  name: Neurocrine Biosciences, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [neurology, psychiatry, endocrinology]
+  ct_sponsor_names:
+    - "Neurocrine Biosciences"
+    - "Neurocrine UK Limited"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: REGN
+  cik: "0000872589"
+  name: Regeneron Pharmaceuticals, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [ophthalmology, immunology, oncology]
+  ct_sponsor_names:
+    - "Regeneron Pharmaceuticals"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: SRPT
+  cik: "0000873303"
+  name: Sarepta Therapeutics, Inc.
+  subsector: commercial_biotech
+  therapeutic_focus: [gene_therapy, neuromuscular, duchenne]
+  ct_sponsor_names:
+    - "Sarepta Therapeutics, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
 
 - ticker: VRTX
   cik: "0000875320"
@@ -233,6 +471,115 @@
   index_membership: [sp500]
   notes: "Non-vaccine comparator; included for R&D-intensity context within commercial biotech."
 
+- ticker: ARVN
+  cik: "0001655759"
+  name: Arvinas, Inc.
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [oncology, neurodegeneration, protein_degradation]
+  ct_sponsor_names:
+    - "Arvinas Inc."
+    - "Arvinas Estrogen Receptor, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: BEAM
+  cik: "0001745999"
+  name: Beam Therapeutics Inc.
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [gene_editing, haematology, hepatology]
+  ct_sponsor_names:
+    - "Beam Therapeutics Inc."
+  ct_sponsor_exclusions:
+    - "Beam"
+    - "Ion Beam Applications"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Excludes Ion Beam Applications and a sleep-supplement company trading as
+    Beam, neither related.
+
+- ticker: CRSP
+  cik: "0001674416"
+  name: CRISPR Therapeutics AG
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [gene_editing, haematology, oncology, diabetes]
+  ct_sponsor_names:
+    - "CRISPR Therapeutics AG"
+    - "CRISPR Therapeutics"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Swiss-domiciled but files 10-K/10-Q under US GAAP, so it is in scope where
+    IFRS filers are not.
+
+- ticker: DNLI
+  cik: "0001714899"
+  name: Denali Therapeutics Inc.
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [neurodegeneration]
+  ct_sponsor_names:
+    - "Denali Therapeutics Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: NTLA
+  cik: "0001652130"
+  name: Intellia Therapeutics, Inc.
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [gene_editing, haematology, angioedema]
+  ct_sponsor_names:
+    - "Intellia Therapeutics"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: RVMD
+  cik: "0001628171"
+  name: Revolution Medicines, Inc.
+  subsector: clinical_stage_biotech
+  therapeutic_focus: [oncology]
+  ct_sponsor_names:
+    - "Revolution Medicines, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: ABT
+  cik: "0000001800"
+  name: Abbott Laboratories
+  subsector: medtech
+  therapeutic_focus: [diagnostics, medical_devices, nutrition, diabetes_care]
+  ct_sponsor_names:
+    - "Abbott"
+    - "Abbott Medical Devices"
+    - "Abbott Nutrition"
+    - "Abbott Diabetes Care"
+    - "Abbott Products"
+    - "Abbott Rapid Dx"
+    - "Abbott Biologicals"
+    - "Abbott Diagnostics Division"
+    - "Abbott Point of Care"
+    - "Abbott RDx Cardiometabolic"
+    - "Abbott Rapid Diagnostics Jena GmbH"
+    - "Abbott Transfusion Medicine"
+    - "Abbott Research Group"
+    - "Alere San Diego"
+  ct_sponsor_exclusions:
+    - "AbbVie (prior sponsor, Abbott)"
+    - "Abbott Medical Optics"
+    - "St. Jude Children's Research Hospital"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Its trials register under divisional names — Abbott Medical Devices, Abbott
+    Nutrition and eleven others — none of which a query on the registrant name
+    reaches. Excludes the AbbVie spin-off (2013) and Abbott Medical Optics, sold
+    to J&J in 2017, and excludes St. Jude Children's Research Hospital, which
+    shares a name with the acquired St. Jude Medical and is an unrelated
+    charity.
+
 - ticker: BDX
   cik: "0000010795"
   name: Becton, Dickinson and Company
@@ -244,7 +591,336 @@
   fda_applicant_names:
     - "BECTON DICKINSON"
   index_membership: [sp500]
+  notes: "Fiscal year ends 30 September. No RevenueFromContractWithCustomer tag, so revenue falls back through the chain. Operating cash flow is split across both entries of the OCF chain."
+
+- ticker: BSX
+  cik: "0000885725"
+  name: Boston Scientific Corporation
+  subsector: medtech
+  therapeutic_focus: [cardiology, electrophysiology, endoscopy]
+  ct_sponsor_names:
+    - "Boston Scientific Corporation"
+    - "Guidant Corporation"
+    - "Axonics, Inc."
+    - "Baylis Medical Company"
+    - "Boston Scientific Japan K.K."
+  ct_sponsor_exclusions:
+    - "Boston Medical Center"
+  fda_applicant_names: []
+  index_membership: []
   notes: >-
-    Fiscal year ends 30 September. No RevenueFromContractWithCustomer tag, so
-    revenue falls back through the chain. Operating cash flow is split across both
-    entries of the OCF chain.
+    Excludes Boston Medical Center, an unrelated hospital that shares the first
+    word of the name.
+
+- ticker: ISRG
+  cik: "0001035267"
+  name: Intuitive Surgical, Inc.
+  subsector: medtech
+  therapeutic_focus: [surgical_robotics]
+  ct_sponsor_names:
+    - "Intuitive Surgical"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: MDT
+  cik: "0001613103"
+  name: Medtronic plc
+  subsector: medtech
+  therapeutic_focus: [cardiology, neuromodulation, diabetes, surgical]
+  ct_sponsor_names:
+    - "Medtronic Cardiac Rhythm and Heart Failure"
+    - "Medtronic - MITG"
+    - "Medtronic MiniMed, Inc."
+    - "Medtronic Cardiovascular"
+    - "Medtronic Vascular"
+    - "Medtronic Spinal and Biologics"
+    - "Medtronic Endovascular"
+    - "Medtronic Cardiac Ablation Solutions"
+    - "Medtronic BRC"
+    - "Intersect ENT"
+    - "Medtronic Neurovascular Clinical Affairs"
+    - "Medtronic Surgical Technologies"
+    - "Medtronic Cardiac Surgery"
+    - "Medtronic Spine LLC"
+    - "Medtronic"
+    - "Covidien, GI Solutions"
+    - "Medtronic Corporate Technologies and New Ventures"
+    - "Medtronic Diabetes R&D Denmark"
+    - "Medtronic Heart Valves"
+    - "Medtronic Italia"
+    - "Medtronic Xomed, Inc."
+    - "Mazor Robotics"
+    - "Medtronic Hellas Medical Devices ΑEE"
+    - "Medtronic Latin America"
+  ct_sponsor_exclusions:
+    - "ENT and Allergy Associates, LLP"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Registers under two dozen divisional names. Excludes ENT and Allergy
+    Associates, unrelated to the acquired Intersect ENT.
+
+- ticker: SYK
+  cik: "0000310764"
+  name: Stryker Corporation
+  subsector: medtech
+  therapeutic_focus: [orthopaedics, surgical, neurotechnology]
+  ct_sponsor_names:
+    - "Stryker Orthopaedics"
+    - "Stryker Neurovascular"
+    - "Stryker Trauma and Extremities"
+    - "Stryker South Pacific"
+    - "Novadaq Technologies ULC, now a part of Stryker"
+    - "Stryker Japan K.K."
+    - "Stryker Sustainability Solutions"
+    - "Stryker Biotech"
+    - "Stryker Instruments"
+    - "Stryker Endoscopy"
+    - "K2M, Inc."
+    - "Orthovita d/b/a Stryker"
+    - "Stryker Australia Pty Ltd."
+    - "Stryker Craniomaxillofacial"
+    - "Stryker GI Ltd."
+  ct_sponsor_exclusions:
+    - "David Wright"
+    - "Karen D. Wright MD"
+    - "Thomas Wright, MD"
+    - "Wright State University"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Registers under divisional names. Excludes Wright State University and three
+    physicians named Wright, which collide with the acquired Wright Medical.
+
+- ticker: DGX
+  cik: "0001022079"
+  name: Quest Diagnostics Incorporated
+  subsector: diagnostics
+  therapeutic_focus: [clinical_laboratory, diagnostics]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: LH
+  cik: "0000920148"
+  name: Labcorp Holdings Inc.
+  subsector: diagnostics
+  therapeutic_focus: [clinical_laboratory, diagnostics, drug_development_services]
+  ct_sponsor_names: []
+  ct_sponsor_exclusions:
+    - "Laser LabCorp"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials; its drug-development arm was spun off as
+    Fortrea in 2023. Excludes Laser LabCorp, unrelated.
+
+- ticker: NTRA
+  cik: "0001604821"
+  name: Natera, Inc.
+  subsector: diagnostics
+  therapeutic_focus: [genetic_testing, oncology, womens_health]
+  ct_sponsor_names:
+    - "Natera, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: A
+  cik: "0001090872"
+  name: Agilent Technologies, Inc.
+  subsector: life_science_tools
+  therapeutic_focus: [analytical_instruments, genomics]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: DHR
+  cik: "0000313616"
+  name: Danaher Corporation
+  subsector: life_science_tools
+  therapeutic_focus: [life_science_tools, diagnostics, biotechnology]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: ILMN
+  cik: "0001110803"
+  name: Illumina, Inc.
+  subsector: life_science_tools
+  therapeutic_focus: [genomic_sequencing, oncology_testing]
+  ct_sponsor_names:
+    - "Illumina, Inc."
+  ct_sponsor_exclusions:
+    - "GRAIL, Inc."
+    - "Innervate Radiopharmaceuticals LLC (Formerly: Illumina Radiopharmaceuticals LLC)"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Excludes GRAIL, spun off in 2024, and Illumina Radiopharmaceuticals, an
+    unrelated company.
+
+- ticker: TMO
+  cik: "0000097745"
+  name: Thermo Fisher Scientific Inc.
+  subsector: life_science_tools
+  therapeutic_focus: [life_science_tools, clinical_research_services, diagnostics]
+  ct_sponsor_names:
+    - "PPD Development, LP"
+  ct_sponsor_exclusions:
+    - "Full-Life Technologies UK Limited"
+    - "Life Research Technologies GmbH"
+    - "On-X Life Technologies, Inc."
+    - "Sellas Life Sciences Group"
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Only PPD, its clinical research arm, leads registered trials. Excludes four
+    companies matching on the generic tokens life and technologies.
+
+- ticker: CVS
+  cik: "0000064803"
+  name: CVS Health Corporation
+  subsector: payer
+  therapeutic_focus: [pharmacy_benefit, retail_pharmacy, health_insurance]
+  ct_sponsor_names:
+    - "Aetna, Inc."
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: ELV
+  cik: "0001156039"
+  name: Elevance Health, Inc.
+  subsector: payer
+  therapeutic_focus: [health_insurance, managed_care]
+  ct_sponsor_names:
+    - "Elevance Health"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: UNH
+  cik: "0000731766"
+  name: UnitedHealth Group Incorporated
+  subsector: payer
+  therapeutic_focus: [health_insurance, managed_care, health_services]
+  ct_sponsor_names:
+    - "UnitedHealth Group"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: HCA
+  cik: "0000860730"
+  name: HCA Healthcare, Inc.
+  subsector: provider
+  therapeutic_focus: [acute_care_hospitals]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: THC
+  cik: "0000070318"
+  name: Tenet Healthcare Corporation
+  subsector: provider
+  therapeutic_focus: [acute_care_hospitals, ambulatory_surgery]
+  ct_sponsor_names:
+    - "Tenet Healthcare Corporation"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: UHS
+  cik: "0000352915"
+  name: Universal Health Services, Inc.
+  subsector: provider
+  therapeutic_focus: [acute_care_hospitals, behavioural_health]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: DOCS
+  cik: "0001516513"
+  name: Doximity, Inc.
+  subsector: hcit
+  therapeutic_focus: [clinician_network, pharma_marketing]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: VEEV
+  cik: "0001393052"
+  name: Veeva Systems Inc.
+  subsector: hcit
+  therapeutic_focus: [clinical_trial_software, pharma_crm]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: CAH
+  cik: "0000721371"
+  name: Cardinal Health, Inc.
+  subsector: distributor
+  therapeutic_focus: [pharmaceutical_distribution, medical_products]
+  ct_sponsor_names:
+    - "Cardinal Health 414, LLC"
+    - "Cardinal Health"
+  fda_applicant_names: []
+  index_membership: []
+  notes: ""
+
+- ticker: COR
+  cik: "0001140859"
+  name: Cencora, Inc.
+  subsector: distributor
+  therapeutic_focus: [pharmaceutical_distribution, specialty_drugs]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.
+
+- ticker: MCK
+  cik: "0000927653"
+  name: McKesson Corporation
+  subsector: distributor
+  therapeutic_focus: [pharmaceutical_distribution, oncology_services]
+  ct_sponsor_names: []
+  fda_applicant_names: []
+  index_membership: []
+  notes: >-
+    Leads no interventional trials on ClinicalTrials.gov, so no sponsor strings
+    are mapped and every pipeline metric is null. That is a property of the
+    business, not a data gap.

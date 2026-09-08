@@ -298,6 +298,67 @@
    }
   },
   {
+   "period_start": "2007-12-31",
+   "period_end": "2008-03-30",
+   "revenue": null,
+   "rnd": 1712000000,
+   "ocf": null,
+   "cash": null,
+   "operating_income": null,
+   "net_income": null,
+   "short_term_investments": null,
+   "debt": null,
+   "restricted_cash": null,
+   "opex": null,
+   "source_tags": {
+    "revenue": null,
+    "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "source_basis": {
+    "revenue": null,
+    "rnd": "derived",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "measurement_basis": {
+    "revenue": null,
+    "rnd": "rnd_excluding_acquired_iprd",
+    "ocf": null,
+    "cash": null,
+    "operating_income": null,
+    "net_income": null,
+    "short_term_investments": null,
+    "debt": null,
+    "restricted_cash": null,
+    "opex": null
+   },
+   "flags": [],
+   "revenue_growth_yoy": {
+    "name": "revenue_growth_yoy",
+    "value": null,
+    "suppressed": true,
+    "suppressed_by": [
+     "incomplete_window"
+    ],
+    "flags": [],
+    "period_ends": []
+   }
+  },
+  {
    "period_start": "2008-03-31",
    "period_end": "2008-06-29",
    "revenue": null,
@@ -737,7 +798,7 @@
    "rnd": 1557000000,
    "ocf": 3690000000,
    "cash": 13743000000,
-   "operating_income": null,
+   "operating_income": 6457000000,
    "net_income": 4526000000,
    "short_term_investments": null,
    "debt": 8059000000,
@@ -748,7 +809,7 @@
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
-    "operating_income": null,
+    "operating_income": "OperatingIncomeLoss",
     "net_income": "NetIncomeLoss",
     "short_term_investments": null,
     "debt": "LongTermDebtNoncurrent + LongTermDebtCurrent",
@@ -760,7 +821,7 @@
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
-    "operating_income": null,
+    "operating_income": "derived",
     "net_income": "reported",
     "short_term_investments": null,
     "debt": "reported",
@@ -772,7 +833,7 @@
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
-    "operating_income": null,
+    "operating_income": "operating_income_reported",
     "net_income": null,
     "short_term_investments": null,
     "debt": null,
@@ -1235,7 +1296,7 @@
   {
    "period_start": "2012-01-02",
    "period_end": "2012-04-01",
-   "revenue": null,
+   "revenue": 16139000000,
    "rnd": 1645000000,
    "ocf": 2795000000,
    "cash": 30267000000,
@@ -1246,7 +1307,7 @@
    "restricted_cash": null,
    "opex": null,
    "source_tags": {
-    "revenue": null,
+    "revenue": "Revenues",
     "rnd": "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
     "ocf": "NetCashProvidedByUsedInOperatingActivities",
     "cash": "CashAndCashEquivalentsAtCarryingValue",
@@ -1258,7 +1319,7 @@
     "opex": null
    },
    "source_basis": {
-    "revenue": null,
+    "revenue": "derived",
     "rnd": "reported",
     "ocf": "reported",
     "cash": "reported",
@@ -1270,7 +1331,7 @@
     "opex": null
    },
    "measurement_basis": {
-    "revenue": null,
+    "revenue": "revenue_total",
     "rnd": "rnd_excluding_acquired_iprd",
     "ocf": "ocf_total",
     "cash": "cash_excluding_restricted",
@@ -6383,9 +6444,9 @@
    "basis_segments": [
     {
      "basis": "revenue_total",
-     "first_period_end": "2012-07-01",
+     "first_period_end": "2012-04-01",
      "last_period_end": "2014-09-28",
-     "periods": 8
+     "periods": 9
     },
     {
      "basis": "revenue_contracts_with_customers",
@@ -6447,9 +6508,9 @@
    "basis_segments": [
     {
      "basis": "rnd_excluding_acquired_iprd",
-     "first_period_end": "2008-06-29",
+     "first_period_end": "2008-03-30",
      "last_period_end": "2026-06-28",
-     "periods": 73
+     "periods": 74
     }
    ],
    "basis_cutovers": [],
@@ -6592,9 +6653,9 @@
    "basis_segments": [
     {
      "basis": "operating_income_reported",
-     "first_period_end": "2010-07-04",
+     "first_period_end": "2010-04-04",
      "last_period_end": "2015-03-29",
-     "periods": 20
+     "periods": 21
     }
    ],
    "basis_cutovers": [],
@@ -6824,7 +6885,7 @@
     ],
     "tag_spans": {
      "Revenues": [
-      "2012-07-01",
+      "2012-04-01",
       "2014-09-28"
      ],
      "RevenueFromContractWithCustomerExcludingAssessedTax": [
@@ -6842,7 +6903,7 @@
    "detail": {
     "tag_spans": {
      "Revenues": [
-      "2012-07-01",
+      "2012-04-01",
       "2014-09-28"
      ],
      "RevenueFromContractWithCustomerExcludingAssessedTax": [
@@ -6861,9 +6922,9 @@
     "bases": [
      {
       "basis": "revenue_total",
-      "first_period_end": "2012-07-01",
+      "first_period_end": "2012-04-01",
       "last_period_end": "2014-09-28",
-      "periods": 8
+      "periods": 9
      },
      {
       "basis": "revenue_contracts_with_customers",
@@ -7071,7 +7132,7 @@
     ],
     "tag_spans": {
      "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": [
-      "2008-06-29",
+      "2008-03-30",
       "2026-06-28"
      ]
     }
