@@ -1,0 +1,74 @@
+---
+/** Index of subsector peer-comparison pages (SPEC §8). */
+import Base from "../../layouts/Base.astro";
+import meta from "../../data/meta.json";
+import screener from "../../data/screener.json";
+import { raw } from "../../lib/flags";
+import { METRICS, metaFor, summarise, valueOf } from "../../lib/subsectors";
+import type { CompanyRow } from "../../lib/screener";
+
+const rows = screener.companies as unknown as CompanyRow[];
+const revenue = METRICS.find((m) => m.key === "revenue_ttm")!;
+const runway = METRICS.find((m) => m.key === "cash_runway_quarters")!;
+
+const groups = [...new Set(rows.map((c) => c.subsector))]
+  .map((subsector) => {
+    const members = rows.filter((c) => c.subsector === subsector);
+    return {
+      subsector,
+      info: metaFor(subsector),
+      members,
+      revenue: summarise(members, revenue),
+      runway: summarise(members, runway),
+      trials: members.reduce((sum, c) => sum + (valueOf(c, "active_trials") ?? 0), 0),
+    };
+  })
+  .sort((a, b) => b.members.length - a.members.length);
+---
+
+<Base title="Subsectors">
+  <p class="muted"><a href="/screener/">Screener</a> · <a href="/companies/">Companies</a> · <a href="/methodology/">Methodology</a></p>
+
+  <h1>Subsectors</h1>
+  <p>
+    Peer comparison within a group. Companies are only usefully compared against others facing the
+    same economics — a clinical-stage developer with no revenue and a distributor on two per cent
+    margins do not belong in the same ranking, and several metrics do not even apply across both.
+  </p>
+  <p class="muted">
+    {groups.length} subsectors, {rows.length} companies. Data as of {meta.generated_at}.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Subsector</th>
+        <th class="num">Companies</th>
+        <th class="num">Median revenue TTM (USD)</th>
+        <th class="num">Active trials</th>
+        <th class="num">With a runway figure</th>
+      </tr>
+    </thead>
+    <tbody>
+      {groups.map((g) => (
+        <tr>
+          <td>
+            <a href={`/subsectors/${g.info.slug}/`}>{g.info.label}</a>
+          </td>
+          <td class="num">{g.members.length}</td>
+          <td class={`num ${g.revenue.median === null ? "null" : ""}`}>{raw(g.revenue.median)}</td>
+          <td class="num">{g.trials}</td>
+          <td class="num">
+            {g.runway.n}<span class="muted">/{g.members.length}</span>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <p class="muted">
+    A runway figure exists only where trailing operating cash flow is negative — a company funding
+    itself from operations has no runway to run out of. The count above is therefore a rough
+    measure of how much of each subsector is still consuming capital.
+  </p>
+</Base>

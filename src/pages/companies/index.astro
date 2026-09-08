@@ -9,6 +9,8 @@ const companies = [...screener.companies].sort((a, b) => a.ticker.localeCompare(
 ---
 
 <Base title="Companies">
+  <p class="muted"><a href="/screener/">Screener</a> · <a href="/subsectors/">Subsectors</a> · <a href="/methodology/">Methodology</a></p>
+
   <h1>Companies</h1>
   <p class="muted">
     {companies.length} covered filers. Data as of {meta.generated_at}, pipeline version{" "}

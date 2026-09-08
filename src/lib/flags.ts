@@ -154,6 +154,14 @@ export function describeReason(code: string, concept = "This metric"): string {
       return `No value: neither revenue nor operating expenses were available as a denominator.`;
     case "no_cash_figure":
       return `No value: no cash balance could be resolved for this filer.`;
+    case "phase_not_applicable":
+      return `Not applicable: clinical phases are a drug-development construct, and this company's studies are pivotal, feasibility or post-market instead. Null rather than zero, because zero would say it has no pipeline.`;
+    case "too_few_active_trials":
+      return `Suppressed: fewer than three active trials. The count itself stays visible, but a figure distributed across one or two trials describes the denominator rather than the company.`;
+    case "too_few_late_stage_trials":
+      return `Suppressed: fewer than three active late-stage trials to divide R&D across.`;
+    case "no_figure":
+      return `No figure was produced for this company.`;
     case "no_active_trials":
       return `No value: this company has no active trials, so there is nothing to score.`;
     case "no_active_late_stage_trials":

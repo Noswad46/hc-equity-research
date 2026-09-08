@@ -1,0 +1,218 @@
+---
+/**
+ * Peer comparison within one subsector (SPEC §8): distribution of each key
+ * metric, medians, and a ranked table.
+ *
+ * Two rules carry over from everywhere else. Figures print exactly as the
+ * pipeline produced them. And every summary states how many companies it was
+ * computed over, because a median taken across a subsector where half the
+ * figures are suppressed describes the half that survived, not the subsector.
+ */
+import Base from "../../layouts/Base.astro";
+import meta from "../../data/meta.json";
+import screener from "../../data/screener.json";
+import { raw, describeReason } from "../../lib/flags";
+import {
+  METRICS,
+  RANKED_COLUMNS,
+  SUBSECTORS,
+  metaFor,
+  rankBy,
+  reasonsFor,
+  summarise,
+  valueOf,
+} from "../../lib/subsectors";
+import type { CompanyRow } from "../../lib/screener";
+
+// Editorial notes live as markdown alongside the data, keyed on the subsector.
+const notes = import.meta.glob("../../../content/subsectors/*.md", { eager: true });
+
+export async function getStaticPaths() {
+  const rows = screener.companies as unknown as CompanyRow[];
+  const present = [...new Set(rows.map((c) => c.subsector))];
+  return present.map((subsector) => ({
+    params: { slug: metaFor(subsector).slug },
+    props: { subsector },
+  }));
+}
+
+const { subsector } = Astro.props;
+const info = metaFor(subsector);
+const rows = (screener.companies as unknown as CompanyRow[]).filter(
+  (c) => c.subsector === subsector,
+);
+
+const summaries = METRICS.map((spec) => summarise(rows, spec));
+const ranked = rankBy(rows, "revenue_ttm");
+const columns = METRICS.filter((m) => RANKED_COLUMNS.includes(m.key));
+
+const note: any = Object.values(notes).find(
+  (m: any) => m?.frontmatter?.subsector === subsector,
+);
+const NoteContent = note?.Content;
+
+const peers = Object.entries(SUBSECTORS)
+  .filter(([key]) => key !== subsector)
+  .filter(([key]) => (screener.companies as any[]).some((c) => c.subsector === key));
+---
+
+<Base title={`${info.label} — subsector`}>
+  <p class="muted">
+    <a href="/subsectors/">All subsectors</a> · <a href="/screener/">Screener</a> ·
+    <a href="/methodology/">Methodology</a>
+  </p>
+
+  <h1>{info.label}</h1>
+  <p>{info.blurb}</p>
+  <p class="muted">
+    {rows.length} of {screener.companies.length} covered companies. Data as of {meta.generated_at}.{" "}
+    <a href={`/screener/?subsector=${subsector}`}>Open this subsector in the screener →</a>
+  </p>
+
+  {NoteContent && (
+    <div class="editorial">
+      <NoteContent />
+    </div>
+  )}
+
+  <h2>Distribution</h2>
+  <p class="muted">
+    Computed across the companies that have a figure, never across the subsector with missing
+    values read as zero. The median for an even count is the mean of the two middle values, so it
+    is a summary statistic rather than any company's own figure — everything in the ranked table
+    below is.
+  </p>
+
+  <table>
+    <caption class="visually-hidden">
+      Distribution of each key metric across {info.label}.
+    </caption>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th class="num">n</th>
+        <th class="num">Min</th>
+        <th class="num">Median</th>
+        <th class="num">Max</th>
+        <th>Range held by</th>
+      </tr>
+    </thead>
+    <tbody>
+      {summaries.map((s) => (
+        <tr>
+          <td>
+            {s.spec.label}
+            <span class="muted"> ({s.spec.unit})</span>
+          </td>
+          <td class={`num ${s.n === 0 ? "null" : ""}`}>
+            {s.n}<span class="muted">/{s.total}</span>
+          </td>
+          <td class={`num ${s.min === null ? "null" : ""}`}>{raw(s.min)}</td>
+          <td class={`num ${s.median === null ? "null" : ""}`}>{raw(s.median)}</td>
+          <td class={`num ${s.max === null ? "null" : ""}`}>{raw(s.max)}</td>
+          <td class="muted">
+            {s.n === 0 ? (
+              <>
+                No company in this subsector has this figure
+                {s.absences.length > 0 ? `: ${describeReason(s.absences[0].reason, s.spec.label)}` : "."}
+              </>
+            ) : (
+              <>
+                <a href={`/companies/${s.minTicker}/`}>{s.minTicker}</a> to{" "}
+                <a href={`/companies/${s.maxTicker}/`}>{s.maxTicker}</a>
+                {s.n < s.total && s.absences.length > 0 && (
+                  <span> · {s.total - s.n} without: {s.absences.map((a) => `${a.reason} (${a.count})`).join(", ")}</span>
+                )}
+              </>
+            )}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Ranked</h2>
+  <p class="muted">
+    Ordered by trailing revenue, with companies lacking a figure last. Figures are printed exactly
+    as filed; <strong>null</strong> is not zero.
+  </p>
+  <div class="ranked-scroll">
+    <table>
+      <caption class="visually-hidden">{info.label} companies ranked by trailing revenue.</caption>
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Name</th>
+          {columns.map((c) => (
+            <th class="num">
+              {c.label}
+              <span class="muted"> ({c.unit})</span>
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {ranked.map((company) => (
+          <tr>
+            <th scope="row"><a href={`/companies/${company.ticker}/`}>{company.ticker}</a></th>
+            <td>{company.name}</td>
+            {columns.map((c) => {
+              const v = valueOf(company, c.key);
+              const why = v === null ? reasonsFor(company, c.key) : [];
+              return (
+                <td class={`num ${v === null ? "null" : ""}`}>
+                  {why.length ? (
+                    <span tabindex="0" title={describeReason(why[0], c.label)}>{raw(v)}</span>
+                  ) : (
+                    raw(v)
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Other subsectors</h2>
+  <ul class="peers">
+    {peers.map(([key, m]) => (
+      <li>
+        <a href={`/subsectors/${m.slug}/`}>{m.label}</a>
+        <span class="muted">
+          {" "}({(screener.companies as any[]).filter((c) => c.subsector === key).length})
+        </span>
+      </li>
+    ))}
+  </ul>
+
+  <style>
+    .editorial {
+      border-left: 3px solid var(--rule);
+      padding: 0.1rem 0 0.1rem 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .editorial :global(h2) {
+      font-size: 1rem;
+      border: 0;
+      margin: 0.75rem 0 0.4rem;
+      padding: 0;
+    }
+
+    .ranked-scroll {
+      overflow-x: auto;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .peers {
+      columns: 2;
+      max-width: 40rem;
+    }
+
+    .peers li {
+      margin-bottom: 0.2rem;
+    }
+  </style>
+</Base>

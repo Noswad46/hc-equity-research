@@ -49,6 +49,9 @@ const flags: QualityRecord[] = [...company.data_quality].sort(
 const conceptEntries = Object.entries(company.concepts) as [string, any][];
 // Phases are a drug-development construct; device studies are pivotal or
 // feasibility instead, so the phase chart is suppressed rather than drawn empty.
+import { metaFor } from "../../lib/subsectors";
+
+const subsectorSlug = metaFor(company.subsector).slug;
 const PHASELESS_SUBSECTORS = ["medtech", "diagnostics"];
 const phasesApplicable = !PHASELESS_SUBSECTORS.includes(company.subsector);
 
@@ -67,7 +70,8 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
     <dt>Ticker</dt><dd>{company.ticker}</dd>
     <dt>CIK</dt><dd>{company.cik}</dd>
     <dt>Registrant</dt><dd>{company.entity_name}</dd>
-    <dt>Subsector</dt><dd>{company.subsector}</dd>
+    <dt>Subsector</dt>
+    <dd><a href={`/subsectors/${subsectorSlug}/`}>{company.subsector}</a></dd>
     <dt>Therapeutic focus</dt><dd>{company.therapeutic_focus.join(", ") || "—"}</dd>
     <dt>Fiscal period end</dt>
     <dd class={company.fiscal_period_end === null ? "null" : ""}>
