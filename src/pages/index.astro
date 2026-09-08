@@ -1,17 +1,273 @@
 ---
+/**
+ * Home (SPEC §8).
+ *
+ * "Avoid a marketing hero with no data in it — for this audience the data *is*
+ * the pitch." So: what this is and where the numbers come from in a few lines,
+ * then real cuts from the current dataset, computed at build time from the same
+ * `screener.json` the screener loads. No island; nothing here is interactive.
+ *
+ * Figures print exactly as the pipeline produced them, unrounded, as everywhere
+ * else on the site. An analyst reading `1.5962199936021528` can see immediately
+ * that nothing has been massaged, which is the whole argument for the thing.
+ */
+import Base from "../layouts/Base.astro";
+import meta from "../data/meta.json";
+import screener from "../data/screener.json";
+import { raw } from "../lib/flags";
 
+type Row = (typeof screener.companies)[number];
+
+interface Cut {
+  title: string;
+  question: string;
+  metric: string;
+  unit: string;
+  direction: "highest" | "lowest";
+  screenerHref: string;
+  /** Why the figure is missing for the companies it is missing for. */
+  absence: string;
+}
+
+const CUTS: Cut[] = [
+  {
+    title: "Shortest cash runway",
+    question: "Who runs out of money first, on current burn?",
+    metric: "cash_runway_quarters",
+    unit: "quarters",
+    direction: "lowest",
+    screenerHref: "/screener/?sort=cash_runway_quarters&dir=asc&preset=cash",
+    absence:
+      "have no runway figure because trailing operating cash flow is positive — that is the absence of a runway, not a short one.",
+  },
+  {
+    title: "Highest R&D intensity",
+    question: "Who spends the most on research relative to what they earn?",
+    metric: "rnd_intensity",
+    unit: "R&D ÷ revenue",
+    direction: "highest",
+    screenerHref: "/screener/?sort=rnd_intensity",
+    absence: "have no figure, because a metric input was suppressed or a window did not align.",
+  },
+  {
+    title: "Highest operating cash flow margin",
+    question: "Who converts revenue into cash most efficiently?",
+    metric: "ocf_margin",
+    unit: "operating cash flow ÷ revenue",
+    direction: "highest",
+    screenerHref: "/screener/?sort=ocf_margin",
+    absence: "have no figure, because a metric input was suppressed or a window did not align.",
+  },
+  {
+    title: "Largest clinical momentum",
+    question: "Whose pipeline is expanding fastest?",
+    metric: "clinical_momentum",
+    unit: "trials started, trailing 12m minus prior 12m",
+    direction: "highest",
+    screenerHref: "/screener/?sort=clinical_momentum&preset=pipeline",
+    absence: "have no figure.",
+  },
+];
+
+function value(row: Row, metric: string): number | null {
+  const raw = (row as any)[metric];
+  if (raw && typeof raw === "object") return raw.value ?? null;
+  return typeof raw === "number" ? raw : null;
+}
+
+/** Rank the companies that have a figure. A suppressed value is never ranked. */
+function rank(metric: string, direction: "highest" | "lowest") {
+  const scored = screener.companies
+    .map((c) => ({ company: c, v: value(c, metric) }))
+    .filter((x): x is { company: Row; v: number } => x.v !== null);
+  scored.sort((a, b) => (direction === "highest" ? b.v - a.v : a.v - b.v));
+  return { top: scored.slice(0, 3), counted: scored.length };
+}
+
+const cuts = CUTS.map((cut) => ({ ...cut, ...rank(cut.metric, cut.direction) }));
+
+const total = screener.companies.length;
+
+/**
+ * The share of figures that are null or suppressed, counted rather than
+ * asserted. Hardcoding "roughly a fifth" would be a confident unverified claim
+ * on the one page arguing this site does not make those.
+ */
+const METRIC_KEYS = Object.entries(screener.companies[0])
+  .filter(([, v]) => v && typeof v === "object" && "suppressed_by" in (v as object))
+  .map(([k]) => k);
+const FIGURE_KEYS = [
+  "revenue_ttm", "rnd_ttm", "ocf_ttm", "operating_income_ttm",
+  "net_income_ttm", "cash", "active_trials", "phase_3_trials",
+];
+let cellsTotal = 0;
+let cellsMissing = 0;
+for (const company of screener.companies) {
+  for (const key of METRIC_KEYS) {
+    cellsTotal += 1;
+    if (((company as any)[key]?.value ?? null) === null) cellsMissing += 1;
+  }
+  for (const key of FIGURE_KEYS) {
+    cellsTotal += 1;
+    if (((company as any)[key] ?? null) === null) cellsMissing += 1;
+  }
+}
+const missingShare = Math.round((cellsMissing / cellsTotal) * 100);
+const trials = meta.sources.clinicaltrials?.studies_indexed ?? null;
+const subsectors = [...new Set(screener.companies.map((c) => c.subsector))].sort();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Healthcare equity screener">
+  <h1>Healthcare equity screener</h1>
+
+  <p>
+    A screener for US-listed healthcare companies built on two public sources: financial
+    fundamentals from SEC EDGAR, and clinical-pipeline data from ClinicalTrials.gov. It combines
+    them into metrics that generic screeners do not show — cash runway, R&D intensity, pipeline
+    depth and concentration — and publishes how every one of them is calculated.
+  </p>
+  <p>
+    Every figure is printed exactly as filed, unrounded. Where a figure cannot be established
+    honestly it reads <strong>null</strong>, which is not zero, or <strong>n/m</strong>, which
+    means the arithmetic is valid but the answer describes nothing useful.{" "}
+    {missingShare}% of the {cellsTotal} figures behind the screener are one of those two, and that
+    is the point rather than a gap: the <a href="/methodology/">methodology page</a> gives the
+    reason for each.
+  </p>
+
+  <dl class="meta">
+    <dt>Coverage</dt>
+    <dd>{total} companies across {subsectors.length} subsectors, anchored on vaccines and infectious disease</dd>
+    <dt>Fundamentals</dt>
+    <dd>SEC EDGAR XBRL company facts · {meta.sources.edgar.companies_ok} of {meta.universe_size} filers</dd>
+    <dt>Clinical</dt>
+    <dd>
+      ClinicalTrials.gov {trials !== null ? `· ${trials} interventional studies indexed` : ""}
+      {meta.sources.clinicaltrials?.as_of ? ` · registry as of ${meta.sources.clinicaltrials.as_of}` : ""}
+    </dd>
+    <dt>Data as of</dt><dd>{meta.generated_at}</dd>
+    <dt>Pipeline version</dt><dd>{meta.pipeline_version}</dd>
+  </dl>
+
+  <h2>Cuts from the current dataset</h2>
+  <p class="muted">
+    Computed from the same data the screener loads. Companies whose figure is suppressed are not
+    ranked — a suppressed value is not a low one.
+  </p>
+
+  <div class="cuts">
+    {cuts.map((cut) => (
+      <section class="cut">
+        <h3>{cut.title}</h3>
+        <p class="cut-question">{cut.question}</p>
+        <table>
+          <caption class="visually-hidden">
+            {cut.title}, {cut.direction} first, measured in {cut.unit}.
+          </caption>
+          <thead>
+            <tr><th>Company</th><th class="num">{cut.unit}</th></tr>
+          </thead>
+          <tbody>
+            {cut.top.map(({ company, v }) => (
+              <tr>
+                <td>
+                  <a href={`/companies/${company.ticker}/`}>{company.ticker}</a>
+                  <span class="muted"> {company.name}</span>
+                </td>
+                <td class="num">{raw(v)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="cut-note">
+          Ranked across the {cut.counted} of {total} companies with a figure.
+          {cut.counted < total && (
+            <>
+              {" "}The other {total - cut.counted}{" "}
+              {total - cut.counted === 1 ? "has no figure" : cut.absence}
+              {total - cut.counted === 1 ? "." : ""}
+            </>
+          )}{" "}
+          <a href={cut.screenerHref}>See all {total} in the screener →</a>
+        </p>
+      </section>
+    ))}
+  </div>
+
+  <h2>Where to go</h2>
+  <ul>
+    <li>
+      <a href="/screener/">Screener</a> — filter and sort all {total} companies on fundamentals,
+      cash and pipeline. Filter state is in the URL, so a screen can be shared.
+    </li>
+    <li>
+      <a href="/companies/">Company pages</a> — quarterly and annual figures, trend charts,
+      clinical pipeline, and every data-quality flag on the record, with links to the underlying
+      SEC filings.
+    </li>
+    <li>
+      <a href="/methodology/">Methodology</a> — every formula, its limitations, and what is
+      deliberately not covered.
+    </li>
+  </ul>
+
+  <h2>What this does not cover</h2>
+  <p>
+    No prices, market caps or valuation multiples: the free price feeds that would supply them
+    restrict public redisplay, and every metric here is computable without them. No IFRS filers —
+    GSK, AstraZeneca, Sanofi and BioNTech are excluded, because IAS 38 capitalises qualifying
+    development costs where US GAAP expenses them, so R&D intensity and cash runway would not mean
+    the same thing across the two. No recommendations, ratings or price targets, and none are
+    planned.
+  </p>
+
+  <style>
+    .cuts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 0 2rem;
+    }
+
+    .cut {
+      border-top: 1px solid var(--rule);
+      padding-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      min-width: 0;
+    }
+
+    .cut h3 {
+      margin: 0.25rem 0 0.1rem;
+    }
+
+    .cut-question {
+      color: var(--ink-muted);
+      font-size: 13px;
+      margin: 0 0 0.5rem;
+      max-width: none;
+    }
+
+    .cut-note {
+      color: var(--ink-muted);
+      font-size: 12px;
+      margin: 0;
+      max-width: none;
+    }
+
+    .cut table {
+      margin: 0 0 0.5rem;
+    }
+
+    .cut td,
+    .cut th {
+      padding: 0.3rem 0.4rem;
+    }
+
+    ul {
+      max-width: 42rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</Base>
