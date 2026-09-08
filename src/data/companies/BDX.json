@@ -120,9 +120,11 @@
  "phase_3_trials": 0,
  "pipeline_depth_score": {
   "name": "pipeline_depth_score",
-  "value": 0.0,
-  "suppressed": false,
-  "suppressed_by": [],
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "phase_not_applicable"
+  ],
   "flags": [],
   "period_ends": []
  },

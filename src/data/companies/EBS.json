@@ -119,9 +119,11 @@
  },
  "pipeline_concentration": {
   "name": "pipeline_concentration",
-  "value": 0.5,
-  "suppressed": false,
-  "suppressed_by": [],
+  "value": null,
+  "suppressed": true,
+  "suppressed_by": [
+   "too_few_active_trials"
+  ],
   "flags": [],
   "period_ends": []
  },

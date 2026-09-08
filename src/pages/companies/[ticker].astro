@@ -8,6 +8,7 @@
  * not exist must not look like a zero.
  */
 import Base from "../../layouts/Base.astro";
+import QuarterlyCharts from "../../components/charts/QuarterlyCharts.tsx";
 import meta from "../../data/meta.json";
 import {
   describeFlag,
@@ -46,6 +47,11 @@ const flags: QualityRecord[] = [...company.data_quality].sort(
 );
 
 const conceptEntries = Object.entries(company.concepts) as [string, any][];
+// Phases are a drug-development construct; device studies are pivotal or
+// feasibility instead, so the phase chart is suppressed rather than drawn empty.
+const PHASELESS_SUBSECTORS = ["medtech", "diagnostics"];
+const phasesApplicable = !PHASELESS_SUBSECTORS.includes(company.subsector);
+
 const activeTrials = (company.active_trials_detail ?? []).slice().sort(
   (a: any, b: any) => (b.start_date ?? "").localeCompare(a.start_date ?? ""),
 );
@@ -102,6 +108,18 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
       </tr>
     </tbody>
   </table>
+
+  <h2>Charts</h2>
+  <QuarterlyCharts
+    client:load
+    ticker={company.ticker}
+    quarters={company.quarterly.slice(-QUARTERS_SHOWN)}
+    concepts={company.concepts}
+    asOf={meta.generated_at}
+    byPhase={company.pipeline?.by_phase ?? null}
+    phasesApplicable={phasesApplicable && company.pipeline !== null}
+    pipelineAsOf={company.pipeline?.as_of ?? null}
+  />
 
   <h2>Quarterly</h2>
   <table>
@@ -224,28 +242,48 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
         {company.pipeline.sponsors.map((s: string) => <code>{s}</code>).reduce((a: any, b: any) => [a, ", ", b])}.
       </p>
 
-      <table>
-        <caption>Active trials by phase. A trial declaring several phases counts once, at its highest.</caption>
-        <thead>
-          <tr><th>Phase</th><th class="num">Active trials</th></tr>
-        </thead>
-        <tbody>
-          {[["phase_1","Phase 1"],["phase_2","Phase 2"],["phase_3","Phase 3"],["phase_4","Phase 4"],["not_applicable","Not applicable"]].map(([key,label]) => (
+      {phasesApplicable ? (
+        <table>
+          <caption>Active trials by phase. A trial declaring several phases counts once, at its highest.</caption>
+          <thead>
+            <tr><th>Phase</th><th class="num">Active trials</th></tr>
+          </thead>
+          <tbody>
+            {[["phase_1","Phase 1"],["phase_2","Phase 2"],["phase_3","Phase 3"],["phase_4","Phase 4"],["not_applicable","No phase recorded"]].map(([key,label]) => (
+              <tr>
+                <td>{label}</td>
+                <td class="num">{raw(company.pipeline.by_phase[key] ?? 0)}</td>
+              </tr>
+            ))}
             <tr>
-              <td>{label}</td>
-              <td class="num">{raw(company.pipeline.by_phase[key] ?? 0)}</td>
+              <td><strong>Total active</strong></td>
+              <td class="num"><strong>{raw(company.pipeline.active_trials_total)}</strong></td>
             </tr>
-          ))}
-          <tr>
-            <td><strong>Total active</strong></td>
-            <td class="num"><strong>{raw(company.pipeline.active_trials_total)}</strong></td>
-          </tr>
-          <tr>
-            <td class="muted">All trials, all time</td>
-            <td class="num muted">{raw(company.pipeline.total_trials)}</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td class="muted">All trials, all time</td>
+              <td class="num muted">{raw(company.pipeline.total_trials)}</td>
+            </tr>
+          </tbody>
+        </table>
+      ) : (
+        <>
+          <p>
+            <strong>Phase is not recorded for this company's trials.</strong> Clinical phases are a
+            drug-development construct; device and diagnostic studies are pivotal, feasibility or
+            post-market instead. A phase breakdown here would read as a row of zeros, which would
+            say this company has no pipeline — it does, and the count below is it. The depth score
+            and the phase chart are suppressed for the same reason rather than reported as zero.
+          </p>
+          <table>
+            <caption>Trial counts. Phase distribution is not applicable to this subsector.</caption>
+            <thead><tr><th>Measure</th><th class="num">Trials</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Total active</strong></td><td class="num"><strong>{raw(company.pipeline.active_trials_total)}</strong></td></tr>
+              <tr><td class="muted">All trials, all time</td><td class="num muted">{raw(company.pipeline.total_trials)}</td></tr>
+            </tbody>
+          </table>
+        </>
+      )}
 
       <table>
         <caption>Pipeline metrics. Weights and thresholds are on the <a href="/methodology/">methodology page</a>.</caption>

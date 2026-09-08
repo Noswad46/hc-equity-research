@@ -25,6 +25,7 @@ from sources.clinicaltrials import (
 from sources.edgar import load_universe
 from transform.clinical import (
     ACTIVE_STATUSES,
+    PHASELESS_SUBSECTORS,
     DEPTH_WEIGHTS,
     DISCONTINUATION_MIN_TRIALS,
     clinical_momentum,
@@ -266,9 +267,58 @@ def test_concentration_falls_as_areas_spread():
 
 def test_a_multi_condition_trial_is_split_not_multiplied():
     """One broad trial must not count as several narrow ones."""
-    one_broad = pipeline_concentration([study("N", conditions=("A", "B", "C", "D"))])
+    broad = [study(f"N{i}", conditions=("A", "B", "C", "D")) for i in range(3)]
 
-    assert one_broad.value == pytest.approx(0.25)
+    assert pipeline_concentration(broad).value == pytest.approx(0.25)
+
+
+def test_concentration_is_null_on_too_few_active_trials():
+    """Novavax has one active trial; a distribution across it describes nothing."""
+    result = pipeline_concentration([study("N1")])
+
+    assert result.value is None
+    assert result.suppressed_by == ("too_few_active_trials",)
+
+
+def test_depth_score_is_null_for_subsectors_without_phases():
+    """Device studies are pivotal or feasibility, not phased. Zero would read as
+    "no pipeline", which is false for Becton Dickinson."""
+    studies = [study(f"N{i}", phases=()) for i in range(10)]
+    summary = summarise(studies, as_of=AS_OF)
+
+    for subsector in PHASELESS_SUBSECTORS:
+        result = pipeline_depth_score(summary, subsector)
+        assert result.value is None, subsector
+        assert result.suppressed_by == ("phase_not_applicable",)
+
+
+def test_depth_score_still_scores_drug_subsectors():
+    summary = summarise([study("N", phases=("PHASE3",))], as_of=AS_OF)
+
+    assert pipeline_depth_score(summary, "large_cap_pharma").value == 8
+
+
+def test_rnd_per_late_stage_is_null_on_a_thin_denominator():
+    """The count stays visible; the ratio built on it does not."""
+    from transform.clinical import rnd_per_late_stage_programme
+    from transform.fundamentals import quarterly_series
+
+    rnd_doc = {
+        "facts": {"us-gaap": {"ResearchAndDevelopmentExpense": {"units": {"USD": [
+            {"start": f"2026-{s}", "end": f"2026-{e}", "val": 100_000_000, "form": "10-Q",
+             "accn": f"a{i}", "filed": "2027-02-01"}
+            for i, (s, e) in enumerate(
+                [("01-01", "03-31"), ("04-01", "06-30"), ("07-01", "09-30"), ("10-01", "12-31")]
+            )
+        ]}}}}
+    }
+    rnd = quarterly_series(rnd_doc, "rnd")
+    thin = summarise([study("N1", phases=("PHASE3",))], as_of=dt.date(2026, 12, 31))
+    result = rnd_per_late_stage_programme(rnd, thin)
+
+    assert thin.active_late_stage == 1  # the count is still real and reported
+    assert result.value is None
+    assert result.suppressed_by == ("too_few_late_stage_trials",)
 
 
 def test_momentum_is_the_difference_between_two_years():

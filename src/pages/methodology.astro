@@ -143,8 +143,11 @@ const growthFloor = meta.thresholds.growth_floor_usd;
         <td>1×Phase 1 + 3×Phase 2 + 8×Phase 3 + 12×Phase 4, active trials only</td>
         <td>
           A transparent heuristic, not a proprietary model. The weights rise steeply because a
-          Phase 3 represents far more committed capital than a Phase 1. Zero for companies whose
-          trials carry no phase, which is normal for device studies.
+          Phase 3 represents far more committed capital than a Phase 1. <strong>Null for medtech
+          and diagnostics</strong>: phases are a drug-development construct, and device studies are
+          pivotal, feasibility or post-market instead. A zero there would say "no pipeline", which
+          is false; null says "not applicable", which is true. No parallel medtech heuristic is
+          offered, because inventing one would put a different metric under the same heading.
         </td>
       </tr>
       <tr>
@@ -153,7 +156,8 @@ const growthFloor = meta.thresholds.growth_floor_usd;
         <td>
           1.0 means every active trial addresses one condition — single-asset risk. A trial listing
           several conditions contributes a fraction to each, so one broad trial is not counted as
-          several narrow ones.
+          several narrow ones. Null below three active trials: the counts stay visible, but any
+          figure distributed across one or two of them describes the denominator, not the company.
         </td>
       </tr>
       <tr>
@@ -176,10 +180,14 @@ const growthFloor = meta.thresholds.growth_floor_usd;
         <td>R&D per late-stage programme</td>
         <td>R&D TTM ÷ count of active Phase 2 and 3 trials</td>
         <td>
-          Crude, and comparable only within a subsector. This is the one metric spanning both data
-          sources: the R&D figure ends on a fiscal quarter end while the trial count is whatever the
-          registry said at fetch time, so the two were never true at the same instant. Where that
-          gap exceeds a quarter the value is flagged.
+          <strong>Shown on company pages only, not in the screener.</strong> Trial count is a weak
+          proxy for programme count: one Phase 3 run across four indications registers as four
+          trials, while a basket trial across the same four registers as one. The denominator
+          therefore tracks registry practice rather than how R&D is actually allocated, which makes
+          the metric defensible within a subsector and not across one — so it is kept off a screen
+          people would rank on. It also spans both data sources: the R&D figure ends on a fiscal
+          quarter end while the trial count is whatever the registry said at fetch time, so the two
+          were never true at the same instant. Where that gap exceeds a quarter the value is flagged.
         </td>
       </tr>
     </tbody>

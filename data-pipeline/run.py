@@ -393,7 +393,9 @@ def company_document(
         )
         pipeline_metrics = {
             name: result.to_dict()
-            for name, result in all_pipeline_metrics(studies, pipeline, quarterly.get("rnd")).items()
+            for name, result in all_pipeline_metrics(
+                studies, pipeline, quarterly.get("rnd"), company.subsector
+            ).items()
         }
 
     document = screener_record(

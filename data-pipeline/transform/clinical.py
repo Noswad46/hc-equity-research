@@ -28,6 +28,8 @@ from sources.clinicaltrials import Study
 from transform.fundamentals import MetricResult, PeriodValue, QuarterlySeries, guard_metric
 
 __all__ = [
+    "MIN_TRIALS_FOR_RATIO",
+    "PHASELESS_SUBSECTORS",
     "is_active",
     "ACTIVE_STATUSES",
     "DEPTH_WEIGHTS",
@@ -64,6 +66,21 @@ DEPTH_WEIGHTS: Mapping[str, int] = {"PHASE1": 1, "PHASE2": 3, "PHASE3": 8, "PHAS
 
 #: SPEC §6: a discontinuation rate over a handful of trials is noise.
 DISCONTINUATION_MIN_TRIALS = 10
+
+#: The same reasoning applied to every other metric that divides by, or
+#: distributes across, a trial count. Novavax has one active trial and Emergent
+#: two; those counts are real and stay visible, but a ratio built on them
+#: produces a large number that describes the denominator rather than the
+#: company. Below this, such metrics are null.
+MIN_TRIALS_FOR_RATIO = 3
+
+#: Subsectors where the phase construct does not apply. Phases are a
+#: drug-development concept; device studies are pivotal, feasibility or
+#: post-market instead. A depth score of zero for Becton Dickinson would say
+#: "no pipeline", which is false. Null says "not applicable", which is true.
+#: Deliberately no parallel medtech heuristic — inventing one would be a
+#: different metric wearing the same column heading.
+PHASELESS_SUBSECTORS = frozenset({"medtech", "diagnostics"})
 
 #: Late stage, for R&D per programme.
 LATE_STAGE = frozenset({"PHASE2", "PHASE3"})
@@ -206,8 +223,15 @@ def summarise(
 # --------------------------------------------------------------------------- #
 
 
-def pipeline_depth_score(pipeline: Pipeline) -> MetricResult:
-    """`1×Ph1 + 3×Ph2 + 8×Ph3 + 12×Ph4`, active trials only."""
+def pipeline_depth_score(pipeline: Pipeline, subsector: str = "") -> MetricResult:
+    """`1×Ph1 + 3×Ph2 + 8×Ph3 + 12×Ph4`, active trials only.
+
+    Null rather than zero for subsectors whose trials carry no phase.
+    """
+    if subsector in PHASELESS_SUBSECTORS:
+        return MetricResult(
+            name="pipeline_depth_score", value=None, suppressed_by=("phase_not_applicable",)
+        )
     weighted = (
         DEPTH_WEIGHTS["PHASE1"] * pipeline.by_phase.get("phase_1", 0)
         + DEPTH_WEIGHTS["PHASE2"] * pipeline.by_phase.get("phase_2", 0)
@@ -229,6 +253,10 @@ def pipeline_concentration(studies: Sequence[Study]) -> MetricResult:
     of itself to each, so a broad trial does not count as several narrow ones.
     """
     active = [s for s in studies if is_active(s)]
+    if len(active) < MIN_TRIALS_FOR_RATIO:
+        return MetricResult(
+            name="pipeline_concentration", value=None, suppressed_by=("too_few_active_trials",)
+        )
     weights: Counter[str] = Counter()
     for study in active:
         if not study.conditions:
@@ -311,6 +339,13 @@ def rnd_per_late_stage_programme(
             inputs=(spend,),
             suppressed_by=("no_active_late_stage_trials",),
         )
+    if pipeline.active_late_stage < MIN_TRIALS_FOR_RATIO:
+        return MetricResult(
+            name="rnd_per_late_stage_programme",
+            value=None,
+            inputs=(spend,),
+            suppressed_by=("too_few_late_stage_trials",),
+        )
 
     gap = abs((pipeline.as_of - spend.end).days)
     extra = (FLAG_SOURCE_DATE_GAP,) if gap > SOURCE_GAP_TOLERANCE_DAYS else ()
@@ -324,10 +359,13 @@ def rnd_per_late_stage_programme(
 
 
 def all_pipeline_metrics(
-    studies: Sequence[Study], pipeline: Pipeline, rnd: QuarterlySeries | None
+    studies: Sequence[Study],
+    pipeline: Pipeline,
+    rnd: QuarterlySeries | None,
+    subsector: str = "",
 ) -> dict[str, MetricResult]:
     metrics = {
-        "pipeline_depth_score": pipeline_depth_score(pipeline),
+        "pipeline_depth_score": pipeline_depth_score(pipeline, subsector),
         "pipeline_concentration": pipeline_concentration(studies),
         "clinical_momentum": clinical_momentum(pipeline),
         "discontinuation_rate": discontinuation_rate(pipeline),

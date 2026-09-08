@@ -79,7 +79,12 @@ const PRESETS: { id: string; label: string; columns: Column[] }[] = [
       { key: "pipeline_concentration", label: "Concentration", numeric: true, note: "HHI" },
       { key: "clinical_momentum", label: "Momentum", numeric: true, note: "trials" },
       { key: "discontinuation_rate", label: "Discontinuation", numeric: true, note: "fraction" },
-      { key: "rnd_per_late_stage_programme", label: "R&D per late-stage", numeric: true, note: "USD" },
+      // R&D per late-stage programme is deliberately not here. Trial count is a
+      // weak proxy for programme count: one Phase 3 run across four indications
+      // registers as four trials, while a basket trial across four registers as
+      // one. The denominator tracks registry practice rather than R&D
+      // allocation, so the metric is defensible within a subsector and not
+      // across one. It stays on the company page, where that context is present.
     ],
   },
 ];

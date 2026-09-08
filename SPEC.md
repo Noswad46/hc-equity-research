@@ -121,7 +121,18 @@ Reasonable v1 shape: a vaccines and infectious-disease core, plus a comparison s
 
 **Subsector enum:** `large_cap_pharma`, `commercial_biotech`, `clinical_stage_biotech`, `vaccines_infectious_disease`, `medtech`, `diagnostics`, `life_science_tools`, `payer`, `provider`, `hcit`, `distributor`.
 
-**Critical gotcha:** sponsor and applicant names in ClinicalTrials.gov and openFDA do not match tickers or SEC registrant names, and subsidiaries file under their own names (acquisitions are the worst case — trials stay under the acquired entity's name for years). These mappings must be curated by hand in `universe.yaml` and reviewed whenever a name is added. Do not attempt fuzzy matching; it produces silent, plausible-looking errors.
+**Critical gotcha:** sponsor and applicant names in ClinicalTrials.gov and openFDA do not match tickers or SEC registrant names, and subsidiaries file under their own names. These mappings must be curated by hand in `universe.yaml` and reviewed whenever a name is added. Do not attempt fuzzy matching; it produces silent, plausible-looking errors. Use `data-pipeline/scripts/enumerate_sponsors.py` to discover candidates, and confirm them by hand.
+
+**Acquisitions and divestitures are not symmetric.** This is the single most useful thing to know when adding tickers, and it is the opposite of what the sentence above originally assumed:
+
+- **Acquisitions self-resolve.** ClinicalTrials.gov rewrites lead-sponsor records *retroactively*. Immunomedics' trials, including IMMU-132-01 started in 2012, now carry `Gilead Sciences` — eight years of history reassigned to the acquirer. This matches how the financials consolidate an acquisition, so no perimeter work is needed. It also means a query on an acquired company's name legitimately returns nothing, and that absence is not a tokenisation gap.
+- **Divestitures need explicit exclusion.** Trials move to the divested entity's own name (`Organon and Co`, `Pfizer's Upjohn has merged with Mylan to form Viatris Inc.`), while the *pre-divestiture* history moves with them. SEC filings behave differently: the financials are restated to exclude the divested business, but the original filer keeps filing. Left alone, the clinical and financial histories therefore sit on different corporate perimeters and every cross-source metric compares a broad trial base against a narrow revenue base.
+
+**Governing rule: the clinical perimeter matches the financial reporting perimeter.** Where a business has been divested, exclude its trials for all years, including those before the divestiture. Pre-divestiture clinical history shrinks as a result; a truncated series that matches the financials beats a complete one that does not. Use the `ct_sponsor_exclusions` field.
+
+**Two companies may share a name.** Merck & Co (MRK) and Merck KGaA of Darmstadt are unrelated listed companies; outside North America the branding is reversed. Exclusions must be asserted, not filtered — contaminating one company's pipeline with a competitor's is the most damaging error available here.
+
+**Names are matched whole-field.** ClinicalTrials.gov tokenises, so `query.spons=Moderna` returns one unrelated study while the real lead sponsor is `ModernaTX, Inc.`. A company can be invisible to a query on its own name, and a zero result must fail loudly rather than be reported as "no trials".
 
 ---
 
