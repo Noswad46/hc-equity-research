@@ -1,21 +1,25 @@
 {
- "generated_at": "2026-09-08T23:09:59Z",
+ "generated_at": "2026-09-10T00:40:28Z",
  "universe_size": 58,
  "sources": {
   "edgar": {
-   "fetched_at": "2026-09-08T23:09:59Z",
+   "fetched_at": "2026-09-10T00:40:28Z",
    "companies_ok": 58,
-   "companies_failed": []
+   "companies_failed": [],
+   "companies_carried_stale": [],
+   "companies_dropped": []
   },
   "clinicaltrials": {
-   "fetched_at": "2026-09-08T23:09:59Z",
+   "fetched_at": "2026-09-10T00:40:28Z",
    "studies_indexed": 15759,
-   "as_of": "2026-09-08"
+   "as_of": "2026-09-10"
   },
   "openfda": null
  },
  "pipeline_version": "1.0.0",
  "thresholds": {
-  "growth_floor_usd": 50000000.0
+  "growth_floor_usd": 50000000.0,
+  "max_stale_runs": 4,
+  "alert_failure_share": 0.1
  }
 }

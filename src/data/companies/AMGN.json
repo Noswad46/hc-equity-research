@@ -124,7 +124,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": -4.0,
+  "value": -2.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -7797,7 +7797,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Amgen",
    "Amgen Research (Munich) GmbH",
@@ -7953,7 +7953,7 @@
    }
   ],
   "started_ttm": 24,
-  "started_prior_ttm": 28,
+  "started_prior_ttm": 26,
   "discontinued_all_time": 116,
   "completed_all_time": 617,
   "active_late_stage": 59
@@ -9545,5 +9545,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07778316"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

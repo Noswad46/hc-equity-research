@@ -8440,7 +8440,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "PPD Development, LP"
   ],
@@ -8608,5 +8608,6 @@
    "url": "https://clinicaltrials.gov/study/NCT06703073"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

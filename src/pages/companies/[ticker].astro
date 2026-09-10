@@ -13,6 +13,8 @@ import meta from "../../data/meta.json";
 import {
   describeFlag,
   describeReason,
+  describeStale,
+  staleOf,
   severityOf,
   SEVERITY_ORDER,
   conceptLabel,
@@ -58,6 +60,12 @@ const phasesApplicable = !PHASELESS_SUBSECTORS.includes(company.subsector);
 const activeTrials = (company.active_trials_detail ?? []).slice().sort(
   (a: any, b: any) => (b.start_date ?? "").localeCompare(a.start_date ?? ""),
 );
+
+// Set when the last refresh for this company failed and the previous record was
+// carried forward. Every figure below then predates the site's as-of date, so
+// the page must date itself from the run that produced them.
+const stale = staleOf(company);
+const figuresAsOf = stale?.last_success_at ?? meta.generated_at;
 ---
 
 <Base title={`${company.ticker} — ${company.name}`}>
@@ -65,6 +73,12 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
 
   <h1>{company.name}</h1>
   <p class="muted">{company.ticker} · {company.subsector}</p>
+
+  {stale && (
+    <p class="stale-banner" role="status">
+      <strong>These figures are not current.</strong> {describeStale(stale)}
+    </p>
+  )}
 
   <dl class="meta">
     <dt>Ticker</dt><dd>{company.ticker}</dd>
@@ -77,7 +91,10 @@ const activeTrials = (company.active_trials_detail ?? []).slice().sort(
     <dd class={company.fiscal_period_end === null ? "null" : ""}>
       {raw(company.fiscal_period_end)}
     </dd>
-    <dt>Data as of</dt><dd>{meta.generated_at}</dd>
+    <dt>Data as of</dt>
+    <dd class={stale ? "null" : undefined}>
+      {figuresAsOf}{stale ? ` (site refreshed ${meta.generated_at}; this company was not)` : ""}
+    </dd>
     <dt>Taxonomies</dt><dd>{company.taxonomies.join(", ")}</dd>
   </dl>
 

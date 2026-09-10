@@ -51,6 +51,23 @@ log = logging.getLogger("run")
 
 PIPELINE_VERSION = "1.0.0"
 
+#: How many consecutive failed refreshes a company may be carried through on its
+#: last good figures before it is dropped from the site altogether.
+#:
+#: Carrying a stale row forward is the right answer to one bad fetch. Carrying it
+#: forever is a different failure, and a worse one: at the weekly cadence in
+#: SPEC §10 this is about a month, after which a company that still will not
+#: fetch is broken rather than briefly unavailable. Month-old figures sitting
+#: under a current as-of date are exactly the stale-but-plausible output the
+#: staleness guard on tag series exists to prevent, so past this bound the
+#: company is reported missing instead.
+MAX_STALE_RUNS = 4
+
+#: Share of the universe that may fail before the run is worth waking someone
+#: for. Alerting only. SPEC §10's rule is that the run still writes what it has,
+#: and the workflow commits whatever landed regardless of this number.
+ALERT_FAILURE_SHARE = 0.1
+
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent
 DEFAULT_UNIVERSE = HERE / "universe.yaml"
@@ -449,6 +466,10 @@ def company_document(
                 [s.to_dict() for s in studies if is_active(s)] if studies is not None else None
             ),
             "regulatory": None,
+            # Null on every document this function produces: a company that was
+            # just fetched is by definition not stale. `run` stamps a block here
+            # on the files it carries forward instead of rewriting.
+            "stale": None,
         }
     )
     return document
@@ -464,6 +485,75 @@ def write_json(path: Path, payload: Any) -> int:
     text = json.dumps(payload, indent=1, sort_keys=False, ensure_ascii=False) + "\n"
     path.write_text(text, encoding="utf-8")
     return len(text.encode("utf-8"))
+
+
+# --------------------------------------------------------------------------- #
+# Carrying a failed company forward
+# --------------------------------------------------------------------------- #
+
+
+def _previous_state(out_dir: Path) -> tuple[dict[str, dict[str, Any]], str | None]:
+    """The screener rows currently on disk, by ticker, and when they were written.
+
+    Read before anything in this run is written, so it is the state the site is
+    actually serving rather than the half-finished state this run is producing.
+    A missing or unreadable file is not an error: it means there is nothing to
+    carry forward, which is the correct answer on a first run.
+    """
+    path = out_dir / "screener.json"
+    if not path.exists():
+        return {}, None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        log.warning("previous screener.json unreadable (%s); nothing to carry forward", exc)
+        return {}, None
+    rows = {row["ticker"]: row for row in payload.get("companies", []) if "ticker" in row}
+    return rows, payload.get("generated_at")
+
+
+def _aged(previous: Mapping[str, Any], *, reason: str, last_good: str | None) -> dict[str, Any] | None:
+    """Age a company's last good row by one failed run, or give up on it.
+
+    Returns the row to re-emit with its `stale` block advanced, or `None` once
+    it has been carried `MAX_STALE_RUNS` times and should be dropped instead.
+    """
+    was = previous.get("stale") or {}
+    consecutive = int(was.get("consecutive_failures", 0)) + 1
+    if consecutive > MAX_STALE_RUNS:
+        return None
+
+    row = dict(previous)
+    row["stale"] = {
+        # Set on the first failure and preserved through the rest, so it keeps
+        # naming the run that last actually fetched this company rather than
+        # creeping forward one week at a time.
+        "last_success_at": was.get("last_success_at") or last_good,
+        "consecutive_failures": consecutive,
+        "limit": MAX_STALE_RUNS,
+        "error": reason,
+    }
+    return row
+
+
+def _mark_stale(path: Path, stale: Mapping[str, Any]) -> bool:
+    """Stamp the stale block onto a company file this run did not rewrite.
+
+    The figures inside stay exactly as the last good run produced them; only the
+    marker changes, so the page can say how old they are instead of presenting
+    them under the current as-of date. Returns False when there is no file to
+    mark, in which case the screener row would link to a page that is not there.
+    """
+    if not path.exists():
+        return False
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        log.warning("%s unreadable (%s); not carried forward", path.name, exc)
+        return False
+    document["stale"] = dict(stale)
+    write_json(path, document)
+    return True
 
 
 def run(
@@ -483,18 +573,79 @@ def run(
     trials_as_of = now.date()
 
     generated_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    previous_rows, previous_generated_at = _previous_state(out_dir)
+
     screener: list[dict[str, Any]] = []
     failed: list[dict[str, str]] = []
+    carried: list[dict[str, Any]] = []
+    dropped: list[dict[str, Any]] = []
+    fetched = 0
     studies_indexed = 0
 
     companies_dir = out_dir / "companies"
     companies_dir.mkdir(parents=True, exist_ok=True)
 
+    def handle_failure(company: Company, reason: str) -> None:
+        """SPEC §10: one company failing must not fail the run — and must not
+        quietly remove the company from the site either.
+
+        The last good row is re-emitted with a stale marker for up to
+        `MAX_STALE_RUNS` refreshes. Past that, or with nothing good to fall back
+        on, the company is dropped and its page removed, so the site says
+        "missing" rather than showing month-old figures as current.
+        """
+        failed.append({"ticker": company.ticker, "cik": company.cik, "error": reason})
+        document_path = companies_dir / f"{company.ticker}.json"
+        previous = previous_rows.get(company.ticker)
+
+        row = (
+            _aged(previous, reason=reason, last_good=previous_generated_at)
+            if previous is not None
+            else None
+        )
+        if row is not None and not _mark_stale(document_path, row["stale"]):
+            # A row with no page behind it is worse than no row.
+            row = None
+
+        if row is None:
+            why = (
+                "no previous record"
+                if previous is None
+                else f"stale for more than {MAX_STALE_RUNS} refreshes"
+            )
+            dropped.append(
+                {
+                    "ticker": company.ticker,
+                    "cik": company.cik,
+                    "error": reason,
+                    "dropped_because": why,
+                }
+            )
+            document_path.unlink(missing_ok=True)
+            log.warning("%-6s dropped (%s): %s", company.ticker, why, reason)
+            return
+
+        stale = row["stale"]
+        screener.append(row)
+        carried.append(
+            {
+                "ticker": company.ticker,
+                "last_success_at": stale["last_success_at"],
+                "consecutive_failures": stale["consecutive_failures"],
+            }
+        )
+        log.warning(
+            "%-6s stale %d/%d, figures from %s: %s",
+            company.ticker,
+            stale["consecutive_failures"],
+            MAX_STALE_RUNS,
+            stale["last_success_at"],
+            reason,
+        )
+
     for company, facts, error in client.iter_companyfacts(companies, refresh=refresh):
         if error is not None or facts is None:
-            # SPEC §10: a failure on one company must not fail the run.
-            failed.append({"ticker": company.ticker, "cik": company.cik, "error": str(error)})
-            log.warning("%s failed: %s", company.ticker, error)
+            handle_failure(company, str(error))
             continue
 
         try:
@@ -510,10 +661,10 @@ def run(
             # covers a source being down; it does not cover a silent zero.
             raise
         except ClinicalTrialsError as exc:
-            failed.append({"ticker": company.ticker, "cik": company.cik, "error": str(exc)})
-            log.warning("%s clinical fetch failed: %s", company.ticker, exc)
+            handle_failure(company, str(exc))
             continue
 
+        fetched += 1
         document = company_document(
             company, facts, studies=studies, as_of=trials_as_of
         )
@@ -529,6 +680,11 @@ def run(
             document["active_trials"] or 0,
         )
 
+    # Universe order, so a carried-forward row sits where it always sat rather
+    # than migrating to the end of the file and showing up as a spurious diff.
+    order = {company.ticker: i for i, company in enumerate(companies)}
+    screener.sort(key=lambda row: order.get(row["ticker"], len(order)))
+
     write_json(out_dir / "screener.json", {"generated_at": generated_at, "companies": screener})
     write_json(
         out_dir / "meta.json",
@@ -538,8 +694,13 @@ def run(
             "sources": {
                 "edgar": {
                     "fetched_at": generated_at,
-                    "companies_ok": len(screener),
+                    # Freshly fetched this run. Deliberately not the row count:
+                    # the home page reports this as "n of m filers", and a
+                    # carried-forward row is not a filer that was reached.
+                    "companies_ok": fetched,
                     "companies_failed": failed,
+                    "companies_carried_stale": carried,
+                    "companies_dropped": dropped,
                 },
                 "clinicaltrials": {
                     "fetched_at": generated_at,
@@ -549,11 +710,25 @@ def run(
                 "openfda": None,
             },
             "pipeline_version": PIPELINE_VERSION,
-            "thresholds": {"growth_floor_usd": GROWTH_FLOOR},
+            "thresholds": {
+                "growth_floor_usd": GROWTH_FLOOR,
+                "max_stale_runs": MAX_STALE_RUNS,
+                "alert_failure_share": ALERT_FAILURE_SHARE,
+            },
         },
     )
 
-    log.info("wrote %d/%d companies to %s", len(screener), len(companies), out_dir)
+    log.info(
+        "wrote %d rows to %s — %d fetched, %d carried stale, %d dropped",
+        len(screener),
+        out_dir,
+        fetched,
+        len(carried),
+        len(dropped),
+    )
+    # Non-zero marks the run for a human to look at. It does not decide whether
+    # the data is committed: the workflow commits what landed either way, so a
+    # flaky fetch costs visibility, not a week of fresh figures.
     return 1 if failed else 0
 
 
@@ -577,6 +752,9 @@ _SCREENER_KEYS = (
     *PIPELINE_COUNTS,
     *PIPELINE_METRICS,
     "data_quality_flags",
+    # Null on a freshly fetched row; a block naming the last good run on one
+    # carried forward through a failed refresh.
+    "stale",
 )
 
 

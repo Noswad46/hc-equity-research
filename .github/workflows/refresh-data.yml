@@ -1,0 +1,145 @@
+# Weekly data refresh (SPEC §10).
+#
+# Fetches EDGAR and ClinicalTrials.gov, writes `src/data/`, and commits the
+# result. Pushing to `main` is what triggers the Cloudflare Pages build, so this
+# job is the only thing standing between a bad run and the live site — hence the
+# sanity gate before the commit.
+#
+# Three rules shape the step order:
+#
+#   1. A failure fetching one company must not cost the other fifty-seven their
+#      refresh. `run.py` carries a failed company forward on its last good
+#      figures (bounded — see MAX_STALE_RUNS) and keeps going, so the commit is
+#      deliberately not gated on its exit code.
+#   2. The job must still go red, so somebody looks. That happens at the end,
+#      after the good data has landed.
+#   3. Nothing gets committed if the output looks wrong. That *is* a gate, and
+#      it is the only one.
+
+name: Refresh data
+
+on:
+  schedule:
+    # 06:00 UTC each Sunday. Fundamentals move quarterly, so weekly is generous.
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Re-fetch from the APIs. Turn off to do a dry run against the cache."
+        type: boolean
+        default: true
+
+concurrency:
+  # Two refreshes committing to `main` at once would race. Never cancel a run in
+  # progress: it holds a part-written `src/data/`.
+  group: refresh-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # A cold, fully refreshed run is ~1,200 throttled requests; 45 minutes is
+    # roughly double the observed time.
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: data-pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r data-pipeline/requirements.txt
+
+      # The cache holds raw API responses, which `.gitignore` keeps out of the
+      # repo. It exists to make re-runs cheap, NOT to spare the weekly fetch:
+      # `EdgarClient` uses a cached file unconditionally unless `--refresh` is
+      # passed, so a cache keyed only on the universe would serve the first
+      # week's filings forever and the site would silently stop updating.
+      #
+      # The key therefore changes every run and falls back to the most recent
+      # cache for the same universe. Editing `universe.yaml` starts a new
+      # lineage, because the sponsor mappings the CT.gov entries were built from
+      # have changed.
+      - name: Restore API response cache
+        uses: actions/cache@v4
+        with:
+          path: data-pipeline/cache
+          key: api-cache-${{ hashFiles('data-pipeline/universe.yaml') }}-${{ github.run_id }}
+          restore-keys: |
+            api-cache-${{ hashFiles('data-pipeline/universe.yaml') }}-
+
+      - name: Refresh
+        id: refresh
+        # Per-company failures exit non-zero by design. Let the job continue so
+        # the data that did land still gets committed; rule 2 re-fails at the end.
+        continue-on-error: true
+        env:
+          # EDGAR rejects requests without a User-Agent naming a real person and
+          # email. This is the only secret the pipeline needs: openFDA is SPEC §5.3
+          # and M7, and nothing calls it yet, so there is no key to supply.
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        working-directory: data-pipeline
+        run: |
+          if [ -z "$SEC_USER_AGENT" ]; then
+            echo "::error::SEC_USER_AGENT is not set. EDGAR will reject every request."
+            exit 1
+          fi
+          python run.py ${{ (github.event_name != 'workflow_dispatch' || inputs.refresh) && '--refresh' || '' }}
+
+      - name: Sanity check
+        id: sanity
+        if: always()
+        working-directory: data-pipeline
+        # --max-age-hours catches the case the other checks cannot see: a run
+        # that crashed before writing meta.json, leaving some company files
+        # rewritten and the screener they belong to untouched.
+        run: python scripts/sanity_check.py --max-age-hours 6
+
+      - name: Commit refreshed data
+        # Runs whichever way the refresh went, and only if the output passed the
+        # gate. Deciding whether good data is saved on the strength of a failure
+        # count would be solving the wrong problem.
+        if: always() && steps.sanity.outcome == 'success'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # --porcelain rather than `git diff`, so a newly covered company
+          # arriving as an untracked file still counts as a change.
+          if [ -z "$(git status --porcelain -- src/data)" ]; then
+            echo "No change in src/data — nothing to commit."
+            exit 0
+          fi
+
+          # Stages additions, modifications and the deletions left by a company
+          # dropped after repeated failures.
+          git add -A src/data
+          printf 'Weekly data refresh\n\n%s\n' \
+            "$(python data-pipeline/scripts/summarise_run.py)" > "$RUNNER_TEMP/commit-message"
+          git commit -F "$RUNNER_TEMP/commit-message"
+
+          # Rebase rather than force: a human commit landing mid-run should win.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Report run health
+        # Last, so a flaky fetch costs visibility rather than a week of figures.
+        if: always()
+        run: |
+          if [ "${{ steps.sanity.outcome }}" != "success" ]; then
+            echo "::error::Sanity check failed — nothing was committed. Inspect the run's output before publishing."
+            exit 1
+          fi
+          if [ "${{ steps.refresh.outcome }}" != "success" ]; then
+            echo "::error::Some companies failed to refresh. Fresh data for the rest was committed; see companies_failed in src/data/meta.json."
+            exit 1
+          fi
+          echo "Refresh clean."

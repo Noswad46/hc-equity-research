@@ -7296,7 +7296,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Neurocrine Biosciences",
    "Neurocrine UK Limited"
@@ -7712,5 +7712,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07365462"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

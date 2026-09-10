@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-08T23:09:59Z",
+ "generated_at": "2026-09-10T00:40:28Z",
  "companies": [
   {
    "ticker": "ARCT",
@@ -162,7 +162,8 @@
     "debt:stale_series",
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "EBS",
@@ -337,7 +338,8 @@
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "MRNA",
@@ -464,7 +466,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": -2.0,
+    "value": -1.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -499,7 +501,8 @@
     "restricted_cash:mixed_tags",
     "opex:fallback_tag",
     "opex:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "NVAX",
@@ -659,7 +662,8 @@
     "short_term_investments:fallback_tag",
     "debt:fallback_tag",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "OCGN",
@@ -832,7 +836,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "PCVX",
@@ -981,7 +986,8 @@
     "cash:basis_cutover",
     "debt:no_tag_resolved",
     "restricted_cash:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "SCYX",
@@ -1147,7 +1153,8 @@
     "debt:fallback_tag",
     "debt:stale_series",
     "restricted_cash:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "SIGA",
@@ -1316,7 +1323,8 @@
     "restricted_cash:stale_series",
     "opex:fallback_tag",
     "opex:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "SPRO",
@@ -1493,7 +1501,8 @@
     "short_term_investments:stale_series",
     "debt:no_tag_resolved",
     "restricted_cash:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "VIR",
@@ -1651,7 +1660,8 @@
     "debt:no_tag_resolved",
     "opex:fallback_tag",
     "opex:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "VXRT",
@@ -1829,7 +1839,8 @@
     "debt:stale_series",
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ABBV",
@@ -1958,7 +1969,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": -4.0,
+    "value": -3.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -1990,7 +2001,8 @@
     "debt:stale_series",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "AMGN",
@@ -2118,7 +2130,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": -4.0,
+    "value": -2.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -2153,7 +2165,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "BMY",
@@ -2314,7 +2327,8 @@
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "JNJ",
@@ -2447,7 +2461,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": 6.0,
+    "value": 4.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -2486,7 +2500,8 @@
     "restricted_cash:mixed_tags",
     "restricted_cash:stale_series",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "LLY",
@@ -2652,7 +2667,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "MRK",
@@ -2782,7 +2798,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": -11.0,
+    "value": -10.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -2821,7 +2837,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "PFE",
@@ -2950,7 +2967,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": 7.0,
+    "value": 6.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -2993,7 +3010,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ZTS",
@@ -3166,7 +3184,8 @@
     "restricted_cash:fallback_tag",
     "opex:fallback_tag",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ALNY",
@@ -3338,7 +3357,8 @@
     "restricted_cash:mixed_tags",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "BIIB",
@@ -3508,7 +3528,8 @@
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "GILD",
@@ -3682,7 +3703,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "INCY",
@@ -3849,7 +3871,8 @@
     "debt:stale_series",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "IONS",
@@ -4022,7 +4045,8 @@
     "debt:stale_series",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "NBIX",
@@ -4190,7 +4214,8 @@
     "restricted_cash:stale_series",
     "opex:fallback_tag",
     "opex:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "REGN",
@@ -4319,7 +4344,7 @@
    },
    "clinical_momentum": {
     "name": "clinical_momentum",
-    "value": 18.0,
+    "value": 20.0,
     "suppressed": false,
     "suppressed_by": [],
     "flags": [],
@@ -4354,7 +4379,8 @@
     "restricted_cash:mixed_tags",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "SRPT",
@@ -4517,7 +4543,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "VRTX",
@@ -4686,7 +4713,8 @@
     "restricted_cash:mixed_tags",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ARVN",
@@ -4853,7 +4881,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "BEAM",
@@ -5016,7 +5045,8 @@
     "short_term_investments:mixed_tags",
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "CRSP",
@@ -5183,7 +5213,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "DNLI",
@@ -5344,7 +5375,8 @@
     "restricted_cash:stale_series",
     "opex:fallback_tag",
     "opex:mixed_tags"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "NTLA",
@@ -5504,7 +5536,8 @@
     "debt:no_tag_resolved",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "RVMD",
@@ -5670,7 +5703,8 @@
     "short_term_investments:fallback_tag",
     "debt:no_tag_resolved",
     "restricted_cash:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ABT",
@@ -5838,7 +5872,8 @@
     "restricted_cash:stale_series",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "BDX",
@@ -6024,7 +6059,8 @@
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed",
     "opex:overlapping_periods"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "BSX",
@@ -6187,7 +6223,8 @@
     "net_income:stale_series",
     "short_term_investments:no_tag_resolved",
     "debt:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ISRG",
@@ -6351,7 +6388,8 @@
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags",
     "restricted_cash:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "MDT",
@@ -6517,7 +6555,8 @@
     "debt:stale_series",
     "restricted_cash:no_tag_resolved",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "SYK",
@@ -6679,7 +6718,8 @@
     "short_term_investments:fallback_tag",
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "DGX",
@@ -6846,7 +6886,8 @@
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "LH",
@@ -7015,7 +7056,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "NTRA",
@@ -7190,7 +7232,8 @@
     "debt:stale_series",
     "restricted_cash:stale_series",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "A",
@@ -7357,7 +7400,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "DHR",
@@ -7537,7 +7581,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ILMN",
@@ -7706,7 +7751,8 @@
     "debt:fallback_tag",
     "debt:stale_series",
     "restricted_cash:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "TMO",
@@ -7871,7 +7917,8 @@
     "debt:fallback_tag",
     "opex:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "CVS",
@@ -8040,7 +8087,8 @@
     "opex:fallback_tag",
     "opex:mixed_tags",
     "opex:chain_tags_diverge"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "ELV",
@@ -8204,7 +8252,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "UNH",
@@ -8369,7 +8418,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "HCA",
@@ -8538,7 +8588,8 @@
     "debt:fallback_tag",
     "restricted_cash:no_tag_resolved",
     "opex:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "THC",
@@ -8710,7 +8761,8 @@
     "debt:stale_series",
     "restricted_cash:no_tag_resolved",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "UHS",
@@ -8876,7 +8928,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "opex:fy_reconciliation_failed"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "DOCS",
@@ -9044,7 +9097,8 @@
     "short_term_investments:no_tag_resolved",
     "debt:no_tag_resolved",
     "restricted_cash:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "VEEV",
@@ -9215,7 +9269,8 @@
     "short_term_investments:fallback_tag",
     "debt:no_tag_resolved",
     "restricted_cash:fallback_tag"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "CAH",
@@ -9388,7 +9443,8 @@
     "debt:stale_series",
     "restricted_cash:no_tag_resolved",
     "opex:no_tag_resolved"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "COR",
@@ -9568,7 +9624,8 @@
     "restricted_cash:fallback_tag",
     "restricted_cash:stale_series",
     "opex:stale_series"
-   ]
+   ],
+   "stale": null
   },
   {
    "ticker": "MCK",
@@ -9736,7 +9793,8 @@
     "debt:fallback_tag",
     "restricted_cash:fallback_tag",
     "restricted_cash:mixed_tags"
-   ]
+   ],
+   "stale": null
   }
  ]
 }

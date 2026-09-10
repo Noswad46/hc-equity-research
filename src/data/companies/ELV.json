@@ -7495,7 +7495,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Elevance Health"
   ],
@@ -7518,5 +7518,6 @@
   "active_late_stage": 0
  },
  "active_trials_detail": [],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

@@ -7806,7 +7806,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Alpine Immune Sciences Inc, A Subsidiary of Vertex",
    "Vertex Pharmaceuticals Incorporated"
@@ -8452,5 +8452,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07807995"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

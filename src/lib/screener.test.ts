@@ -255,8 +255,35 @@ describe("csv export", () => {
     const lines = csv.trim().split("\n");
 
     expect(lines[0]).toContain("2026-09-07T01:00:00Z");
-    expect(lines[2]).toBe("Name,Revenue TTM,Revenue growth YoY,flags");
-    expect(lines[3]).toContain("revenue:fallback_tag");
+    expect(lines[3]).toBe("Name,Revenue TTM,Revenue growth YoY,flags,figures as of");
+    expect(lines[4]).toContain("revenue:fallback_tag");
+  });
+
+  it("dates a fresh row from the run that produced the file", () => {
+    const csv = toCsv([row()], columns, "2026-09-07T01:00:00Z");
+    expect(csv.trim().split("\n")[4]).toMatch(/,2026-09-07T01:00:00Z$/);
+  });
+
+  it("dates a carried-forward row from its own last good run", () => {
+    // Without this the two are indistinguishable in a spreadsheet, which is
+    // where an exported screen stops carrying its tooltips.
+    const csv = toCsv(
+      [
+        row({
+          ticker: "STALE",
+          stale: {
+            last_success_at: "2026-08-10T01:00:00Z",
+            consecutive_failures: 2,
+            limit: 4,
+            error: "HTTP 503",
+          },
+        }),
+      ],
+      columns,
+      "2026-09-07T01:00:00Z",
+    );
+
+    expect(csv.trim().split("\n")[4]).toMatch(/,2026-08-10T01:00:00Z$/);
   });
 
   it("exports values exactly as displayed, including n/m and null", () => {

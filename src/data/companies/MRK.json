@@ -126,7 +126,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": -11.0,
+  "value": -10.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -8479,7 +8479,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Acceleron Pharma, Inc., a wholly-owned subsidiary of Merck & Co., Inc., Rahway, NJ USA",
    "Afferent Pharmaceuticals, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)",
@@ -8650,7 +8650,7 @@
    }
   ],
   "started_ttm": 65,
-  "started_prior_ttm": 76,
+  "started_prior_ttm": 75,
   "discontinued_all_time": 299,
   "completed_all_time": 1406,
   "active_late_stage": 182
@@ -12849,5 +12849,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07801027"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

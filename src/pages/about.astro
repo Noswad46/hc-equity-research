@@ -1,0 +1,91 @@
+---
+/**
+ * SPEC §8: who built it, why, and the disclaimer in full.
+ *
+ * The footer carries the disclaimer on every page; this is where it appears
+ * unabridged, alongside the things a reader needs in order to judge how much
+ * weight to put on the figures — who assembled them, what the update cadence
+ * is, and what happens when a refresh fails.
+ */
+import Base from "../layouts/Base.astro";
+import meta from "../data/meta.json";
+import screener from "../data/screener.json";
+
+const total = screener.companies.length;
+const maxStaleRuns = meta.thresholds.max_stale_runs;
+---
+
+<Base title="About">
+  <p class="muted">
+    <a href="/">Home</a> · <a href="/screener/">Screener</a> ·
+    <a href="/methodology/">Methodology</a>
+  </p>
+
+  <h1>About</h1>
+
+  <h2>What this is</h2>
+  <p>
+    A screener over {total} US-listed healthcare companies, built from primary sources only: SEC
+    EDGAR XBRL company facts for fundamentals, and ClinicalTrials.gov for pipeline. Every figure
+    on the site traces to a filing or a registry record, and every company page links to the
+    filings its numbers were read from.
+  </p>
+  <p>
+    Nothing is estimated, smoothed or adjusted. Figures are printed exactly as filed — unrounded
+    and unscaled — and where a figure cannot be established honestly it is reported as
+    <strong>null</strong>, which is not zero, rather than filled in. The
+    <a href="/methodology/">methodology page</a> gives every formula and its known limitations.
+  </p>
+
+  <h2>Why it exists</h2>
+  <p>
+    Healthcare screeners generally either cover fundamentals well and ignore the pipeline, or
+    cover the pipeline and treat the financials as an afterthought. For a sector where a
+    clinical-stage company's value is mostly its trials and its runway, both halves have to be on
+    the same page to be worth anything.
+  </p>
+  <p>
+    The second reason is the one that shaped most of the build: derived metrics are easy to
+    compute and hard to compute honestly. Quarterly figures have to be differenced out of
+    year-to-date filings, filers migrate XBRL tags mid-life, annual figures get restated after
+    their quarters are filed, and a ratio across any of those produces a number that looks
+    entirely reasonable and means nothing. This site's main design commitment is refusing to
+    print those — and saying so where it has declined.
+  </p>
+
+  <h2>Who built it</h2>
+  <p class="stale-banner">
+    <strong>To fill in before this goes public.</strong> Name, background, and how to get in
+    touch. Anyone weighing these figures should be able to see who assembled them.
+  </p>
+
+  <h2>How it stays current</h2>
+  <p>
+    The pipeline re-fetches every company weekly and commits the result, which rebuilds the site.
+    Fundamentals move quarterly, so weekly is generous. Current data is from
+    <strong>{meta.generated_at}</strong>, pipeline version {meta.pipeline_version}.
+  </p>
+  <p>
+    When a refresh fails for one company, that company keeps its previous figures and is marked
+    on both the screener and its own page with the date those figures actually come from — the
+    rest of the universe still updates. That fallback is bounded: after {maxStaleRuns} consecutive
+    failed refreshes the company is dropped from the site entirely rather than carried further,
+    because month-old numbers presented as current are a worse failure than an admitted gap.
+  </p>
+
+  <h2>What it does not cover</h2>
+  <p>
+    No prices, market caps or valuation multiples, so nothing here is a valuation. No IFRS
+    filers, because IAS 38 capitalises qualifying development costs where US GAAP expenses them,
+    which would make R&D intensity and cash runway incomparable across the two. Coverage is
+    US-listed and US GAAP only. The <a href="/">home page</a> sets out the exclusions in full.
+  </p>
+
+  <h2>Disclaimer</h2>
+  <p>
+    This site is a personal project for research and educational purposes. It presents publicly
+    available data from SEC EDGAR, ClinicalTrials.gov, and openFDA, together with metrics derived
+    from that data. Nothing here is investment advice, a recommendation, or an offer to buy or
+    sell any security. Figures may be incomplete, delayed, or incorrect.
+  </p>
+</Base>

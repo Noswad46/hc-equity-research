@@ -130,6 +130,18 @@ const { title } = Astro.props;
         margin: 0;
       }
 
+      /* A whole page of figures carried through a failed refresh. Loud on
+         purpose: every number below it is older than the site's as-of date,
+         and that is not something a reader should have to infer. */
+      .stale-banner {
+        border-left: 3px solid #9b2c2c;
+        background: var(--field);
+        padding: 0.6rem 0.9rem;
+        margin: 1rem 0 0;
+        max-width: 52rem;
+        font-size: 14px;
+      }
+
       .flag {
         border-left: 3px solid var(--rule);
         padding: 0.4rem 0 0.4rem 0.75rem;
@@ -259,6 +271,7 @@ const { title } = Astro.props;
         metrics derived from that data. Nothing here is investment advice, a recommendation, or
         an offer to buy or sell any security. Figures may be incomplete, delayed, or incorrect.
       </p>
+      <p><a href="/about/">About</a> · <a href="/methodology/">Methodology</a></p>
     </footer>
   </body>
 </html>

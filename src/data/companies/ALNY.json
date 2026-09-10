@@ -7417,7 +7417,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Alnylam Pharmaceuticals"
   ],
@@ -7966,5 +7966,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07636811"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

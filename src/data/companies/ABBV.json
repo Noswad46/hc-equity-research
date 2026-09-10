@@ -125,7 +125,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": -4.0,
+  "value": -3.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -6300,7 +6300,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "AbbVie",
    "Allergan",
@@ -6466,7 +6466,7 @@
    }
   ],
   "started_ttm": 55,
-  "started_prior_ttm": 59,
+  "started_prior_ttm": 58,
   "discontinued_all_time": 159,
   "completed_all_time": 919,
   "active_late_stage": 114
@@ -9724,5 +9724,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07807956"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

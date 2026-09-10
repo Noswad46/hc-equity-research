@@ -125,7 +125,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": 18.0,
+  "value": 20.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -7918,7 +7918,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Regeneron Pharmaceuticals"
   ],
@@ -8071,8 +8071,8 @@
     "url": "https://clinicaltrials.gov/study/NCT07015905"
    }
   ],
-  "started_ttm": 41,
-  "started_prior_ttm": 23,
+  "started_ttm": 42,
+  "started_prior_ttm": 22,
   "discontinued_all_time": 49,
   "completed_all_time": 179,
   "active_late_stage": 80
@@ -9982,5 +9982,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07759167"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

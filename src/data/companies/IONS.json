@@ -7820,7 +7820,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Ionis Pharmaceuticals, Inc.",
    "Akcea Therapeutics"
@@ -8308,5 +8308,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07782827"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

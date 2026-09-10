@@ -6061,7 +6061,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Natera, Inc."
   ],
@@ -6316,5 +6316,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07718633"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

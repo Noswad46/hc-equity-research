@@ -125,7 +125,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": 7.0,
+  "value": 6.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -8510,7 +8510,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Arena Pharmaceuticals",
    "Array BioPharma",
@@ -8676,7 +8676,7 @@
    }
   ],
   "started_ttm": 62,
-  "started_prior_ttm": 55,
+  "started_prior_ttm": 56,
   "discontinued_all_time": 503,
   "completed_all_time": 2070,
   "active_late_stage": 129
@@ -12073,5 +12073,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07794774"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

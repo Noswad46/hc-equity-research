@@ -219,6 +219,16 @@ import screener from "../data/screener.json";
       padding-left: 0.15em;
     }
 
+    /* Row is one refresh behind. Same functional red as the flag marker — both
+       mean "this figure needs a caveat" — but a dagger, not a star, because the
+       caveat is about the row's age rather than the tag it was drawn from. */
+    .screener .stale {
+      color: #9b2c2c;
+      font-weight: 700;
+      padding-left: 0.25em;
+      cursor: help;
+    }
+
     .screener :focus-visible {
       outline: 2px solid #0f7a6b;
       outline-offset: 1px;

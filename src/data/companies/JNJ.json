@@ -129,7 +129,7 @@
  },
  "clinical_momentum": {
   "name": "clinical_momentum",
-  "value": 6.0,
+  "value": 4.0,
   "suppressed": false,
   "suppressed_by": [],
   "flags": [],
@@ -8242,7 +8242,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Abiomed Inc.",
    "Actelion",
@@ -8418,8 +8418,8 @@
     "url": "https://clinicaltrials.gov/study/NCT06150157"
    }
   ],
-  "started_ttm": 35,
-  "started_prior_ttm": 29,
+  "started_ttm": 34,
+  "started_prior_ttm": 30,
   "discontinued_all_time": 191,
   "completed_all_time": 1086,
   "active_late_stage": 119
@@ -11811,5 +11811,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07746713"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

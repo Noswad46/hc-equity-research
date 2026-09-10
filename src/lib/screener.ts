@@ -6,6 +6,7 @@
  * between a number, the word `null`, and `n/m` — three distinct states that must
  * never collapse into each other.
  */
+import type { Stale } from "./flags";
 
 /** A SPEC §6 metric as `run.py` emits it: a value, or the reason there isn't one. */
 export interface MetricResult {
@@ -45,6 +46,8 @@ export interface CompanyRow {
   discontinuation_rate: MetricResult | null;
   rnd_per_late_stage_programme: MetricResult | null;
   data_quality_flags: string[];
+  /** Set when this row was carried through a failed refresh. See `flags.ts`. */
+  stale?: Stale | null;
 }
 
 /** The reason code that means "arithmetically true, but not worth reporting". */
@@ -288,8 +291,10 @@ function csvField(text: string): string {
 /**
  * Export the current view, exactly as displayed.
  *
- * Carries the as-of date and a flags column, so an exported screen can still be
- * audited once it is out of the page and away from the tooltips.
+ * Carries the as-of date, a flags column and a `figures as of` column, so an
+ * exported screen can still be audited once it is out of the page and away from
+ * the tooltips. The last of those matters most: a carried-forward row looks
+ * identical to a fresh one in a spreadsheet unless its own date travels with it.
  */
 export function toCsv(
   rows: CompanyRow[],
@@ -299,11 +304,15 @@ export function toCsv(
   const lines: string[] = [];
   lines.push(`# Healthcare equity screener. Data as of ${generatedAt}.`);
   lines.push("# Figures are as filed with the SEC, unrounded. n/m = not meaningful. null = no value produced.");
-  lines.push([...columns.map((c) => csvField(c.label)), "flags"].join(","));
+  lines.push(
+    "# figures as of: the run these figures come from. Earlier than the as-of date where a refresh failed.",
+  );
+  lines.push([...columns.map((c) => csvField(c.label)), "flags", "figures as of"].join(","));
 
   for (const row of rows) {
     const cells = columns.map((c) => csvField(cellOf(row, c.key).text));
     cells.push(csvField(row.data_quality_flags.join(" ")));
+    cells.push(csvField(row.stale?.last_success_at ?? generatedAt));
     lines.push(cells.join(","));
   }
   return lines.join("\n") + "\n";

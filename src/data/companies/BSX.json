@@ -8515,7 +8515,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Boston Scientific Corporation",
    "Guidant Corporation",
@@ -9481,5 +9481,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07639684"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

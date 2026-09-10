@@ -188,6 +188,44 @@ export function describeReason(code: string, concept = "This metric"): string {
 }
 
 /**
+ * A company whose last refresh failed, carried on its previous figures.
+ *
+ * `run.py` writes this block when a fetch fails and there is a good record to
+ * fall back on. It is bounded: past `limit` consecutive failures the company is
+ * dropped from the dataset entirely rather than carried further, so anything
+ * carrying this marker is at most a few refreshes behind.
+ */
+export interface Stale {
+  last_success_at: string | null;
+  consecutive_failures: number;
+  limit: number;
+  error: string;
+}
+
+/** `null` for a freshly fetched company; a block for a carried-forward one. */
+export function staleOf(record: { stale?: Stale | null } | null | undefined): Stale | null {
+  return record?.stale ?? null;
+}
+
+/**
+ * Why these figures are older than the site's as-of date.
+ *
+ * Names the date they actually come from. A reader who cannot tell a carried
+ * row from a fresh one is being shown stale-but-plausible data, which is the
+ * failure this whole marker exists to prevent.
+ */
+export function describeStale(stale: Stale): string {
+  const runs =
+    stale.consecutive_failures === 1
+      ? "the last refresh"
+      : `the last ${stale.consecutive_failures} refreshes`;
+  const from = stale.last_success_at
+    ? `Figures are from ${stale.last_success_at}, not the site's as-of date.`
+    : "Figures predate the site's as-of date.";
+  return `${from} Fetching this company failed on ${runs} (${stale.error}). It is dropped from the dataset after ${stale.limit} consecutive failures rather than carried further.`;
+}
+
+/**
  * Render a pipeline value exactly as it arrived.
  *
  * No rounding, no thousands separators, no scaling. `null` renders as the word

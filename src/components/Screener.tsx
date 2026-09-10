@@ -23,7 +23,7 @@ import {
   type Profitability,
   type ScreenState,
 } from "../lib/screener";
-import { describeFlag, describeReason, conceptLabel } from "../lib/flags";
+import { describeFlag, describeReason, describeStale, conceptLabel } from "../lib/flags";
 
 interface Column {
   key: string;
@@ -143,6 +143,8 @@ export default function Screener({ companies, generatedAt, growthFloor }: Props)
       return compareRows(a, b, key, state.sortDir);
     });
   }, [companies, state]);
+
+  const staleRows = useMemo(() => rows.filter((r) => r.stale), [rows]);
 
   useEffect(() => {
     if (liveRef.current) liveRef.current.textContent = `${rows.length} of ${companies.length} companies match.`;
@@ -311,6 +313,20 @@ export default function Screener({ companies, generatedAt, growthFloor }: Props)
         </p>
       )}
 
+      {staleRows.length > 0 && (
+        // Stated up front, not only in a tooltip. A reader scanning the table
+        // should not have to hover a row to find out it is a refresh behind.
+        <p className="notice">
+          <strong>
+            {staleRows.length} {staleRows.length === 1 ? "company" : "companies"}
+          </strong>{" "}
+          in this view show figures from an earlier run, marked{" "}
+          <span aria-hidden="true">†</span>: their last refresh failed. Hover the ticker for the
+          date the figures come from. A company is dropped from the universe rather than carried
+          further once it has failed repeatedly, so nothing here is more than a few refreshes old.
+        </p>
+      )}
+
       {rows.length === 0 ? (
         <p className="empty">
           No companies match these filters. <button onClick={() => setState((s) => ({ ...s, filters: DEFAULT_STATE.filters }))}>Clear filters</button> to
@@ -361,6 +377,15 @@ export default function Screener({ companies, generatedAt, growthFloor }: Props)
                 <tr key={row.ticker}>
                   <th scope="row" className="sticky-col">
                     <a href={`/companies/${row.ticker}/`}>{row.ticker}</a>
+                    {row.stale && (
+                      // Marked on the ticker rather than on each cell: the whole
+                      // row is one refresh behind, and repeating the mark across
+                      // nine columns would say the same thing nine times.
+                      <span className="stale" tabIndex={0} title={describeStale(row.stale)}>
+                        <span aria-hidden="true">†</span>
+                        <span className="visually-hidden"> — {describeStale(row.stale)}</span>
+                      </span>
+                    )}
                   </th>
                   {columns.map((column) => (
                     <Cell key={column.key} row={row} column={column} />

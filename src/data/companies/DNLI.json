@@ -4583,7 +4583,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Denali Therapeutics Inc."
   ],
@@ -4903,5 +4903,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07758595"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

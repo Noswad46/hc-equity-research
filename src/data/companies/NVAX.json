@@ -7026,7 +7026,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Novavax"
   ],
@@ -7091,5 +7091,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07086222"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

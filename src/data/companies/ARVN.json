@@ -4821,7 +4821,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Arvinas Inc.",
    "Arvinas Estrogen Receptor, Inc."
@@ -4959,5 +4959,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07749586"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }

@@ -8666,7 +8666,7 @@
   }
  ],
  "pipeline": {
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-10",
   "sponsors": [
    "Biogen",
    "HI-Bio, A Biogen Company",
@@ -9309,5 +9309,6 @@
    "url": "https://clinicaltrials.gov/study/NCT07722546"
   }
  ],
- "regulatory": null
+ "regulatory": null,
+ "stale": null
 }
