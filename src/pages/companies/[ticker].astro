@@ -123,10 +123,22 @@ const figuresAsOf = stale?.last_success_at ?? meta.generated_at;
       </tr>
       <tr>
         <td>Revenue growth, year on year</td>
-        <td class={`num ${company.revenue_growth_yoy === null ? "null" : ""}`}>
-          {raw(company.revenue_growth_yoy)}
+        {/* A metric result, not a bare number — read `.value`, as the annual
+            table and the metrics section below both do. Printing the object
+            itself rendered "[object Object]" on every company page. */}
+        <td class={`num ${company.revenue_growth_yoy?.value === null ? "null" : ""}`}>
+          {raw(company.revenue_growth_yoy?.value)}
         </td>
       </tr>
+      {company.revenue_growth_yoy?.suppressed_by?.length > 0 && (
+        <tr>
+          <td colspan="2" class="muted">
+            {company.revenue_growth_yoy.suppressed_by
+              .map((code: string) => describeReason(code, "Revenue"))
+              .join(" ")}
+          </td>
+        </tr>
+      )}
     </tbody>
   </table>
 

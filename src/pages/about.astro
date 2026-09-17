@@ -62,8 +62,8 @@ const maxStaleRuns = meta.thresholds.max_stale_runs;
   <h2>How it stays current</h2>
   <p>
     The pipeline re-fetches every company weekly and commits the result, which rebuilds the site.
-    Fundamentals move quarterly, so weekly is generous. Current data is from
-    <strong>{meta.generated_at}</strong>, pipeline version {meta.pipeline_version}.
+    Fundamentals move quarterly, so weekly is generous. Current data is from <strong>{meta.generated_at}</strong>,
+    pipeline version {meta.pipeline_version}.
   </p>
   <p>
     When a refresh fails for one company, that company keeps its previous figures and is marked

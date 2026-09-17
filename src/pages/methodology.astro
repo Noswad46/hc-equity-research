@@ -6,22 +6,61 @@
  */
 import Base from "../layouts/Base.astro";
 import meta from "../data/meta.json";
+import screener from "../data/screener.json";
 
 const growthFloor = meta.thresholds.growth_floor_usd;
+const maxStaleRuns = meta.thresholds.max_stale_runs;
+const universeSize = meta.universe_size;
+
+// Counted rather than written down, so the regulatory-coverage argument below
+// cannot drift as the universe grows — the failure this page was just fixed for.
+const NO_APPROVALS = new Set([
+  "payer",
+  "provider",
+  "distributor",
+  "hcit",
+  "clinical_stage_biotech",
+]);
+const DEVICE_ROUTE = new Set(["medtech", "diagnostics", "life_science_tools"]);
+
+const bySubsector = screener.companies.map((c) => c.subsector);
+const noApprovals = bySubsector.filter((s) => NO_APPROVALS.has(s)).length;
+const deviceRoute = bySubsector.filter((s) => DEVICE_ROUTE.has(s)).length;
+const drugRoute = universeSize - noApprovals - deviceRoute;
 ---
 
 <Base title="Methodology">
-  <p class="muted"><a href="/screener/">Screener</a> · <a href="/companies/">Company pages</a></p>
+  <p class="muted">
+    <a href="/screener/">Screener</a> · <a href="/companies/">Company pages</a> ·
+    <a href="/subsectors/">Subsectors</a> · <a href="/about/">About</a>
+  </p>
 
   <h1>Methodology</h1>
   <p>
-    Every figure on this site comes from SEC EDGAR XBRL company facts. Nothing is estimated,
-    smoothed or adjusted. Where a figure cannot be established honestly it is reported as
+    Every figure on this site comes from one of two primary sources: SEC EDGAR XBRL company facts
+    for financials, and ClinicalTrials.gov for the pipeline. Nothing is estimated, smoothed or
+    adjusted. Where a figure cannot be established honestly it is reported as
     <strong>null</strong>, which is not zero, or as <strong>n/m</strong>, which means the
     arithmetic is valid but the result describes nothing useful.
   </p>
   <p class="muted">
     Data as of {meta.generated_at} · pipeline version {meta.pipeline_version} · refreshed weekly.
+  </p>
+
+  <h2>Update cadence</h2>
+  <p>
+    The pipeline re-fetches the whole universe weekly and commits the result, which rebuilds the
+    site. Fundamentals move quarterly, so weekly is generous; the registry data moves continuously,
+    and its as-of date is recorded separately on every company page.
+  </p>
+  <p>
+    A refresh that fails for one company does not hold up the rest. That company keeps its previous
+    figures and is marked — on the screener with a dagger beside the ticker, and on its own page
+    with a banner and the date the figures actually come from.
+    The fallback is bounded at {maxStaleRuns} consecutive failed refreshes, after which the company is removed from the site
+    rather than carried further. Figures that are a month old while presented under a current
+    as-of date are a worse failure than an admitted gap, and every guard on this page exists for
+    the same reason.
   </p>
 
   <h2>Deriving quarters</h2>
@@ -274,11 +313,40 @@ const growthFloor = meta.thresholds.growth_floor_usd;
     business.
   </p>
 
-  <h2>Not yet built</h2>
+  <h3>Regulatory and reimbursement data are not covered</h3>
   <p>
-    Clinical-pipeline and regulatory metrics — active trials, phase distribution, pipeline depth
-    and concentration, clinical momentum — come from ClinicalTrials.gov and openFDA and are not yet
-    implemented. Their columns exist and are empty so that the shape of the data does not change
-    when they arrive.
+    Every company record carries a <code>regulatory</code> field and it is null. openFDA would
+    populate it with approval counts and dates. It has not been built, because the coverage does
+    not justify the matching risk.
+  </p>
+  <p>
+    openFDA identifies companies by sponsor and applicant strings that match neither tickers nor
+    SEC registrant names — the FDA knows Pfizer as <code>PFIZER</code> and Bristol-Myers Squibb
+    under four strings beginning <code>BMS</code>, none containing "Bristol" or "Squibb". Covering
+    it means a third hand-curated mapping of exactly the kind described above, where a wrong entry
+    misattributes one company's record to another and looks entirely plausible while doing it.
+  </p>
+  <p>
+    What that buys is narrower than it appears.
+    Of the {universeSize} companies here, <strong>{noApprovals}</strong> have no approvals to count at all —
+    payers, providers, distributors, health IT and the clinical-stage names.
+    The other {deviceRoute + drugRoute} split across two datasets that are not the same measurement
+    and do not belong in one column: {drugRoute} go through drug approvals, and {deviceRoute} through device clearances. For the
+    vaccines and infectious-disease companies this universe is weighted toward, approval counts are
+    in any case dominated by supplemental and label-expansion filings rather than new products, so
+    the number would read as a measure of output while mostly measuring paperwork.
+  </p>
+  <p>
+    Medicare Part B and Part D spending was assessed as an alternative and rejected for the same
+    reason. It is the closest public proxy for product-level US revenue, which segment reporting
+    does not give. But Part B carries no manufacturer field at all; Part D truncates manufacturer
+    names to fifteen characters, so the matching key is lossy before any curation begins; and
+    vaccines are 0.3% of Part D rows, which is to say the dataset is emptiest exactly where this
+    site is deepest. On a September 2026 assessment of the live data, around eighteen companies
+    here would have gained anything at all.
+  </p>
+  <p>
+    Both remain possible later. The <code>regulatory</code> field is kept null rather than removed
+    so that the shape of the data would not change if either arrives.
   </p>
 </Base>
