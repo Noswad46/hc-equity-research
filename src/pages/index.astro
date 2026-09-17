@@ -195,30 +195,48 @@ const subsectors = [...new Set(screener.companies.map((c) => c.subsector))].sort
   </div>
 
   <h2>Where to go</h2>
-  <ul>
-    <li>
-      <a href="/screener/">Screener</a> — filter and sort all {total} companies on fundamentals,
-      cash and pipeline. Filter state is in the URL, so a screen can be shared.
-    </li>
-    <li>
-      <a href="/companies/">Company pages</a> — quarterly and annual figures, trend charts,
-      clinical pipeline, and every data-quality flag on the record, with links to the underlying
-      SEC filings.
-    </li>
-    <li>
-      <a href="/subsectors/">Subsectors</a> — peer comparison within a group, with the
-      distribution and median of every key metric. Companies are only usefully compared against
-      others facing the same economics.
-    </li>
-    <li>
-      <a href="/methodology/">Methodology</a> — every formula, its limitations, and what is
-      deliberately not covered.
-    </li>
-    <li>
-      <a href="/about/">About</a> — who built this and why, the refresh cadence, and the
-      disclaimer in full.
-    </li>
-  </ul>
+  <p class="muted">
+    These five sections are also in the bar at the top of every page.
+  </p>
+
+  <div class="directory">
+    <section class="dir">
+      <h3><a href="/screener/">Screener</a></h3>
+      <p>
+        All {total} companies in one sortable table, filtered on fundamentals, cash or pipeline.
+        Filter state lives in the URL, so a screen can be shared or bookmarked.
+      </p>
+    </section>
+
+    <section class="dir">
+      <h3><a href="/companies/">Companies</a></h3>
+      <p>
+        One page per filer: quarterly and annual figures, trend charts, clinical pipeline, every
+        data-quality flag on the record, and links to the SEC filings behind each number.
+      </p>
+    </section>
+
+    <section class="dir">
+      <h3><a href="/subsectors/">Subsectors</a></h3>
+      <p>
+        Peer comparison inside a group, with the distribution and median of each key metric. A
+        company is only usefully compared against others facing the same economics.
+      </p>
+    </section>
+
+    <section class="dir">
+      <h3><a href="/methodology/">Methodology</a></h3>
+      <p>
+        Every formula, its source, its limitations, the refresh cadence, and what is deliberately
+        not covered. The page to read before trusting any figure here.
+      </p>
+    </section>
+
+    <section class="dir">
+      <h3><a href="/about/">About</a></h3>
+      <p>Who built this and why, how it stays current, and the disclaimer in full.</p>
+    </section>
+  </div>
 
   <h2>What this does not cover</h2>
   <p>
@@ -277,6 +295,32 @@ const subsectors = [...new Set(screener.companies.map((c) => c.subsector))].sort
 
     li {
       margin-bottom: 0.4rem;
+    }
+
+    /* Same ruled grid as the cuts above, so the page has one visual language
+       rather than a table idiom and a list idiom. */
+    .directory {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0 2rem;
+    }
+
+    .dir {
+      border-top: 1px solid var(--rule);
+      padding-top: 0.5rem;
+      margin-bottom: 1.25rem;
+      min-width: 0;
+    }
+
+    .dir h3 {
+      margin: 0.25rem 0 0.3rem;
+    }
+
+    .dir p {
+      color: var(--ink-muted);
+      font-size: 13px;
+      margin: 0;
+      max-width: none;
     }
   </style>
 </Base>
